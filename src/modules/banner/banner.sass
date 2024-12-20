@@ -1,0 +1,62 @@
+.banner
+  padding: 0.5rem
+  box-sizing: border-box
+  &__pic
+    vertical-align: middle
+    width: 100%
+  &__wrapper
+    position: relative
+  &__content
+    position: absolute
+    padding: 0 5.5rem 13rem
+    z-index: 2
+    bottom: 0
+    left: 0
+    width: 100%
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    gap: 1.5rem
+    max-width: 500px
+  &__tag
+    padding: 1.2rem 1.5rem
+    box-sizing: border-box
+    font-weight: 600
+    border-radius: 82px
+    backdrop-filter: blur(17px)
+    background: var(--white)
+    display: flex
+    align-items: center
+    gap: 1rem
+    &_orange
+      background: var(--tertiary)
+      color: var(--white)
+      box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.04)
+    & > span
+      width: 6px
+      height: 6px
+      border-radius: 100%
+      background: #c51e1e
+  &__time
+    display: flex
+    align-items: center
+    gap: .5rem
+    font-weight: 600
+    color: #9c9c9c
+  &__title
+    +fs(90px)
+    color: var(--white)
+    
+    margin: 5rem 0 3.5rem
+    font-family: var(--second-family)
+    line-height: 1
+  &__txt
+    +fs(26px)
+    color: var(--white)
+    line-height: 1.2
+    
+  .slider-arrows
+    position: absolute
+    right: 5.5rem
+    bottom: 13rem
+    z-index: 3

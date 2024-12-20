@@ -1,0 +1,17 @@
+include ../static/pug/head
+include ../modules/location/location
++head('Главная')
+body
+  main
+    +header()
+    include ../modules/banner/banner
+    include ../modules/proposal/proposal
+    include ../modules/sales/sales
+    include ../modules/about/about
+    include ../modules/vantage/vantage
+    include ../modules/landscaping/landscaping
+    include ../modules/placement/placement
+    +location('Инфраструктура')
+    include ../modules/callback/callback
+    +location('Места поблизости')
+  include ../static/pug/scripts

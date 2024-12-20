@@ -1,0 +1,39 @@
+.callback
+  margin: 6rem 0 12rem
+  &__container
+    border-radius: 25px
+    background-color: var(--secondary)
+    background-image: url(../img/bg-callback-1.png)
+    background-repeat: no-repeat
+    background-position: right top
+    padding: 5rem
+    box-sizing: border-box
+    color: var(--white)
+  &__title
+    +fs(50px)
+    font-family: var(--second-family)
+    margin-bottom: 1.5rem
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__txt
+    max-width: 1150px
+    +fs(22px)
+    font-weight: 600
+    line-height: 1.4
+  &__btn
+    border-radius: 48px
+    padding: 2.5rem
+    background: var(--white)
+    display: inline-block
+    width: 252px
+    +fs(18px)
+    font-weight: 600
+    color: var(--primary)
+    transition: .5s ease
+    border: 1px solid var(--white)
+    text-align: center
+    &:hover
+      background: var(--hover-green)
+      color: var(--white)
