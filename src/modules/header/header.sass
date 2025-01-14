@@ -6,6 +6,8 @@
   left: 0
   width: 100%
   z-index: 99
+  +screen('max', 1500)
+    padding: 2rem 4rem
   &__container
     border-radius: 18px
     box-shadow: 0 6px 15px 0 rgba(3, 27, 0, 0.09)
@@ -21,11 +23,15 @@
     gap: 4rem
     position: relative
     width: 100%
+    +screen('max', 1700)
+      gap: 2rem
   &__nav
     flex-grow: 1
   &__list
     display: flex
     gap: 3rem
+    +screen('max', 1500)
+      gap: 2rem
   &__item
     margin-bottom: -4.5rem
     padding-bottom: 3.5rem
@@ -53,13 +59,19 @@
           rotate: 180deg
       .header__dropdown
         display: block
+  &__icon
+    +screen('max', 1700)
+      width: 55px
   &__link
     font-weight: 600
-    
     display: inline-block
     padding-bottom: 0.5rem
     border-bottom: 2px solid transparent
     transition: .5s ease
+    +screen('max', 1700)
+      +fs(15px)
+    +screen('max', 1500)
+      +fs(12px)
     span
       width: 7px
       height: 7px
@@ -91,6 +103,13 @@
     justify-content: center
     align-items: center
     transition: .5s ease
+    +screen('max', 1700)
+      width: 32px
+      height: 32px
+      svg
+        +screen('max', 1700)
+          width: 16px
+          height: 16px
     &:hover
       border-color: var(--white)
       background: var(--hover-green)
@@ -99,17 +118,21 @@
     align-items: center
     justify-content: flex-end
     gap: 3rem
+    +screen('max', 1700)
+      gap: 2rem
   &__contacts
     display: flex
     flex-flow: column
   &__phone
     +fs(20px)
     font-weight: 600
-    
+    +screen('max', 1700)
+      +fs(16px)
   &__call
     +fs(14px)
-    
     font-weight: 600
+    +screen('max', 1700)
+      +fs(12px)
   &__control
     display: flex
     gap: .7rem
@@ -123,6 +146,13 @@
     justify-content: center
     align-items: center
     transition: .5s ease
+    +screen('max', 1700)
+      width: 32px
+      height: 32px
+      svg
+        +screen('max', 1700)
+          width: 16px
+          height: 16px
     &:hover
       border-color: var(--white)
       background: var(--hover-green)
@@ -139,7 +169,6 @@
     gap: 1rem 10rem
     li
       +fs(20px)
-      
       color: #4d545a
       margin-bottom: 0
     &:before

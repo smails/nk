@@ -1,5 +1,6 @@
 include ../static/pug/head
 include ../modules/location/location
+include ../modules/callback/callback
 +head('Главная')
 body
   main
@@ -12,6 +13,19 @@ body
     include ../modules/landscaping/landscaping
     include ../modules/placement/placement
     +location('Инфраструктура')
-    include ../modules/callback/callback
+    +callback(1)
     +location('Места поблизости')
+    include ../modules/eco/eco
+    include ../modules/finishing/finishing
+    include ../modules/plane/plane
+    include ../modules/sale/sale
+    include ../modules/offer/offer
+    include ../modules/calc/calc
+    include ../modules/live/live
+    include ../modules/life/life
+    include ../modules/review/review
+    include ../modules/news/news
+    +callback(3)
+    include ../modules/office/office
+    include ../modules/footer/footer
   include ../static/pug/scripts

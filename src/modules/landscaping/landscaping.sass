@@ -1,5 +1,7 @@
 .landscaping
   margin: 14rem 0 16rem
+  +screen('max', 1500)
+    margin: 10rem 0
   &__head
     display: flex
     justify-content: space-between
@@ -7,20 +9,12 @@
   &__control
     display: flex
     gap: 1.2rem
-  &__btn
-    border-color: #bdc0ca
-    color: var(--primary)
-    padding: 1.8rem 2.5rem
-    &.active
-      background: var(--tertiary)
-      color: var(--white)
-      border-color: var(--tertiary)
   &__body
     margin-left: 5.5rem
     position: relative
     margin-top: 3rem
     +screen('max', 1500)
-      margin-left: 3rem
+      margin-left: 7rem
     +screen('max', 1200)
       margin-left: 2rem
   &__pic
@@ -38,6 +32,10 @@
     bottom: 3.5rem
     left: 4rem
     z-index: 2
+    +screen('max', 1500)
+      +fs(22px)
+      bottom: 2.5rem
+      left: 2.5rem
   .swiper-slide
     &:before
       content: ''
@@ -58,3 +56,6 @@
     align-items: center
     z-index: 4
     left: 2rem
+    +screen('max', 1500)
+      width: calc(100% - 10rem)
+      

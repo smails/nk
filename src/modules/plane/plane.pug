@@ -1,0 +1,81 @@
++b.plane
+  +e.inner.inner
+    +e.head
+      +e.H2.title Планировки
+      +e.P.text В ЖК «Новая Кузнечиха» предусмотрено несколько вариантов планировочных решений, включающих как классические планировки, так и квартиры евро формата с совмещенными кухней и гостинной. Новая очередь застройки отличается разнообразием квартир с эргономичными планировками по доступной цене.
+    +e.body
+      +e.control
+        +e.filter
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='Студия' checked)
+            +e.SPAN.txt Студия
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='1')
+            +e.SPAN.txt 1
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='2')
+            +e.SPAN.txt 2
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='3')
+            +e.SPAN.txt 3
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='4')
+            +e.SPAN.txt 4
+        +e.buts
+          +e.A.submit.btn Смотреть все варианты
+            span 1 230 
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+      +e.wrapper
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.pic(src='/img/plane-1.png' alt='')
+              +e.info
+                +e.mark
+                  span от 
+                  | 20 м²
+                +e.mark_orange
+                  span от 
+                  |3 649 685 ₽
+            .swiper-slide
+              +e.IMG.pic(src='/img/plane-2.png' alt='')
+              +e.info
+                +e.mark
+                  span от 
+                  | 20 м²
+                +e.mark_orange
+                  span от 
+                  |3 649 685 ₽
+            .swiper-slide
+              +e.IMG.pic(src='/img/plane-1.png' alt='')
+              +e.info
+                +e.mark
+                  span от 
+                  | 20 м²
+                +e.mark_orange
+                  span от 
+                  |3 649 685 ₽
+            .swiper-slide
+              +e.IMG.pic(src='/img/plane-1.png' alt='')
+              +e.info
+                +e.mark
+                  span от 
+                  | 20 м²
+                +e.mark_orange
+                  span от 
+                  |3 649 685 ₽
+            .swiper-slide
+              +e.IMG.pic(src='/img/plane-1.png' alt='')
+              +e.info
+                +e.mark
+                  span от 
+                  | 20 м²
+                +e.mark_orange
+                  span от 
+                  |3 649 685 ₽

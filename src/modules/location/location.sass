@@ -4,10 +4,12 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 3rem
-    +screen('max', 600)
+    +screen('max', 1500)
       margin-bottom: 2rem
   &__wrapper
     margin-left: 5rem
+    +screen('max', 1500)
+      margin-left: 7rem
     +screen('max', 1200)
       margin-left: 1.5rem
     +screen('min', 1921)
@@ -33,6 +35,8 @@
     bottom: 2rem
     left: 2rem
     z-index: 3
+    +screen('max', 1500)
+      +fs(14px)
   &__time
     padding: .8rem
     display: inline-flex
@@ -45,15 +49,25 @@
     +fs(14px)
     color: rgba(#4d545a, .8)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(10px)
+      padding: 0.65rem
+      gap: .4rem
     &:first-of-type
       left: 1rem
     &:nth-of-type(2)
       right: 1rem
+    svg
+      +screen('max', 1500)
+        height: 11px
+  &__pic
+    max-width: 100%
   &__more
     border-color: var(--secondary)
-    gap: 0.8rem
     color: var(--primary)
     width: 100%
     max-width: 1800px
     margin: 1.6rem auto 0
     display: block
+    +screen('max', 1500)
+      max-width: 1140px

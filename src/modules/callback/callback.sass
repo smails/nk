@@ -1,5 +1,7 @@
 .callback
   margin: 6rem 0 12rem
+  +screen('max', 1500)
+    margin: 6rem 0 10rem
   &__container
     border-radius: 25px
     background-color: var(--secondary)
@@ -9,10 +11,15 @@
     padding: 5rem
     box-sizing: border-box
     color: var(--white)
+    +screen('max', 1500)
+      padding: 4rem
+      background-position: 60% top
   &__title
     +fs(50px)
     font-family: var(--second-family)
     margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(39px)
   &__info
     display: flex
     justify-content: space-between
@@ -22,6 +29,9 @@
     +fs(22px)
     font-weight: 600
     line-height: 1.4
+    +screen('max', 1500)
+      +fs(16px)
+      max-width: 50%
   &__btn
     border-radius: 48px
     padding: 2.5rem
@@ -34,6 +44,25 @@
     transition: .5s ease
     border: 1px solid var(--white)
     text-align: center
+    box-sizing: border-box
+    +screen('max', 1500)
+      +fs(14px)
+      width: 177px
+      padding: 1.6rem
     &:hover
       background: var(--hover-green)
       color: var(--white)
+  &__more
+    backdrop-filter: blur(8px)
+    background: rgba(255, 255, 255, 0.15)
+  &__control
+    display: flex
+    gap: 1.5rem
+    align-items: center
+    +screen('max', 1500)
+      flex-flow: column-reverse
+      align-items: stretch
+      margin-top: -7rem
+    .callback__btn
+      +screen('max', 1500)
+        width: 220px

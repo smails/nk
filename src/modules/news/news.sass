@@ -1,0 +1,40 @@
+.news-tile
+  margin: 11rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3rem
+  &__btn
+    border-color: var(--secondary)
+    color: var(--primary)
+    padding: 2.2rem 3.8rem
+  &__list
+    display: flex
+    gap: 1.5rem
+  &__picture
+    position: relative
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 25px
+    margin-bottom: 3rem
+    max-height: 370px
+    object-fit: cover
+  &__time
+    +fs(18px)
+    line-height: 1.3
+    color: #4d545a
+    margin-bottom: 2rem
+  &__caption
+    +fs(30px)
+    line-height: 1.2
+    font-weight: 600
+    margin-bottom: 2rem
+    text-wrap: balance
+  &__more
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    +fs(18px)
+    font-weight: 600

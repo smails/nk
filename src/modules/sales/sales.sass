@@ -3,6 +3,10 @@
   &__list
     display: flex
     gap: 1.5rem
+  &__item
+    &:last-of-type
+      +screen('max', 1300)
+        display: none
   &__pic
     vertical-align: middle
     width: 100%

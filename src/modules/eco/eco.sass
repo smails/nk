@@ -1,0 +1,87 @@
+.eco
+  margin: 15rem 0 10rem
+  position: relative
+  &:before
+    content: ''
+    width: min(339px, 17vw)
+    height: min(778px, 40vw)
+    position: absolute
+    right: 0
+    top: -20rem
+    background-image: url(../img/bg-park-1.png)
+    background-repeat: no-repeat
+    background-size: contain
+    z-index: 3
+    +screen('max', 1500)
+      top: -15rem
+  &__title
+    font-size: clamp(38px, 7.5vw, 144px)
+    font-family: var(--second-family)
+    color: var(--secondary)
+    letter-spacing: -0.02em
+    line-height: 1
+    border-top: 3px solid var(--secondary)
+    margin-bottom: 3rem
+    display: inline-block
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1.5rem
+    +screen('max', 1500)
+      margin: 0 -6.5rem
+  &__pic
+    width: 100%
+    border-radius: 25px
+    vertical-align: middle
+  &__item
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 8.96%, rgba(0, 0, 0, 0) 66.15%)
+      opacity: 0.8
+      position: absolute
+      top: 0
+      left: 0
+      border-radius: 25px
+      z-index: 1
+  &__content
+    position: absolute
+    bottom: 3.5rem
+    left: 0
+    right: 0
+    margin: 0 auto
+    z-index: 3
+    text-align: center
+  &__time
+    padding: .8rem
+    display: inline-flex
+    align-items: center
+    gap: 0.7rem
+    border-radius: 82px
+    background: var(--white)
+    +fs(14px)
+    color: rgba(#4d545a, .8)
+    font-weight: 600
+    margin-bottom: 1.3rem
+    +screen('max', 1500)
+      +fs(10px)
+      padding: 0.65rem
+      gap: .4rem
+    svg
+      +screen('max', 1500)
+        height: 11px
+  &__caption
+    +fs(26px)
+    color: var(--white)
+    line-height: 1.2
+    +screen('max', 1500)
+      +fs(16px)
+  &__more
+    border-color: var(--secondary)
+    color: var(--primary)
+    width: 100%
+    max-width: 1800px
+    margin: 1.6rem auto 0
+    display: block

@@ -14,6 +14,8 @@
     display: inline-flex
     align-items: center
     gap: 0.8rem
+    +screen('max', 1500)
+      padding: 1.25rem 2rem
     &.btn_transparent
       color: var(--primary)
     &.active
@@ -67,4 +69,5 @@
       position: absolute
       left: 0
       top: -4px
-    
+  &__pic
+    max-width: 100%

@@ -10,9 +10,23 @@
   font-weight: 600
   border: 1px solid transparent
   transition: .5s ease
+  +screen('max', 1500)
+    +fs(14px)
+    padding: 1.6rem 2.5rem
   &_transparent
     background: none
     border-color: var(--white)
+  &_white
+    background: var(--white)
+    color: var(--primary)
+  &_tr-black
+    border-color: #bdc0ca
+    color: var(--primary)
+    padding: 1.8rem 2.5rem
+  &.active
+    background: var(--tertiary)
+    color: var(--white)
+    border-color: var(--tertiary)
 
 .slider-arrows
   display: inline-flex
@@ -29,9 +43,9 @@
   transition: .5s ese
   cursor: pointer
   +screen('max', 1500)
-    width: 55px
-    height: 55px
-  +screen('max', 700)
+    width: 50px
+    height: 50px
+  +screen('max', 1279)
     width: 35px
     height: 35px
   &_gray
@@ -39,8 +53,6 @@
   path
     transition: .5s ese
   svg
-    +screen('max', 1500)
-      transform: scale(.8)
     +screen('max', 700)
       transform: scale(.6)
   &:hover
@@ -51,6 +63,19 @@
   &.swiper-button-disabled
     opacity: 0.5
 
+.slider-dots
+  display: inline-flex
+  gap: 1rem
+  .swiper-pagination-bullet
+    width: 7px
+    height: 7px
+    border-radius: 100%
+    background: var(--white)
+    opacity: 0.3
+    transition: .5s ease
+    &.swiper-pagination-bullet-active
+      opacity: 1
+      background: var(--tertiary)
 .slider
   position: absolute
   width: calc(100% - 40px)

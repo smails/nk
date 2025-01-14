@@ -1,0 +1,106 @@
+.live
+  margin: 10rem 0 8rem
+  &__title
+    +fs(80px)
+    font-family: var(--second-family)
+    text-align: center
+    margin-bottom: 6rem
+    &:before
+      content: ''
+      width: 17px
+      height: 17px
+      border-radius: 100%
+      background: #c41e1e
+      display: inline-block
+      margin-right: 2rem
+      vertical-align: middle
+      margin-bottom: 1rem
+  &__container
+    margin: 0 -5rem
+    padding: 6rem 5rem
+    box-sizing: border-box
+    border-radius: 40px
+    background: var(--fon)
+    +screen('max', 1800)
+      margin: 0 -3rem
+    +screen('max', 1500)
+      margin: 0 -7rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__list
+    display: flex
+    gap: 1.5rem
+  &__item
+    position: relative
+    display: block
+    &:last-of-type
+      +screen('max', 1500)
+        display: none
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      border-radius: 25px
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      position: absolute
+    &:after
+      content: ''
+      width: 60px
+      height: 60px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23F37528'/%3E%3Cpath fill='%23fff' d='M38.4071 28.9287c1.2268.787 1.2268 2.5798 0 3.3668l-10.8266 6.9452c-1.3311.8539-3.0799-.1019-3.0799-1.6834V23.6668c0-1.5814 1.7488-2.5373 3.0799-1.6834l10.8266 6.9453Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+  &__pic
+    border-radius: 25px
+    vertical-align: middle
+    max-width: 100%
+  &__holder
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 2rem
+    box-sizing: border-box
+    +fs(22px)
+    font-weight: 600
+    color: var(--white)
+    z-index: 2
+    +screen('max', 1500)
+      +fs(14px)
+  &__more
+    border-color: var(--secondary)
+    color: var(--primary)
+    width: 100%
+    margin-top: 1.6rem

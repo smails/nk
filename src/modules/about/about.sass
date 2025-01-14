@@ -7,28 +7,44 @@
   background-repeat: no-repeat
   background-position: right bottom
   color: var(--white)
+  +screen('max', 1500)
+    padding: 7rem 5px
+    background-size: 30%
   &__inner
     display: flex
     gap: min(15rem, 10vw)
   &__left
     max-width: 457px
     flex-shrink: 0
+    +screen('max', 1500)
+      max-width: 290px
   &__sign
     +fs(18px)
     font-weight: 600
     margin-bottom: 1.8rem
+    +screen('max', 1500)
+      +fs(16px)
   &__title
     +fs(38px)
     line-height: 1.2
     font-weight: 600
     margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(28px)
+      margin-bottom: 3.5rem
   &__txt
     +fs(28px)
     line-height: 1.5
     margin-bottom: 4rem
+    +screen('max', 1500)
+      +fs(18px)
+      margin-bottom: 3rem
   &__pic
     max-width: 100%
     border-radius: 20px
+    object-fit: cover
+    +screen('max', 1500)
+      height: 307px
   &__vnt
     margin-top: 7rem
     display: flex
@@ -38,6 +54,8 @@
     gap: 4rem
     max-width: 778px
     background: var(--white)
+    +screen('max', 1500)
+      margin-top: 4rem
   &__numb
     +fs(44px)
     color: var(--secondary)
