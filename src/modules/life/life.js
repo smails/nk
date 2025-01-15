@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 
 $('.life').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
-    slidesPerView: 2.4,
+    slidesPerView: 1.5,
     spaceBetween: '15px',
     navigation: {
       nextEl: $(item).find('.slider-arrow_next')[0],

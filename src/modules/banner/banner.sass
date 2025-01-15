@@ -4,6 +4,14 @@
   &__pic
     vertical-align: middle
     width: 100%
+    border-radius: 40px
+    object-fit: cover
+    +screen('max', 1280)
+      height: 700px
+    +screen('max', 1023)
+      height: 900px
+    +screen('max', 700)
+      height: 700px
   &__wrapper
     position: relative
   &__content
@@ -15,11 +23,18 @@
     width: 100%
     +screen('max', 1500)
       padding: 0 6.5rem 8rem
+    +screen('max', 1023)
+      padding: 0 1.5rem 5.5rem
+      max-width: 52%
+    +screen('max', 700)
+      max-width: 100%
   &__tags
     display: flex
     flex-wrap: wrap
     gap: 1.5rem
     max-width: 500px
+    +screen('max', 1280)
+      gap: 1rem
   &__tag
     padding: 1.2rem 1.5rem
     box-sizing: border-box
@@ -57,12 +72,16 @@
     +screen('max', 1500)
       +fs(50px)
       margin: 3rem 0 2rem
+    +screen('max', 700)
+      +fs(48px)
   &__txt
     +fs(26px)
     color: var(--white)
     line-height: 1.2
     +screen('max', 1500)
       +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
   .slider-arrows
     position: absolute
     right: 5.5rem
@@ -70,3 +89,8 @@
     z-index: 3
     +screen('max', 1500)
       bottom: 8rem
+    +screen('max', 1023)
+      right: 1.5rem
+      bottom: 5.5rem
+    +screen('max', 700)
+      display: none

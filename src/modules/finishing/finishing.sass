@@ -2,33 +2,59 @@
   margin: 12rem 0
   +screen('max', 1500)
     margin: 10rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 3rem
+    +screen('max', 1023)
+      display: block
   &__control
     display: flex
     gap: 1.2rem
+    scrollbar-width: 0
+    +screen('max', 1023)
+      margin-top: 2.5rem
+    +screen('max', 700)
+      overflow: auto
+      margin: 2.5rem -1.5rem 0
+      padding: 0 1.5rem
+    &::-webkit-scrollbar
+      height: 0
+  &__btn
+    +screen('max', 700)
+      flex-shrink: 0
   &__wrapper
     position: relative
     .swiper
       padding-inline: 5rem
       +screen('max', 1500)
         padding-inline: 7rem
+      +screen('max', 1280)
+        padding-inline: 2rem
     .slider-arrow
       position: absolute
       top: 50%
       z-index: 2
       transform: translateY(-50%)
+      +screen('max', 1023)
+        display: none
       &_prev
         left: 7rem
         +screen('max', 1500)
           left: 8rem
+        +screen('max', 1280)
+          left: 3rem
       &_next
         right: 7rem
         +screen('max', 1500)
           right: 8rem
+        +screen('max', 1280)
+          right: 3rem
     .swiper-slide
       &:before
         content: ''
@@ -45,10 +71,18 @@
       right: 8rem
       bottom: 3rem
       z-index: 3
+      +screen('max', 1023)
+        display: none
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 25px
+    object-fit: cover
+    +screen('max', 1023)
+      height: 397px
+    +screen('max', 700)
+      height: 260px
+      border-radius: 15px
   &__info
     display: flex
     justify-content: center
@@ -58,3 +92,17 @@
     position: absolute
     width: 100%
     gap: 2rem
+    +screen('max', 1023)
+      position: relative
+      margin-top: 4rem
+    +screen('max', 700)
+      flex-wrap: wrap
+      width: calc(100% - 3rem)
+      left: 1.5rem
+  &__cntrl
+    +screen('max', 1023)
+      width: calc(50% - 4rem)
+    +screen('max', 700)
+      width: 100%
+    &:last-of-type
+      border-color: var(--secondary)

@@ -1,5 +1,10 @@
 .offer
   overflow: hidden
+  &__inner
+    +screen('max', 700)
+      display: flex
+      flex-flow: column-reverse
+      gap: 2rem
   &__head
     display: flex
     justify-content: space-between
@@ -11,6 +16,12 @@
       +screen('max', 1500)
         width: 50px
         height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__title
+    +screen('max', 700)
+      display: none
   &__btn
     border-color: var(--secondary)
     color: var(--primary)
@@ -18,6 +29,13 @@
     margin-right: 2rem
     +screen('max', 1500)
       padding: 1.6rem 2.5rem
+    +screen('max', 1023)
+      margin-right: 0
+    +screen('max', 700)
+      width: 100%
+  &__control
+    +screen('max', 700)
+      width: 100%
   &__wrapper
     .swiper
       margin: 0 -5rem
@@ -54,6 +72,8 @@
     margin-bottom: 2.7rem
     +screen('max', 1500)
       +fs(14px)
+    +screen('max', 1023)
+      margin-bottom: 2rem
     span
       position: relative
       +fs(14.5px)

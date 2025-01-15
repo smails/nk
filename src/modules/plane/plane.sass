@@ -5,6 +5,8 @@
     align-items: flex-start
     gap: 3rem
     margin-bottom: 4rem
+    +screen('max', 1023)
+      display: block
   &__text
     max-width: 1195px
     +fs(20px)
@@ -13,6 +15,9 @@
     +screen('max', 1500)
       +fs(16px)
       max-width: 60%
+    +screen('max', 1023)
+      max-width: 100%
+      margin-top: 2rem
   &__body
     padding: 6rem 5.6rem
     border-radius: 40px
@@ -24,6 +29,12 @@
     +screen('max', 1500)
       margin: 0 -7rem
       padding: 4rem 5rem
+    +screen('max', 1280)
+      margin: 0 -2rem
+      padding: 4rem 2rem
+    +screen('max', 700)
+      padding-bottom: 8rem
+      position: relative
   &__control
     display: flex
     justify-content: space-between
@@ -34,11 +45,16 @@
   &__buts
     display: flex
     gap: 2rem
+    +screen('max', 700)
+      position: absolute
+      bottom: 1.5rem
+      left: 1.5rem
+      width: calc(100% - 3rem)
   &__filter
     display: flex
     gap: 1rem
     position: relative
-    +screen('max', 1200)
+    +screen('max', 1280)
       gap: .8rem
   &__hidden
     display: none
@@ -62,8 +78,6 @@
     +screen('max', 1500)
       +fs(16px)
       padding: 1.3rem 2.1rem
-    +screen('max', 1200)
-      padding: 2rem 1.6rem
   &__submit
     display: flex
     align-items: center
@@ -71,6 +85,9 @@
     padding: 2.2rem 3.8rem
     +screen('max', 1500)
       padding: 1.4rem 2.5rem
+    +screen('max', 700)
+      width: 100%
+      justify-content: center
     span
       display: inline-block
       border-radius: 60px
@@ -84,6 +101,9 @@
   &__pic
     max-width: 100%
     vertical-align: middle
+    object-fit: contain
+    +screen('max', 700)
+      max-height: 245px
   &__info
     display: flex
     justify-content: space-between
@@ -117,6 +137,9 @@
     +screen('max', 1500)
       width: 50px
       height: 50px
+  .slider-arrows
+    +screen('max', 1023)
+      display: none
   .swiper-slide
     padding: 2.5rem 2rem
     border-radius: 25px

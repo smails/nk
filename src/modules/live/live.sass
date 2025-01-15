@@ -1,5 +1,7 @@
 .live
   margin: 10rem 0 8rem
+  +screen('max', 1023)
+    margin: 5.5rem 0
   &__title
     +fs(80px)
     font-family: var(--second-family)
@@ -25,11 +27,18 @@
       margin: 0 -3rem
     +screen('max', 1500)
       margin: 0 -7rem
+    +screen('max', 1280)
+      margin: 0 -2rem
+      padding: 4rem 2rem
+    +screen('max', 1023)
+      padding: 3.5rem 2rem
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 4rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
   &__tabs
     border: 1px solid var(--tertiary)
     border-radius: 84px
@@ -55,9 +64,19 @@
   &__list
     display: flex
     gap: 1.5rem
+    scrollbar-width: 0
+    +screen('max', 1023)
+      flex-wrap: nowrap
+      overflow: auto
+      gap: 1rem
+    &::-webkit-scrollbar
+      height: 0
   &__item
     position: relative
     display: block
+    +screen('max', 1023)
+      width: 350px
+      flex-shrink: 0
     &:last-of-type
       +screen('max', 1500)
         display: none

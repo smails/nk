@@ -2,6 +2,8 @@
   margin: 6rem 0 12rem
   +screen('max', 1500)
     margin: 6rem 0 10rem
+  +screen('max', 700)
+    margin: 5.5rem 0
   &__container
     border-radius: 25px
     background-color: var(--secondary)
@@ -14,16 +16,22 @@
     +screen('max', 1500)
       padding: 4rem
       background-position: 60% top
+    +screen('max', 1023)
+      padding: 3rem
   &__title
     +fs(50px)
     font-family: var(--second-family)
     margin-bottom: 1.5rem
     +screen('max', 1500)
       +fs(39px)
+    +screen('max', 1023)
+      +fs(28px)
   &__info
     display: flex
     justify-content: space-between
     align-items: center
+    +screen('max', 700)
+      display: block
   &__txt
     max-width: 1150px
     +fs(22px)
@@ -32,6 +40,10 @@
     +screen('max', 1500)
       +fs(16px)
       max-width: 50%
+    +screen('max', 1023)
+      +fs(14px)
+    +screen('max', 700)
+      max-width: 100%
   &__btn
     border-radius: 48px
     padding: 2.5rem
@@ -49,6 +61,9 @@
       +fs(14px)
       width: 177px
       padding: 1.6rem
+    +screen('max', 700)
+      width: 100%
+      margin-top: 2rem
     &:hover
       background: var(--hover-green)
       color: var(--white)

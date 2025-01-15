@@ -6,6 +6,9 @@
   overflow: hidden
   +screen('max', 1500)
     padding-block: 7rem
+  +screen('max', 1023)
+    padding-block: 6rem
+    margin: 5.5rem 0
   &__head
     display: flex
     justify-content: space-between
@@ -17,6 +20,9 @@
       +screen('max', 1500)
         width: 50px
         height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
   &__title
     color: var(--white)
   &__btn
@@ -24,6 +30,8 @@
     margin-right: 2rem
     +screen('max', 1500)
       padding: 1.6rem 3.5rem
+    +screen('max', 1023)
+      margin-right: 0
   &__wrapper
     .swiper
       margin: 0 -5rem

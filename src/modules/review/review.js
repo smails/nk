@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 
 $('.review').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
-    slidesPerView: 4.1,
+    slidesPerView: 1.1,
     spaceBetween: '15px',
     navigation: {
       nextEl: $(item).find('.slider-arrow_next')[0],
@@ -13,7 +13,10 @@ $('.review').each((index, item) => {
     },
     modules: [Navigation],
     breakpoints: {
-      1200: {
+      500: {
+        slidesPerView: 2.1,
+      },
+      800: {
         slidesPerView: 3,
       },
       1500: {

@@ -1,6 +1,10 @@
 .eco
   margin: 15rem 0 10rem
   position: relative
+  +screen('max', 1023)
+    margin: 9rem 0 6rem
+  +screen('max', 700)
+    margin: 4rem 0
   &:before
     content: ''
     width: min(339px, 17vw)
@@ -14,8 +18,14 @@
     z-index: 3
     +screen('max', 1500)
       top: -15rem
+    +screen('max', 1023)
+      top: -10rem
+    +screen('max', 700)
+      top: -3rem
+      width: 100px
+      height: 250px
   &__title
-    font-size: clamp(38px, 7.5vw, 144px)
+    font-size: clamp(38px, 7.25vw, 144px)
     font-family: var(--second-family)
     color: var(--secondary)
     letter-spacing: -0.02em
@@ -23,18 +33,43 @@
     border-top: 3px solid var(--secondary)
     margin-bottom: 3rem
     display: inline-block
+    +screen('max', 1023)
+      padding-top: 2rem
+    +screen('max', 700)
+      width: 60vw
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 1.5rem
+    scrollbar-width: 0
     +screen('max', 1500)
       margin: 0 -6.5rem
+    +screen('max', 1280)
+      margin: 0
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 70vw)
+      overflow: auto
+      margin: 0 -1.5rem
+      padding: 0 1.5rem
+    &::-webkit-scrollbar
+      height: 0
   &__pic
     width: 100%
     border-radius: 25px
     vertical-align: middle
+    object-fit: cover
+    +screen('max', 1023)
+      height: 100%
   &__item
     position: relative
+    &:last-of-type
+      max-height: 332px
+      +screen('max', 1023)
+        grid-column: 1/3
+      +screen('max', 700)
+        grid-column: auto
     &:before
       content: ''
       width: 100%

@@ -2,24 +2,35 @@
   margin: 14rem 0 16rem
   +screen('max', 1500)
     margin: 10rem 0
+  +screen('max', 1023)
+    margin: 5.5rem 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
+    +screen('max', 700)
+      display: block
   &__control
     display: flex
     gap: 1.2rem
+    +screen('max', 700)
+      margin-top: 2rem
   &__body
     margin-left: 5.5rem
     position: relative
     margin-top: 3rem
     +screen('max', 1500)
       margin-left: 7rem
-    +screen('max', 1200)
+    +screen('max', 1280)
       margin-left: 2rem
+    +screen('max', 1023)
+      margin-top: 2rem
   &__pic
     width: 100%
     border-radius: 30px
+    object-fit: cover
+    +screen('max', 700)
+      height: 300px
   &__box
     display: none
     &:first-of-type
@@ -36,6 +47,10 @@
       +fs(22px)
       bottom: 2.5rem
       left: 2.5rem
+    +screen('max', 700)
+      +fs(16px)
+      left: 2rem
+      bottom: 2rem
   .swiper-slide
     &:before
       content: ''
@@ -58,4 +73,5 @@
     left: 2rem
     +screen('max', 1500)
       width: calc(100% - 10rem)
-      
+    +screen('max', 1023)
+      display: none

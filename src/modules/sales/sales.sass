@@ -1,12 +1,26 @@
 .sales
   margin: 5rem 0 8.5rem
+  +screen('max', 700)
+    margin: 3.5rem 0
   &__list
     display: flex
     gap: 1.5rem
+    scrollbar-width: 0
+    +screen('max', 1023)
+      overflow: auto
+    &::-webkit-scrollbar
+      height: 0
   &__item
+    +screen('max', 1023)
+      flex-shrink: 0
+      width: 289px
+    +screen('max', 700)
+      width: 187px
     &:last-of-type
       +screen('max', 1300)
         display: none
+      +screen('max', 1023)
+        display: block
   &__pic
     vertical-align: middle
     width: 100%

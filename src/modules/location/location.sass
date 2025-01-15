@@ -10,7 +10,7 @@
     margin-left: 5rem
     +screen('max', 1500)
       margin-left: 7rem
-    +screen('max', 1200)
+    +screen('max', 1280)
       margin-left: 1.5rem
     +screen('min', 1921)
       margin-left: calc((100% - 1850px) / 2)
@@ -71,3 +71,8 @@
     display: block
     +screen('max', 1500)
       max-width: 1140px
+    +screen('max', 1023)
+      width: calc(100% - 4rem)
+  .slider-arrows
+    +screen('max', 1023)
+      display: none
