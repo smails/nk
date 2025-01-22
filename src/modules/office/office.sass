@@ -2,6 +2,8 @@
   margin: 15rem 0 6rem
   +screen('max', 1500)
     margin: 10rem 0 6rem
+  +screen('max', 700)
+    margin: 6.5rem 0 4rem
   &__holder
     font-size: 6.122vw
     font-family: var(--second-family)
@@ -16,6 +18,10 @@
       margin-bottom: 4rem
     +screen('max', 1023)
       font-size: 6.1vw
+    +screen('max', 700)
+      +fs(32px)
+      text-wrap: balance
+      line-height: 1
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -25,6 +31,8 @@
       grid-template-rows: minmax(295px, auto) repeat(2, minmax(123px, auto))
     +screen('max', 1023)
       grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      gap: 2rem 1.4rem
   &__item
     padding: 2.5rem
     box-sizing: border-box
@@ -37,6 +45,31 @@
     gap: 2.5rem
     +screen('max', 1500)
       padding: 2.5rem 2rem
+    +screen('max', 700)
+      border-radius: 10px
+    &:first-of-type, &:nth-of-type(2)
+      +screen('max', 700)
+        grid-column: 1/3
+    &:last-of-type, &:nth-last-of-type(2)
+      +screen('max', 700)
+        padding: 1rem
+        gap: 0
+      .office__title
+        +screen('max', 700)
+          +fs(14px)
+      .office__txt
+        +screen('max', 700)
+          +fs(12px)
+      .office__btn
+        +screen('max', 700)
+          width: 100%
+          padding: 1.3rem
+    &:nth-last-of-type(2)
+      .office__call
+        +screen('max', 700)
+          width: 100%
+          display: block
+          padding: 1.3rem
     &_large
       position: relative
       grid-column: 1/3
@@ -44,6 +77,10 @@
       padding: 0
       +screen('max', 1023)
         grid-row: 3/5
+      +screen('max', 700)
+        gap: 0
+        flex-flow: column-reverse
+        background: none
     &_mod
       position: relative
       color: var(--white)
@@ -99,6 +136,9 @@
     border-radius: 25px
     height: 100%
     object-fit: cover
+    +screen('max', 700)
+      border-radius: 10px
+      margin-top: -30px
   &__floating
     position: absolute
     top: 0.8rem
@@ -117,12 +157,22 @@
     border-radius: 23px
     +screen('max', 1500)
       padding: 3rem
+    +screen('max', 700)
+      position: relative
+      width: 100%
+      left: 0
+      top: 0
+      padding: 2rem
+      border-radius: 15px
   &__caption
     +fs(38px)
     line-height: 1.2
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(28px)
+    +screen('max', 700)
+      +fs(18px)
+      margin-bottom: 1.5rem
   &__txt
     +fs(20px)
     line-height: 1.5
@@ -130,6 +180,8 @@
       +fs(14px)
   &__btn
     margin-top: 3rem
+    +screen('max', 700)
+      margin-top: 2rem
   &__state
     +fs(16px)
     color: var(--white)

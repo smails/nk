@@ -18,6 +18,10 @@
       background-position: 60% top
     +screen('max', 1023)
       padding: 3rem
+    +screen('max', 700)
+      padding: 3rem 2rem
+      background-position: 50% top
+      background-size: 150%
   &__title
     +fs(50px)
     font-family: var(--second-family)
@@ -26,6 +30,9 @@
       +fs(39px)
     +screen('max', 1023)
       +fs(28px)
+    &_mod
+      +screen('max', 700)
+        +fs(22px)
   &__info
     display: flex
     justify-content: space-between
@@ -44,6 +51,7 @@
       +fs(14px)
     +screen('max', 700)
       max-width: 100%
+      margin-bottom: 2rem
   &__btn
     border-radius: 48px
     padding: 2.5rem
@@ -63,13 +71,16 @@
       padding: 1.6rem
     +screen('max', 700)
       width: 100%
-      margin-top: 2rem
+      +fs(12px)
+      margin-top: 0
     &:hover
       background: var(--hover-green)
       color: var(--white)
   &__more
     backdrop-filter: blur(8px)
     background: rgba(255, 255, 255, 0.15)
+    +screen('max', 700)
+      padding: 1.6rem
   &__control
     display: flex
     gap: 1.5rem
@@ -78,6 +89,10 @@
       flex-flow: column-reverse
       align-items: stretch
       margin-top: -7rem
+    +screen('max', 700)
+      margin-top: 0
+      flex-flow: row-reverse
+      gap: .7rem
     .callback__btn
       +screen('max', 1500)
         width: 220px

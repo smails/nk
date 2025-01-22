@@ -2,6 +2,12 @@
   margin: 11rem 0
   +screen('max', 1500)
     margin: 7rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+  &__inner
+    +screen('max', 700)
+      position: relative
+      padding-bottom: 8rem
   &__head
     display: flex
     justify-content: space-between
@@ -13,6 +19,11 @@
     padding: 2.2rem 3.8rem
     +screen('max', 1023)
       padding: 1.6rem 3.5rem
+    +screen('max', 700)
+      position: absolute
+      bottom: 0
+      left: 1.5rem
+      width: calc(100% - 3rem)
   &__list
     display: flex
     gap: 1.5rem

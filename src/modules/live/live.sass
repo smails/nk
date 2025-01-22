@@ -2,11 +2,16 @@
   margin: 10rem 0 8rem
   +screen('max', 1023)
     margin: 5.5rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__title
     +fs(80px)
     font-family: var(--second-family)
     text-align: center
     margin-bottom: 6rem
+    +screen('max', 700)
+      +fs(60px)
+      margin-bottom: 2.5rem
     &:before
       content: ''
       width: 17px
@@ -32,6 +37,7 @@
       padding: 4rem 2rem
     +screen('max', 1023)
       padding: 3.5rem 2rem
+      margin: 0 -1.5rem
   &__head
     display: flex
     justify-content: space-between
@@ -39,12 +45,19 @@
     margin-bottom: 4rem
     +screen('max', 1023)
       margin-bottom: 3rem
+    +screen('max', 700)
+      display: block
+      margin-bottom: 2rem
   &__tabs
     border: 1px solid var(--tertiary)
     border-radius: 84px
     background: var(--white)
     box-sizing: border-box
     padding: 0.3rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+      margin-top: 2.5rem
   &__tab
     +fs(18px)
     font-weight: 600
@@ -54,6 +67,9 @@
     +screen('max', 1500)
       +fs(12px)
       padding: 1.2rem 1.5rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
     &.active
       background: var(--tertiary)
       color: var(--white)
@@ -77,6 +93,8 @@
     +screen('max', 1023)
       width: 350px
       flex-shrink: 0
+    +screen('max', 700)
+      width: 80vw
     &:last-of-type
       +screen('max', 1500)
         display: none
