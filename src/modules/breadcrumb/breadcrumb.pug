@@ -1,0 +1,14 @@
+mixin breadcrumb(links, active)
+  +b.breadcrumb(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+    +e.inner.inner
+      each link, index in links
+        if link == active
+          +e.SPAN.active(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+            a(itemprop='item', title=link , href="#")
+              span(itemprop='name')=link
+              meta(itemprop='position', content=index)
+        else
+          +e.SPAN.link(itemscope='', itemprop='itemListElement', itemtype='http://schema.org/ListItem')
+            a(itemprop='item', title=link , href="#")
+              span(itemprop='name')=link
+              meta(itemprop='position', content=index)

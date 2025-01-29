@@ -1,0 +1,13 @@
+.breadcrumb
+  margin-bottom: 6rem
+  +screen('max', 1500)
+    margin-bottom: 3.5rem
+  &__active, &__link
+    color: #838c95
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+  &__link
+    &:after
+      content: '/'
+      padding-inline: .2rem .4rem

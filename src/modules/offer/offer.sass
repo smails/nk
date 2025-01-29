@@ -1,5 +1,16 @@
 .offer
   overflow: hidden
+  margin: 7.5rem 0
+  position: relative
+  +screen('max', 700)
+    margin: 4.5rem 0
+  &_sale
+    +screen('max', 700)
+      padding-top: 5rem
+    .offer__title
+      display: block
+      position: absolute
+      top: 0
   &__inner
     +screen('max', 700)
       display: flex

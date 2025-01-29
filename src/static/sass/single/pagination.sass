@@ -1,0 +1,65 @@
+.pagination
+  margin: 5rem 0 3rem
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: .8rem
+  +screen('max', 700)
+    margin: 3.5rem 0 1.5rem
+  &__btn
+    display: inline-flex
+    align-items: center
+    gap: 1.3rem
+    border: 1px solid var(--secondary)
+    border-radius: 71px
+    padding: 1.85rem
+    box-sizing: border-box
+    +fs(18px)
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 1.35rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.35rem .8rem
+      gap: .3rem
+    &.disabled
+      opacity: 0.4
+  &__numb
+    display: block
+    box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    +fs(18px)
+    color: #838c95
+    transition: .5s ease
+    border-radius: 100%
+    background: var(--white)
+    +screen('max', 1500)
+      width: 40px
+      height: 40px
+      +fs(14px)
+    +screen('max', 700)
+      display: none
+    &:nth-of-type(-n + 4)
+      +screen('max', 700)
+        display: flex
+    &.active
+      background: var(--secondary)
+      box-shadow: none
+      color: var(--white)
+  &__next
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid var(--secondary)
+    border-radius: 100%
+    box-sizing: border-box
+    +screen('max', 1500)
+      width: 40px
+      height: 40px

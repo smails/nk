@@ -1,0 +1,355 @@
+.filter
+  &.fixed
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 999
+    .filter__inner
+      padding: 5.5rem
+      background: var(--white)
+      border-radius: 40px
+      box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
+      margin: 0.7rem
+      max-width: calc(100% - 1.4rem)
+      max-height: 100%
+      overflow: auto
+      +screen('max', 1023)
+        position: absolute
+        bottom: 0
+        left: 0
+        margin: 0
+        border-radius: 30px
+        max-width: 100%
+        padding: 4rem 2rem
+      +screen('max', 700)
+        padding: 4rem 1.5rem
+        border-radius: 20px 20px 0 0
+    .filter__mini-control
+      display: none
+    .filter__action
+      grid-auto-flow: column
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+      gap: 0
+      align-items: flex-start
+      +screen('max', 1023)
+        grid-template-columns: repeat(2, 1fr)
+        grid-auto-flow: row
+        grid-template-rows: auto
+        gap: 3rem 2rem
+      +screen('max', 700)
+        gap: 2rem
+    .filter__box
+      padding-right: 6rem
+      margin-right: 6rem
+      padding-bottom: 4.5rem
+      border-right: 1px solid #d7dbe0
+      +screen('max', 1500)
+        padding-right: 4rem
+        margin-right: 4rem
+        padding-bottom: 3rem
+      +screen('max', 1023)
+        padding-right: 0
+        margin-right: 0
+        border-right: 0
+        padding-bottom: 0
+      +screen('max', 700)
+        display: block
+        grid-column: 1/3
+      &:nth-last-of-type(2)
+        grid-row: 1/4
+        grid-column: 3/4
+        padding-right: 0
+        margin-right: 0
+        border-right: 0
+        padding-bottom: 0
+        +screen('max', 1023)
+          grid-column: 1/3
+          grid-row: 5/5
+        +screen('max', 700)
+          grid-row: 8/8
+      &:nth-of-type(4n)
+        padding-bottom: 1.5rem
+        +screen('max', 1023)
+          padding-bottom: 0
+      &:nth-last-of-type(4), &:nth-last-of-type(5)
+        +screen('max', 1023)
+          display: block
+      &:nth-last-of-type(4)
+        +screen('max', 700)
+          grid-column: 1/2
+      &_filter
+        display: block
+        +screen('max', 700)
+          grid-column: 2/3
+    .filter__reset
+      margin-bottom: 0
+    .filter__overlay, .filter__tags
+      display: block
+    .filter__head, .filter__control
+      display: flex
+    .filter__reset
+      +screen('max', 700)
+        display: block
+  &__close
+    cursor: pointer
+    svg
+      +screen('max', 1500)
+        height: 27px
+        width: 27px
+      +screen('max', 700)
+        width: 15px
+        height: 15px
+    +screen('max', 700)
+      position: absolute
+      top: 1.5rem
+      right: 1.5rem
+  &__head
+    display: none
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__wrap
+    display: flex
+    align-items: center
+    gap: 4rem
+  &__overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    backdrop-filter: blur(9px)
+    background: rgba(0, 0, 0, 0.3)
+    z-index: -1
+    display: none
+  &__action
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 3.5rem 2rem
+    +screen('max', 1500)
+      gap: 2.5rem 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+  &__caption
+    margin-bottom: 1.5rem
+    color: #4d545a
+    opacity: 0.7
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 1rem
+  &__list
+    display: flex
+    gap: 1rem
+    position: relative
+    +screen('max', 1280)
+      gap: .8rem
+  &__box
+    &_filter
+      display: none
+    &:nth-last-of-type(4), &:nth-last-of-type(5)
+      +screen('max', 1023)
+        display: none
+    +screen('max', 700)
+      display: none
+    &:nth-last-of-type(2)
+      +screen('max', 700)
+        display: block
+  &__hidden
+    display: none
+    &:checked + .proposal__txt
+      background: var(--dark-green)
+      color: var(--white)
+  &__txt
+    border-radius: 45px
+    padding: 2rem 3.2rem
+    background: var(--fon)
+    text-align: center
+    line-height: 1.5
+    +fs(18px)
+    color: var(--primary)
+    transition: .5s ease
+    cursor: pointer
+    display: inline-block
+    box-sizing: border-box
+    flex-shrink: 0
+    font-weight: 600
+    border: 1px solid transparent
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 1.3rem 1.6rem
+    &:hover
+      background: var(--white)
+      border-color: var(--hover-green)
+  &__row
+    display: flex
+    padding: 1rem 2rem
+    width: 100%
+    border-radius: 100px
+    background: var(--fon)
+    box-sizing: border-box
+    position: relative
+    height: 73px
+    +screen('max', 1500)
+      height: 50px
+    &:before
+      content: ''
+      width: 2px
+      height: 27px
+      background: #838c95
+      opacity: .3
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      +screen('max', 1500)
+        height: 22px
+  &__field
+    +fs(18px)
+    background: none
+    border: none
+    text-align: center
+    margin-left: auto
+    margin-right: 0
+    color: var(--primary)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+  &__group
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    gap: .5rem
+    &_start
+      left: 2rem
+    &_end
+      right: 2rem
+    span
+      +fs(14px)
+      color: #4d545a
+  &__mini-control
+    display: flex
+    align-items: flex-end
+    gap: 3rem
+    height: 100%
+    justify-content: flex-end
+    +screen('max', 1500)
+      gap: 2rem
+    +screen('max', 700)
+      gap: 0
+  &__reset
+    +fs(18px)
+    display: inline-flex
+    align-items: center
+    flex-shrink: 0
+    gap: 0.7rem
+    font-weight: 600
+    color: #838c95
+    margin-bottom: 2.5rem
+    +screen('max', 1500)
+      +fs(14px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      display: none
+    svg
+      +screen('max', 1500)
+        width: 12px
+        height: 12px
+  &__full-filter
+    padding: 2.15rem 2rem
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    cursor: pointer
+    +screen('max', 1500)
+      padding: 1.5rem
+    +screen('max', 700)
+      width: 100%
+      justify-content: center
+    svg
+      +screen('max', 1500)
+        width: 16px
+        height: 17px
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__submit
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: .8rem
+    width: 100%
+    span
+      display: inline-block
+      border-radius: 60px
+      background: var(--white)
+      +fs(14px)
+      color: var(--secondary)
+      padding: .5rem.6rem .3rem
+      font-weight: 700
+      box-sizing: border-box
+      line-height: 1
+      +screen('max', 1500)
+        +fs(12px)
+  &__control
+    grid-row: 5/6
+    grid-column: 1/4
+    display: flex
+    align-items: center
+    gap: 4.5rem
+    display: none
+    +screen('max', 1023)
+      grid-column: 1/3
+      grid-row: 6/6
+    +screen('max', 700)
+      grid-row: 9/9
+      flex-flow: column
+      justify-content: center
+      gap: 2rem
+  &__tags
+    display: none
+  &__tags-list
+    display: flex
+    flex-wrap: wrap
+    gap: 1.2rem
+    margin-top: 2rem
+    +screen('max', 700)
+      gap:.8rem
+  &__tag
+    padding: 1.5rem 2rem
+    font-weight: 600
+    background: #f0f1f3
+    box-sizing: border-box
+    border-radius: 82px
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
+      padding: 1.2rem

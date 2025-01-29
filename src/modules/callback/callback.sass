@@ -12,6 +12,7 @@
     background-position: right top
     padding: 5rem
     box-sizing: border-box
+    background-size: cover
     color: var(--white)
     +screen('max', 1500)
       padding: 4rem
@@ -22,6 +23,29 @@
       padding: 3rem 2rem
       background-position: 50% top
       background-size: 150%
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    border-radius: 25px
+    background-color: var(--secondary)
+    background-image: url(../img/bg-callback-1.png)
+    background-repeat: no-repeat
+    background-position: right top
+    padding: 5rem
+    box-sizing: border-box
+    color: var(--white)
+    +screen('max', 1500)
+      padding: 4rem
+      background-position: 60% top
+    +screen('max', 1023)
+      padding: 3rem
+    +screen('max', 700)
+      padding: 3rem 2rem
+      background-position: 50% top
+      background-size: 150%
+      flex-flow: column
+      gap: 2rem
   &__title
     +fs(50px)
     font-family: var(--second-family)
@@ -31,6 +55,13 @@
     +screen('max', 1023)
       +fs(28px)
     &_mod
+      +screen('max', 700)
+        +fs(22px)
+    &_two
+      max-width: 1000px
+      margin-bottom: 0
+      +screen('max', 1500)
+        max-width: 700px
       +screen('max', 700)
         +fs(22px)
   &__info

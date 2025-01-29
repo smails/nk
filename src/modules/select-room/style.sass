@@ -1,0 +1,362 @@
+.sr-header
+  margin: 6rem 0
+  +screen('max', 1500)
+    margin: 3.5rem 0
+  +screen('max', 700)
+    margin: 2rem 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 1023)
+      display: block
+  &__control
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 2rem
+    +screen('max', 1500)
+      gap: 1rem
+    +screen('max', 1023)
+      margin-top: 2rem
+      justify-content: space-between
+      flex-flow: row-reverse
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__btn
+    border-radius: 48px
+    padding: 1.5rem
+    box-sizing: border-box
+    width: 66px
+    height: 66px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 2rem
+    +fs(18px)
+    color: var(--white)
+    background: var(--secondary)
+    font-weight: 600
+    white-space: nowrap
+    transition: .5s ease
+    +screen('max', 1500)
+      width: 45px
+      height: 45px
+      +fs(12px)
+    +screen('max', 1023)
+      width: 180px
+      flex-flow: row-reverse
+      gap: 1rem
+    svg
+      flex-shrink: 0
+      +screen('max', 1500)
+        width: 17px
+        height: 15px
+    span
+      display: none
+      +screen('max', 1023)
+        display: block
+      svg
+        margin-left: 1rem
+        +screen('max', 1023)
+          display: none
+    @media (hover: hover)
+      &:hover
+        width: 308px
+        background: var(--dark-green)
+        span
+          display: block
+
+.sr-product-list
+  margin-top: 7rem
+  padding-block: 5rem
+  box-sizing: border-box
+  border-radius: 40px
+  background: var(--fon)
+  +screen('max', 1500)
+    padding-block: 4rem
+    margin-top: 4.5rem
+    border-radius: 20px
+  +screen('max', 700)
+    margin-top: 2rem
+    padding-block: 2.4rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2rem
+    position: relative
+    +screen('max', 1023)
+      padding-bottom: 4rem
+    +screen('max', 700)
+      padding-bottom: 0
+    .select
+      width: 435px
+      +screen('max', 1500)
+        width: 270px
+      +screen('max', 700)
+        width: 70vw
+        max-width: 217px
+      &__summary
+        background: var(--white)
+        box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
+        +screen('max', 1500)
+          padding: 1.35rem 1.5rem
+  &__left
+    display: flex
+    align-items: center
+    gap: 2rem
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    +screen('max', 700)
+      display: none
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__filter-block
+    width: 66px
+    height: 66px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--white)
+    box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
+    transition: .5s ease
+    border-radius: 100%
+    +screen('max', 1500)
+      width: 45px
+      height: 45px
+    +screen('max', 700)
+      display: none
+    &:hover
+      background: var(--tertiary)
+      path
+        fill: var(--white)
+        opacity: 1
+    svg
+      vertical-align: middle
+      +screen('max', 1500)
+        width: 16px
+        height: 16px
+  &__right
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 3rem
+  &__count
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1023)
+      position: absolute
+      bottom: 0
+      left: 0
+    +screen('max', 700)
+      display: none
+  &__performance
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    +screen('max', 700)
+      gap: .8rem
+  &__perf
+    width: 66px
+    height: 66px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--white)
+    box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
+    transition: .5s ease
+    border-radius: 100%
+    +screen('max', 1023)
+      width: 45px
+      height: 45px
+    svg
+      vertical-align: middle
+      +screen('max', 1500)
+        width: 16px
+        height: 16px
+    &.active
+      background: var(--tertiary)
+      g
+        opacity: 1
+        fill: #fff
+  &__body
+    margin-top: 5rem
+    +screen('max', 1500)
+      margin-top: 4rem
+    +screen('max', 700)
+      margin-top: 2.5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    +screen('max', 1500)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+    .callback
+      grid-column: 1/5
+      margin: 0
+      +screen('max', 1500)
+        grid-column: 1/4
+      +screen('max', 1023)
+        grid-column: 1/3
+      +screen('max', 700)
+        grid-column: 1/2
+
+
+.sp-prod-card
+  box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+  border-radius: 25px
+  background: var(--white)
+  padding: 2.5rem
+  box-sizing: border-box
+  +screen('max', 1500)
+    padding: 1.5rem 2rem
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: 2rem
+  &__position
+    display: flex
+    gap: 2rem
+    +fs(14px)
+    font-weight: 600
+    color: #838c95
+    opacity: 0.8
+    margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(12px)
+  &__type
+    display: flex
+    +fs(14px)
+    font-weight: 600
+    gap: .4rem
+    +screen('max', 1500)
+      +fs(12px)
+    span
+      &:after
+        content: '•'
+  &__right
+    display: flex
+    gap: 1.5rem
+    justify-content: flex-end
+    position: relative
+    right: -1rem
+  &__middle
+    margin: 3rem 0
+    max-width: 100%
+  &__slider
+    position: relative
+    max-width: 350px
+    margin: 0 auto
+    +screen('max', 1500)
+      max-width: 280px
+    .swiper-slide
+      text-align: center
+    .slider-dots
+      display: flex
+      justify-content: center
+      margin-top: 2rem
+      .swiper-pagination-bullet.swiper-pagination-bullet-active
+        background: var(--secondary)
+      .swiper-pagination-bullet
+        background:  #838c95
+  &__pic
+    max-width: 100%
+  &__price
+    +fs(28px)
+    font-weight: 600
+    margin-bottom: 2rem
+    line-height: 1
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    +screen('max', 1500)
+      +fs(24px)
+      margin-bottom: 1.2rem
+    span
+      &:first-of-type
+        color: #dd4949
+  &__old
+    +fs(11px)
+    color: #838c95
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 1px
+      background: #dd4949
+      position: absolute
+      top: 0
+      right: 0
+      transform: rotate(-8deg)
+      transform-origin: right
+  &__info
+    color: rgba(131, 140, 149, 0.8)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+    p
+      margin-bottom: 1rem
+    a
+      color: var(--secondary)
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    gap: 1.2rem
+    margin-top: 2rem
+    +screen('max', 1500)
+      margin-top: 1.2rem
+  &__tag
+    padding: 0.8rem 1.2rem
+    font-weight: 600
+    background: #f0f1f3
+    box-sizing: border-box
+    border-radius: 82px
+    +screen('max', 1500)
+      +fs(12px)
+    &_sale
+      color: var(--white)
+      background: #dd4949

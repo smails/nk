@@ -25,3 +25,17 @@ mixin callback(type)
           +e.info
             +e.P.txt Подпишитесь на новости и получайте информацию о спецпредложениях первыми. Не упустите выгодные возможности!
             +e.A.btn.js-open-modal(href="#callback") Подробнее 
+  if type == 4
+    +b.callback
+      +e.inner
+        +e.box
+          +e.P.title_two Кэшбек 15% от стоимости квартиры до 28 июня
+          +e.A.btn.js-open-modal(href="#callback") Узнать больше 
+  if type == 5
+    +b.callback
+      +e.inner.inner
+        +e.container
+          +e.P.title Записаться в демоквартиру
+          +e.info
+            +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
+            +e.A.btn.js-open-modal(href="#callback") Записаться
