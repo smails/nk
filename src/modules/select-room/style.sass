@@ -216,8 +216,8 @@
     &.active
       background: var(--tertiary)
       g
-      opacity: 1
-      fill: #fff
+        opacity: 1
+        fill: #fff
   &__body
     margin-top: 5rem
     +screen('max', 1500)
@@ -423,3 +423,187 @@
     &:hover
       path
         stroke: var(--white)
+
+.sr-product-line
+  &__top
+    display: grid
+    grid-template-columns: 150px 160px 100px 100px 180px 120px 1fr
+    gap: 5rem
+  &__row
+    display: grid
+    gap: 5rem
+    grid-template-columns: 150px 160px 100px 100px 180px 120px 300px 115px 50px
+    align-items: center
+    padding: 0.5rem
+    box-sizing: border-box
+    margin-bottom: 1.5rem
+    box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
+    background: var(--white)
+    border-radius: 20px
+    position: relative
+  &__caption
+    +fs(16px)
+    font-weight: 600
+    color: #838c95
+    margin-bottom: 2rem
+  &__pic
+    width: 146px
+    vertical-align: middle
+  &__title
+    +fs(24px)
+    font-weight: 600
+  &__txt
+    +fs(20px)
+    span
+      color: var(--secondary)
+  &__price
+    +fs(30px)
+    font-weight: 600
+    margin-bottom: 2rem
+    line-height: 1
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    +screen('max', 1500)
+      +fs(24px)
+      margin-bottom: 1.2rem
+    span
+      &:first-of-type
+        color: #dd4949
+  &__old
+    +fs(8px)
+    color: #838c95
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 1px
+      background: #dd4949
+      position: absolute
+      top: 0
+      right: 0
+      transform: rotate(-8deg)
+      transform-origin: right
+  &__info
+    color: rgba(131, 140, 149, 0.8)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+    p
+      margin-bottom: 1rem
+    a
+      color: var(--secondary)
+  &__tags
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: flex-start
+    gap: 1.2rem
+  &__tag
+    padding: 0.8rem 1.2rem
+    font-weight: 600
+    background: #f0f1f3
+    box-sizing: border-box
+    border-radius: 82px
+    display: inline-block
+    position: relative
+    +screen('max', 1500)
+      +fs(12px)
+    &_sale
+      color: var(--white)
+      background: #dd4949
+      cursor: pointer
+      &:hover
+        .sr-product-line__sale-hidden
+          opacity: 1
+          z-index: 2
+          visibility: visible
+  &__control
+    position: absolute
+    right: 3rem
+    top: 3rem
+    display: flex
+    flex-flow: column-reverse
+    justify-content: space-between
+    height: calc(100% - 6rem)
+  &__more
+    position: relative
+    span
+      display: inline-block
+      border: 1px solid var(--secondary)
+      border-radius: 82px
+      padding: .8rem 1.2rem 1rem
+      box-sizing: border-box
+      font-weight: 600
+      color: var(--secondary)
+      transition: .5s ease
+      cursor: pointer
+    &:hover
+      span
+        background: var(--hover-green)
+        color: var(--white)
+      .sr-product-line__more-hidden
+        opacity: 1
+        z-index: 2
+        visibility: visible
+  &__more-hidden
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: calc(100% + 1rem)
+    box-shadow: 0 4px 45px 0 rgba(29, 31, 34, 0.1), 0 4px 12px 0 rgba(0, 0, 0, 0.05)
+    background: var(--white)
+    border-radius: 10px
+    padding: 1.5rem
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    gap: 1rem
+    flex-wrap: wrap
+    min-width: 220px
+    max-width: 220px
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+    transition: .5s ease
+  &__sale-hidden
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: calc(100% + .5rem)
+    background: var(--secondary)
+    border-radius: 10px
+    padding: 1.4rem 1.2rem
+    box-sizing: border-box
+    +fs(18px)
+    font-weight: 600
+    flex-wrap: wrap
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+    transition: .5s ease
+    min-width: 350px
+  &__link
+    display: flex
+    justify-content: center
+    gap: 1rem
+    span
+      display: inline-block
+      border-radius: 60px
+      background: var(--white)
+      +fs(16px)
+      color: var(--secondary)
+      padding: .5rem.6rem
+      font-weight: 700
+      box-sizing: border-box
+      line-height: .8
+      +screen('max', 1500)
+        +fs(12px)
+  &__favor
+    &.active
+      path
+        fill: #dd4949
+    &:hover
+      path
+        fill: #dd4949
+        opacity: 0.5
