@@ -220,7 +220,7 @@
           +e.P.caption Дом
           +e.P.caption Этаж
           +e.P.caption Стоимость
-        +e.row
+        +e.A.row(href="#")
           +e.IMG.pic(src='/img/plane-1.png' alt='')
           +e.P.title Студия
           +e.P.txt 22,2 м²
@@ -228,26 +228,33 @@
           +e.P.txt 15 дом, 2 секц.
           +e.P.txt 2 из 14
           +e.prices
+            +e.position
+              span дом 15, секц. 2
+              span Ввод  4 кв. 2023
             +e.P.price 3 799 600 ₽
+            +e.type
+              span Студия
+              span 21 м²
+              span 15 этаж
             +e.P.info Ипотека от 
-              a(href="#")  8 599 ₽/мес
+              span  8 599 ₽/мес
             +e.P.info Первоначальный взнос от 
-              a(href="#")  128 599 ₽
+              span  128 599 ₽
           +e.tags
-            +e.A.tag(href="#") Лоджия
+            +e.tag Лоджия
             +e.more
               span +2
               +e.more-hidden
-                +e.A.tag(href="#") Лоджия
-                +e.A.tag(href="#") Терраса
+                +e.tag Лоджия
+                +e.tag Терраса
           +e.control
-            +e.A.block(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none')
+            +e.block
+              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none' viewBox="0 0 22 29")
                 path(fill='#D3D6DD' fill-rule='evenodd' d='M18.1172 10.9992h.9c1.488 0 2.7 1.2107 2.7 2.7v12.6c0 1.4893-1.212 2.7-2.7 2.7H2.81719c-1.48798 0-2.7-1.2107-2.7-2.7v-12.6c0-1.4893 1.21202-2.7 2.7-2.7h.9V7.39922c0-3.97091 3.22909-7.2 7.20001-7.2 3.5639 0 6.5302 2.60106 7.1009 6.00503.1096.65364-.4382 1.19497-1.1009 1.19497-.6628 0-1.1847-.54566-1.3487-1.18781-.5298-2.07438-2.4139-3.61212-4.6513-3.61212-2.64725 0-4.79994 2.15263-4.79994 4.79993v3.59998H18.1172Z' clip-rule='evenodd')
-            +e.A.favor(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+            +e.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none' viewBox="0 0 30 30")
                 path(fill='#D3D6DD' d='M15.8791 28.1592c-.4809.1676-1.2729.1676-1.7537 0C10.0239 26.7767.85937 21.0093.85937 11.234c0-4.31509 3.52158-7.80627 7.86343-7.80627 2.574 0 4.851 1.2289 6.2794 3.12809 1.4285-1.89919 3.7196-3.12809 6.2795-3.12809 4.3418 0 7.8634 3.49118 7.8634 7.80627 0 9.7753-9.1646 15.5427-13.266 16.9252Z')
-        +e.row
+        +e.A.row(href="#")
           +e.IMG.pic(src='/img/plane-1.png' alt='')
           +e.P.title 2-комнатная
           +e.P.txt 22,2 м²
@@ -256,26 +263,33 @@
             span Готов к заселению
           +e.P.txt 2 из 14
           +e.prices
+            +e.position
+              span дом 15, секц. 2
+              span Ввод  4 кв. 2023
             +e.P.price
               span 3 649 685 ₽
               +e.old 12 649 685 ₽
+            +e.type
+              span Студия
+              span 21 м²
+              span 15 этаж
             +e.P.info Ипотека от 
-              a(href="#")  8 599 ₽/мес
+              span 8 599 ₽/мес
             +e.P.info Первоначальный взнос от 
-              a(href="#")  128 599 ₽
+              span 128 599 ₽
           +e.tags
             +e.tag_sale Акция -30%
               +e.sale-hidden
-                +e.A.link(href='#') Все квартиры по данной акции
+                +e.link Все квартиры по данной акции
                   span 15
           +e.control
-            +e.A.block(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none')
+            +e.block
+              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none' viewBox="0 0 22 29")
                 path(fill='#D3D6DD' fill-rule='evenodd' d='M18.1172 10.9992h.9c1.488 0 2.7 1.2107 2.7 2.7v12.6c0 1.4893-1.212 2.7-2.7 2.7H2.81719c-1.48798 0-2.7-1.2107-2.7-2.7v-12.6c0-1.4893 1.21202-2.7 2.7-2.7h.9V7.39922c0-3.97091 3.22909-7.2 7.20001-7.2 3.5639 0 6.5302 2.60106 7.1009 6.00503.1096.65364-.4382 1.19497-1.1009 1.19497-.6628 0-1.1847-.54566-1.3487-1.18781-.5298-2.07438-2.4139-3.61212-4.6513-3.61212-2.64725 0-4.79994 2.15263-4.79994 4.79993v3.59998H18.1172Z' clip-rule='evenodd')
-            +e.A.favor(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+            +e.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none' viewBox="0 0 30 30")
                 path(fill='#D3D6DD' d='M15.8791 28.1592c-.4809.1676-1.2729.1676-1.7537 0C10.0239 26.7767.85937 21.0093.85937 11.234c0-4.31509 3.52158-7.80627 7.86343-7.80627 2.574 0 4.851 1.2289 6.2794 3.12809 1.4285-1.89919 3.7196-3.12809 6.2795-3.12809 4.3418 0 7.8634 3.49118 7.8634 7.80627 0 9.7753-9.1646 15.5427-13.266 16.9252Z')
-        +e.row
+        +e.A.row(href="#")
           +e.IMG.pic(src='/img/plane-1.png' alt='')
           +e.P.title 1-комнатная
           +e.P.txt 22,2 м²
@@ -284,26 +298,33 @@
             span Готов к заселению
           +e.P.txt 2 из 14
           +e.prices
+            +e.position
+              span дом 15, секц. 2
+              span Ввод  4 кв. 2023
             +e.P.price
               span 3 649 685 ₽
               +e.old 12 649 685 ₽
+            +e.type
+              span Студия
+              span 21 м²
+              span 15 этаж
             +e.P.info Ипотека от 
-              a(href="#")  8 599 ₽/мес
+              span  8 599 ₽/мес
             +e.P.info Первоначальный взнос от 
-              a(href="#")  128 599 ₽
+              span  128 599 ₽
           +e.tags
-            +e.A.tag(href="#") Лоджия
+            +e.tag Лоджия
             +e.more
               span +2
               +e.more-hidden
-                +e.A.tag(href="#") Лоджия
-                +e.A.tag(href="#") Терраса
+                +e.tag Лоджия
+                +e.tag Терраса
           +e.control
-            +e.A.block(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none')
+            +e.block
+              svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none' viewBox="0 0 22 29")
                 path(fill='#D3D6DD' fill-rule='evenodd' d='M18.1172 10.9992h.9c1.488 0 2.7 1.2107 2.7 2.7v12.6c0 1.4893-1.212 2.7-2.7 2.7H2.81719c-1.48798 0-2.7-1.2107-2.7-2.7v-12.6c0-1.4893 1.21202-2.7 2.7-2.7h.9V7.39922c0-3.97091 3.22909-7.2 7.20001-7.2 3.5639 0 6.5302 2.60106 7.1009 6.00503.1096.65364-.4382 1.19497-1.1009 1.19497-.6628 0-1.1847-.54566-1.3487-1.18781-.5298-2.07438-2.4139-3.61212-4.6513-3.61212-2.64725 0-4.79994 2.15263-4.79994 4.79993v3.59998H18.1172Z' clip-rule='evenodd')
-            +e.A.favor(href="#")
-              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+            +e.favor
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none' viewBox="0 0 30 30")
                 path(fill='#D3D6DD' d='M15.8791 28.1592c-.4809.1676-1.2729.1676-1.7537 0C10.0239 26.7767.85937 21.0093.85937 11.234c0-4.31509 3.52158-7.80627 7.86343-7.80627 2.574 0 4.851 1.2289 6.2794 3.12809 1.4285-1.89919 3.7196-3.12809 6.2795-3.12809 4.3418 0 7.8634 3.49118 7.8634 7.80627 0 9.7753-9.1646 15.5427-13.266 16.9252Z')
       +b.pagination
         +e.A.btn.disabled(href="#")

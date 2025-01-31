@@ -216,6 +216,8 @@
   &__open-mobile
     display: inline-block
     position: relative
+    +screen('min', 1280)
+      display: none
     &:before
       content: ''
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23fff'/%3E%3Cpath stroke='%2351A747' stroke-linecap='round' stroke-width='2' d='M31.3672 18.6367 18.6393 31.3646M31.3672 31.3633 18.6393 18.6354'/%3E%3C/svg%3E")
