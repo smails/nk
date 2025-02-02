@@ -1,0 +1,13 @@
+include ../static/pug/head
+include ../modules/breadcrumb/breadcrumb
+include ../modules/callback/callback
++head('Выбор квартиры и парковочного места')
+body
+  main.gray
+    +header()
+    +breadcrumb(['Главная','Выбор квартиры и парковочного места', '1-комн. 41.7 м²'], '1-комн. 41.7 м²')
+    include ../modules/product/product
+    include ../modules/footer/footer
+  include ../static/pug/scripts
+  
+  

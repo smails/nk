@@ -1,0 +1,389 @@
+.product
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3.5rem
+    +screen('max', 1500)
+      margin-bottom: 2rem
+  &__back
+    display: inline-flex
+    align-items: center
+    gap: 1.2rem
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+    svg
+      +screen('max', 1500)
+        width: 20px
+        height: 20px
+  &__tech
+    display: flex
+    align-items: center
+    gap: 2.5rem
+  &__state
+    position: relative
+    padding-left: 1.5rem
+    +screen('max', 1500)
+      +fs(14px)
+      padding-left: 1rem
+    &:before
+      content: ''
+      width: 8px
+      height: 8px
+      border-radius: 100%
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      +screen('max', 1500)
+        width: 6px
+        height: 6px
+    &_green
+      &:before
+        background: #1dc509
+    &_red
+      &:before
+        background: var(--color-red)
+  &__knops
+    display: flex
+    gap: 1.5rem
+  &__knop
+    width: 50px
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    background: #ccced4
+    +screen('max', 1500)
+      width: 45px
+      height: 45px
+    +screen('max', 700)
+      width: 35px
+      height: 35px
+    &:first-of-type
+      +screen('max', 700)
+        display: none
+    svg
+      +screen('max', 700)
+        width: 11px
+        height: 12px
+  &__middle
+    display: flex
+    gap: 4rem
+    +screen('max', 1500)
+      align-items: flex-start
+      gap: 2rem
+    +screen('max', 1023)
+      display: block
+  &__pictures
+    width: 93%
+    max-width: 1170px
+    position: relative
+    box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
+    background: var(--white)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+    gap: 5.5rem
+    padding: 2rem
+    box-sizing: border-box
+    border-radius: 25px
+    flex-grow: 1
+    +screen('max', 1500)
+      gap: 3rem
+      width: 70%
+    +screen('max', 1023)
+      width: 100%
+      margin-bottom: 1rem
+    +screen('max', 700)
+      padding: 1rem
+      gap: 2rem
+  &__pic
+    +screen('max', 1500)
+      width: 340px
+    +screen('max', 700)
+      width: 280px
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: .8rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__sort
+    width: 70px
+    height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    background: var(--fon)
+    position: absolute
+    top: 2rem
+    right: 2rem
+    +screen('max', 1500)
+      width: 50px
+      height: 50px
+      top: 1rem
+      right: 1rem
+    +screen('max', 700)
+      top: 5.5rem
+    svg
+      +screen('max', 1500)
+        width: 30px
+        height: 24px
+  &__full
+    position: absolute
+    bottom: 3rem
+    right: 3rem
+    +screen('max', 1500)
+      bottom: 2rem
+      right: 2rem
+    svg
+      +screen('max', 1500)
+        width: 23px
+        height: 23px
+  &__info
+    flex-grow: 1
+  &__top
+    +screen('max', 1023)
+      display: flex
+      justify-content: space-between
+      align-items: center
+    +screen('max', 700)
+      display: block
+  &__case
+    margin-bottom: 2rem
+    box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
+    background: var(--white)
+    border-radius: 25px
+    padding: 3rem 3rem 3.6rem
+    box-sizing: border-box
+    position: relative
+    +screen('max', 1500)
+      padding: 2rem
+    +screen('max', 1023)
+      margin-bottom: 1rem
+    +screen('max', 700)
+      padding: 1.5rem 1rem
+    &:last-of-type
+      margin-bottom: 0
+  &__title
+    +fs(38px)
+    font-family: var(--font-family)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(28px)
+    +screen('max', 700)
+      +fs(22px)
+  &__price-metr
+    margin-top: 2.5rem
+    border-radius: 82px
+    background: #f0f1f3
+    +fs(18px)
+    font-weight: 600
+    color: #4d545a
+    padding: 0.8rem 1rem .6rem
+    display: inline-block
+    +screen('max', 1500)
+      +fs(12px)
+      margin-top: 1.2rem
+  &__list
+    margin-top: 1.8rem
+    padding-top: 1.7rem
+    border-top: 1px solid #e9edf0
+  &__item
+    display: flex
+    justify-content: space-between
+    margin-bottom: 0.6rem
+    +fs(20px)
+    +screen('max', 1500)
+      +fs(16px)
+    span
+      &:first-of-type
+        color: #838c95
+    &:last-of-type
+      margin-bottom: 0
+  &__more
+    margin-top: 2rem
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(14px)
+  &__caption
+    +fs(20px)
+    color: #838c95
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(16px)
+  &__hidden
+    display: none
+    &:checked + .product__txt
+      color: var(--primary)
+      font-weight: 600
+      &:before
+        border-color: var(--secondary)
+        border-width: 6px
+  &__pays
+    +screen('max', 1023)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      display: block
+  &__check
+    display: block
+    margin-bottom: 1.3rem
+    position: relative
+    &:last-of-type
+      margin-bottom: 0
+  &__txt
+    position: relative
+    padding-left: 35px
+    +fs(20px)
+    color: #838c95
+    +screen('max', 1500)
+      +fs(16px)
+    &:before
+      content: ''
+      width: 22px
+      height: 22px
+      border-radius: 100%
+      border: 1px solid #bdc0ca
+      box-sizing: border-box
+      position: absolute
+      top: 0
+      left: 0
+      transition: .2s linear
+    &[data-sale-red]
+      &:after
+        content: attr(data-sale-red)
+        border-radius: 82px
+        background: var(--color-red)
+        font-weight: 600
+        color: var(--white)
+        padding: 0.8rem 1rem .6rem
+        +fs(13px)
+        position: absolute
+        left: calc(100% + 1rem)
+        top: -10px
+    &[data-sale]
+      &:after
+        content: attr(data-sale)
+        border-radius: 82px
+        background: rgba(131, 140, 149, 0.1)
+        font-weight: 600
+        color: #4d545a
+        padding: 0.8rem 1rem .6rem
+        +fs(13px)
+        position: absolute
+        left: calc(100% + 1rem)
+        top: -5px
+  &__select-term
+    position: absolute
+    right: 0
+    bottom: 3px
+    color: var(--secondary)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+  &__price
+    margin-top: 2.5rem
+    padding-top: 3rem
+    border-top: 1px solid #e9edf0
+    +fs(30px)
+    font-weight: 600
+    line-height: 1
+    display: flex
+    align-items: center
+    gap: 2rem
+    +screen('max', 1500)
+      +fs(24px)
+      padding-top: 2rem
+    span
+      &:first-of-type
+        color: var(--color-red)
+  &__old
+    +fs(11px)
+    color: #838c95
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 1px
+      background: var(--color-red)
+      position: absolute
+      top: 0
+      right: 0
+      transform: rotate(-8deg)
+      transform-origin: right
+  &__control
+    display: flex
+    align-items: center
+    gap: 1rem
+    margin-top: 3.5rem
+    +screen('max', 1500)
+      margin-top: 1.6rem
+  &__favor
+    width: 70px
+    height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    background: var(--fon)
+    +screen('max', 1500)
+      width: 50px
+      height: 50px
+    svg
+      +screen('max', 1500)
+        width: 24px
+        height: 22px
+  &__call
+    +fs(17px)
+    padding: 2.25rem 3.2rem
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.5rem 1rem
+      width: 124px
+    +screen('max', 1023)
+      width: 45%
+    +screen('max', 700)
+      width: 124px
+  &__book
+    padding: 2.25rem 3rem
+    display: flex
+    justify-content: center
+    gap: 1.5rem
+    +fs(17px)
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.5rem 1rem
+      gap: 1rem
+    +screen('max', 1023)
+      width: 45%
+    svg
+      +screen('max', 1500)
+        width: 14px
+        height: 17px
