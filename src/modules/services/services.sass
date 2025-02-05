@@ -1,0 +1,98 @@
+.services
+  overflow: hidden
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__btn
+    border-color: var(--secondary)
+    color: var(--primary)
+    padding: 2.2rem 3.8rem
+    margin-right: 2rem
+    +screen('max', 1500)
+      padding: 1.6rem 2.5rem
+    +screen('max', 1023)
+      margin-right: 0
+    +screen('max', 700)
+      width: 100%
+  &__item
+    display: flex
+    justify-content: space-between
+    flex-flow: column
+    padding: 2.5rem
+    box-sizing: border-box
+    border-bottom: 1.50px solid var(--secondary)
+    border-radius: 22px
+    box-shadow: 0 -15px 17px 0 rgba(0, 0, 0, 0.02)
+    background: var(--white)
+    transition: .5s ease
+    height: 230px
+    gap: 2rem
+    +screen('max', 1500)
+      padding: 2rem
+      height: 170px
+    &:hover
+      background: var(--hover-green)
+      box-shadow: none
+      border-bottom-color: transparent
+      color: var(--white)
+      .services__to
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09)
+        &:before
+          opacity: 1
+      .services__icon
+        g
+          fill: var(--white)
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__icon
+    +screen('max', 1500)
+      width: 50px
+      height: 50px
+    g
+      transition: .5s ease
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    line-height: 1.2
+    +screen('max', 1500)
+      +fs(18px)
+  &__to
+    position: relative
+    border-radius: 100%
+    svg
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    &:before
+      content: attr(data-sign)
+      position: absolute
+      top: 50%
+      right: calc( 100% + 10px )
+      transform: translateY(-50%)
+      +fs(18px)
+      font-weight: 600
+      color: var(--white)
+      opacity: 0
+      transition: .5s ease
+  &__wrapper
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 -7rem
+        padding-inline: 7rem

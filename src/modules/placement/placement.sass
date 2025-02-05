@@ -49,10 +49,12 @@
         line-height: 1
     span
       &[data-caption]
-        font-size: 0
+        +screen('max', 700)
+          font-size: 0
       &:before
-        content: attr(data-caption)
-        font-size: 12px
+        +screen('max', 700)
+          content: attr(data-caption)
+          font-size: 12px
   &__body
     position: relative
   &__photo

@@ -1,0 +1,129 @@
+.step-build
+  margin: 12rem 0
+  +screen('max', 1500)
+    margin: 10rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+  &__title
+    margin-bottom: 4.5rem
+    +screen('max', 1500)
+      margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 3.5rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1.5rem
+  &__item
+    position: relative
+    z-index: 2
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      bottom: 0
+      border-radius: 25px
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      position: absolute
+    &_back
+      &:after
+        content: ''
+        position: absolute
+        z-index: -1
+        background: #d7dbe0
+        border-radius: 2.5rem
+        left: 2.4rem
+        bottom: -1.3rem
+        height: 50%
+        width: calc(100% - 4.8rem)
+        +screen('max', 1023)
+          width: calc(100% - 3rem)
+          left: 1.5rem
+        +screen('max', 700)
+          bottom: -1rem
+    &_big
+      grid-column: 1/3
+      grid-row: 1/3
+      +screen('max', 700)
+        grid-column: auto
+        grid-row: auto
+      &:before
+        bottom: 17px
+        +screen('max', 1500)
+          bottom: 4px
+        +screen('max', 700)
+          bottom: 0
+      &:after
+        left: 4.8rem
+        width: calc(100% - 9.6rem)
+        +screen('max', 1023)
+          left: 3rem
+          width: calc(100% - 6rem)
+    &_live
+      &:after
+        content: ''
+        width: 100px
+        height: 100px
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='none'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F37528'/%3E%3Cpath fill='%23fff' d='M62.4336 49.5028c1.3333.7698 1.3333 2.6943 0 3.4641l-17.1482 9.9005c-1.3333.7698-3-.1925-3-1.7321v-19.801c0-1.5396 1.6667-2.5018 3-1.732l17.1482 9.9005Z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
+        +screen('max', 1500)
+          width: 50px
+          height: 50px
+  &__caption
+    position: absolute
+    bottom: 3.5rem
+    left: 3.5rem
+    +fs(30px)
+    z-index: 2
+    color: var(--white)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(16px)
+      left: 1.5rem
+      bottom: 1.5rem
+    &_mini
+      +fs(24px)
+      bottom: 2.5rem
+      left: 2.5rem
+      +screen('max', 1500)
+        +fs(14px)
+      +screen('max', 700)
+        +fs(16px)
+        left: 1.5rem
+        bottom: 1.5rem
+  &__count
+    position: absolute
+    top: 1.5rem
+    left: 1.5rem
+    background: var(--tertiary)
+    padding: 0.5rem 1.2rem
+    border-radius: 36px
+    display: inline-flex
+    align-items: center
+    gap: .4rem
+    +fs(18px)
+    font-weight: 600
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(14px)
+      transform: scale(.8)
+    svg
+      vertical-align: middle
+  &__pic
+    width: 100%
+    border-radius: 25px

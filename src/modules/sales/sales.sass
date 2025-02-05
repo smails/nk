@@ -17,10 +17,19 @@
     +screen('max', 700)
       width: 187px
     &:last-of-type
-      +screen('max', 1300)
+      +screen('max', 1500)
         display: none
       +screen('max', 1023)
         display: block
   &__pic
     vertical-align: middle
     width: 100%
+  &__title
+    +fs(30px)
+    padding-block: 5rem 4rem
+    +screen('max', 1500)
+      padding-block: 1rem 3.5rem
+      +fs(28px)
+    +screen('max', 700)
+      +fs(18px)
+      padding-block: 1rem 2rem

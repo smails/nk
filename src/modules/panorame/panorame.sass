@@ -1,0 +1,42 @@
+.panorame
+  +screen('max', 700)
+    display: none
+  &__box
+    position: relative
+  &__pic
+    border-radius: 20px
+    vertical-align: middle
+    width: 100%
+    object-fit: cover
+    +screen('max', 1023)
+      height: 200px
+  &__content
+    position: absolute
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding: 4rem
+    box-sizing: border-box
+    width: 100%
+    bottom: 0
+    left: 0
+    +screen('max', 1500)
+      padding: 3rem
+    +screen('max', 1023)
+      padding: 2rem
+  &__left
+    span
+      max-width: 430px
+      +fs(24px)
+      line-height: 1.2
+      color: var(--white)
+      display: block
+      margin-top: 3rem
+      +screen('max', 1500)
+        +fs(18px)
+      +screen('max', 1023)
+        max-width: 280px
+        margin-top: 1rem
+    svg
+      +screen('max', 1023)
+        transform: scale(.7) translate(-10px, 10px)

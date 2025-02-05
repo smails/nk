@@ -1,46 +1,47 @@
-+b.office
-  +e.inner.inner
-    +e.holder Офисы продаж и шоу-румы
-    +e.list
-      +e.item
-        +e.info
-          +e.P.title Офис продаж в БЦ «Столица Нижний»
-          +e.P.addr Ул. М. Горького, 117, 3 этаж, офис 317
-            a(href="#") Как добраться
-          +e.P.time Пн-Пт с 9:00 до 19:00
-          +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-        +e.A.cons.btn.js-open-modal(href='#') Записаться на консультацию
-      +e.item
-        +e.info
-          +e.P.title Демоквартира в ЖК «Новая Кузнечиха»
-          +e.P.state Идивидуальные туры в реальную квартиру
-          +e.P.addr Ул. Романтиков, 8
-            a(href="#") Как добраться
-          +e.P.time_red по предварительной записи
-          +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-        +e.A.call.btn_transparent.js-open-modal(href='#') Записаться на просмотр
-      +e.item
-        +e.info
-          +e.P.title Шоу-рум в ТРЦ «Жар птица»
-          +e.P.state Идивидуальные туры в реальную квартиру
-          +e.P.addr Ул. М. Горького, 117, 3 этаж, офис 317
-            a(href="#") Как добраться
-          +e.P.time Пн-Пт с 9:00 до 19:00
-          +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-        +e.A.call.btn_transparent.js-open-modal(href='#') Записаться в шоурум
-      +e.item_large
-        +e.IMG.pic(src='/img/office-1.png' alt='')
-        +e.floating
-          +e.P.caption Экскурсии в жилой комплекс
-          +e.P.txt Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
-          +e.A.btn.btn_transparent.js-open-modal(href='#') Записаться на экскурсию
-      +e.item
-        +e.info
-          +e.P.title Есть вопросы или предложения?
-          +e.txt Напишите нам и мы ответим вам в ближайшее время
-        +e.A.call.btn_transparent.js-open-modal(href='#') Написать
-      +e.item_mod
-        +e.info
-          +e.P.title Обращение 
-          +e.txt Если у вас возникла ситуация, подлежащая решению вопроса по гарантии - напишите
-        +e.A.btn.btn_transparent.js-open-modal(href='#') Обратиться
+mixin office(cls)
+  +b.office
+    +e.inner.inner
+      +e.holder Офисы продаж и шоу-румы
+      +e.list
+        +e.item(class=cls)
+          +e.info
+            +e.P.title Офис продаж в БЦ «Столица Нижний»
+            +e.P.addr Ул. М. Горького, 117, 3 этаж, офис 317
+              a(href="#") Как добраться
+            +e.P.time Пн-Пт с 9:00 до 19:00
+            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+          +e.A.cons.btn.js-open-modal(href='#') Записаться на консультацию
+        +e.item(class=cls)
+          +e.info
+            +e.P.title Демоквартира в ЖК «Новая Кузнечиха»
+            +e.P.state Идивидуальные туры в реальную квартиру
+            +e.P.addr Ул. Романтиков, 8
+              a(href="#") Как добраться
+            +e.P.time_red по предварительной записи
+            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+          +e.A.call.btn_transparent.js-open-modal(href='#') Записаться на просмотр
+        +e.item(class=cls)
+          +e.info
+            +e.P.title Шоу-рум в ТРЦ «Жар птица»
+            +e.P.state Идивидуальные туры в реальную квартиру
+            +e.P.addr Ул. М. Горького, 117, 3 этаж, офис 317
+              a(href="#") Как добраться
+            +e.P.time Пн-Пт с 9:00 до 19:00
+            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+          +e.A.call.btn_transparent.js-open-modal(href='#') Записаться в шоурум
+        +e.item_large(class=cls)
+          +e.IMG.pic(src='/img/office-1.png' alt='')
+          +e.floating
+            +e.P.caption Экскурсии в жилой комплекс
+            +e.P.txt Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+            +e.A.btn.btn_transparent.js-open-modal(href='#') Записаться на экскурсию
+        +e.item(class=cls)
+          +e.info
+            +e.P.title Есть вопросы или предложения?
+            +e.txt Напишите нам и мы ответим вам в ближайшее время
+          +e.A.call.btn_transparent.js-open-modal(href='#') Написать
+        +e.item_mod(class=cls)
+          +e.info
+            +e.P.title Обращение 
+            +e.txt Если у вас возникла ситуация, подлежащая решению вопроса по гарантии - напишите
+          +e.A.btn.btn_transparent.js-open-modal(href='#') Обратиться

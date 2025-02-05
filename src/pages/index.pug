@@ -1,6 +1,7 @@
 include ../static/pug/head
 include ../modules/location/location
 include ../modules/callback/callback
+include ../modules/office/office
 +head('Главная')
 body
   main.home
@@ -26,6 +27,6 @@ body
     include ../modules/review/review
     include ../modules/news/news
     +callback(3)
-    include ../modules/office/office
+    +office()
     include ../modules/footer/footer
   include ../static/pug/scripts
