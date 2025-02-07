@@ -77,6 +77,10 @@
       gap: 2rem
     +screen('max', 1023)
       display: block
+  &__pic
+    display: none
+    &:first-of-type
+      display: block
   &__pictures
     width: 93%
     max-width: 1170px
@@ -219,6 +223,8 @@
     +fs(20px)
     +screen('max', 1500)
       +fs(16px)
+    &.hide
+      display: none
     span
       &:first-of-type
         color: #838c95

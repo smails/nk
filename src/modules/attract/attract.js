@@ -4,6 +4,7 @@ import { Navigation } from 'swiper/modules';
 
 
 $('.attract').each((index, item) => {
+  console.log($(item).find('.swiper'))
   const swiper = new Swiper($(item).find('.swiper')[0], {
     slidesPerView: 1.15,
     spaceBetween: '10px',
@@ -24,5 +25,9 @@ $('.attract').each((index, item) => {
         slidesPerView: 4,
       },
     }
+  });
+  const swiper2 = new Swiper($(item).find('.swiper')[6], {
+    slidesPerView: 1.15,
+    spaceBetween: '10px',
   });
 })

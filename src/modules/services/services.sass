@@ -1,5 +1,8 @@
 .services
   overflow: hidden
+  +screen('max', 700)
+    padding-bottom: 6rem
+    position: relative
   &__head
     display: flex
     justify-content: space-between
@@ -24,7 +27,10 @@
     +screen('max', 1023)
       margin-right: 0
     +screen('max', 700)
-      width: 100%
+      width: calc(100% - 3rem)
+      position: absolute
+      bottom: 0
+      left: 1.5rem
   &__item
     display: flex
     justify-content: space-between
@@ -38,9 +44,14 @@
     transition: .5s ease
     height: 230px
     gap: 2rem
+    position: relative
     +screen('max', 1500)
       padding: 2rem
       height: 170px
+    +screen('max', 700)
+      height: auto
+      border-radius: 8px
+      margin-bottom: 0.8rem
     &:hover
       background: var(--hover-green)
       box-shadow: none
@@ -57,10 +68,17 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
+    +screen('max', 700)
+      position: absolute
+      right: 1rem
+      top: 50%
+      transform: translateY(-50%)
   &__icon
     +screen('max', 1500)
       width: 50px
       height: 50px
+    +screen('max', 700)
+      display: none
     g
       transition: .5s ease
   &__caption
@@ -69,6 +87,8 @@
     line-height: 1.2
     +screen('max', 1500)
       +fs(18px)
+    +screen('max', 700)
+      +fs(14px)
   &__to
     position: relative
     border-radius: 100%
@@ -76,6 +96,9 @@
       +screen('max', 1500)
         width: 50px
         height: 50px
+      +screen('max', 700)
+        width: 30px
+        height: 30px
     &:before
       content: attr(data-sign)
       position: absolute
@@ -96,3 +119,6 @@
       +screen('max', 1500)
         margin: 0 -7rem
         padding-inline: 7rem
+    .swiper-wrapper
+      +screen('max', 700)
+        flex-flow: column

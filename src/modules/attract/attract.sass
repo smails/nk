@@ -25,7 +25,12 @@
     +screen('max', 1023)
       +fs(22px)
   &__wrapper
+    +screen('max', 700)
+      display: none
     .swiper
       +screen('max', 1023)
         margin: 0 -2rem
         padding-inline: 2rem
+  &__wrapper-mobile
+    +screen('min', 700)
+      display: none

@@ -1,0 +1,89 @@
+.sections
+  margin: 12rem 0
+  +screen('max', 1500)
+    margin: 8rem 0
+  &__title
+    margin-bottom: 4.5rem
+    +screen('max', 1500)
+      margin-bottom: 3rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__box
+    position: relative
+  &__pic
+    vertical-align: middle
+    border-radius: 30px
+    width: 100%
+    object-fit: cover
+    +screen('max', 1023)
+      height: 600px
+  &__legend
+    position: absolute
+    top: 4rem
+    left: 5.5rem
+    background: var(--white)
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    padding: 2.5rem
+    box-sizing: border-box
+    max-width: 300px
+    width: 30%
+    border-radius: 25px
+    +screen('max', 1500)
+      max-width: 250px
+      left: 12rem
+    +screen('max', 1023)
+      left: 1rem
+    +screen('max', 700)
+      position: relative
+      background: none
+      display: flex
+      box-shadow: none
+      overflow: auto
+      max-width: 100%
+      left: 0
+      top: 0
+      padding: 2rem
+      width: 100%
+  &__line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 1.2rem
+    gap: 1.2rem
+    +fs(18px)
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      flex-shrink: 0
+      margin-bottom: 0
+    &:last-of-type
+      margin-bottom: 0
+    &.active
+      font-weight: 600
+      .sections__icon
+        background: var(--secondary)
+        .fill
+          fill: var(--white)
+        .stroke
+          stroke: var(--white)
+      .sections__count
+        color: var(--primary)
+  &__icon
+    width: 45px
+    height: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    background: var(--fon)
+    flex-shrink: 0
+    +screen('max', 1500)
+      width: 34px
+      height: 34px
+    svg
+      +screen('max', 1500)
+        transform: scale(.7)
+  &__caption
+    flex-grow: 1
+  &__count
+    color: #838c95

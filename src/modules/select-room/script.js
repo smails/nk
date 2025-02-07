@@ -5,7 +5,7 @@ import { Pagination } from 'swiper/modules';
 
 
 $('.sp-prod-card__slider').each((index, item) => {
-  const swiper = new Swiper($(item).find('.swiper')[0], {
+  const swiper = new Swiper($(item).find('.swiper'), {
     slidesPerView: 1,
       pagination: {
         el: $(item).find('.slider-dots')[0],

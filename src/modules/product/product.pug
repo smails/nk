@@ -25,6 +25,9 @@
           +e.BUTTON.tab Вид из окна
         +e.box
           +e.IMG.pic(src='/img/prod-1.png' alt='')
+          +e.IMG.pic(src='/img/prod-1.png' alt='')
+          +e.IMG.pic(src='/img/prod-1.png' alt='')
+          +e.IMG.pic(src='/img/prod-1.png' alt='')
         +e.A.sort(href='#')
           svg(xmlns='http://www.w3.org/2000/svg' width='35' height='35' fill='none' viewBox="0 0 35 35")
             g
@@ -52,7 +55,19 @@
             +e.item
               span Срок сдачи
               span 1 кв. 2024
-          +e.A.more(href="#") Все параметры квартиры
+            +e.item.hide
+              span Срок сдачи
+              span 1 кв. 2024
+            +e.item.hide
+              span Срок сдачи
+              span 1 кв. 2024
+            +e.item.hide
+              span Срок сдачи
+              span 1 кв. 2024
+            +e.item.hide
+              span Срок сдачи
+              span 1 кв. 2024
+          +e.more Все параметры квартиры
             svg(xmlns='http://www.w3.org/2000/svg' width='15' height='8' fill='none')
               path(stroke='#23262B' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 1 6.5 6L14 1')
         +e.case
