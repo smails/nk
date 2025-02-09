@@ -1,0 +1,87 @@
+.product-sale
+  position: sticky
+  top: 13rem
+  z-index: 999
+  margin-top: -2rem
+  margin-bottom: 2rem
+  +screen('max', 1500)
+    top: 10rem
+    margin-top: -1rem
+  +screen('max', 700)
+    margin-bottom: 1.5rem
+  &__inner
+    max-width: calc(100% - 6rem)
+    margin: 0 auto
+    +screen('max', 1500)
+      max-width: calc(100% - 8rem)
+    +screen('max', 1280)
+      max-width: calc(100% - 2rem)
+  &__box
+    border-radius: 10px
+    background: var(--tertiary)
+    padding: 1.3rem
+    box-sizing: border-box
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 3rem
+    +screen('max', 1023)
+      justify-content: flex-start
+    +screen('max', 700)
+      padding: 0.7rem .9rem
+      gap: 1rem
+  &__txt
+    +fs(20px)
+    font-weight: 600
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(12px)
+  &__timer
+    display: flex
+    gap: .8rem
+    +screen('max', 700)
+      gap: .5rem
+  &__count
+    border-radius: 6px
+    background: var(--white)
+    padding: 0.5rem 1.2rem .3rem
+    +fs(20px)
+    font-family: var(--second-family)
+    color: var(--tertiary)
+    line-height: 1
+    min-width: 50px
+    text-align: center
+    box-sizing: border-box
+    +screen('max', 1500)
+      +fs(15px)
+      min-width: 35px
+    +screen('max', 700)
+      +fs(12px)
+      min-width: 32px
+  &__sign
+    font-family: var(--second-family)
+    +fs(14px)
+    margin-top: 0.6rem
+    text-align: center
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(10px)
+    +screen('max', 700)
+      +fs(8px)
+  &__close
+    position: absolute
+    right: 2.5rem
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    +screen('max', 700)
+      position: relative
+      transform: none
+      right: 0
+      margin-left: 1rem
+    svg
+      +screen('max', 700)
+        width: 16px

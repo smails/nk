@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 
-$('.location').each((index, item) => {
+$('.more').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
     slidesPerView: 1.15,
     spaceBetween: '10px',
@@ -14,11 +14,11 @@ $('.location').each((index, item) => {
     modules: [Navigation],
     breakpoints: {
       767: {
-        slidesPerView: 2.9,
+        slidesPerView: 2.15,
       },
       1500: {
         spaceBetween: '15px',
-        slidesPerView: 4.1,
+        slidesPerView: 'auto',
       },
     }
   });

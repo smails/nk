@@ -2,6 +2,7 @@ include ../static/pug/head
 include ../modules/location/location
 include ../modules/callback/callback
 include ../modules/office/office
+include ../modules/placement/placement
 +head('Главная')
 body
   main.home
@@ -12,7 +13,7 @@ body
     include ../modules/about/about
     include ../modules/vantage/vantage
     include ../modules/landscaping/landscaping
-    include ../modules/placement/placement
+    +placement()
     +location('Инфраструктура')
     +callback(1)
     include ../modules/sections/sections

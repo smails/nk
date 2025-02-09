@@ -8,5 +8,5 @@ $('.product__tab').click(function () {
 })
 
 $('.product__more').click(function () {
-  $('.product__item.hide');
+  $('.product__item.hide').toggleClass('open');
 })

@@ -1,28 +1,16 @@
 include ../static/pug/head
 include ../modules/breadcrumb/breadcrumb
-include ../modules/callback/callback
-include ../modules/office/office
-+head('Выбор квартиры и парковочного места')
+include ../modules/placement/placement
++head('Генплан')
 body
-  main.gray
+  main
     +header()
-    include ../modules/product-sale/product-sale
-    +breadcrumb(['Главная','Выбор квартиры и парковочного места', '1-комн. 41.7 м²'], '1-комн. 41.7 м²')
-    include ../modules/product/product
-    include ../modules/sales/sales-is-title
-    include ../modules/panorame/panorame
-    include ../modules/finishing/finishing-tabs
-    include ../modules/calc/calc
-    include ../modules/payment/payment
-    include ../modules/step-build/step-build
-    include ../modules/sections/sections
-    include ../modules/services/services
-    +office('_white')
-    include ../modules/attract/attract
+    +breadcrumb(['Главная','Генплан'], 'Генплан')
+    +placement('_page')
+    include ../modules/plane/interest
+    include ../modules/more/more
     +b.seo-text
       +e.inner.inner
         +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
     include ../modules/footer/footer
   include ../static/pug/scripts
-  
-  

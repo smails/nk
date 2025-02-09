@@ -73,7 +73,6 @@
     display: flex
     gap: 4rem
     +screen('max', 1500)
-      align-items: flex-start
       gap: 2rem
     +screen('max', 1023)
       display: block
@@ -81,10 +80,17 @@
     display: none
     &:first-of-type
       display: block
-  &__pictures
+  &__over-picture
     width: 93%
     max-width: 1170px
     position: relative
+    +screen('max', 1500)
+      width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__pictures
+    top: 10rem
+    position: sticky
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
     background: var(--white)
     display: flex
@@ -98,9 +104,7 @@
     flex-grow: 1
     +screen('max', 1500)
       gap: 3rem
-      width: 70%
     +screen('max', 1023)
-      width: 100%
       margin-bottom: 1rem
     +screen('max', 700)
       padding: 1rem
@@ -225,6 +229,8 @@
       +fs(16px)
     &.hide
       display: none
+    &.open
+      display: flex
     span
       &:first-of-type
         color: #838c95
@@ -236,6 +242,7 @@
     align-items: center
     gap: 1rem
     font-weight: 600
+    cursor: pointer
     +screen('max', 1500)
       +fs(14px)
   &__caption

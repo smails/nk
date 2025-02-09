@@ -79,8 +79,12 @@
     +screen('max', 1500)
       +fs(16px)
       padding: 1.3rem 2.1rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
   &__submit
-    display: flex
+    display: inline-flex
     align-items: center
     gap: .8rem
     padding: 2.2rem 3.8rem
@@ -99,6 +103,14 @@
       font-weight: 700
       box-sizing: border-box
       line-height: 1
+  &__item
+    padding: 2.5rem 2rem
+    border-radius: 25px
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    background: var(--white)
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding: 1.5rem
   &__pic
     max-width: 100%
     vertical-align: middle
@@ -128,6 +140,10 @@
       color: var(--white)
       span
         color: var(--white)
+  &__more
+    text-align: center
+    margin-top: 4.5rem
+    margin-bottom: 6rem
   .swiper
     padding: 0 .75rem 3rem
     margin: 0 -.75rem -3rem
