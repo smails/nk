@@ -3,6 +3,7 @@ include ../modules/location/location
 include ../modules/callback/callback
 include ../modules/office/office
 include ../modules/placement/placement
+include ../modules/eco/eco
 +head('Главная')
 body
   main.home
@@ -18,7 +19,7 @@ body
     +callback(1)
     include ../modules/sections/sections
     +location('Места поблизости')
-    include ../modules/eco/eco
+    +eco()
     include ../modules/finishing/finishing
     include ../modules/plane/plane
     include ../modules/sale/sale

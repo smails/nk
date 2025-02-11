@@ -1,0 +1,35 @@
+include ../static/pug/head
+include ../modules/breadcrumb/breadcrumb
+include ../modules/placement/placement
+include ../modules/location/location
+include ../modules/callback/callback
+include ../modules/beautification/beautification
+include ../modules/transport/transport
+include ../modules/eco/eco
++head('Расположение')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Расположение'], 'Расположение')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Расположение
+        +e.txt
+          p Жилой комплекс «Новая Кузнечиха» расположен в Советском районе Нижнего Новгорода рядом с двумя излюбленными местами отдыха — Ботаническим садом и Щелоковским хутором. В шаговой доступности от комплекса находится вся необходимая инфраструктура.
+          p В непосредственной близости от комплекса несколько действующих школ, детских садов, поликлиник, торгово-развлекательных центров, остановок общественного транспорта с развитой сетью маршрутов.
+    +beautification(false)
+    include ../modules/sections/sections
+    +placement()
+    +transport('', false, 2)
+    +location('Места поблизости', 'Расположение')
+    +eco('_top', true)
+    +b.video
+      +e.inner.inner
+        +e.box
+          +e.IMG.pic(src='/img/video-2.png' alt='')
+    include ../modules/more/more
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

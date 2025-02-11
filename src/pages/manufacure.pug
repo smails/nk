@@ -1,0 +1,114 @@
+include ../static/pug/head
+include ../modules/breadcrumb/breadcrumb
+include ../modules/placement/placement
+include ../modules/location/location
+include ../modules/callback/callback
+include ../modules/beautification/beautification
+include ../modules/transport/transport
++head('Инфраструктура')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Инфраструктура'], 'Инфраструктура')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Инфраструктура
+        +e.P.txt «Новая Кузнечиха» — это масштабный проект не только по объему возводимого жилья, но и с точки зрения окружающей и создаваемой инфраструктуры.
+    include ../modules/benefit/benefit
+    +b.video
+      +e.inner.inner
+        +e.box
+          +e.IMG.pic(src='/img/video-1.png' alt='')
+    include ../modules/sections/sections
+    +location('Места поблизости', 'Расположение')
+    +placement()
+    +b.manufacure-tabs
+      +e.inner.inner
+        +e.head
+          +e.H2.title Социальная инфраструктура
+          +e.text
+            p Ведется строительство объектов социальной инфраструктуры, находящихся в ведении муниципалитета: 
+              b 2 детских сада и школа.
+            p Объекты социальной инфраструктуры возводятся муниципалитетом, посредством включения в соответствующие городские программы социально-экономического развития. Планы по их реализации освещены на официальном сайте единой информационной системы в сфере закупок 
+              a(href="#")  https://zakupki.gov.ru/
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-1.png' alt='')
+            +e.P.caption Детский сад № 37
+            +e.P.sign На 320 мест строится между 5 и 8 кварталом
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-2.png' alt='')
+            +e.P.caption Детский сад № 38
+            +e.P.sign На 270 мест строится напротив 1 квартала
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-3.png' alt='')
+            +e.P.caption Школа
+            +e.P.sign На 1225 мест возводится рядом с 4 кварталом
+    +b.manufacure-tabs_gray
+      +e.inner.inner
+        +e.head
+          +e.H2.title Торговая инфраструктура
+          +e.text С каждым годом растет и развивается коммерческая инфраструктура в ЖК «Новая Кузнечиха». На первых этажах домов уже работают супермаркеты и продуктовые лавки, аптеки, частные медицинские центры, зоомагазины, кафе, салоны красоты и другие необходимые для комфортной жизни объекты.
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-4.png' alt='')
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-5.png' alt='')
+          +e.item
+            +e.IMG.pic(src='/img/manufacture-6.png' alt='')
+    +beautification()
+    +b.check-list
+      +e.inner.inner
+        +e.left
+          +e.P.title На территории ЖК в пешеходной доступности
+          +e.A.btn.btn(href='#') Подробнее о благоустройстве
+        +e.right
+          +e.item Просторный двор без машин
+          +e.item Площадки для игровых видов спорта
+          +e.item Парковочные места по периметру квартала
+          +e.item Площадка для выгула собак
+          +e.item Современные детские комплексы
+          +e.item Современные детские комплексы
+          +e.item Зоны воркаута
+          +e.item Уличные тренажеры
+          +e.item Озеленение
+          +e.item Велодорожка
+          +e.item Общественные пространства и зоны отдыха
+          +e.item Благоустроенная зона Кузнечихинского ручья
+        hr
+    +b.manufacure-content
+      +e.inner.inner
+        +e.content
+          +e.H2.title Паркинг
+          +e.text
+            p Кроме того, в районе 12 квартала построен ТЦ с крытым 
+              b паркингом площадью 1700 кв.м. 
+            p На первом этаже здания разместилась торговая зона с продовольственным гипермаркетом, на 2 и 3 этаже - 
+              b 200 машиномест
+          +e.A.btn.btn(href='#') Выбрать машиноместо
+        +e.IMG.pic(src='/img/parking.png' alt='')
+    +transport('_gray', true, 1)
+    +b.manufacure-content
+      +e.inner.inner
+        +e.content
+          +e.H2.title Коммуникации
+          +e.text
+            p На территории микрорайона работает 
+              b собственная котельная
+            p
+              b А это значит:
+            ol
+              li Экономия на коммунальных расходах
+              li Улучшение качества отопления
+              li Независимость от централизованной системы
+              li Уменьшение нагрузки на городскую инфраструктуру
+              li Улучшение экологической ситуации
+          +e.A.btn.btn(href='#') Выбрать машиноместо
+        +e.IMG.pic(src='/img/com.png' alt='')
+    +callback(6)
+    include ../modules/more/more
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

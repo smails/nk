@@ -4,15 +4,15 @@ import { Pagination } from 'swiper/modules';
 
 
 
-$('.sp-prod-card__slider').each((index, item) => {
-  const swiper = new Swiper($(item).find('.swiper'), {
-    slidesPerView: 1,
-      pagination: {
-        el: $(item).find('.slider-dots')[0],
-      },
-      modules: [Pagination],
-  });
-})
+// $('.sp-prod-card__slider').each((index, item) => {
+//   const swiper = new Swiper($(item).find('.swiper'), {
+//     slidesPerView: 1,
+//       pagination: {
+//         el: $(item).find('.slider-dots')[0],
+//       },
+//       modules: [Pagination],
+//   });
+// })
 
 $('.filter__full-filter').click(() => {
   $('body').addClass('fixed')

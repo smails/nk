@@ -1,0 +1,51 @@
+.beautification
+  &__head
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    margin-bottom: 6rem
+  &__title
+    line-height: 1
+  &__text
+    line-height: 150%
+    +fs(20px)
+    color: #4d545a
+    max-width: 1195px
+  &__wrapper
+    position: relative
+    .slider-arrows
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: calc(100% - 4rem)
+      left: 2rem
+      z-index: 2
+  &__thumbs
+    margin-top: 2.5rem
+    display: flex
+    gap: 1.5rem
+    .swiper-slide
+      width: 212px
+      opacity: 0.4
+      transition: .5s ease
+    .swiper-slide-active
+      opacity: 1
+    .beautification__pic
+      border-radius: 15px
+  &__pic
+    vertical-align: middle
+    width: 100%
+  &__more
+    border-radius: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--fon)
+    +fs(24px)
+    font-weight: 600
+    color: #838c95
+    flex-shrink: 0
+    width: 212px

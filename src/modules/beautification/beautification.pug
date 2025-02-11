@@ -1,0 +1,55 @@
+mixin beautification(title)
+  +b.beautification
+    +e.inner.inner
+      if title != false
+        +e.head
+          +e.H2.title Благоустройство
+          +e.text С каждым годом растет и развивается коммерческая инфраструктура в ЖК «Новая Кузнечиха». На первых этажах домов уже работают супермаркеты и продуктовые лавки, аптеки, частные медицинские центры, зоомагазины, кафе, салоны красоты и другие необходимые для комфортной жизни объекты.
+      +e.wrapper
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+          .slider-arrows
+            +b.slider-arrow_prev._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+      +e.thumbs
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/excursion-1.png' alt='')
+        +e.more + 40

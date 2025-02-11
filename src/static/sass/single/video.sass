@@ -1,0 +1,24 @@
+.video
+  margin: 7rem 0
+  &__box
+    position: relative
+    &:after
+      content: ''
+      width: 100px
+      height: 100px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='none'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23F37528'/%3E%3Cpath fill='%23fff' d='M62.4336 49.5028c1.3333.7698 1.3333 2.6943 0 3.4641l-17.1482 9.9005c-1.3333.7698-3-.1925-3-1.7321v-19.801c0-1.5396 1.6667-2.5018 3-1.732l17.1482 9.9005Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+  &__pic
+    width: 100%
+    border-radius: 30px
+    vertical-align: middle

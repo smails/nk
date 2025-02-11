@@ -1,4 +1,4 @@
-mixin location(title)
+mixin location(title, btn)
   +b.location
     +e.inner
       +e.head.inner
@@ -77,3 +77,5 @@ mixin location(title)
               +e.P.caption Безопасность
       if title == 'Инфраструктура'
         +e.A.more.btn_transparent(href="#") Подробнее об инфраструктуре
+      if btn == 'Расположение'
+        +e.A.more.btn_transparent(href="#") Подробнее о расположении

@@ -39,3 +39,11 @@ mixin callback(type)
           +e.info
             +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
             +e.A.btn.js-open-modal(href="#callback") Записаться
+  if type == 6
+    +b.callback
+      +e.inner.inner
+        +e.container
+          +e.P.title Для региональных клиентов
+          +e.info
+            +e.P.txt Узнайте о льготах и преимуществах  переезда для клиентов из других регионов
+            +e.A.btn.js-open-modal(href="#callback") Подробнее 
