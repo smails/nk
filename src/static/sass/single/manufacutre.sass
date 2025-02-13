@@ -1,26 +1,46 @@
 .manufacure-tabs
   margin: 8rem 0
   +screen('max', 1500)
-    padding-block: 6rem
-  +screen('max', 1023)
-    padding-block: 4rem
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4.5rem 0
   &_gray
     background: var(--fon)
     border-radius: 40px
     padding-block: 8rem
+    +screen('max', 1500)
+      padding-block: 6rem
+    +screen('max', 1023)
+      padding-block: 5rem
+      border-radius: 20px
+    +screen('max', 700)
+      padding-block: 3.5rem
   &__head
     display: flex
     justify-content: space-between
     gap: 2rem
     margin-bottom: 6rem
+    +screen('max', 1023)
+      display: block
+      margin-bottom: 3.5rem
   &__title
     line-height: 1
     +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 1023)
+      margin-bottom: 2.5rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+      +fs(18px)
   &__text
     line-height: 150%
     +fs(20px)
     color: #4d545a
     max-width: 1195px
+    +screen('max', 1500)
+      +fs(16px)
+      max-width: 750px
     a
       color: var(--tertiary)
     p
@@ -31,36 +51,65 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(3, 387px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 295px)
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 20px
+    +screen('max', 1023)
+      border-radius: 15px
   &__caption
     +fs(24px)
     font-weight: 600
     line-height: 1.2
     margin-top: 2.5rem
     margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(18px)
+      margin-top: 2rem
+    +screen('max', 700)
+      +fs(16px)
   &__sign
     +fs(18px)
     opacity: 0.9
     color: #4d545a
     line-height: 1.4
+    +screen('max', 1500)
+      +fs(14px)
 
 .manufacure-content
   margin: 8rem 0
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 5rem 0
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
     gap: 10rem
+    +screen('max', 1500)
+      gap: 4rem
+    +screen('max', 1023)
+      display: block
   &__title
     margin-bottom: 3rem
+    +screen('max', 1500)
+      margin-bottom: 2rem
   &__text
     line-height: 150%
     color: #4d545a
     +fs(20px)
     margin-bottom: 3rem
+    +screen('max', 1500)
+      +fs(16px)
     p
       margin-bottom: 1rem
       &:last-of-type
@@ -74,7 +123,14 @@
           margin-bottom: 0
   &__btn
     padding: 2rem 2.8rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
+    +screen('max', 700)
+      width: 100%
   &__pic
     max-width: 1191px
-    width: 70%
+    width: 65%
     border-radius: 25px
+    +screen('max', 1023)
+      width: 100%
+      border-radius: 15px

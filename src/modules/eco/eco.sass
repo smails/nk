@@ -55,6 +55,24 @@
       padding: 0 1.5rem
     &::-webkit-scrollbar
       height: 0
+    &_top
+      +screen('max', 1023)
+        grid-template-columns: repeat(3, 40vw)
+        overflow: auto
+        margin: 0 -1.5rem
+        padding: 0 1.5rem
+        gap: 1rem
+      +screen('max', 700)
+        grid-template-columns: repeat(3, 277px)
+      .eco__item
+        &:last-of-type
+          +screen('max', 1023)
+            grid-column: auto
+      .eco__pic
+        +screen('max', 1023)
+          max-height: 270px
+        +screen('max', 700)
+          max-height: 240px
   &__pic
     width: 100%
     border-radius: 25px
@@ -62,6 +80,7 @@
     object-fit: cover
     +screen('max', 1023)
       height: 100%
+      border-radius: 15px
   &__item
     position: relative
     &:last-of-type
@@ -97,6 +116,10 @@
       bottom: auto
       top: 2rem
       left: 1rem
+      +screen('max', 700)
+        top: 0.8rem
+        left: 0.8rem
+        width: 63px
   &__time
     padding: .8rem
     display: inline-flex
@@ -130,11 +153,20 @@
     display: block
   &__info
     margin-top: 3rem
+    +screen('max', 1500)
+      margin-top: 1.5rem
   &__holder
     +fs(30px)
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(22px)
+      margin-bottom: 1rem
+    +screen('max', 700)
+      +fs(18px)
   &__txt
     color: #4d545a
     +fs(20px)
     line-height: 1.4
     max-width: 550px
+    +screen('max', 1500)
+      +fs(14px)

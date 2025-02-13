@@ -5,8 +5,13 @@ import { Navigation, thumbs } from 'swiper/modules';
 
 const beautificationThumb = new Swiper($('.beautification__thumbs').find('.swiper')[0], {
   slidesPerView: 'auto',
-  spaceBetween: '15px',
-  slideToClickedSlide: true
+  spaceBetween: '10px',
+  slideToClickedSlide: true,
+  breakpoints: {
+    1023: {
+      spaceBetween: '15px',
+    },
+  }
 });
 
 const beautificationBig = new Swiper($('.beautification__wrapper').find('.swiper')[0], {

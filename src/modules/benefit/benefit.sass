@@ -1,9 +1,19 @@
 .benefit
   margin-bottom: 6rem
+  +screen('max', 1500)
+    margin-bottom: 4rem
   &__list
     display: grid
     grid-template-columns: repeat(6, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(6, 186px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(2, 1fr)
   &__item
     padding: 2.5rem
     box-sizing: border-box
@@ -14,7 +24,21 @@
     align-items: flex-start
     flex-flow: column
     gap: 3.5rem
+    +screen('max', 1500)
+      padding: 2rem
+      gap: 2rem
+    +screen('max', 700)
+      gap: 1rem
+      border-radius: 15px
   &__caption
     font-weight: 600
     +fs(20px)
     line-height: 1.3
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(12px)
+  &__pic
+    +screen('max', 1500)
+      width: 35px
+      height: 35px

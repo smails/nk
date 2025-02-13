@@ -1,5 +1,9 @@
 .video
   margin: 7rem 0
+  +screen('max', 1023)
+    margin: 3rem 0
+  +screen('max', 700)
+    margin: 2rem 0
   &__box
     position: relative
     &:after
@@ -22,3 +26,5 @@
     width: 100%
     border-radius: 30px
     vertical-align: middle
+    +screen('max', 700)
+      border-radius: 15px
