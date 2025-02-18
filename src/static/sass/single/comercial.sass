@@ -1,0 +1,89 @@
+.comercial
+  margin: 9rem 0
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+  &__left
+    max-width: 500px
+    width: 30%
+  &__title
+    margin-bottom: 3.5rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+  &__right
+    max-width: 1195px
+    width: 70%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    p
+      margin-bottom: 1rem
+  &__info
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    margin-bottom: 4rem
+  &__metro
+    display: flex
+    align-items: center
+    gap: 1rem
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+    &::before
+      content: ''
+      width: 6px
+      height: 6px
+      border-radius: 100%
+      background: #c51e1e
+  &__time
+    display: flex
+    align-items: center
+    gap: .5rem
+    font-weight: 600
+    color: #9c9c9c
+    +fs(18px)
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 3rem
+  &__item
+    border-radius: 100%
+    border: 1px solid var(--secondary)
+    padding-block: 8rem
+    text-align: center
+  &__numb
+    +fs(60px)
+    color: var(--secondary)
+    font-weight: 600
+    margin-bottom: 3rem
+    padding-bottom: 2rem
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 76px
+      height: 1px
+      background: var(--secondary)
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+    span
+      +fs(6.931px)
+  &__sign
+    +fs(24px)
+    line-height: 1.2
+    color: #838c95
+    max-width: 220px
+    display: inline-block
+    b
+      color: var(--primary)
+      display: block

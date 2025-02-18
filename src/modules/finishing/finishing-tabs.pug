@@ -1,52 +1,110 @@
-+b.finishing-tabs
-  +e.inner.inner
-    +e.head
-      +e.H2.title Отделка
-      +e.control
-        +e.BUTTON.btn.btn_white.active Комнаты и кухня
-        +e.BUTTON.btn.btn_white Санузел
-        +e.BUTTON.btn.btn_white Лоджия
-        +e.BUTTON.btn.btn_white Окна в квартире
-    +e.wrapper
-      +e.box
-        +e.row
-          +e.IMG.pic(src='/img/finishing-2.png' alt='')
-          +e.content
-            +e.H2.caption Чистовая
-            +e.line
-              +e.P.holder Напольное покрытие
-              +e.P.txt Керамогранит на кухне и в прихожей, ламинат 33 класса в жилых комнатах
-            +e.line
-              +e.P.holder Обои
-              +e.P.txt Под покраску виниловые на флизелиновой основе
-            +e.line
-              +e.P.holder Потолок
-              +e.P.txt Натяжной с выводом под люстру
-            +e.line
-              +e.P.holder Двери Geona
-              +e.P.txt Металлическая входная дверь с утеплением косяка, межкомнатные двери с качественной фурнитурой и магнитным замком.
-            +e.line
-              +e.P.holder Радиаторы
-              +e.P.txt Prado с термостатическим элементом Danfoss.
-            +e.A.more.btn_tr-green(href="#") Подробнее об отделке
-      +e.box
-        +e.row
-          +e.IMG.pic(src='/img/finishing-2.png' alt='')
-          +e.content
-            +e.H2.caption Чистовая
-            +e.line
-              +e.P.holder Напольное покрытие
-              +e.P.txt Керамогранит на кухне и в прихожей, ламинат 33 класса в жилых комнатах
-            +e.line
-              +e.P.holder Обои
-              +e.P.txt Под покраску виниловые на флизелиновой основе
-            +e.line
-              +e.P.holder Потолок
-              +e.P.txt Натяжной с выводом под люстру
-            +e.line
-              +e.P.holder Двери Geona
-              +e.P.txt Металлическая входная дверь с утеплением косяка, межкомнатные двери с качественной фурнитурой и магнитным замком.
-            +e.line
-              +e.P.holder Радиаторы
-              +e.P.txt Prado с термостатическим элементом Danfoss.
-            +e.A.more.btn_tr-green(href="#") Подробнее об отделке
+mixin finishing(title='Отделка', control, btn='_white', sign, video, slider)
+  +b.finishing-tabs
+    +e.inner.inner
+      +e.head
+        +e.H2.title=title
+        +e.control
+          +e.BUTTON.btn.btn(class=btn).active Комнаты и кухня
+          +e.BUTTON.btn.btn(class=btn) Санузел
+          +e.BUTTON.btn.btn(class=btn) Лоджия
+          +e.BUTTON.btn.btn(class=btn) Окна в квартире
+      +e.wrapper
+        +e.box
+          +e.row
+            if slider != undefined
+              +e.slider
+                .swiper
+                  .swiper-wrapper
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                  .slider-arrows
+                    +b.slider-arrow_prev._gray
+                      svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                        path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                    +b.slider-arrow_next._gray
+                      svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                        path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                  .slider-dots
+            else
+              +e.IMG.pic(src='/img/finishing-2.png' alt='')
+            +e.content(class=control)
+              +e.H2.caption Чистовая
+              +e.line
+                +e.P.holder Напольное покрытие
+                +e.P.txt Керамогранит на кухне и в прихожей, ламинат 33 класса в жилых комнатах
+              +e.line
+                +e.P.holder Обои
+                +e.P.txt Под покраску виниловые на флизелиновой основе
+              +e.line
+                +e.P.holder Потолок
+                +e.P.txt Натяжной с выводом под люстру
+              +e.line
+                +e.P.holder Двери Geona
+                +e.P.txt Металлическая входная дверь с утеплением косяка, межкомнатные двери с качественной фурнитурой и магнитным замком.
+              +e.line
+                +e.P.holder Радиаторы
+                +e.P.txt Prado с термостатическим элементом Danfoss.
+              if video != undefined
+                +e.A.video.btn_tr-green(href="#")
+                  svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+                    circle(cx='15' cy='15' r='15' fill='#51A747')
+                    path(fill='#fff' d='M20.2581 14.7523c.6228.3922.6228 1.3001 0 1.6923l-7.0236 4.4237c-.6659.4194-1.5329-.0591-1.5329-.8461v-8.8475c0-.787.867-1.26556 1.5329-.8461l7.0236 4.4237Z')
+                  span Смотреть видео об отделке
+              else
+                +e.A.more.btn_tr-green(href="#") Подробнее об отделке
+        +e.box
+          +e.row
+            if slider != undefined
+              +e.slider
+                .swiper
+                  .swiper-wrapper
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                    .swiper-slide
+                      +e.IMG.pic(src='/img/finishing-2.png' alt='')
+                  .slider-arrows
+                    +b.slider-arrow_prev._gray
+                      svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                        path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                    +b.slider-arrow_next._gray
+                      svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                        path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                  .slider-dots
+            else
+              +e.IMG.pic(src='/img/finishing-2.png' alt='')
+            +e.content(class=control)
+              +e.H2.caption Чистовая
+              +e.line
+                +e.P.holder Напольное покрытие
+                +e.P.txt Керамогранит на кухне и в прихожей, ламинат 33 класса в жилых комнатах
+              +e.line
+                +e.P.holder Обои
+                +e.P.txt Под покраску виниловые на флизелиновой основе
+              +e.line
+                +e.P.holder Потолок
+                +e.P.txt Натяжной с выводом под люстру
+              +e.line
+                +e.P.holder Двери Geona
+                +e.P.txt Металлическая входная дверь с утеплением косяка, межкомнатные двери с качественной фурнитурой и магнитным замком.
+              +e.line
+                +e.P.holder Радиаторы
+                +e.P.txt Prado с термостатическим элементом Danfoss.
+              if video != undefined
+                +e.A.video.btn_tr-green(href="#")
+                  svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+                    circle(cx='15' cy='15' r='15' fill='#51A747')
+                    path(fill='#fff' d='M20.2581 14.7523c.6228.3922.6228 1.3001 0 1.6923l-7.0236 4.4237c-.6659.4194-1.5329-.0591-1.5329-.8461v-8.8475c0-.787.867-1.26556 1.5329-.8461l7.0236 4.4237Z')
+                  span Смотреть видео об отделке
+              else
+                +e.A.more.btn_tr-green(href="#") Подробнее об отделке
+      if control != undefined
+        +e.control
+          +e.A.call.btn.js-open-modal(href="#callback") Записаться в демоквартиру
+      if sign != undefined
+        +e.sign * Представленные материалы и оборудование демонстрируются в целях художественной визуализации, являются примером. Марка или производитель оборудования и материалов могут меняться без ухудшения свойств без какого-либо уведомления. Цветовые решения фасадов и иные проектные решения могут быть изменены

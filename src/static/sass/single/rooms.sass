@@ -1,0 +1,113 @@
+.rooms
+  margin: 9rem 0
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+    padding-bottom: 6rem
+    border-bottom: 1px solid #d7dbe0
+  &__left
+    max-width: 500px
+    width: 30%
+  &__title
+    margin-bottom: 2.5rem
+  &__subtitle
+    +fs(20px)
+    font-weight: 600
+  &__right
+    max-width: 1195px
+    width: 70%
+    margin-top: 7rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    p
+      margin-bottom: 1rem
+  &__middle
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: max(7rem, 5vw)
+    margin: 7rem 0
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 2rem
+  &__caption
+    +fs(30px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+  &__sign
+    max-width: 195px
+    +fs(18px)
+    line-height: 1.5
+    color: var(--color-gray)
+    text-align: right
+  &__mid
+    position: relative
+    margin-bottom: 2rem
+  &__icon
+    position: absolute
+    top: 1rem
+    right: 1rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+    object-fit: cover
+    border-radius: 20px
+  &__foot
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__info
+    +fs(20px)
+    font-weight: 600
+    p
+      line-height: 1.4
+      margin-bottom: 0.5rem
+    span
+      display: block
+      color: var(--secondary)
+  &__more
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    padding: 1.6rem 1.5rem
+    +fs(16px)
+    span
+      display: inline-block
+      border-radius: 60px
+      background: var(--secondary)
+      +fs(15px)
+      color: var(--white)
+      padding: .5rem.6rem .3rem
+      font-weight: 700
+      box-sizing: border-box
+      line-height: 1
+  &__callback
+    border-radius: 25px
+    background-color: var(--secondary)
+    background-image: url(../img/bg-callback-3.png)
+    background-repeat: no-repeat
+    background-position: bottom
+    background-size: contain
+    padding: 2.4rem
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 4rem
+  &__holder
+    +fs(30px)
+    font-weight: 600
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)

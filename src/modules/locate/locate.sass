@@ -1,0 +1,46 @@
+.locate
+  margin: 7rem 0
+  &__row
+    display: flex
+    justify-content: space-between
+    gap: 3rem
+  &__left
+    max-width: 486px
+  &__txt
+    margin-top: 2.5rem
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+  &__info
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    margin-top: 3rem
+  &__metro
+    display: flex
+    align-items: center
+    gap: 1rem
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)
+    &::before
+      content: ''
+      width: 6px
+      height: 6px
+      border-radius: 100%
+      background: #c51e1e
+  &__time
+    display: flex
+    align-items: center
+    gap: .5rem
+    font-weight: 600
+    color: #9c9c9c
+    +fs(18px)
+  &__right
+    max-width: 1190px
+    width: 70%
+  &__map
+    width: 100%
+    height: 249px
+    border-radius: 20px

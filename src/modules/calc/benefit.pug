@@ -1,0 +1,75 @@
++b.calc
+  +e.inner.inner
+    +e.head
+      +e.H2.title Посчитайте вашу выгоду
+      +e.sort
+        svg(xmlns='http://www.w3.org/2000/svg' width='34' height='34' fill='none' viewBox="0 0 34 34")
+          circle(cx='17' cy='17' r='17' fill='#51A747')
+          path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' d='M11.1797 13.1613h10.6349m0 0-3.3005-3.1418m3.3005 3.1418-3.3005 3.1419M21.8125 20.841H11.1776m0 0 3.3005-3.1418m-3.3005 3.1418 3.3005 3.1419')
+        span Узнать про способы покупки
+    +e.container
+      +e.left
+        +e.box
+          +e.caption Стоимость квартиры, млн ₽ 
+          +e.row.price
+            +e.group_start
+              span от
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+              +e.field.range-start 0
+            +e.group_end
+              span до
+              input(type="hidden" name="PRICE_END" class="price_end" value="25")
+              +e.field.range-end 0
+            .slider
+        +e.box
+          +e.caption Первоначальны взнос, ₽ 
+          +e.row_one.contribution
+            +e.group
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="start" value="1")
+              +e.field.range-start 0
+            +e.percent 30%
+            .slider
+        +e.box
+          +e.caption Срок
+          +e.row_one.year
+            +e.group
+              input(type="hidden" name="PRICE_START" id="PRICE_START" class="start" value="1")
+              +e.field.range-start 0
+            .slider 
+      +e.right
+        +b.calc-benefit
+          +e.box
+            +e.head
+              span Стандартная ипотека
+              svg(xmlns='http://www.w3.org/2000/svg' width='20' height='12' fill='none')
+                path(stroke='#23262B' stroke-linecap='round' stroke-width='1.5' d='m1 1 9 9 9-9')
+            +e.line
+              +e.P.val_price 34 305
+              +e.P.sign Ежемесячный платеж
+            +e.line
+              +e.P.val 6,7%
+              +e.P.sign Процентная ставка
+            +e.line
+              +e.P.val_price 4 836 640
+              +e.P.sign Переплата
+            +e.all
+              +e.total 0
+              +e.state Вы сэкономите
+          +e.box_green
+            +e.head
+              span Стандартная ипотека
+              svg(xmlns='http://www.w3.org/2000/svg' width='20' height='12' fill='none')
+                path(stroke='#23262B' stroke-linecap='round' stroke-width='1.5' d='m1 1 9 9 9-9')
+            +e.line
+              +e.P.val_price 16 305
+              +e.P.sign Ежемесячный платеж
+            +e.line
+              +e.P.val 6,7%
+              +e.P.sign Процентная ставка
+            +e.line
+              +e.P.val_price 5 899
+              +e.P.sign Переплата
+            +e.all
+              +e.total 10 568 657
+              +e.state Вы сэкономите
+      +e.A.submit.btn(href="#") Получить консультацию

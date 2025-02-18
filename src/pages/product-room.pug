@@ -1,7 +1,4 @@
 include ../static/pug/head
-include ../modules/breadcrumb/breadcrumb
-include ../modules/callback/callback
-include ../modules/office/office
 +head('Выбор квартиры и парковочного места')
 body
   main.gray
@@ -11,12 +8,12 @@ body
     include ../modules/product/product
     include ../modules/sales/sales-is-title
     include ../modules/panorame/panorame
-    include ../modules/finishing/finishing-tabs
+    +finishing()
     include ../modules/calc/calc
-    include ../modules/payment/payment
+    +payment()
     include ../modules/step-build/step-build
     include ../modules/sections/sections
-    include ../modules/services/services
+    +services()
     +office('_white')
     include ../modules/attract/attract
     +b.seo-text
@@ -24,5 +21,3 @@ body
         +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
     include ../modules/footer/footer
   include ../static/pug/scripts
-  
-  

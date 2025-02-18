@@ -1,0 +1,33 @@
+mixin heading(img, title, btn1, btn2, topsign, bottomsign, txt, sale)
+  +b.heading
+    +e.container
+      +e.IMG.pic(src=img alt='' loading="lazy")
+      +breadcrumb(['Главная', title], title)
+      +e.content
+        +e.inner.inner
+          if topsign != ''
+            +e.P.sign.display-2=topsign
+          +e.H1.title=title
+          if bottomsign != ''
+            +e.P.subtitle.display-2=bottomsign
+          if txt != ''
+            +e.P.txt=txt
+          if btn1 != '' || btn2 != ''
+            +e.control
+              if btn1 != ''
+                +e.A.btn.btn(href='#')=btn1
+              if btn2 != ''
+                +e.A.btn.btn_transparent(href='#')=btn2
+    if sale != undefined
+      +b.timer
+        +e.P.holder До ввода
+        +e.row
+          +e.col
+            +e.count 00
+            +e.sign Дней
+          +e.col
+            +e.count 12
+            +e.sign часов
+          +e.col
+            +e.count 19
+            +e.sign минут

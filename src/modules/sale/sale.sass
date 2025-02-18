@@ -73,7 +73,7 @@
   &__txt
     +fs(20px)
     line-height: 1.5
-    color: #4d545a
+    color: var(--color-gray)
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(16px)
@@ -100,12 +100,7 @@
         position: absolute
         left: 0
         top: 8px
-  &__timer
-    padding: 2.4rem 2.8rem
-    box-sizing: border-box
-    backdrop-filter: blur(33px)
-    background: rgba(35, 38, 43, 0.5)
-    border-radius: 25px
+  .timer
     position: absolute
     bottom: 2rem
     right: 2rem
@@ -113,70 +108,203 @@
       position: relative
       bottom: 0
       left: 0
-      background: var(--secondary)
-      display: flex
-      align-items: center
-      justify-content: space-between
-      gap: 2rem
-      padding: 2rem
       margin-top: 2rem
     +screen('max', 700)
       position: absolute
       bottom: 0
       left: 1rem
-      padding: 0.6rem .9rem
-      border-radius: 8px
-      margin-top: 0rem
-      width: calc(100% - 2rem)
+
+.sale-days
+  margin-top: -10rem
+  z-index: 2
+  &__top
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+    margin-bottom: 8rem
+  &__item
+    border-radius: 20px
+    background: var(--color-brown)
+    padding: 4.5rem 3.5rem
+    +fs(24px)
+    font-weight: 600
+    color: var(--white)
   &__row
     display: flex
-    justify-content: center
-    gap: 1rem
-    +screen('max', 1023)
-      gap: 1.5rem
-    +screen('max', 700)
-      gap: .5rem
-  &__holder
-    color: var(--white)
-    font-family: var(--second-family)
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+    position: relative
+  &__left
+    max-width: 515px
+    width: 40%
+  &__title
+    margin-bottom: 5rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__right
+    max-width: 1190px
+    width: 66%
+    padding-top: 34rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    p
+      margin-bottom: 2rem
+  &__caption
     +fs(30px)
-    text-align: center
-    margin-bottom: 1.2rem
+    margin-bottom: 3.5rem
+    font-weight: 600
     +screen('max', 1500)
-      +fs(24px)
-    +screen('max', 1023)
-      margin-bottom: 0
+      +fs(22px)
     +screen('max', 700)
-      +fs(20px)
-  &__count
-    border-radius: 10px
+      +fs(18px)
+  &__btn
+    margin-top: 3rem
+  .timer
     background: var(--secondary)
-    padding: 1.5rem
-    +fs(48px)
-    font-family: var(--second-family)
-    color: var(--white)
-    line-height: 1
-    min-width: 88px
-    text-align: center
-    box-sizing: border-box
-    +screen('max', 1500)
-      +fs(40px)
-      min-width: 68px
-    +screen('max', 1023)
+    position: absolute
+    top: 9rem
+    left: 34%
+    &__count
       background: var(--white)
       color: var(--secondary)
-    +screen('max', 700)
-      +fs(12px)
-      min-width: 32px
-      padding: 0.6rem
-  &__sign
-    font-family: var(--second-family)
-    +fs(22px)
-    margin-top: 1rem
+
+.sales-room
+  margin: 7rem 0
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+    position: relative
+    padding-top: 6.5rem
+    border-top: 1px solid #d7dbe0
+  &__left
+    max-width: 515px
+    width: 40%
+  &__right
+    max-width: 1190px
+    width: 66%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    p
+      margin-bottom: 2rem
+      color: #4d545a
+    b
+      color: var(--primary)
+      font-weight: 600
+  &__item
+    border-radius: 40px
+    padding: 1.5rem
+    box-sizing: border-box
+    background: var(--fon)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10rem
+    margin-top: 6rem
+  &__content
+    padding-left: 6rem
+    flex-shrink: 0
+    max-width: 650px
+  &__caption
+    margin-bottom: 1.5rem
+  &__subcaption
+    +fs(24px)
+    font-weight: 600
+    line-height: 1.2
+    margin-bottom: 3rem
+  &__list
+    +fs(20px)
+    list-style: inside
+  &__control
+    display: flex
+    gap: 2rem
+    margin-top: 4rem
+  &__btn
+    padding: 2.5rem
+  &__slider
+    max-width: 960px
+    background: var(--white)
+    border-radius: 30px
+    position: relative
+    padding: 3rem
     text-align: center
+    box-sizing: border-box
+    .slider-arrow
+      position: absolute
+      top: 50%
+      z-index: 2
+      transform: translateY(-50%)
+      +screen('max', 1023)
+        display: none
+      &_prev
+        left: 2rem
+      &_next
+        right: 2rem
+  &__sign
+    color: #838c95
+
+.sale-other
+  margin: 9rem 0
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+    overflow: auto
+  &__box
+    padding: 3.5rem
+    box-sizing: border-box
+    border-radius: 25px
     color: var(--white)
+    background: var(--color-brown)
+    margin: 2rem 0
     +screen('max', 1500)
-      +fs(18px)
-    +screen('max', 700)
-      +fs(8px)
-      margin-top: 0.5rem
+      padding: 2.5rem
+  &__time
+    display: inline-block
+    padding: 0.7rem 1rem
+    box-sizing: border-box
+    background: rgba(255, 255, 255, 0.1)
+    border-radius: 32px
+    +fs(18px)
+    font-weight: 700
+    line-height: 1
+    margin-bottom: 2.7rem
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1023)
+      margin-bottom: 2rem
+    span
+      position: relative
+      +fs(14.5px)
+      font-weight: 600
+      padding-left: 1rem
+      &:before
+        content: '•'
+        padding-right: 1rem
+  &__caption
+    +fs(28px)
+    font-weight: 700
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(24px)
+  &__txt
+    +fs(16px)
+    font-weight: 600
+    line-height: 1.3
+    opacity: 0.9
+    text-wrap: balance
+    +screen('max', 1500)
+      +fs(14px)
+  &__control
+    text-align: center
+    margin-top: 4.5rem
+  &__pic
+    width: 100%
+    vertical-align: middle

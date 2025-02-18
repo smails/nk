@@ -127,3 +127,78 @@
     .callback__btn
       +screen('max', 1500)
         width: 220px
+
+.callback-banner
+  margin: 9rem 0
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-radius: 30px
+    background-color: var(--color-brown)
+    background-image: url(../img/bg-callback-2.png)
+    background-repeat: no-repeat
+    background-position: right bottom
+    background-size: contain
+    padding: 5rem
+    box-sizing: border-box
+    color: var(--white)
+    +screen('max', 1500)
+      padding: 4rem
+      background-position: 60% bottom
+    +screen('max', 1023)
+      padding: 3rem
+    +screen('max', 700)
+      padding: 3rem 2rem
+      background-position: 50% bottom
+  &__sign
+    +fs(30px)
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+  &__title
+    +fs(70px)
+    color: var(--white)
+    font-family: var(--second-family)
+    line-height: 1
+    max-width: 800px
+    margin-bottom: 4.5rem
+    +screen('max', 1500)
+      +fs(50px)
+    +screen('max', 700)
+      +fs(48px)
+
+.subscribe
+  margin: 5rem 0
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-radius: 30px
+    background-color: var(--color-brown)
+    background-image: url(../img/bg-callback-4.png)
+    background-repeat: no-repeat
+    background-position: right bottom
+    background-size: contain
+    padding: 3.5rem 4rem
+    box-sizing: border-box
+    gap: 10rem
+    color: var(--white)
+    +screen('max', 1500)
+      background-position: 60% bottom
+    +screen('max', 1023)
+      padding: 3rem
+    +screen('max', 700)
+      padding: 3rem 2rem
+      background-position: 50% bottom
+  &__title
+    +fs(30px)
+    line-height: 1
+    font-weight: 600
+  &__btn
+    display: inline-flex
+    padding: 2rem 3rem
+    flex-shrink: 0
+    gap: 1rem

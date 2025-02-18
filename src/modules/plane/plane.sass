@@ -1,4 +1,11 @@
 .plane
+  margin: 12rem 0 3rem
+  +screen('max', 1500)
+    margin: 10rem 0 3rem
+  +screen('max', 1023)
+    margin: 6rem 0 3rem
+  +screen('max', 700)
+    margin: 4rem 0 3rem
   &__head
     display: flex
     justify-content: space-between
@@ -11,7 +18,7 @@
     max-width: 1195px
     +fs(20px)
     line-height: 1.5
-    color: #4d545a
+    color: var(--color-gray)
     +screen('max', 1500)
       +fs(16px)
       max-width: 60%

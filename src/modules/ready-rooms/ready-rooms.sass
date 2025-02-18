@@ -1,0 +1,35 @@
+.ready-rooms
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3.5rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__title
+    +fs(30px)
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+  &__pic
+    width: 100%
+    vertical-align: middle
+    object-fit: cover
+    border-radius: 25px
+  &__slider
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 -7rem
+        padding-inline: 7rem

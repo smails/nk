@@ -1,12 +1,7 @@
 include ../static/pug/head
-include ../modules/location/location
-include ../modules/callback/callback
-include ../modules/office/office
-include ../modules/placement/placement
-include ../modules/eco/eco
 +head('Главная')
 body
-  main.home
+  main.with-top
     +header()
     include ../modules/banner/banner
     include ../modules/proposal/proposal
@@ -25,7 +20,7 @@ body
     include ../modules/sale/sale
     include ../modules/offer/offer
     include ../modules/calc/calc
-    include ../modules/live/live
+    +live()
     include ../modules/life/life
     include ../modules/review/review
     include ../modules/news/news

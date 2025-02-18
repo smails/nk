@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
 
-$('.offer').each((index, item) => {
+$('.offer, .offer-special').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
     slidesPerView: 1.15,
     spaceBetween: '10px',

@@ -1,0 +1,38 @@
+.suggestion
+  padding-block: 9rem 7rem
+  background: var(--fon)
+  border-radius: 40px
+  &__title
+    margin-bottom: 5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+  &__item
+    border-radius: 20px
+    box-shadow: 0 9px 21px 0 rgba(89, 109, 130, 0.08)
+    background: var(--white)
+    position: relative
+    padding-bottom: 10rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+  &__content
+    margin: 2.5rem
+    box-sizing: border-box
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    line-height: 1.2
+    margin-bottom: 1.5rem
+  &__text
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    p
+      margin-bottom: 1rem
+  &__call
+    width: calc(100% - 5rem)
+    position: absolute
+    bottom: 2.5rem

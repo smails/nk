@@ -1,0 +1,70 @@
+.timer
+  padding: 2.4rem 2.8rem
+  box-sizing: border-box
+  backdrop-filter: blur(33px)
+  background: rgba(35, 38, 43, 0.5)
+  border-radius: 25px
+  +screen('max', 1023)
+    background: var(--secondary)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 2rem
+    padding: 2rem
+  +screen('max', 700)
+    padding: 0.6rem .9rem
+    border-radius: 8px
+    margin-top: 0rem
+    width: calc(100% - 2rem)
+  &__row
+    display: flex
+    justify-content: center
+    gap: 1rem
+    +screen('max', 1023)
+      gap: 1.5rem
+    +screen('max', 700)
+      gap: .5rem
+  &__holder
+    color: var(--white)
+    font-family: var(--second-family)
+    +fs(30px)
+    text-align: center
+    margin-bottom: 1.2rem
+    +screen('max', 1500)
+      +fs(24px)
+    +screen('max', 1023)
+      margin-bottom: 0
+    +screen('max', 700)
+      +fs(20px)
+  &__count
+    border-radius: 10px
+    background: var(--secondary)
+    padding: 1.5rem
+    +fs(48px)
+    font-family: var(--second-family)
+    color: var(--white)
+    line-height: 1
+    min-width: 88px
+    text-align: center
+    box-sizing: border-box
+    +screen('max', 1500)
+      +fs(40px)
+      min-width: 68px
+    +screen('max', 1023)
+      background: var(--white)
+      color: var(--secondary)
+    +screen('max', 700)
+      +fs(12px)
+      min-width: 32px
+      padding: 0.6rem
+  &__sign
+    font-family: var(--second-family)
+    +fs(22px)
+    margin-top: 1rem
+    text-align: center
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(8px)
+      margin-top: 0.5rem

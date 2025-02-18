@@ -61,7 +61,7 @@
     flex-shrink: 0
     width: 32%
     border-radius: 25px
-    padding: 3.5rem 2.5rem
+    padding: 3.5rem 2.5rem 13rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
     background: var(--white)
     box-sizing: border-box
@@ -130,11 +130,11 @@
       right: 2rem
     span
       +fs(14px)
-      color: #4d545a
+      color: var(--color-gray)
   &__caption
     +fs(16px)
     margin-bottom: 1.5rem
-    color: #4d545a
+    color: var(--color-gray)
     opacity: 0.7
     +screen('max', 1500)
       +fs(14px)
@@ -329,7 +329,7 @@
         border-right: 0
   &__caption
     +fs(16px)
-    color: #4d545a
+    color: var(--color-gray)
     margin-top: 0.4rem
     line-height: 1
     opacity: 0.6
@@ -364,3 +364,85 @@
       position: absolute
       right: 0
       top: .7rem
+
+.calc-benefit
+  box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
+  display: flex
+  background: var(--white)
+  border-radius: 25px
+  &__box
+    padding: 3rem 3rem 4rem
+    flex-grow: 1
+    &_green
+      border-radius: 25px
+      background: var(--secondary)
+      color: var(--white)
+      border: 8px solid var(--fon)
+      .calc-benefit__head
+        path
+          stroke: var(--white)
+      .calc-benefit__sign
+        color: var(--white)
+      .calc-benefit__line
+        border-bottom-color: #74c76b
+      .calc-benefit__val_price:after, .calc-benefit__total:after
+        filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(0%) hue-rotate(74deg) brightness(106%) contrast(106%)
+      .calc-benefit__state
+        background: #e96a6a
+        color: var(--white)
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +fs(30px)
+    padding-bottom: 3rem
+    font-weight: 600
+    border-bottom: 1px solid #e1e4e8
+  &__line
+    padding-block: 1.9rem
+    border-bottom: 1px solid #e1e4e8
+  &__val
+    +fs(30px)
+    font-weight: 600
+    margin-bottom: 0.8rem
+    &_price
+      &:after
+        content: ''
+        width: 14px
+        height: 21px
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='21' fill='none'%3E%3Cpath fill='%2323262B' d='M2.28518 21V0h4.93809C9.5172 0 11.2158.5196 12.3189 1.55882 13.4396 2.59804 14 4.10784 14 6.08823c0 1.33334-.2714 2.4804-.8143 3.44118-.5428.94119-1.3483 1.66669-2.4165 2.17649-1.05063.5098-2.35519.7647-3.91366.7647H4.64916V21H2.28518ZM0 17v-1.9118h8.98311V17H0Zm0-4.5294v-2.2353h6.01501v2.2353H0Zm6.51407-2.2353c1.06817 0 1.96998-.1275 2.70544-.38236.75297-.2549 1.33079-.67647 1.73359-1.2647.4027-.58824.6041-1.39216.6041-2.41177 0-1.33333-.3677-2.32353-1.1032-2.97059-.73543-.64706-1.88239-.97059-3.44087-.97059H4.64916v8.00001h1.86491Z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: center
+        display: inline-block
+        position: relative
+
+  &__sign
+    line-height: 1.1
+    color: var(--color-gray)
+  &__all
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 5.5rem
+  &__total
+    +fs(38px)
+    font-weight: 600
+    &:after
+      content: ''
+      width: 21px
+      height: 36px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='36' fill='none'%3E%3Cpath fill='%2323262B' d='M3.10131 33V6H9.803c3.1132 0 5.4184.66807 6.9156 2.0042C18.2395 9.34034 19 11.2815 19 13.8277c0 1.7143-.3684 3.1891-1.1051 4.4244-.7367 1.2101-1.8299 2.1429-3.2795 2.7983-1.4259.6555-3.1964.9832-5.31146.9832H6.30957V33H3.10131ZM0 27.8571v-2.4579h12.1914v2.4579H0Zm0-5.8235v-2.8739h8.16323v2.8739H0Zm8.84053-2.8739c1.44967 0 2.67357-.1639 3.67167-.4916 1.0219-.3278 1.8061-.8698 2.3527-1.6261.5466-.7563.8199-1.7899.8199-3.1008 0-1.7143-.4991-2.9874-1.4972-3.8194-.9981-.83188-2.5547-1.24785-4.66978-1.24785H6.30957V19.1597h2.53096Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      display: inline-block
+      position: relative
+      top: 2px
+  &__state
+    +fs(18px)
+    font-weight: 600
+    color: var(--secondary)
+    padding: 1rem 1.5rem
+    box-sizing: border-box
+    display: inline-block
+    background: rgba(38, 187, 20, 0.09)
+    border-radius: 56px
