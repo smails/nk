@@ -115,41 +115,80 @@
       left: 1rem
 
 .sale-days
-  margin-top: -10rem
+  margin-top: -7rem
   z-index: 2
+  position: relative
   &__top
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
     margin-bottom: 8rem
+    +screen('max', 1500)
+      margin-bottom: 7rem
+    +screen('max', 1023)
+      gap: 1.5rem
+      margin-bottom: 5rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 180px)
+      gap: .5rem
+      overflow: auto
+      margin: 0 -2rem 3rem
+      padding-inline: 2rem
   &__item
     border-radius: 20px
     background: var(--color-brown)
-    padding: 4.5rem 3.5rem
+    padding: 3.5rem 3rem
     +fs(24px)
     font-weight: 600
     color: var(--white)
+    display: flex
+    align-items: center
+    text-wrap: balance
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      padding: 1rem 2rem
+      +fs(14px)
   &__row
     display: flex
     align-items: flex-start
     justify-content: space-between
-    gap: 4rem
+    gap: 8rem
     position: relative
+    +screen('max', 1023)
+      display: block
   &__left
     max-width: 515px
     width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 3rem
   &__pic
     width: 100%
     vertical-align: middle
+    +screen('max', 1023)
+      max-width: 400px
+      margin-top: 2rem
   &__right
     max-width: 1190px
     width: 66%
     padding-top: 34rem
+    +screen('max', 1500)
+      padding-top: 28rem
+    +screen('max', 1023)
+      width: 100%
+      padding-top: 5.5rem
+    +screen('max', 700)
+      padding-top: 3rem
   &__txt
     +fs(20px)
     line-height: 1.5
+    +screen('max', 1500)
+      +fs(16px)
     p
       margin-bottom: 2rem
   &__caption
@@ -158,21 +197,37 @@
     font-weight: 600
     +screen('max', 1500)
       +fs(22px)
+      margin-bottom: 2.5rem
     +screen('max', 700)
       +fs(18px)
   &__btn
-    margin-top: 3rem
+    margin-top: 1rem
+    +screen('max', 1500)
+      margin-top: 0
+    +screen('max', 1023)
+      width: 100%
   .timer
     background: var(--secondary)
     position: absolute
     top: 9rem
     left: 34%
+    +screen('max', 1500)
+      left: 42%
+      top: 4rem
+    +screen('max', 1023)
+      position: relative
+      left: 0
+      top: 0
+    +screen('max', 700)
+      width: 100%
     &__count
       background: var(--white)
       color: var(--secondary)
 
 .sales-room
   margin: 7rem 0
+  +screen('max', 700)
+    margin: 5rem 0
   &__row
     display: flex
     align-items: flex-start
@@ -181,15 +236,29 @@
     position: relative
     padding-top: 6.5rem
     border-top: 1px solid #d7dbe0
+    +screen('max', 1023)
+      display: block
+    +screen('max', 1023)
+      padding-top: 0
+      border-top: 0
   &__left
     max-width: 515px
     width: 40%
+    +screen('max', 1023)
+      width: 100%
   &__right
     max-width: 1190px
     width: 66%
+    +screen('max', 1023)
+      width: 100%
+  &__title
+    +screen('max', 1023)
+      margin-bottom: 2rem
   &__txt
     +fs(20px)
     line-height: 1.5
+    +screen('max', 1500)
+      +fs(16px)
     p
       margin-bottom: 2rem
       color: #4d545a
@@ -206,10 +275,25 @@
     justify-content: space-between
     gap: 10rem
     margin-top: 6rem
+    +screen('max', 1500)
+      gap: 6rem
+    +screen('max', 1023)
+      margin-top: 4rem
+      display: block
+      border: 1px solid rgba(0, 0, 0, 0.15)
+      padding: 3.5rem 4.5rem
+    +screen('max', 700)
+      padding: 2.5rem
+      border-radius: 15px
   &__content
     padding-left: 6rem
     flex-shrink: 0
     max-width: 650px
+    +screen('max', 1500)
+      padding-left: 5rem
+    +screen('max', 1023)
+      padding-left: 0
+      max-width: 100%
   &__caption
     margin-bottom: 1.5rem
   &__subcaption
@@ -217,15 +301,37 @@
     font-weight: 600
     line-height: 1.2
     margin-bottom: 3rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      margin-bottom: 2.5rem
   &__list
     +fs(20px)
     list-style: inside
+    +screen('max', 1500)
+      +fs(16px)
   &__control
     display: flex
     gap: 2rem
     margin-top: 4rem
+    +screen('max', 1280)
+      flex-flow: column
+    +screen('max', 1023)
+      flex-flow: row
+    +screen('max', 700)
+      flex-flow: column
+      margin-top: 2.5rem
+  &__pic
+    +screen('max', 700)
+      width: 100%
   &__btn
     padding: 2.5rem
+    +screen('max', 1500)
+      padding: 2.2rem
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: 100%
   &__slider
     max-width: 960px
     background: var(--white)
@@ -234,6 +340,15 @@
     padding: 3rem
     text-align: center
     box-sizing: border-box
+    width: 44%
+    +screen('max', 1500)
+      padding: 1rem 1rem 3rem
+    +screen('max', 1023)
+      width: 100%
+      margin-top: 4.5rem
+    +screen('max', 700)
+      border-radius: 15px
+      margin-top: 3rem
     .slider-arrow
       position: absolute
       top: 50%
@@ -247,16 +362,27 @@
         right: 2rem
   &__sign
     color: #838c95
+    +screen('max', 1500)
+      +fs(12px)
 
 .sale-other
   margin: 9rem 0
+  +screen('max', 1500)
+    margin: 7rem 0
   &__title
     margin-bottom: 3rem
+    +screen('max', 1500)
+      margin-bottom: 2rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
     overflow: auto
+    +screen('max', 1023)
+      grid-template-columns: repeat(3, 346px)
+      gap: 1rem
+      margin: 0 -2rem
+      padding-inline: 2rem
   &__box
     padding: 3.5rem
     box-sizing: border-box
@@ -266,6 +392,8 @@
     margin: 2rem 0
     +screen('max', 1500)
       padding: 2.5rem
+    +screen('max', 1023)
+      margin: 1rem 0
   &__time
     display: inline-block
     padding: 0.7rem 1rem

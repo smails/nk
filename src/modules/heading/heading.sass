@@ -1,6 +1,11 @@
 .heading
   padding: 0.5rem
   box-sizing: border-box
+  position: relative
+  &__inner
+    max-width: calc(100% - 8rem)
+    +screen('max', 1280)
+      max-width: 100%
   &__container
     position: relative
     &:before
@@ -19,12 +24,21 @@
     border-radius: 40px
     vertical-align: middle
     object-fit: cover
+    +screen('max', 1280)
+      height: 700px
+      border-radius: 20px
+    +screen('max', 1023)
+      height: clamp(715px, 80vh, 915px)
   &__content
     position: absolute
     bottom: 6rem
     width: 100%
     z-index: 2
     left: 0
+    +screen('max', 1023)
+      bottom: 2.5rem
+    &_sale
+      bottom: 12rem
   &__title
     +fs(90px)
     color: var(--white)
@@ -32,9 +46,11 @@
     line-height: 1
     max-width: 1450px
     +screen('max', 1500)
-      +fs(50px)
+      +fs(66px)
+    +screen('max', 1280)
+      +fs(55px)
     +screen('max', 700)
-      +fs(48px)
+      +fs(32px)
   &__sign
     margin-bottom: 4rem
     color: var(--white)
@@ -42,6 +58,11 @@
     color: var(--white)
     margin-top: 2.5rem
     max-width: 940px
+    +screen('max', 1500)
+      margin-top: 2rem
+    +screen('max', 700)
+      +fs(18px)
+      margin-top: 1rem
   &__txt
     margin-top: 4rem
     max-width: 940px
@@ -49,15 +70,35 @@
     font-weight: 600
     line-height: 1.3
     color: var(--white)
+    +screen('max', 1500)
+      +fs(14px)
+      margin-top: 2rem
+    +screen('max', 700)
+      margin-top: 1rem
   &__control
     display: flex
     gap: 2rem
     margin-top: 5rem
+    +screen('max', 1500)
+      margin-top: 3rem
+    +screen('max', 700)
+      flex-wrap: wrap
+      gap: 1.5rem
+  &__btn
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: 100%
   .breadcrumb
     position: absolute
     top: 14rem
     left: calc((100% - 1800px) / 2)
     z-index: 2
+    +screen('max', 1800)
+      left: 4rem
+      top: 10rem
+    +screen('max', 1280)
+      left: 0
     &__active, &__link
       color: var(--white)
       opacity: 0.8
@@ -66,6 +107,11 @@
     bottom: 3.5rem
     right: 3.5rem
     z-index: 2
+    +screen('max', 1023)
+      position: relative
+      bottom: 0
+      left: 0
+      margin-top: 1rem
 
 .heading-with-text
   margin-bottom: 6rem

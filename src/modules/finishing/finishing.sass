@@ -111,7 +111,7 @@
   margin-top: 12rem
   margin-bottom: 7rem
   +screen('max', 1500)
-    margin-top: 10rem
+    margin-top: 6rem
   +screen('max', 1023)
     margin-top: 6rem
   +screen('max', 700)
@@ -146,7 +146,7 @@
       display: block
   &__row
     display: grid
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 50%)
     gap: 1.8rem
     +screen('max', 1023)
       display: block
@@ -156,6 +156,9 @@
       background: var(--white)
     +screen('max', 700)
       padding: 0.5rem
+    &_border
+      +screen('max', 700)
+        border: 1px solid #d7dbe0
   &__pic
     width: 100%
     vertical-align: middle
@@ -186,6 +189,8 @@
     &_border
       border: 1px solid #d7dbe0
       box-shadow: none
+      +screen('max', 700)
+        border: none
   &__caption
     +fs(30px)
     margin-bottom: 4rem
@@ -252,6 +257,7 @@
   &__video
     display: inline-flex
     align-items: center
+    justify-content: center
     gap: 1rem
     padding: 1.8rem 3rem
     position: absolute
@@ -265,6 +271,7 @@
       width: 100%
       left: 0
       bottom: 0
+      padding: 1.1rem
   &__sign
     margin-top: 6.5rem
     padding-block: 2rem
@@ -272,7 +279,13 @@
     opacity: 0.9
     border-block: 1px solid #d7dbe0
     line-height: 1.5
+    +screen('max', 1500)
+      margin-top: 3rem
+      +fs(12px)
   &__call
     margin-top: 3rem
     width: 100%
     padding: 2.1rem 3rem
+    +screen('max', 1023)
+      margin-top: 0
+      padding: 1.6rem

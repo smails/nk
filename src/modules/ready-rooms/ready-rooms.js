@@ -13,7 +13,7 @@ $('.ready-rooms__slider').each((index, item) => {
     modules: [Navigation],
     breakpoints: {
       767: {
-        slidesPerView: 2.15,
+        slidesPerView: 1.7,
       },
       1500: {
         spaceBetween: '15px',

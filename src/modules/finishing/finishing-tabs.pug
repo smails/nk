@@ -10,7 +10,7 @@ mixin finishing(title='Отделка', control, btn='_white', sign, video, slid
           +e.BUTTON.btn.btn(class=btn) Окна в квартире
       +e.wrapper
         +e.box
-          +e.row
+          +e.row(class=control)
             if slider != undefined
               +e.slider
                 .swiper
@@ -57,7 +57,7 @@ mixin finishing(title='Отделка', control, btn='_white', sign, video, slid
               else
                 +e.A.more.btn_tr-green(href="#") Подробнее об отделке
         +e.box
-          +e.row
+          +e.row(class=control)
             if slider != undefined
               +e.slider
                 .swiper

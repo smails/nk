@@ -58,6 +58,10 @@
       justify-content: space-between
       display: flex
       margin-top: 2.5rem
+  &__caption
+    +screen('max', 1023)
+      +fs(22px)
+      max-width: 40%
   &__tab
     +fs(18px)
     font-weight: 600
@@ -67,6 +71,8 @@
     +screen('max', 1500)
       +fs(12px)
       padding: 1.2rem 1.5rem
+    +screen('max', 1023)
+      padding: 1.2rem
     +screen('max', 700)
       +fs(10px)
       padding: 1.2rem 2.5vw

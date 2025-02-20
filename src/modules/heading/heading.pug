@@ -1,9 +1,9 @@
-mixin heading(img, title, btn1, btn2, topsign, bottomsign, txt, sale)
+mixin heading(img, title, btn1, btn2, topsign, bottomsign, txt, sale, mod)
   +b.heading
     +e.container
       +e.IMG.pic(src=img alt='' loading="lazy")
       +breadcrumb(['Главная', title], title)
-      +e.content
+      +e.content(class=mod)
         +e.inner.inner
           if topsign != ''
             +e.P.sign.display-2=topsign

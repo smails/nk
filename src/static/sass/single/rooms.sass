@@ -1,5 +1,11 @@
 .rooms
   margin: 9rem 0
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 1023)
+    margin: 4.5rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__head
     display: flex
     align-items: flex-start
@@ -7,23 +13,43 @@
     gap: 4rem
     padding-bottom: 6rem
     border-bottom: 1px solid #d7dbe0
+    +screen('max', 1500)
+      padding-bottom: 5rem
+    +screen('max', 1023)
+      display: block
+      padding-bottom: 4rem
+    +screen('max', 700)
+      padding-bottom: 3rem
   &__left
     max-width: 500px
-    width: 30%
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
   &__title
     margin-bottom: 2.5rem
+    +screen('max', 1023)
+      margin-bottom: 1.5rem
   &__subtitle
     +fs(20px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      margin-bottom: 2.5rem
   &__right
     max-width: 1195px
     width: 70%
-    margin-top: 7rem
+    +screen('max', 1023)
+      width: 100%
   &__txt
     +fs(20px)
     line-height: 1.5
     color: var(--color-gray)
-    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
     p
       margin-bottom: 1rem
   &__middle
@@ -31,6 +57,20 @@
     grid-template-columns: repeat(3, 1fr)
     gap: max(7rem, 5vw)
     margin: 7rem 0
+    +screen('max', 1500)
+      margin: 5rem 0
+      gap: 5rem 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 4rem 3.5rem
+    +screen('max', 700)
+      margin: 4rem 0
+      grid-template-columns: 1fr
+      gap: 3rem
+  &__item
+    +screen('max', 700)
+      border-bottom: 1px solid #d7dbe0
+      padding-bottom: 3rem
   &__top
     display: flex
     justify-content: space-between
@@ -49,6 +89,10 @@
     line-height: 1.5
     color: var(--color-gray)
     text-align: right
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
   &__mid
     position: relative
     margin-bottom: 2rem
@@ -68,6 +112,8 @@
   &__info
     +fs(20px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
     p
       line-height: 1.4
       margin-bottom: 0.5rem
@@ -80,6 +126,13 @@
     gap: 1rem
     padding: 1.6rem 1.5rem
     +fs(16px)
+    +screen('max', 1500)
+      +fs(13px)
+      padding: 1.5rem .6rem
+      gap: .5rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.3rem
     span
       display: inline-block
       border-radius: 60px
@@ -90,6 +143,8 @@
       font-weight: 700
       box-sizing: border-box
       line-height: 1
+      +screen('max', 1500)
+        +fs(11px)
   &__callback
     border-radius: 25px
     background-color: var(--secondary)
@@ -103,11 +158,21 @@
     justify-content: center
     align-items: center
     gap: 4rem
+    +screen('max', 1023)
+      padding: 2rem
+      gap: 2rem
+    +screen('max', 700)
+      flex-flow: column
   &__holder
     +fs(30px)
     font-weight: 600
     color: var(--white)
     +screen('max', 1500)
       +fs(22px)
+    +screen('max', 1023)
+      +fs(18px)
     +screen('max', 700)
       +fs(18px)
+  &__call
+    +screen('max', 700)
+      width: 100%

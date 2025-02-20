@@ -1,9 +1,12 @@
 .ready-rooms
+  overflow: hidden
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 3.5rem
+    +screen('max', 1500)
+      margin-bottom: 2.5rem
     .slider-arrow
       width: 67px
       height: 67px
@@ -33,3 +36,7 @@
       +screen('max', 1500)
         margin: 0 -7rem
         padding-inline: 7rem
+      +screen('max', 1280)
+        margin: 0 -5rem
+        padding-inline: 5rem
+        
