@@ -237,12 +237,23 @@
       top: 50%
       z-index: 2
       transform: translateY(-50%)
-      +screen('max', 1023)
-        display: none
+      +screen('max', 700)
+        background: none
+        top: 90%
       &_prev
         left: 2rem
+        +screen('max', 700)
+          left: 0
       &_next
         right: 2rem
+        +screen('max', 700)
+          right: 0
+      svg
+        +screen('max', 700)
+          transform: scale(1.1)
+      path
+        +screen('max', 700)
+          stroke: var(--white)
     .slider-dots
       position: absolute
       left: 0
@@ -250,8 +261,8 @@
       justify-content: center
       bottom: 3rem
       z-index: 3
-      +screen('max', 1023)
-        display: none
+      +screen('max', 700)
+        bottom: 1.5rem
       .swiper-pagination-bullet.swiper-pagination-bullet-active
         background: var(--secondary)
   &__video

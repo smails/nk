@@ -91,12 +91,19 @@
     min-height: 70px
     +screen('max', 1500)
       +fs(14px)
+    +screen('max', 700)
+      min-height: 57px
   &__btn
     width: 100%
     margin-top: 3rem
     +screen('max', 1500)
       margin-top: 1.5rem
       padding: 1.4rem 2rem
+    &_hidden
+      display: none
+      +screen('max', 700)
+        display: block
+        margin-top: 0
   &__to
     position: relative
     border-radius: 100%

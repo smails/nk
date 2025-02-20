@@ -237,17 +237,25 @@
       display: block
     +screen('max', 700)
       padding: 3rem 2rem
+      background-image: none
+      border-radius: 15px
   &__title
     +fs(30px)
     line-height: 1
     font-weight: 600
     +screen('max', 1500)
       +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
   &__btn
     display: inline-flex
+    align-items: center
+    justify-content: center
     padding: 2rem 3rem
     flex-shrink: 0
     gap: 1rem
     +screen('max', 1023)
       padding: 1.2rem 1.5rem
       margin-top: 2.5rem
+    +screen('max', 700)
+      width: 100%

@@ -149,6 +149,9 @@
     +screen('max', 1023)
       padding: 1rem 2rem
       +fs(14px)
+    +screen('max', 700)
+      padding: .5rem 1.5rem
+      border-radius: 13px
   &__row
     display: flex
     align-items: flex-start
@@ -383,6 +386,8 @@
       gap: 1rem
       margin: 0 -2rem
       padding-inline: 2rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 270px)
   &__box
     padding: 3.5rem
     box-sizing: border-box
@@ -394,6 +399,7 @@
       padding: 2.5rem
     +screen('max', 1023)
       margin: 1rem 0
+      padding: 1.5rem 1.5rem 2rem
   &__time
     display: inline-block
     padding: 0.7rem 1rem

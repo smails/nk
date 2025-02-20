@@ -57,6 +57,15 @@
       +screen('max', 1500)
         margin: 0 -7rem
         padding-inline: 7rem
+  &__slider
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 -7rem
+        padding-inline: 7rem
   &__box
     padding: 3.5rem
     box-sizing: border-box
@@ -113,6 +122,11 @@
   padding-block: 8rem
   background: var(--fon)
   border-radius: 40px
+  +screen('max', 1500)
+    padding-block: 5rem
+  +screen('max', 700)
+    padding-block: 3.5rem
+    border-radius: 15px
   &__head
     display: flex
     justify-content: space-between
@@ -127,6 +141,9 @@
     .slider-arrows
       +screen('max', 1023)
         display: none
+  &__control
+    +screen('max', 700)
+      display: none
   &__item
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
     border-radius: 25px
@@ -136,11 +153,20 @@
     position: relative
     +screen('max', 1500)
       padding: 1.5rem 2rem
-  &__slider
-    position: relative
+    +screen('max', 700)
+      padding: 1.5rem
+      border-radius: 15px
+  &__wrapper
     .swiper
       padding: 2rem
       margin: -2rem
+  &__slider
+    position: relative
+    +screen('max', 700)
+      width: 96px
+      position: absolute
+      right: 0
+      top: 1rem
     .slider-dots
       display: flex
       justify-content: center
@@ -159,7 +185,13 @@
     border-radius: 82px
     display: inline-block
     margin-bottom: 5rem
+    +screen('max', 700)
+      +fs(12px)
+      margin-bottom: 2rem
   &__caption
     +fs(28px)
     font-weight: 600
     margin-bottom: 4rem
+    +screen('max', 700)
+      +fs(20px)
+      padding-right: 120px
