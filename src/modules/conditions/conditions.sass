@@ -1,0 +1,100 @@
+.conditions
+  margin: 9rem 0 7rem
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+    padding-bottom: 7rem
+    +screen('max', 1500)
+      padding-bottom: 5rem
+    +screen('max', 1023)
+      display: block
+      padding-bottom: 4rem
+    +screen('max', 700)
+      padding-bottom: 3rem
+  &__left
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__right
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      margin-bottom: 1.5rem
+    a
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      color: #838c95
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+  &__item
+    padding: 2.6rem 2.6rem 2.6rem 7.5rem
+    box-sizing: border-box
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2351A747'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m11 21 5.5 5.5L29 14'/%3E%3C/svg%3E")
+    background-size: 40px
+    background-repeat: no-repeat
+    background-position: 20px center
+    border: 1px solid var(--secondary)
+    border-radius: 15px
+  &__sign
+    color: var(--color-gray)
+    margin-bottom: 0.5rem
+  &__caption
+    +fs(24px)
+    line-height: 1.2
+    font-weight: 600
+
+.demand
+  padding-block: 6rem 7rem
+  background: var(--secondary)
+  border-radius: 40px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__title
+    color: var(--white)
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    padding: 2.8rem 2.6rem 2.8rem 7.5rem
+    box-sizing: border-box
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2351A747'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m11 21 5.5 5.5L29 14'/%3E%3C/svg%3E")
+    background-size: 40px
+    background-repeat: no-repeat
+    background-position: 20px center
+    background-color: var(--white)
+    border-radius: 15px
+    display: flex
+    justify-content: center
+    flex-flow: column
+  &__sign
+    color: var(--color-gray)
+  &__caption
+    +fs(24px)
+    line-height: 1.2
+    font-weight: 600
+  &__txt
+    +fs(18px)
+    font-weight: 600
+    opacity: 0.8
+    margin-top: 4rem
+    color: var(--white)

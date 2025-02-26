@@ -259,3 +259,57 @@
       margin-top: 2.5rem
     +screen('max', 700)
       width: 100%
+
+.callback-form
+  padding-block: 9.5rem
+  border-radius: 40px
+  background-color: var(--secondary)
+  background-image: url(../img/bg-callback-5.png)
+  background-repeat: no-repeat
+  background-size: contain
+  margin: 8.5rem 0
+  &__container
+    max-width: 1070px
+    margin: 0 auto
+    text-align: center
+    color: var(--white)
+  &__title
+    +fs(60px)
+    font-family: var(--second-family)
+    margin-bottom: 3rem
+  &__txt
+    +fs(24px)
+    line-height: 1.5
+    opacity: 0.8
+    margin-bottom: 5rem
+  &__action
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 4rem
+    align-items: flex-end
+  &__name
+    margin-bottom: 1.5rem
+    text-align: left
+  &__field
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    width: 100%
+    padding: 2.3rem 2rem
+    box-sizing: border-box
+    +fs(18px)
+    font-weight: 600
+    border-radius: 64px
+    background: none
+    color: var(--white)
+    transition: .5s ease
+    &::placeholder
+      color: var(--white)
+      opacity: 0.4
+    &:focus
+      border-color: var(--white)
+  &__req
+    +fs(18px)
+    font-weight: 600
+    margin-top: 5rem
+    color: rgba(255, 255, 255, 0.5)
+    a
+      color: var(--white)

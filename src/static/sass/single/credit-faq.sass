@@ -1,0 +1,27 @@
+.credit-faq
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+  &__item
+    padding: 4rem
+    background: var(--fon)
+    border-radius: 25px
+    box-sizing: border-box
+  &__caption
+    +fs(30px)
+    font-weight: 600
+    line-height: 1.2
+    margin-bottom: 3.5rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    opacity: 0.9
+    margin-bottom: 3.5rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      margin-bottom: 1.5rem

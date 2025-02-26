@@ -1,0 +1,37 @@
+.credit-variable
+  &__title
+    margin-bottom: 4.5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+  &__item
+    padding: 5rem
+    background: var(--secondary)
+    border-radius: 25px
+    display: flex
+    justify-content: space-between
+    flex-flow: column
+    align-items: flex-start
+    color: var(--white)
+  &__state
+    padding: 0.8rem 1.5rem
+    font-weight: 600
+    box-sizing: border-box
+    border-radius: 82px
+    background: var(--color-red)
+    +fs(20px)
+    position: relative
+    left: -3rem
+    top: -3rem
+    +screen('max', 1500)
+      +fs(12px)
+  &__content
+    margin: 9rem 0 5rem
+  &__caption
+    +fs(50px)
+    font-family: var(--second-family)
+    margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5

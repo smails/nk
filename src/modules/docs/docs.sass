@@ -1,0 +1,32 @@
+.docs
+  margin-top: 3rem
+  padding-block: 7rem 7rem
+  background: var(--fon)
+  border-radius: 40px
+  &__title
+    margin-bottom: 5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    padding: 3rem
+    box-sizing: border-box
+    background: var(--white)
+    border-radius: 25px
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+  &__pic
+    margin-bottom: 4rem
+  &__caption
+    +fs(30px)
+    font-weight: 600
+    line-height: 1.2
+    margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)

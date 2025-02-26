@@ -1,0 +1,19 @@
+include ../static/pug/head
++head('Удобные квартиры в современных ЖК по ипотеке для IT-специалистов')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-7.png', 'Удобные квартиры в современных ЖК по ипотеке для IT-специалистов', 'Подобрать планировку', 'Получить консультацию', '', '', 'Государственная программа кредитования «Ипотека для IT» по ставке от 4% при покупке квартиры в жилых комплексах девелопера «Столица Нижний»!')
+    include ../modules/conditions/type-2
+    include ../modules/conditions/demand
+    include ../modules/docs/docs
+    include ../modules/flat/flat
+    include ../modules/calc/benefit
+    include ../modules/broker/broker
+    include ../modules/faq/faq
+    include ../modules/select-room/offer
+    include ../modules/programs/programs
+    +callback(9)
+    +callback(10)
+    include ../modules/footer/footer
+  include ../static/pug/scripts 

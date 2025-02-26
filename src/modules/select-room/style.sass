@@ -752,3 +752,23 @@
       &:last-of-type
         &:after
           display: none
+
+.sr-product-offer
+  padding-block: 9rem
+  background: var(--fon)
+  border-radius: 40px
+  &__title
+    margin-bottom: 5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    +screen('max', 1500)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+  &__control
+    margin-top: 3.5rem
+    text-align: center

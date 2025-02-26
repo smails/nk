@@ -1,0 +1,64 @@
+.programs
+  padding-block: 9rem
+  background: var(--fon)
+  border-radius: 40px
+  margin-top: 3rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__control
+    +screen('max', 700)
+      display: none
+  &__btn
+    border-color: var(--secondary)
+    color: var(--primary)
+    padding: 2.2rem 3.8rem
+    margin-right: 2rem
+    +screen('max', 1500)
+      padding: 1.6rem 2.5rem
+    +screen('max', 1023)
+      margin-right: 0
+    +screen('max', 700)
+      width: 100%
+  &__item
+    padding: 3rem
+    box-sizing: border-box
+    border-radius: 25px
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    background: var(--white)
+    padding-bottom: 12rem
+    position: relative
+    height: 100%
+  &__numb
+    +fs(110px)
+    font-weight: 600
+    color: #e9edf0
+    opacity: 0.7
+    margin-bottom: 3.5rem
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+  &__btn
+    position: absolute
+    bottom: 3rem
+    left: 3rem

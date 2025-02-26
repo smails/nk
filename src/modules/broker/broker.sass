@@ -1,0 +1,27 @@
+.broker
+  margin: 8rem 0 10rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 5rem
+  &__content
+    max-width: 1190px
+  &__title
+    margin-bottom: 3.5rem
+  &__text
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      margin-bottom: 1rem
+  &__control
+    display: flex
+    gap: 2rem
+    margin-top: 3.5rem
+  &__pic
+    vertical-align: middle

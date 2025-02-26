@@ -1,0 +1,42 @@
+.faq
+  margin: 11rem 0
+  &__inner
+    display: flex
+    justify-content: space-between
+    gap: 5rem
+  &__content
+    max-width: 1190px
+    width: 70%
+  &__line
+    padding-block: 2.3rem
+    border-block: 1px solid #d7dbe0
+    margin-top: -1px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2rem
+    cursor: pointer
+  &__caption
+    +fs(24px)
+    font-weight: 600
+  &__icon
+    flex-shrink: 0
+    transition: .5s ease
+    path
+      transition: .5s ease
+    &.open
+      rotate: 45deg
+      path
+        fill: var(--primary)
+  &__body
+    margin-top: 2.6rem
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    opacity: 0.8
+    display: none
+  &__control
+    display: flex
+    gap: 2rem
+    margin-top: 3.5rem
