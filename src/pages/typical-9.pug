@@ -1,0 +1,130 @@
+include ../static/pug/head
++head('Одна анкета по ипотеке сразу в 20 банков-партнеров девелопера «Столица Нижний»')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-10.png', 'Одна анкета по ипотеке сразу в 20 банков-партнеров девелопера «Столица Нижний»', 'Отправить анкету в 20 банков', 'Получить консультацию', '', '', 'Ипотечный брокер подберет наиболее подходящие для вашей ситуации программы и банки, после чего вы получите индивидуальное предложение с выгодными ставками и высоким процентом одобрения.')
+    +b.credit-need
+      +e.inner.inner
+        +e.H2.title C сервисом цифровой ипотеки от «Столицы Нижний» вы сможете
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/need-1.svg' alt='')
+            +e.txt
+              b Узнать, где одобрят наименьшую ставку по ипотеке
+          +e.item
+            +e.IMG.pic(src='/icon/need-2.svg' alt='')
+            +e.txt
+              b Узнать о программах 
+              | с нулевым или наименьшим первоначальным взносом
+          +e.item
+            +e.IMG.pic(src='/icon/need-3.svg' alt='')
+            +e.txt
+              b Увеличить шансы на одобрение 
+              | при плохой кредитной истории или отказах от крупных банков
+          +e.item
+            +e.IMG.pic(src='/icon/need-4.svg' alt='')
+            +e.txt
+              b Сэкономить 95 % времени 
+              | на коммуникацию с банками и одобрение
+    +callback(11)
+    +b.execution
+      +e.inner.inner
+        +e.head
+          +e.H2.title Это просто как раз-два-три
+        +e.list
+          +e.item
+            +e.numb 01
+            +e.P.caption Выбор квартиры в ЖК Новая Кузнечиха
+            +e.txt Можно выбрать квартиры на любой стадии строительства
+            +e.A.more.btn_tr-green(href="#") Посмотреть квартиры
+          +e.item
+            +e.numb 02
+            +e.P.caption Оценка вашей недвижимости
+            +e.txt Оперативный осмотр экспертом и бесплатная оценка стоимости квартиры
+            +e.A.more.btn_tr-green(href="#") Посмотреть квартиры
+          +e.item
+            +e.numb 03
+            +e.P.caption Быстрая продажа вашей недвижимости
+            +e.txt Агентства-партнеры возьмут на себя поиски покупателя и коммуникацию по сделке
+            +e.A.more.btn_tr-green(href="#") Посмотреть квартиры
+        +e.callback
+          +e.P.sign Если вам потребуется помощь менеджера для заполнения анкеты, вы можете обратиться по телефону 
+            a(href="tel:8 (831) 211 86 78") 8 (831) 211 86 78 
+            |или заказать обратный звонок
+          +e.control
+            +e.A.btn.btn_tr-green(href='#') Оставить заявку
+            +e.A.btn.btn.js-open-modal(href="#callback") Заказать звонок
+    +b.ankets-bank
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Одна анкета по ипотеке сразу в 20 банков-партнеров девелопера «Столица Нижний»
+          +e.right
+            +e.txt Жилые комплексы от «Столицы Нижний» аккредитованы всеми ведущими банками-партнерами. Отправив анкету сразу во все банки, вы сможете оперативно подобрать наиболее выгодную для вас программу и значительно сэкономить на покупке квартиры.
+            +e.P.sign *Перечень банков необходимо уточнять на момент подачи заявки
+        +e.middle
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 1; i < 5; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 5; i < 9; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+    +b.individual-choice
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Индивидуальный подбор программы с лучшей ставкой
+          +e.right
+            +e.text Все виды ипотечных программ, а также специальные партнерские программы от банков на квартиры от "Столицы Нижний"
+            +e.A.call.btn_transparent.js-open-modal(href="#callback") Заказать звонок
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/choise-1.svg' alt='')
+            +e.P.caption Стандартные программы
+            +e.P.txt Ипотечный кредит на покупку квартиры в новостройке или на вторичном рынке. Ипотека не предусматривает ограничение по сроку действия, наличия или отсутствия детей
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+          +e.item
+            +e.IMG.pic(src='/icon/choise-2.svg' alt='')
+            +e.P.caption Семейная ипотека
+            +e.P.txt Семьи, в которых есть даже один ребенок, родившийся после 1 января 2018 года, имеют право на льготную ипотеку
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+          +e.item
+            +e.IMG.pic(src='/icon/choise-3.svg' alt='')
+            +e.P.caption Господдержка
+            +e.P.txt Льготная ипотека на покупку квартиры в новостройке по сниженной ставке. Программа позволяет взять кредит до 6 млн рублей для всех регионов РФ
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+          +e.item
+            +e.IMG.pic(src='/icon/choise-4.svg' alt='')
+            +e.P.caption Материнский капитал
+            +e.P.txt Эксклюзивные условия с возможностью использования средств материнского капитала в качестве первоначального взноса по ипотеке
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+          +e.item
+            +e.IMG.pic(src='/icon/choise-5.svg' alt='')
+            +e.P.caption Военная ипотека
+            +e.P.txt Дома жилых комплексов девелопера «Столица Нижний» аккредитованы в ФГКУ «Росвоенипотека». Теперь военнослужащие могут приобрести квартиру, воспользовавшись государственной программой военной ипотеки.
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+          +e.item
+            +e.IMG.pic(src='/icon/choise-6.svg' alt='')
+            +e.P.caption Ипотека для IT-специалистов
+            +e.P.txt Ипотека по федеральной программе кредитования "ипотека для IT" для IT-специалистов со ставкой не более 5%.
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Оставить заявку
+    include ../modules/docs/docs
+    include ../modules/flat/flat
+    include ../modules/calc/calc
+    include ../modules/faq/faq 
+    include ../modules/select-room/offer
+    include ../modules/programs/programs
+    +callback(10)
+    include ../modules/footer/footer
+  include ../static/pug/scripts  

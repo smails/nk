@@ -91,3 +91,13 @@ mixin callback(type)
             +e.BUTTON.submit.btn_white Отправить заявку
           +e.req Отправляя свои данные вы соглашаетесь с 
             a(href="#") пользовательским соглашением и политикой конфиденциальности
+  if type == 11
+    +b.callback
+      +e.inner.inner
+        +e.container
+          +e.P.title Стоимость: 2 490 рублей
+          +e.info
+            +e.P.txt Что в ~5 раз дешевле услуг любого агентства. Без звонков из банков, решения вы получаете онлайн
+            +e.control
+              +e.A.btn.js-open-modal(href="#callback") Отправить анкету в 20 банков
+              +e.A.more.btn_transparent(href='#')  Получить консультацию

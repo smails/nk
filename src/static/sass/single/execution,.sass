@@ -87,3 +87,32 @@
       bottom: 2rem
       left: 1.5rem
       width: calc( 100% - 3rem )
+  &__callback
+    margin-top: 5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 4rem
+    border-radius: 15px
+    border: 1px solid var(--secondary)
+    padding: 2.5rem 3rem
+    background: var(--white)
+  &__sign
+    +fs(20px)
+    font-weight: 600
+    line-height: 140%
+    padding-left: 85px
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none'%3E%3Ccircle cx='30' cy='30' r='30' fill='%2351A747'/%3E%3Cpath fill='%23fff' d='M32.1456 33.9655h-2.5034l-.6788-14.3696h3.8611l-.6789 14.3696Zm-3.352 4.5542c0-.7732.198-1.3154.5941-1.6265.4054-.3206.9004-.4809 1.485-.4809.5752 0 1.0655.1603 1.4709.4809.4055.3111.6082.8533.6082 1.6265 0 .7543-.2027 1.3012-.6082 1.6406-.4054.33-.8957.495-1.4709.495-.5846 0-1.0796-.165-1.485-.495-.3961-.3394-.5941-.8863-.5941-1.6406Z'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+    max-width: 1020px
+    a
+      color: var(--secondary)
+  &__control
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    flex-shrink: 0
+    max-width: 558px
+    width: 40%
