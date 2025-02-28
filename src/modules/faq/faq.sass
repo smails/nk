@@ -1,28 +1,51 @@
 .faq
   margin: 11rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 5rem 0
   &__inner
     display: flex
     justify-content: space-between
     gap: 5rem
+    +screen('max', 1023)
+      display: block
+  &__title
+    +screen('max', 1023)
+      margin-bottom: 2.5rem
   &__content
     max-width: 1190px
-    width: 70%
+    width: 65%
+    +screen('max', 1023)
+      width: 100%
   &__line
     padding-block: 2.3rem
     border-block: 1px solid #d7dbe0
     margin-top: -1px
+    +screen('max', 1500)
+      padding-block: 2rem
+    +screen('max', 700)
+      padding-block: 1.5rem
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     gap: 2rem
     cursor: pointer
+    +screen('max', 700)
+      align-items: flex-start
   &__caption
     +fs(24px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(16px)
   &__icon
     flex-shrink: 0
     transition: .5s ease
+    +screen('max', 700)
+      transform: scale(.6)
     path
       transition: .5s ease
     &.open
@@ -36,7 +59,14 @@
     color: var(--color-gray)
     opacity: 0.8
     display: none
+    +screen('max', 1500)
+      +fs(14px)
   &__control
     display: flex
     gap: 2rem
     margin-top: 3.5rem
+    +screen('max', 1023)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr

@@ -757,8 +757,15 @@
   padding-block: 9rem
   background: var(--fon)
   border-radius: 40px
+  +screen('max', 1500)
+    padding-block: 6rem
+  +screen('max', 1023)
+    padding-block: 4rem
+    border-radius: 20px
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 4rem
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -766,9 +773,11 @@
     +screen('max', 1500)
       grid-template-columns: repeat(3, 1fr)
     +screen('max', 1023)
-      grid-template-columns: repeat(2, 1fr)
-    +screen('max', 700)
-      grid-template-columns: 1fr
+      grid-template-columns: repeat(10, 357px)
+      overflow: auto
   &__control
     margin-top: 3.5rem
     text-align: center
+  &__more
+    +screen('max', 1023)
+      width: 100%

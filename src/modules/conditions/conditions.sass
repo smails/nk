@@ -1,5 +1,9 @@
 .conditions
   margin: 9rem 0 7rem
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 3.5rem 0
   &__head
     display: flex
     align-items: flex-start
@@ -30,8 +34,11 @@
     color: var(--color-gray)
     +screen('max', 1500)
       +fs(16px)
+    +screen('max', 1023)
+      margin-top: 2.5rem
     +screen('max', 700)
       +fs(14px)
+      margin-top: 2rem
     p
       margin-bottom: 1.5rem
     a
@@ -42,6 +49,12 @@
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 270px)
+      overflow: auto
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1rem
   &__item
     padding: 2.6rem 2.6rem 2.6rem 7.5rem
     box-sizing: border-box
@@ -51,29 +64,49 @@
     background-position: 20px center
     border: 1px solid var(--secondary)
     border-radius: 15px
+    +screen('max', 1500)
+      padding: 2.3rem 2.6rem 2.3rem 6rem
+      background-size: 30px
+      background-position: 18px center
+    +screen('max', 700)
+      padding: 1.2rem 1.8rem 1.2rem 6rem
   &__sign
     color: var(--color-gray)
     margin-bottom: 0.5rem
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 0
   &__caption
     +fs(24px)
     line-height: 1.2
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
 
 .demand
   padding-block: 6rem 7rem
   background: var(--secondary)
   border-radius: 40px
+  +screen('max', 1023)
+    border-radius: 20px
+    padding-block: 4rem 11rem
+    position: relative
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 4rem
+    +screen('max', 1500)
+      margin-bottom: 2.5rem
   &__title
     color: var(--white)
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: 1fr
+      gap: 1rem
   &__item
     padding: 2.8rem 2.6rem 2.8rem 7.5rem
     box-sizing: border-box
@@ -86,15 +119,38 @@
     display: flex
     justify-content: center
     flex-flow: column
+    +screen('max', 1500)
+      padding: 1.7rem 2rem 1.7rem 6rem
+      background-size: 30px
+      background-position: 18px center
   &__sign
     color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(12px)
   &__caption
     +fs(24px)
     line-height: 1.2
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
   &__txt
     +fs(18px)
     font-weight: 600
     opacity: 0.8
     margin-top: 4rem
     color: var(--white)
+    +screen('max', 1500)
+      +fs(12px)
+      margin-top: 3rem
+    +screen('max', 1023)
+      margin-top: 2rem
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
+  &__call
+    +screen('max', 1023)
+      position: absolute
+      width: calc( 100% - 4rem )
+      bottom: 3rem

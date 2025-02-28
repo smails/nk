@@ -55,8 +55,11 @@
       +screen('max', 1800)
         margin: 0 -3rem
       +screen('max', 1500)
-        margin: 0 -7rem
-        padding-inline: 7rem
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
   &__slider
     .swiper
       margin: 0 -5rem
@@ -64,8 +67,11 @@
       +screen('max', 1800)
         margin: 0 -3rem
       +screen('max', 1500)
-        margin: 0 -7rem
-        padding-inline: 7rem
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
   &__box
     padding: 3.5rem
     box-sizing: border-box

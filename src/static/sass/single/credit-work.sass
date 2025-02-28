@@ -3,16 +3,34 @@
   padding-block: 7rem
   background: var(--fon)
   border-radius: 40px
+  +screen('max', 1023)
+    padding-block: 5rem
+    border-radius: 20px
+  +screen('max', 700)
+    padding-block: 3.5rem 3rem
+    border-radius: 15px
   &__inner
     display: flex
     justify-content: space-between
     gap: 5rem
+    +screen('max', 1023)
+      display: block
+  &__title
+    +screen('max', 1500)
+      max-width: 40%
+    +screen('max', 1023)
+      margin-bottom: 2.5rem
+      max-width: 100%
   &__content
     max-width: 1190px
-    width: 70%
+    width: 65%
+    +screen('max', 1023)
+      width: 100%
   &__text
     +fs(20px)
     line-height: 1.5
+    +screen('max', 1500)
+      +fs(16px)
     p
       margin-bottom: 1.5rem
     li
@@ -22,12 +40,21 @@
     margin-top: 4.5rem
     display: flex
     gap: 2rem
+    +screen('max', 1023)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      margin-top: 2.5rem
+      gap: 1rem
   &__video
     display: inline-flex
     align-items: center
     justify-content: center
     gap: 1rem
     padding: 1.8rem 3rem
+    +screen('max', 1500)
+      padding: 1.3rem 2rem
   &__sign
     margin-top: 4rem
     padding-top: 2rem
@@ -35,3 +62,7 @@
     line-height: 1.5
     color: var(--color-gray)
     opacity: 0.9
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center

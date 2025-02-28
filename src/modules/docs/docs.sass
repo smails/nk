@@ -1,32 +1,60 @@
 .docs
   margin-top: 3rem
-  padding-block: 7rem 7rem
+  padding-block: 7rem
   background: var(--fon)
   border-radius: 40px
+  +screen('max', 1023)
+    border-radius: 20px
+    padding-block: 4rem
+  +screen('max', 700)
+    margin-top: 1rem
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 4rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(3, 370px)
+      overflow: auto
+      margin: 0 -2rem
+      padding-inline: 2rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      margin: 0
+      padding-inline: 0
   &__item
     padding: 3rem
     box-sizing: border-box
     background: var(--white)
     border-radius: 25px
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    +screen('max', 1023)
+      border-radius: 15px
+    +screen('max', 700)
+      padding: 1.5rem
   &__pic
     margin-bottom: 4rem
+    +screen('max', 700)
+      width: 40px
+      margin-bottom: 1.5rem
   &__caption
     +fs(30px)
     font-weight: 600
     line-height: 1.2
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(20px)
+      margin-bottom: 1rem
+    +screen('max', 700)
+      +fs(18px)
   &__txt
     +fs(20px)
     line-height: 1.5
     color: var(--color-gray)
     +screen('max', 1500)
-      +fs(16px)
-    +screen('max', 700)
       +fs(14px)

@@ -1,45 +1,52 @@
-.programs
-  padding-block: 9rem
+.execution
   background: var(--fon)
   border-radius: 40px
-  margin-top: 3rem
+  padding-block: 8rem
+  margin-top: 1rem
   +screen('max', 1500)
-    padding-block: 7rem
-  +screen('max', 1023)
-    padding-block: 5rem 13rem
-    position: relative
-    border-radius: 20px
+    padding-block: 6rem
+    +screen('max', 1023)
+      padding-block: 5rem
+      border-radius: 20px
+    +screen('max', 700)
+      padding-block: 3.5rem
   &__head
     display: flex
     justify-content: space-between
-    align-items: center
-    margin-bottom: 3rem
-    .slider-arrow
-      width: 67px
-      height: 67px
-      +screen('max', 1500)
-        width: 50px
-        height: 50px
-    .slider-arrows
-      +screen('max', 1023)
-        display: none
-  &__control
+    gap: 2rem
+    margin-bottom: 6rem
     +screen('max', 1023)
-      position: absolute
-      bottom: 5rem
-      width: calc(100% - 2rem)
-  &__btn
-    border-color: var(--secondary)
-    color: var(--primary)
-    padding: 2.2rem 3.8rem
-    margin-right: 2rem
+      display: block
+      margin-bottom: 3.5rem
+  &__title
+    line-height: 1
+  &__txt
+    line-height: 150%
+    +fs(20px)
+    color: var(--color-gray)
+    max-width: 1195px
     +screen('max', 1500)
-      padding: 1.6rem 2.5rem
+      +fs(16px)
+      max-width: 750px
+    a
+      color: var(--tertiary)
+    p
+      margin-bottom: 1rem
+      &:last-of-type
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
     +screen('max', 1023)
-      margin-right: 0
-      width: 100%
+      overflow: auto
+      grid-template-columns: repeat(3, 387px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 295px)
   &__item
-    padding: 3rem 3rem 12rem
+    padding: 3rem 3rem 14rem
     box-sizing: border-box
     border-radius: 25px
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
@@ -80,11 +87,3 @@
       bottom: 2rem
       left: 1.5rem
       width: calc( 100% - 3rem )
-  &__wrapper
-    .swiper
-      +screen('max', 1500)
-        margin: 0 calc((-100vw + 1160px) / 2 )
-        padding-inline: calc((100vw - 1160px) / 2 )
-      +screen('max', 1200)
-        margin: 0 -2rem
-        padding-inline: 2rem

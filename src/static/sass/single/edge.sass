@@ -1,0 +1,40 @@
+.edge
+  margin: 10rem 0
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4.5rem 0
+  &__title
+    margin-bottom: 8rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(4, 387px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 295px)
+  &__item
+    padding: 3rem
+    box-sizing: border-box
+    border-radius: 25px
+    background: var(--fon)
+    position: relative
+    +screen('max', 1500)
+      padding: 3rem 2.5rem
+  &__pic
+    margin-bottom: 6.5rem
+    +screen('max', 1500)
+      margin-bottom: 5rem
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)

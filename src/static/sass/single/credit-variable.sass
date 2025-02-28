@@ -1,10 +1,14 @@
 .credit-variable
   &__title
     margin-bottom: 4.5rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
   &__list
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: 1fr
   &__item
     padding: 5rem
     background: var(--secondary)
@@ -14,6 +18,13 @@
     flex-flow: column
     align-items: flex-start
     color: var(--white)
+    +screen('max', 1500)
+      padding: 4rem
+    +screen('max', 1023)
+      padding: 3rem
+      border-radius: 15px
+    +screen('max', 700)
+      padding: 2rem
   &__state
     padding: 0.8rem 1.5rem
     font-weight: 600
@@ -25,13 +36,36 @@
     left: -3rem
     top: -3rem
     +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      top: -1.5rem
+      left: -1.5rem
+    +screen('max', 700)
       +fs(12px)
+      top: -0.8rem
+      left: -0.8rem
   &__content
     margin: 9rem 0 5rem
+    +screen('max', 1500)
+      margin: 7rem 0 3rem
+    +screen('max', 1023)
+      margin: 3rem 0
   &__caption
     +fs(50px)
     font-family: var(--second-family)
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(30px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(26px)
   &__txt
     +fs(20px)
     line-height: 1.5
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+  &__btn
+    +screen('max', 700)
+      width: 100%

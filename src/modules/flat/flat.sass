@@ -1,11 +1,17 @@
 .flat
   margin: 10rem 0
+  +screen('max', 1023)
+    margin: 7rem 0
   &__wrap
     display: flex
     align-items: center
     gap: 10rem
+    +screen('max', 1023)
+      display: block
   &__title
     margin-bottom: 4rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
   &__list
     li
       padding-left: 3.5rem
@@ -22,9 +28,17 @@
         +fs(14px)
   &__btn
     margin-top: 5rem
+    +screen('max', 1023)
+      width: 100%
+      margin-top: 3.5rem
+    +screen('max', 700)
+      margin-top: 2rem
   &__right
     width: 50%
     max-width: 890px
+    +screen('max', 1023)
+      width: 100%
+      margin-top: 4rem
   &__wrapper
     position: relative
     .slider-arrows
@@ -68,7 +82,7 @@
     border-radius: 30px
     object-fit: cover
     +screen('max', 1023)
-      border-radius: 15px
+      border-radius: 20px
       height: 400px
     +screen('max', 700)
       height: 203px

@@ -59,6 +59,8 @@
       gap: 1rem
     +screen('max', 700)
       grid-template-columns: repeat(3, 295px)
+    &_four
+      grid-template-columns: repeat(4, 1fr)
   &__pic
     width: 100%
     vertical-align: middle
@@ -83,6 +85,54 @@
     line-height: 1.4
     +screen('max', 1500)
       +fs(14px)
+    p
+      margin-bottom: 1rem
+      &:last-of-type
+        margin-bottom: 0
+    b
+      color: var(--primary)
+      font-weight: 600
+  &__wrapper
+    max-width: 434px
+    &:hover
+      .slider-arrow, .slider-dots
+        opacity: 1
+  &__bottom
+    padding-top: 3.5rem
+    margin-top: 5rem
+    border-top: 1px solid #bdc0ca
+  &__signature
+    max-width: 1195px
+    color: var(--color-gray)
+    opacity: 0.9
+    line-height: 1.5
+  .slider-arrow
+    position: absolute
+    top: 90%
+    z-index: 2
+    transform: translateY(-50%)
+    background: none
+    opacity: 0
+    transition: .5s ease
+    &_prev
+      left: 0
+    &_next
+      right: 0
+    svg
+      transform: scale(1.1)
+    path
+      stroke: var(--white)
+  .slider-dots
+    position: absolute
+    left: 0
+    right: 0
+    justify-content: center
+    z-index: 3
+    bottom: 1.5rem
+    opacity: 0
+    transition: .5s ease
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+      background: var(--secondary)
 
 .manufacure-content
   margin: 8rem 0

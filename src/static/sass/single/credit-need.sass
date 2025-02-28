@@ -1,18 +1,42 @@
 .credit-need
   margin: 9rem 0
+  +screen('max', 1500)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 3.5rem 0
   &__title
     margin-bottom: 7rem
+    +screen('max', 1500)
+      margin-bottom: 5rem
+    +screen('max', 700)
+      margin-bottom: 3.5rem
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 4rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 270px)
+      overflow: auto
+      gap: 2rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+  &__item
+    +screen('max', 700)
+      display: flex
+      gap: 2rem
   &__pic
     vertical-align: middle
     margin-bottom: 2rem
+    +screen('max', 1500)
+      width: 50px
+    +screen('max', 700)
+      flex-shrink: 0
   &__txt
     +fs(20px)
     line-height: 1.5
     color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(14px)
     b
       color: var(--primary)
       font-weight: 600

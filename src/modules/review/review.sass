@@ -55,8 +55,11 @@
       +screen('max', 1800)
         margin: 0 -3rem
       +screen('max', 1500)
-        padding-inline: 7rem
-        margin: 0 -7rem
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
   &__box
     border-radius: 25px
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)

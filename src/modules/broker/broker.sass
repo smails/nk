@@ -1,10 +1,19 @@
 .broker
   margin: 8rem 0 10rem
+  +screen('max', 1023)
+    margin: 6rem 0 8rem
+    padding-bottom: 8rem
+    position: relative
+  +screen('max', 700)
+    padding-bottom: 13rem
+    margin: 4rem 0 5rem
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
     gap: 5rem
+    +screen('max', 1023)
+      display: block
   &__content
     max-width: 1190px
   &__title
@@ -23,5 +32,23 @@
     display: flex
     gap: 2rem
     margin-top: 3.5rem
+    +screen('max', 1500)
+      margin-top: 2.5rem
+    +screen('max', 1023)
+      position: absolute
+      bottom: 0
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      width: calc(100% - 2rem)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1rem
   &__pic
     vertical-align: middle
+    +screen('max', 1500)
+      width: 34%
+    +screen('max', 1023)
+      width: 50%
+      margin-top: 2rem
+    +screen('max', 700)
+      width: 100%
