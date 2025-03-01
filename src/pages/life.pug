@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('Жизнь в ЖК ')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Жизнь в ЖК '], 'Жизнь в ЖК ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Жизнь в ЖК
+    include ../modules/life/page
+    include ../modules/footer/footer
+  include ../static/pug/scripts

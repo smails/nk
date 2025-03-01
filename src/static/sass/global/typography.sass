@@ -16,9 +16,27 @@ h2, .display-2
   +screen('max', 700)
     +fs(22px)
 h3, .display-3
-  color: inherit
+  +fs(30px)
+  font-weight: 600
+  line-height: 120%
+  +screen('max', 1500)
+    +fs(22px)
+  +screen('max', 700)
+    +fs(18px)
 h4, .display-4
-  color: inherit
+  +fs(24px)
+  font-weight: 600
+  line-height: 120%
+  +screen('max', 1500)
+    +fs(18px)
+  +screen('max', 700)
+    +fs(16px)
+h5, .display-5
+  +fs(18px)
+  font-weight: 600
+  line-height: 120%
+  +screen('max', 1500)
+    +fs(16px)
 
 .text-uppercase
   text-transform: uppercase

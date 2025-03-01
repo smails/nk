@@ -1,0 +1,38 @@
++b.step-build_page
+  +e.inner.inner
+    +e.line
+      +e.head
+        +e.headline.display-4 В режиме реального времени
+        .slider-arrows
+          +b.slider-arrow_prev._gray
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+          +b.slider-arrow_next._gray
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+      +e.slider
+        .swiper
+          .swiper-wrapper
+            - for(var i = 0; i < 7; i++){
+              .swiper-slide
+                +e.A.slide(href='#')
+                  +e.IMG.pic(src='/img/live-1.png' alt='')
+                  +e.holder 10 и 11 кварталы
+            - }
+    +e.line_sticky
+      +e.over-tabs
+        +e.tabs
+          +e.BUTTON.tab.active Фотоотчет
+          +e.BUTTON.tab Видеоотчет
+      +e.body
+        +e.box
+          +e.row
+            - for(var i = 0; i < 11; i++){
+              +e.item_back
+                +e.count
+                  svg(xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none')
+                    path(fill='#FAC8A9' d='M12.9545 1.76758H6.05158c-2.99843 0-4.78596 1.78663-4.78596 4.78357v6.89125c0 3.0052 1.78753 4.7918 4.78596 4.7918h6.89472c2.9984 0 4.786-1.7866 4.786-4.7835V6.55115c.0082-2.99694-1.7793-4.78357-4.7778-4.78357Zm-1.2603 9.65772-1.0544.6092-1.05436.6093c-1.35918.7822-2.47123.14-2.47123-1.4244V8.78238c0-1.57257 1.11205-2.20653 2.47123-1.42437l1.05436.60927 1.0544.60927c1.3592.78216 1.3592 2.06655 0 2.84875Z')
+                  span 7
+                +e.IMG.pic(src='/img/live-1.png' alt='')
+                +e.P.caption_mini 10 и 11 кварталы
+            - }

@@ -1,0 +1,110 @@
+.news
+  margin-bottom: 10rem
+  +screen('max', 1500)
+    margin-bottom: 7rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    gap: 9rem 4rem
+    margin: 5rem 0 9rem
+    +screen('max', 1500)
+      gap: 5rem 2rem
+      margin: 3.5rem 0 6rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(4, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 4.5rem
+  &__pic
+    vertical-align: middle
+    border-radius: 20px
+    width: 100%
+    +screen('max', 1023)
+      border-radius: 15px
+  &__picture
+    margin-bottom: 2.5rem
+    display: block
+    +screen('max', 1500)
+      margin-bottom: 2rem
+  &__caption
+    +screen('max', 1500)
+      +fs(18px)
+  &__date
+    +fs(18px)
+    margin-bottom: 1rem
+    color: #838c95
+    display: block
+    +screen('max', 1500)
+      +fs(14px)
+  &__item
+    grid-column: span 2
+    +screen('max', 700)
+      grid-column: auto
+    &_half
+      grid-column: span 3
+      +screen('max', 1023)
+        grid-column: span 4
+      +screen('max', 700)
+        grid-column: auto
+  &__more
+    display: none
+    margin-top: 2rem
+    +fs(14px)
+    gap: .8rem
+    align-items: center
+    font-weight: 600
+    +screen('max', 700)
+      display: flex
+.news-pinned
+  border-radius: 25px
+  box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+  background: var(--white)
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  align-items: center
+  padding: 0.5rem
+  box-sizing: border-box
+  +screen('max', 1023)
+    grid-template-columns: 1fr
+    border-radius: 15px
+  &__content
+    padding-inline: 6rem
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding-inline: 5rem
+    +screen('max', 1023)
+      order: 1
+      padding: 3rem
+    +screen('max', 700)
+      padding: 1.5rem
+  &__date
+    +fs(20px)
+    margin-bottom: 3rem
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+      margin-bottom: 2rem
+    +screen('max', 700)
+      +fs(14px)
+      margin-bottom: 1rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-top: 3rem
+    +screen('max', 1500)
+      +fs(16px)
+      margin-top: 2rem
+    +screen('max', 700)
+      +fs(14px)
+  &__pic
+    width: 100%
+    border-radius: 22px
+    vertical-align: middle
+    height: 550px
+    object-fit: cover
+    +screen('max', 1023)
+      height: 380px
+      border-radius: 15px
+    +screen('max', 700)
+      height: 250px

@@ -2,6 +2,10 @@
   margin: 10rem 0 8rem
   +screen('max', 1023)
     margin: 6rem 0 4rem
+  &_page
+    margin: 0
+  & + .sale-other
+    margin-top: 5rem
   &_timer
     +screen('max', 700)
       padding-bottom: 5.5rem
@@ -400,6 +404,12 @@
     +screen('max', 1023)
       margin: 1rem 0
       padding: 1.5rem 1.5rem 2rem
+    &_color-1
+      background: #aa825e
+    &_color-2
+      background: #c3a454
+    &_color-3
+      background: var(--secondary)
   &__time
     display: inline-block
     padding: 0.7rem 1rem

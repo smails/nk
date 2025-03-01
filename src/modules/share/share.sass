@@ -1,0 +1,80 @@
+.share
+  position: relative
+  display: inline-block
+  z-index: 4
+  &:hover
+    .share__icon
+      circle
+        fill: var(--hover-green)
+    .share__hidden
+      opacity: 1
+      visibility: visible
+  &__head
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    cursor: pointer
+    +screen('max', 700)
+      flex-flow: row-reverse
+  &__title
+    +fs(14px)
+    font-weight: 600
+    color: #babcc3
+    +screen('max', 700)
+      +fs(12px)
+  &__icon
+    svg
+      +screen('max', 700)
+        width: 35px
+        height: 35px
+    circle
+      transition: .5s ease
+  &__hidden
+    position: absolute
+    top: calc(100% - 5px)
+    border: 1px solid var(--secondary)
+    border-radius: 20px
+    padding: 1.5rem 1.5rem 2rem
+    box-sizing: border-box
+    width: 234px
+    background: var(--white)
+    z-index: 2
+    right: 0
+    transition: .5s ease
+    opacity: 0
+    visibility: hidden
+    +screen('max', 700)
+      left: 0
+      right: auto
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__link
+    +fs(10px)
+    font-weight: 700
+    text-align: center
+    span
+      padding-top: 0.8rem
+      display: inline-block
+  &__field
+    border: 1px solid #c6c9d1
+    border-radius: 8px
+    padding: 1.7rem 2rem
+    +fs(12px)
+    margin: 1.5rem 0 1rem
+    width: 100%
+    &.click
+      border-color: var(--secondary)
+  &__btn
+    +fs(12px)
+    color: var(--secondary)
+    font-weight: 600
+    transition: .5s ease
+    &.click
+      padding-left: 2rem
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' fill='none'%3E%3Cpath stroke='%2351A747' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 6 4.33333 4.5L14 1.5'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: left center
+      background-size: 15px

@@ -1,0 +1,88 @@
+.update-block
+  margin: 15rem 0
+  position: relative
+  +screen('max', 1500)
+    margin: 10rem 0
+  +screen('max', 1023)
+    margin: 9rem 0 6rem
+  +screen('max', 700)
+    margin: 4rem 0
+  &:before
+    content: ''
+    width: min(339px, 17vw)
+    height: min(778px, 40vw)
+    position: absolute
+    right: 0
+    top: -15rem
+    background-image: url(../img/bg-update-block-1.png)
+    background-repeat: no-repeat
+    background-size: contain
+    z-index: 3
+    +screen('max', 1500)
+      top: -12rem
+    +screen('max', 1023)
+      top: -10rem
+      width: min(339px, 26vw)
+      height: min(778px, 60vw)
+    +screen('max', 700)
+      top: -3rem
+      width: 100px
+      height: 250px
+  &__title
+    font-size: clamp(38px, 4vw, 80px)
+    font-family: var(--second-family)
+    color: var(--secondary)
+    letter-spacing: -0.02em
+    line-height: 1
+    border-top: 3px solid var(--secondary)
+    margin-bottom: 3.5rem
+    padding-top: 4rem
+    display: inline-block
+    +screen('max', 1023)
+      padding-top: 2rem
+      width: 60vw
+      font-size: clamp(26px, 6vw, 80px)
+    +screen('max', 700)
+      width: 70vw
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    +screen('max', 1023)
+      gap: 1.6rem
+    +screen('max', 700)
+      grid-template-columns: repeat(2, 1fr)
+  &__item
+    padding: 3.5rem 3rem 4.5rem
+    background: var(--secondary)
+    border-radius: 25px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+    gap: 3.5rem
+    transition: .5s ease
+    +screen('max', 1500)
+      gap: 1.5rem
+      padding: 2.5rem 2.5rem 3rem
+      border-radius: 15px
+    +screen('max', 1023)
+      padding: 2rem 2rem 2.5rem
+    &:hover
+      background: var(--hover-green)
+    svg
+      +screen('max', 1500)
+        width: 60px
+        height: 60px
+    span
+      display: inline-block
+      border-radius: 37px
+      background: var(--white)
+      +fs(24px)
+      font-weight: 600
+      padding: 1.2rem 2rem
+      +screen('max', 1500)
+        +fs(18px)
+      +screen('max', 1023)
+        +fs(14px)

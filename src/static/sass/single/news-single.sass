@@ -1,0 +1,296 @@
+.news-single
+  +screen('max', 1500)
+    margin-top: 5rem
+  +screen('max', 700)
+    margin-top: 2.5rem
+  &__inner
+    position: relative
+    .share
+      position: absolute
+      right: 0
+      top: -40px
+      +screen('max', 1200)
+        right: 1rem
+      +screen('max', 700)
+        top: 0
+        position: relative
+        right: 0
+        margin-bottom: 2.5rem
+  &__date
+    +fs(20px)
+    opacity: 0.7
+    margin-bottom: 4rem
+    +screen('max', 1500)
+      +fs(16px)
+      margin-bottom: 3rem
+    +screen('max', 1023)
+      margin-bottom: 2rem
+    +screen('max', 700)
+      +fs(12px)
+      margin-bottom: 1.5rem
+  &__head
+    max-width: 1495px
+    margin: 0 auto 1.5rem
+    +screen('max', 1500)
+      max-width: 945px
+    +screen('max', 1200)
+      max-width: 860px
+    +screen('max', 700)
+      margin: 0 auto .5rem
+  &__control
+    position: absolute
+    top: 50px
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+    z-index: 1
+    +screen('max', 1200)
+      width: calc(100% - 2rem)
+      left: 1rem
+    +screen('max', 1023)
+      position: relative
+      top: 0
+      left: 0
+      width: 100%
+      margin-top: 2rem
+  &__title
+    position: relative
+    z-index: 2
+  &__nav
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    cursor: pointer
+    span
+      display: none
+      +fs(14px)
+      font-weight: 600
+      color: var(--color-gray)
+      +screen('max', 1023)
+        display: inline-block
+      +screen('max', 700)
+        +fs(12px)
+      i
+        font-style: normal
+        +screen('max', 700)
+          display: none
+    circle, path
+      transition: .5s ease
+    svg
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+      +screen('max', 700)
+        width: 40px
+        height: 40px
+    &:hover
+      circle
+        fill: var(--hover-green)
+      path
+        stroke: var(--white)
+  &__body
+    max-width: 1495px
+    margin: 0 auto
+    +screen('max', 1500)
+      max-width: 945px
+    +screen('max', 1200)
+      max-width: 860px
+  &__text
+    & > img
+      width: 100%
+      border-radius: 20px
+      margin: 3rem 0
+      +screen('max', 700)
+        margin: 2rem 0
+    h2, h3, h4, h5
+      margin: 2rem 0
+    p
+      color: var(--color-gray)
+      margin: 2rem 0
+      line-height: 1.5
+      +fs(20px)
+      +screen('max', 1500)
+        +fs(16px)
+    a
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      color: var(--secondary)
+    & > article
+      margin: 8rem 0
+      +screen('max', 1023)
+        margin: 4rem 0
+    ul
+      li
+        padding-left: 3.5rem
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='15' fill='none'%3E%3Cpath stroke='%2351A747' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 7.5 7 14 19 1'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: left 5px
+        +fs(20px)
+        color: var(--color-gray)
+        line-height: 1.5
+        margin-bottom: 1.5rem
+        +screen('max', 1500)
+          +fs(16px)
+        +screen('max', 700)
+          +fs(14px)
+          background-size: 13px
+          padding-left: 2rem
+    ol
+      li
+        list-style: decimal inside
+        +fs(20px)
+        color: var(--color-gray)
+        line-height: 1.5
+        margin-bottom: 1.5rem
+        +screen('max', 1500)
+          +fs(16px)
+        +screen('max', 700)
+          +fs(14px)
+    blockquote
+      margin: 8rem 0
+      +screen('max', 1023)
+        margin: 4rem 0
+      h4
+        border-bottom: 2px solid var(--tertiary)
+        padding-bottom: 1rem
+      p
+        +fs(46px)
+        color: var(--tertiary)
+        line-height: 1.2
+        font-family: var(--second-family)
+        position: relative
+        padding-left: 10rem
+        text-wrap: balance
+        +screen('max', 1500)
+          +fs(26px)
+          padding-left: 7rem
+        +screen('max', 700)
+          +fs(22px)
+        &:before
+          content: '“'
+          position: absolute
+          left: 0
+          top: -5px
+          font-family: var(--second-family)
+          +fs(46px)
+          line-height: 1
+          +screen('max', 700)
+            +fs(90px)
+
+.news-gallery
+  &__wrapper
+    position: relative
+    .slider-arrows
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: calc(100% - 4rem)
+      left: 2rem
+      z-index: 2
+      +screen('max', 700)
+        display: none
+  &__thumbs
+    margin-top: 2.5rem
+    display: flex
+    gap: 1.5rem
+    +screen('max', 1023)
+      margin-top: 1.5rem
+      gap: 1rem
+    .swiper-slide
+      width: 212px
+      opacity: 0.4
+      transition: .5s ease
+      +screen('max', 1023)
+        width: 113px
+      +screen('max', 700)
+        width: 78px
+    .swiper-slide-active
+      opacity: 1
+    .news-gallery__pic
+      border-radius: 15px
+      +screen('max', 1023)
+        height: 70px
+        border-radius: 10px
+      +screen('max', 700)
+        height: 50px
+        border-radius: 6px
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 30px
+    object-fit: cover
+    +screen('max', 1023)
+      border-radius: 15px
+      height: 400px
+    +screen('max', 700)
+      height: 203px
+  &__more
+    border-radius: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--fon)
+    +fs(24px)
+    font-weight: 600
+    color: #838c95
+    flex-shrink: 0
+    width: 212px
+    +screen('max', 1023)
+      width: 113px
+      +fs(18px)
+    +screen('max', 700)
+      width: 78px
+      +fs(16px)
+      border-radius: 6px
+
+.news-pictures
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  gap: 2rem
+  margin: 8rem 0
+  scrollbar-width: 0
+  +screen('max', 1023)
+    margin: 4rem 0
+  +screen('max', 700)
+    grid-template-columns: repeat(6, 135px)
+    overflow: auto
+    margin: 4rem -2rem
+    padding-inline: 2rem
+    &::-webkit-scrollbar
+      height: 0
+  &__pic
+    border-radius: 15px
+    grid-column: span 2
+    width: 100%
+    vertical-align: middle
+    border-radius: 15px
+    &:first-of-type, &:nth-of-type(2)
+      grid-column: span 3
+      border: 1px solid #e4e4e4
+
+.news-txt
+  margin: 8rem 0
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  align-items: center
+  gap: 6rem
+  +screen('max', 1023)
+    margin: 4rem 0
+    grid-template-columns: 1fr
+    gap: 4rem
+  &__content
+    h4
+      margin-bottom: 2.5rem
+    p
+      color: var(--color-gray)
+      line-height: 1.5
+      +fs(20px)
+      +screen('max', 1500)
+        +fs(16px)
+  &__pic
+    border-radius: 15px
+    width: 100%

@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper';
-import { Navigation, thumbs } from 'swiper/modules';
+import { Navigation, Controller } from 'swiper/modules';
 
 
 const beautificationThumb = new Swiper($('.beautification__thumbs').find('.swiper')[0], {
@@ -26,5 +26,5 @@ const beautificationBig = new Swiper($('.beautification__wrapper').find('.swiper
   }
 });
 
-beautificationBig.params.control = beautificationThumb;
-beautificationThumb.params.control = beautificationBig;
+beautificationBig.control = beautificationThumb;
+beautificationThumb.control = beautificationBig;

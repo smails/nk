@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('Акции')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Акции'], 'Акции')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Акции
+    include ../modules/sale/page
+    include ../modules/footer/footer
+  include ../static/pug/scripts

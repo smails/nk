@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Controller, Thumbs } from 'swiper/modules';
 
 
 
@@ -17,3 +17,42 @@ $('.manufacure-tabs__wrapper').each((index, item) => {
     modules: [Navigation, Pagination],
   });
 })
+
+
+$('.share__btn').click((e) => {
+  const text = $(e.target).prev().val();
+  navigator.clipboard.writeText(text).then(function() {
+    $(e.target).addClass('click').text('Ссылка скопирована!')
+    $(e.target).prev().addClass('click')
+  }, function(err) {
+    console.error(err);
+  });
+})
+
+
+const newsGalleryThumb = new Swiper($('.news-gallery__thumbs').find('.swiper')[0], {
+  slidesPerView: 'auto',
+  spaceBetween: '10px',
+  slideToClickedSlide: true,
+  loop: true,
+  breakpoints: {
+    1023: {
+      spaceBetween: '15px',
+    },
+  },
+});
+
+const newsGalleryBig = new Swiper($('.news-gallery__wrapper').find('.swiper')[0], {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    nextEl: $('.news-gallery__wrapper').find('.slider-arrow_next')[0],
+    prevEl: $('.news-gallery__wrapper').find('.slider-arrow_prev')[0],
+  },
+  modules: [Navigation, Controller, Thumbs],
+  thumbs:{
+    swiper: newsGalleryThumb
+  },
+});
+
+newsGalleryBig.controller.control = newsGalleryThumb;

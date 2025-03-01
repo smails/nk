@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('Ход строительства ')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Ход строительства '], 'Ход строительства ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Ход строительства 
+    include ../modules/step-build/page
+    include ../modules/footer/footer
+  include ../static/pug/scripts

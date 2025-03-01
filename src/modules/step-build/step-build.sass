@@ -6,6 +6,8 @@
     margin: 6rem 0
   +screen('max', 700)
     margin: 4rem 0
+  &_page
+    margin-top: 0
   &__title
     margin-bottom: 4.5rem
     +screen('max', 1500)
@@ -116,8 +118,160 @@
     +screen('max', 1500)
       +fs(14px)
       transform: scale(.8)
+      top: 0.5rem
+      left: 0.5rem
     svg
       vertical-align: middle
   &__pic
     width: 100%
     border-radius: 25px
+    +screen('max', 1500)
+      border-radius: 15px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__slider
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+  &__slide
+    position: relative
+    display: block
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      border-radius: 25px
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      position: absolute
+    &:after
+      content: ''
+      width: 60px
+      height: 60px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23F37528'/%3E%3Cpath fill='%23fff' d='M38.4071 28.9287c1.2268.787 1.2268 2.5798 0 3.3668l-10.8266 6.9452c-1.3311.8539-3.0799-.1019-3.0799-1.6834V23.6668c0-1.5814 1.7488-2.5373 3.0799-1.6834l10.8266 6.9453Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+  &__holder
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 2rem
+    box-sizing: border-box
+    +fs(22px)
+    font-weight: 600
+    color: var(--white)
+    z-index: 2
+    +screen('max', 1500)
+      +fs(14px)
+  &__over-tabs
+    position: sticky
+    z-index: 9
+    margin-bottom: 4rem
+    padding-block: 1rem
+    box-sizing: border-box
+    top: 110px
+    +screen('max', 1500)
+      top: 98px
+      margin-bottom: 1.5rem
+    +screen('max', 1023)
+      margin-bottom: 1rem
+    +screen('max', 700)
+      margin-bottom: 0.5rem
+      top: 90px
+    &:before
+      content: ''
+      width: calc(100vw - 17px)
+      left: 50%
+      transform: translateX(-50%)
+      height: 100%
+      top: 0
+      background: var(--white)
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.06)
+      position: absolute
+      display: block
+      z-index: -1
+      opacity: 0
+      visibility: hidden
+    &.open
+      &::before
+        opacity: 1
+        visibility: visible
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    display: inline-block
+    +screen('max', 700)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 2rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 1023)
+      padding: 1.2rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__line
+    margin-bottom: 10rem
+    +screen('max', 1500)
+      margin-bottom: 7rem
+    +screen('max', 700)
+      margin-bottom: 3rem
+    &:last-of-type
+      margin-bottom: 0
+  &__row
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 4rem 3rem
+    +screen('max', 1500)
+      gap: 3rem 2rem
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 2rem 1.5rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1.5rem

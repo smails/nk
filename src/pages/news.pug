@@ -1,0 +1,109 @@
+include ../static/pug/head
++head('Новости')
+body
+  main.gray
+    +header()
+    +breadcrumb(['Главная','Новости'], 'Новости')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Новости
+    +b.news
+      +e.inner.inner
+        +b.news-pinned
+          +e.content
+            +e.P.date 28 декабря 2022
+            +e.H2.title Власти планируют построить новые школы в ЖК «Новая Кузнечиха» и «Цветы» к концу 2023 года
+            +e.P.txt Власти Нижегородской области рассчитывают, что новые школы на территории жилых комплексов «Новая Кузнечиха» и «Цветы» будут построены к концу 2023 года. Об этом в своем официальном телеграм-канале сообщает Корпорация развития Нижегородской области.
+          +e.IMG.pic(src='/img/news-pinned-1.png' alt='')
+        +e.list
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-1.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 Выбираем название нового жилого комплекса «Столицы Нижний» вместе с вами
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-2.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 В доме №10 повышенной комфортности в ЖК «Цветы 2» появятся квартиры с отделкой
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-3.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 Выбираем название нового жилого комплекса «Столицы Нижний» вместе с вами
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-4.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 В жилом комплексе «Цветы 2» введен в эксплуатацию дом №1 по генплану
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-5.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 В доме №10 повышенной комфортности в ЖК «Цветы 2» появятся квартиры с отделкой
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-6.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 Выбираем название нового жилого комплекса «Столицы Нижний» вместе с вами
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item_half(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-7.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 В жилом комплексе «Цветы 2» введен в эксплуатацию дом №1 по генплану
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+          +e.A.item_half(href='#')
+            +e.picture
+              +e.IMG.pic(src='/img/news-list-8.png' alt='')
+            +e.date 28 декабря 2022
+            +e.caption.display-3 В жилом комплексе «Цветы 2» введен в эксплуатацию дом №1 по генплану
+            +e.more Подробнее
+              svg(xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none')
+                circle(cx='12.5' cy='12.5' r='12' stroke='#51A747')
+                path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='m11.7578 9.89453 2.6042 2.60417-2.6042 2.6042')
+        +b.pagination
+          +e.A.btn.disabled(href="#")
+            svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none')
+              path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='M12.1039 5.99966H.89614m0 0L6.0517.84411M.89614 5.99966l5.37971 5.37974')
+            span В начало
+          +e.A.numb.active(href="#") 1
+          +e.A.numb(href="#") 2
+          +e.A.numb(href="#") 3
+          +e.A.numb(href="#") 4
+          +e.A.numb(href="#") 5
+          +e.next
+            svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none')
+              path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='M.9977 5.99966h11.2077m0 0L7.04987.84411m5.15553 5.15555L6.82572 11.3794')
+          +e.A.btn(href="#")
+            span В конец
+            svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none')
+              path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='M.4977 5.99966h11.2077m0 0L6.54987.84411m5.15553 5.15555L6.32572 11.3794')
+    include ../modules/footer/footer
+  include ../static/pug/scripts

@@ -1,0 +1,32 @@
+include ../static/pug/head
++head('Практикум ')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Практикум '], 'Практикум ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Практикум
+    +b.practicum
+      +e.inner.inner
+        +e.list
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+          +e.A.item(href='#')
+            +e.IMG.pic(src='/img/practicum-1.png' alt='')
+            +e.holder Первый вебинар
+    include ../modules/footer/footer
+  include ../static/pug/scripts
