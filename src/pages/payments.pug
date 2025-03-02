@@ -1,0 +1,14 @@
+include ../static/pug/head
++head('Способы покупки')
+body
+  main.gray
+    +header()
+    +breadcrumb(['Главная','Способы покупки'], 'Способы покупки')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Способы покупки
+    include ../modules/payment/page
+    include ../modules/calc/benefit
+    +callback(2)
+    include ../modules/footer/footer
+  include ../static/pug/scripts

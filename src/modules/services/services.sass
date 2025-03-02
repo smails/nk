@@ -3,6 +3,12 @@
   +screen('max', 700)
     padding-bottom: 6rem
     position: relative
+  &_page
+    margin-bottom: 15rem
+    +screen('max', 1500)
+      margin-bottom: 10rem
+    +screen('max', 700)
+      margin-bottom: 5.5rem
   &__head
     display: flex
     justify-content: space-between
@@ -125,3 +131,32 @@
     .swiper-wrapper
       +screen('max', 700)
         flex-flow: column
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: 2rem
+    +screen('max', 1500)
+      grid-template-columns: repeat(4, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(3, 1fr)
+      gap: 1.5rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: .5rem
+    .services__item
+      background: var(--fon)
+      &:hover
+        background: var(--hover-green)
+        box-shadow: none
+        border-bottom-color: transparent
+        color: var(--white)
+        .services__to
+          box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09)
+          &:before
+            opacity: 1
+        .services__icon
+          g
+            fill: var(--white)
+    .services__to
+      circle
+        fill: var(--white)

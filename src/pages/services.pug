@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('Сервисы')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Сервисы'], 'Сервисы')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Сервисы
+    include ../modules/services/page
+    include ../modules/footer/footer
+  include ../static/pug/scripts

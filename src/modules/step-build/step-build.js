@@ -28,11 +28,13 @@ $('.step-build').each((index, item) => {
 })
 
 $(window).scroll(() => {
-  if(window.pageYOffset > $('.step-build__line_sticky').offset().top - 100){
-    $('.step-build__over-tabs').addClass('open')
-    return
+  if($('.step-build__line_sticky').length){
+    if(window.pageYOffset > $('.step-build__line_sticky').offset().top - 100){
+      $('.step-build__over-tabs').addClass('open')
+      return
+    }
+    $('.step-build__over-tabs').removeClass('open')
   }
-  $('.step-build__over-tabs').removeClass('open')
 })
 
 $('.step-build__tab').click(function () {
