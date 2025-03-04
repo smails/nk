@@ -1,0 +1,19 @@
+.gallery
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(3, 374px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 245px)
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+    +screen('max', 700)
+      border-radius: 15px

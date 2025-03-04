@@ -130,6 +130,15 @@
     gap: 2rem
     +screen('max', 1023)
       display: block
+    &_border
+      padding-bottom: 10rem
+      border-bottom: 1px solid #d7dbe0
+      +screen('max', 1500)
+        padding-bottom: 8rem
+      +screen('max', 1023)
+        padding-bottom: 6rem
+      +screen('max', 700)
+        padding-bottom: 4rem
   &__title
     line-height: 1
   &__txt
@@ -142,6 +151,52 @@
       max-width: 750px
     +screen('max', 1023)
       margin-top: 1.5rem
+    p
+      margin-bottom: 1rem
+      &:last-of-type
+        margin-bottom: 0
+  &__sign
+    +fs(24px)
+    font-weight: 600
+    margin-top: 1.5rem
+    +screen('max', 1500)
+      +fs(18px)
+      margin-top: 1rem
+    +screen('max', 1023)
+      margin-bottom: 3.5rem
+    +screen('max', 700)
+      +fs(16px)
+      margin-bottom: 2.5rem
+  &__content
+    max-width: 1450px
+    +screen('max', 1500)
+      max-width: 950px
+  &__control
+    display: flex
+    gap: 2rem
+    margin-top: 5rem
+    +screen('max', 1500)
+      margin-top: 3rem
+    +screen('max', 700)
+      flex-wrap: wrap
+      gap: 1.5rem
+  &__btn
+    +screen('max', 1023)
+      width: 50%
+    +screen('max', 700)
+      width: 100%
+  &__text
+    line-height: 150%
+    +fs(20px)
+    color: var(--color-gray)
+    margin-top: 2.5rem
+    +screen('max', 1500)
+      +fs(16px)
+      margin-top: 2rem
+    +screen('max', 1023)
+      margin-top: 1.5rem
+    +screen('max', 700)
+      margin-top: 2rem
     p
       margin-bottom: 1rem
       &:last-of-type

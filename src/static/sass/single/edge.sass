@@ -12,12 +12,12 @@
     gap: 2rem
     +screen('max', 1023)
       overflow: auto
-      grid-template-columns: repeat(4, 387px)
+      grid-template-columns: repeat(4, 282px)
       margin: 0 -2rem
       padding-inline: 2rem
       gap: 1rem
     +screen('max', 700)
-      grid-template-columns: repeat(3, 295px)
+      grid-template-columns: repeat(2, 1fr)
   &__item
     padding: 3rem
     box-sizing: border-box
@@ -26,15 +26,34 @@
     position: relative
     +screen('max', 1500)
       padding: 3rem 2.5rem
+    +screen('max', 1023)
+      padding: 2rem
+    +screen('max', 700)
+      padding: 1.5rem
   &__pic
     margin-bottom: 6.5rem
     +screen('max', 1500)
       margin-bottom: 5rem
+    +screen('max', 1023)
+      width: 35px
+      margin-bottom: 2.5rem
+    &_mod
+      margin-bottom: 2.5rem
+      +screen('max', 1023)
+        margin-bottom: 1.5rem
   &__caption
     +fs(24px)
     font-weight: 600
-    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 1023)
+      +fs(14px)
   &__txt
     +fs(20px)
     line-height: 1.5
+    margin-top: 2rem
     color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)

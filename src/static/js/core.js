@@ -56,3 +56,10 @@ const newsGalleryBig = new Swiper($('.news-gallery__wrapper').find('.swiper')[0]
 });
 
 newsGalleryBig.controller.control = newsGalleryThumb;
+
+$('.decoration-type__btn').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.decoration-type__box').hide();
+  initFinishingSliderInTabs();
+  $('.decoration-type__box').eq($(this).index()).fadeIn();
+})

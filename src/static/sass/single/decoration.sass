@@ -1,0 +1,174 @@
+.decoration-outer
+  margin: 16rem 0 7rem
+  +screen('max', 1023)
+    margin: 5rem 0
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 6rem
+    +screen('max', 1023)
+      display: block
+  &__left
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__title
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__right
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+    p
+      margin-bottom: 1rem
+  &__gallery
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(2, 560px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: repeat(2, 245px)
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+    +screen('max', 1023)
+      border-radius: 15px
+
+.decoration-text
+  &__inner
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    align-items: center
+    gap: 2rem
+    padding-bottom: 12rem
+    border-bottom: 1px solid #d7dbe0
+    +screen('max', 1500)
+      padding-bottom: 8.5rem
+    +screen('max', 1023)
+      grid-template-columns: 1fr
+      gap: 5.5rem
+      border-bottom: 0
+      padding-bottom: 4rem
+    +screen('max', 700)
+      gap: 4rem
+  &__content
+    padding-right: 4rem
+    +screen('max', 1023)
+      padding-right: 0
+  &__txt
+    margin: 4rem 0
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      margin: 3rem 0
+    +screen('max', 700)
+      margin: 2rem 0
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+    +screen('max', 1023)
+      border-radius: 15px
+  &__more
+    +screen('max', 1023)
+      width: 100%
+
+.decoration-type
+  &__control
+    display: flex
+    gap: 1.2rem
+    scrollbar-width: 0
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      overflow: auto
+      margin: 2.5rem -1.5rem
+      padding: 0 1.5rem
+    &::-webkit-scrollbar
+      height: 0
+  &__btn
+    +screen('max', 700)
+      flex-shrink: 0
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__txt
+    margin-bottom: 5rem
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+      margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 3rem
+  &__line
+    margin-bottom: 8rem
+    +screen('max', 1500)
+      margin-bottom: 5rem
+  &__head
+    display: flex
+    align-items: center
+    gap: 2rem
+    margin-bottom: 4rem
+    +screen('max', 1500)
+      margin-bottom: 2.5rem
+    +screen('max', 700)
+      flex-wrap: wrap
+      gap: 1.5rem 
+  &__room
+    +fs(16px)
+    color: var(--white)
+    padding: 0.8rem 1.5rem
+    box-sizing: border-box
+    border-radius: 56px
+    background: var(--tertiary)
+    display: inline-block
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(10px)
+  &__body
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2.5rem
+    +screen('max', 1500)
+      gap: 2rem
+    +screen('max', 700)
+      grid-template-columns: repeat(2, 275px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+      overflow: auto
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+    +screen('max', 1023)
+      border-radius: 15px
+  &__caption
+    margin-top: 2.5rem
+    +screen('max', 1500)
+      margin-top: 1.5rem
