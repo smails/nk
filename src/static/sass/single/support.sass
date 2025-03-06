@@ -1,0 +1,173 @@
+.support
+  padding-block: 8rem
+  background: var(--fon)
+  border-radius: 40px
+  margin: 10rem 0
+  +screen('max', 1500)
+    margin: 7rem 0
+  +screen('max', 1023)
+    padding-block: 5rem
+    border-radius: 20px
+    margin: 5rem 0
+  +screen('max', 700)
+    padding-block: 3.5rem 3rem
+    border-radius: 15px
+    margin: 5rem 0 0
+  &__title
+    margin-bottom: 6rem
+    +screen('max', 1500)
+      margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 3rem
+  &__row
+    display: flex
+    align-items: flex-start
+    gap: 9rem
+    +screen('max', 1500)
+      gap: 4rem
+    +screen('max', 1023)
+      flex-flow: column
+    +screen('max', 700)
+      gap: 2rem
+  &__action
+    border-radius: 40px
+    max-width: 737px
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    background: var(--white)
+    padding: 5rem 6rem 6rem
+    box-sizing: border-box
+    width: 60%
+    flex-shrink: 0
+    +screen('max', 1200)
+      padding: 5rem 4rem
+    +screen('max', 1023)
+      width: 100%
+      padding: 5rem 6rem
+      border-radius: 15px
+    +screen('max', 700)
+      padding: 2rem
+  &__step
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    span
+      height: 4px
+      border-radius: 10px
+      background: #838c95
+      transition: .5s ease
+      opacity: 0.2
+      +screen('max', 700)
+        height: 2px
+      &.active
+        background: var(--secondary)
+        opacity: 1
+  &__wrapper
+    margin-top: 4rem
+    +screen('max', 700)
+      margin-top: 2.5rem
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__caption
+    +fs(22px)
+    font-weight: 600
+    margin-bottom: 4rem
+    +screen('max', 700)
+      +fs(18px)
+      margin-bottom: 2.5rem
+    span
+      color: var(--secondary)
+  &__group
+    &:last-of-type
+      +screen('max', 1023)
+        grid-column: 1/3
+      +screen('max', 700)
+        grid-column: auto
+  &__field
+    width: 100%
+    padding: 2rem
+    border-radius: 40px
+    background: var(--fon)
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 700)
+      +fs(16px)
+    &:placeholder
+      color: #838c95
+      opacity: 0.6
+  &__fields
+    display: grid
+    grid-template-columns: 1fr
+    gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 1.5rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1.2rem
+  &__file
+    cursor: pointer
+    +screen('max', 1023)
+      grid-column: 1/3
+    +screen('max', 700)
+      grid-column: auto
+  &__hidden
+    display: none
+  &__file-box
+    border: 1px dashed #d7dbe0
+    border-radius: 10px
+    padding: 2rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    box-sizing: border-box
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 700)
+      padding: 1.5rem
+      +fs(12px)
+  &__file-name
+    color: #838c95
+    opacity: 0.6
+  &__file-btn
+    color: var(--secondary)
+    padding-left: 25px
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' fill='none'%3E%3Cpath fill='%2351A747' fill-rule='evenodd' d='M10.3941 1.89453c0-.55228-.44769-1-.99998-1-.55228 0-1 .44772-1 1V8.5H1.78906c-.55228 0-1 .44771-1 1 0 .5523.44772 1 1 1h6.60506v6.6051c0 .5522.44772 1 1 1 .55229 0 .99998-.4478.99998-1V10.5h6.6055c.5523 0 1-.4477 1-1 0-.55229-.4477-1-1-1h-6.6055V1.89453Z' clip-rule='evenodd'/%3E%3C/svg%3E")
+    background-position: left center
+    background-size: 18px
+    background-repeat: no-repeat
+    +screen('max', 700)
+      background-size: 11px
+  &__btn
+    width: 100%
+    margin-top: 3rem
+    +screen('max', 700)
+      margin-top: 2rem
+  &__head
+    +fs(18px)
+    font-weight: 600
+    display: inline-block
+    color: #838c95
+    padding: .8rem 11rem 2.5rem 5.5rem
+    border-bottom: 1px solid #d7dbe0
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23838C95' opacity='.4'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='3.2' d='M20 12.8008v8.8'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='4.8' d='M20 26.4023v.08'/%3E%3C/svg%3E")
+    background-position: left top
+    background-size: 40px
+    background-repeat: no-repeat
+    margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(12px)
+      background-size: 25px
+      display: block
+      padding: 0.5rem 2rem 2rem 3.5rem
+  &__text
+    +fs(18px)
+    line-height: 1.4
+    color: #838c95
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
+    p
+      margin-bottom: 1.5rem
