@@ -40,6 +40,5 @@ $(window).scroll(() => {
 $('.step-build__tab').click(function () {
   $(this).addClass('active').siblings().removeClass('active');
   $('.step-build__box').hide();
-  initFinishingSliderInTabs();
   $('.step-build__box').eq($(this).index()).fadeIn();
 })

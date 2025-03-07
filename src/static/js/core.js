@@ -60,6 +60,20 @@ newsGalleryBig.controller.control = newsGalleryThumb;
 $('.decoration-type__btn').click(function () {
   $(this).addClass('active').siblings().removeClass('active');
   $('.decoration-type__box').hide();
-  initFinishingSliderInTabs();
   $('.decoration-type__box').eq($(this).index()).fadeIn();
+})
+
+$('.popup-login__tab').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.popup-login__action').hide();
+  $('.popup-login__action').eq($(this).index()).fadeIn();
+})
+
+$('.popup-login__link').click(function () {
+  $('.popup-login__action').hide();
+  if($(this).data('type') == 'reset'){
+    $('.popup-login__action').eq(2).fadeIn();
+  } else if($(this).data('type') == 'back'){
+    $('.popup-login__action').eq(1).fadeIn();
+  }
 })
