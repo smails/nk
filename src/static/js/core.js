@@ -57,6 +57,23 @@ const newsGalleryBig = new Swiper($('.news-gallery__wrapper').find('.swiper')[0]
 
 newsGalleryBig.controller.control = newsGalleryThumb;
 
+function initGardenSlider() {
+  $('.popup-info__wrapper').each((index, item) => {
+    const swiper = new Swiper($(item).find('.swiper')[0], {
+      slidesPerView: 'auto',
+      spaceBetween: '5px',
+      navigation: {
+        nextEl: $(item).find('.slider-arrow_next')[0],
+        prevEl: $(item).find('.slider-arrow_prev')[0],
+      },
+      modules: [Navigation],
+    });
+  })
+}
+
+initGardenSlider();
+
+
 $('.decoration-type__btn').click(function () {
   $(this).addClass('active').siblings().removeClass('active');
   $('.decoration-type__box').hide();

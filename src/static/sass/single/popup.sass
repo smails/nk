@@ -56,6 +56,25 @@
         fill: var(--primary)
         +screen('max', 1023)
           fill: var(--white)
+  &__frame
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    box-shadow: 0 16px 43px 0 rgba(0, 0, 0, 0.25)
+    background: #fff
+    max-height: 100vh
+    max-width: 1612px
+    width: calc(100% - 4rem)
+    height: calc(100vh - 6rem)
+    padding: 0.5rem
+    min-height: 600px
+    overflow: auto
+  &__close-btn
+    position: absolute
+    top: 0.7rem
+    right: 0.7rem
 
 .popup-login
   padding: 6.5rem 5rem 5rem
@@ -132,6 +151,7 @@
     +screen('max', 1500)
       +fs(14px)
       padding: 1.6rem
+      border-radius: 25px
     &::placeholder
       color: var(--primary)
       opacity: 0.4
@@ -249,3 +269,25 @@
   &__btn
     +screen('max', 700)
       width: 100%
+
+.popup-info
+  &__wrapper
+    position: relative
+    .swiper-slide
+      width: auto
+    .slider-arrows
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: calc(100% - 4rem)
+      left: 2rem
+      z-index: 2
+      +screen('max', 700)
+        display: none
+  &__pic
+    border-radius: 25px
+    vertical-align: middle
+  
