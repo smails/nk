@@ -1,0 +1,50 @@
++b.popup(data-type="#gallery")
+  +e.overlay
+  +e.gallery
+    +e.close-btn.js-close-modal
+      svg(xmlns='http://www.w3.org/2000/svg' width='59' height='59' fill='none' viewBox="0 0 59 59")
+        circle(cx='29.5' cy='29.5' r='29.5' fill='#000' opacity='.5')
+        path(fill='#fff' fill-rule='evenodd' d='M40.337 18.106a.75.75 0 0 1 1.06 1.061L31.315 29.25l10.082 10.083a.75.75 0 0 1-1.06 1.06L30.254 30.312 20.17 40.394a.75.75 0 0 1-1.06-1.061L29.192 29.25 19.11 19.167a.75.75 0 1 1 1.061-1.06l10.083 10.082 10.083-10.083Z' clip-rule='evenodd')
+    +b.popup-gallery
+      +e.wrapper
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.pic(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/gallery-4.png' alt='')
+        .slider-arrows
+          +b.slider-arrow_prev
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+          +b.slider-arrow_next
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+      +e.button
+        svg(xmlns='http://www.w3.org/2000/svg' width='20' height='7' fill='none')
+          path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 1 9 5 9-5')
+      +e.thumbs
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.thumb(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/gallery-4.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/gallery-4.png' alt='')
+        +b.slider-arrow_prev._black
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+        +b.slider-arrow_next._black
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')

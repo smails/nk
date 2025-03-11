@@ -71,10 +71,46 @@
     padding: 0.5rem
     min-height: 600px
     overflow: auto
+    +screen('max', 1300)
+      width: calc(100% - 14rem)
+    +screen('max', 1023)
+      width: calc(100% - 4rem)
+    +screen('max', 700)
+      height: calc(100vh - 3rem)
+      width: calc(100% - 4rem)
+      border-radius: 20px
+  &__gallery
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    box-shadow: 0 16px 43px 0 rgba(0, 0, 0, 0.25)
+    background: #fff
+    max-height: 100vh
+    max-width: 1612px
+    width: calc(100% - 4rem)
+    height: calc(100vh - 6rem)
+    padding: 0.5rem
+    min-height: 600px
+    +screen('max', 1300)
+      height: calc(100vh - 10rem)
+      width: calc(100% - 14rem)
+    +screen('max', 1023)
+      min-height: auto
+      background: none
+      box-shadow: none
+      width: 100%
+      height: 100%
   &__close-btn
     position: absolute
     top: 0.7rem
     right: 0.7rem
+    z-index: 3
+    svg
+      +screen('max', 700)
+        width: 42px
+        height: 42px
 
 .popup-login
   padding: 6.5rem 5rem 5rem
@@ -290,4 +326,203 @@
   &__pic
     border-radius: 25px
     vertical-align: middle
-  
+    +screen('max', 700)
+      height: 209px
+      object-fit: cover
+      border-radius: 16px
+  &__content
+    padding: 5rem 5.5rem
+    box-sizing: border-box
+    +screen('max', 1023)
+      padding: 4rem 3rem
+    +screen('max', 700)
+      padding: 2.5rem 1rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 2rem
+    +screen('max', 1023)
+      display: block
+  &__time
+    padding: .8rem 1.2rem
+    display: inline-flex
+    align-items: center
+    gap: 0.7rem
+    border-radius: 82px
+    background: var(--fon)
+    +fs(16px)
+    font-weight: 600
+    +screen('max', 1300)
+      +fs(14px)
+    +screen('max', 1023)
+      margin-top: 1rem
+    +screen('max', 700)
+      +fs(12px)
+  &__text
+    +fs(18px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1300)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+  &__caption
+    margin: 3.5rem 0 2rem
+    +screen('max', 1023)
+      margin: 2.5rem 0
+  &__list
+    li
+      padding-left: 3.5rem
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='15' fill='none'%3E%3Cpath stroke='%2351A747' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 7.5 7 14 19 1'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: left 5px
+      +fs(18px)
+      color: var(--color-gray)
+      line-height: 1.3
+      margin-bottom: 1.5rem
+      +screen('max', 1300)
+        +fs(16px)
+      +screen('max', 700)
+        +fs(14px)
+        margin-bottom: 1rem
+
+.popup-gallery
+  position: relative
+  height: 100%
+  +screen('max', 1023)
+    display: flex
+    justify-content: center
+    align-items: center
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 40px
+    height: 100%
+    object-fit: cover
+    +screen('max', 1023)
+      border-radius: 20px
+  &__wrapper
+    position: relative
+    height: 100%
+    +screen('max', 1023)
+      height: 450px
+      width: calc(100% - 1rem)
+      top: -10vh
+    +screen('max', 700)
+      height: 250px
+    .swiper, .swiper-slide, .swiper-wrapper
+      height: 100%
+      +screen('max', 1023)
+        height: 450px
+      +screen('max', 700)
+        height: 250px
+    .swiper-slide
+      padding: .5rem
+      background: var(--white)
+      box-sizing: border-box
+      border-radius: 17px
+      +screen('max', 700)
+        padding: 0.2rem
+  &__thumbs
+    position: absolute
+    bottom: .5rem
+    left: .5rem
+    width: calc(100% - 1rem)
+    z-index: 2
+    padding: 1rem
+    box-sizing: border-box
+    border-radius: 26px
+    backdrop-filter: blur(19.924999237060547px)
+    background: rgba(0, 0, 0, 0.6)
+    .swiper-slide
+      width: 151px
+      position: relative
+      transition: .5s ease
+      padding: 0.4rem
+      box-sizing: border-box
+      border: 1px solid transparent
+      border-radius: 22px
+      +screen('max', 1023)
+        width: 113px
+      +screen('max', 700)
+        width: 78px
+        border-radius: 10px
+        padding: 0.2rem
+      &:before
+        content: ''
+        width: calc(100% - 4px)
+        height: calc(100% - 4px)
+        position: absolute
+        top: 2px
+        left: 2px
+        background: #000
+        opacity: 0.3
+        border-radius: 15px
+        transition: .5s ease
+        z-index: 1
+      &:hover
+        &:before
+          opacity: 0
+    .swiper-slide-active
+      border-color: var(--dark-green)
+      &:before
+        opacity: 0
+    .slider-arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 2
+      &_prev
+        left: 2rem
+      &_next
+        right: 2rem
+  &__thumb
+    border-radius: 15px
+    width: 100%
+    +screen('max', 1023)
+      height: 70px
+      border-radius: 10px
+    +screen('max', 700)
+      height: 50px
+      border-radius: 6px
+  &__button
+    position: absolute
+    bottom: 13.5rem
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 68px
+    height: 25px
+    display: flex
+    justify-content: center
+    align-items: center
+    backdrop-filter: blur(14px)
+    background: rgba(0, 0, 0, 0.6)
+    border-radius: 100px
+    transition: .35s linear
+    z-index: 2
+    cursor: pointer
+    +screen('max', 1023)
+      bottom: 12rem
+    +screen('max', 700)
+      bottom: 9rem
+    &:hover
+      background: var(--hover-green)
+    &.hidden
+      bottom: 2.5rem
+  .slider-arrows
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: calc(100% - 4rem)
+    left: 2rem
+    z-index: 4
+    +screen('max', 1023)
+      top: 100%
+      transform: translateY(50%)
+      justify-content: center
+      gap: 2rem
