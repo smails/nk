@@ -1,0 +1,30 @@
++b.popup(data-type="#sale-timer")
+  +e.overlay
+  +e.container_mini._white
+    +e.close-btn.js-close-modal
+      svg(xmlns='http://www.w3.org/2000/svg' width='59' height='59' fill='none' viewBox="0 0 59 59")
+        circle(cx='29.5' cy='29.5' r='29.5' fill='#000' opacity='.5')
+        path(fill='#fff' fill-rule='evenodd' d='M40.337 18.106a.75.75 0 0 1 1.06 1.061L31.315 29.25l10.082 10.083a.75.75 0 0 1-1.06 1.06L30.254 30.312 20.17 40.394a.75.75 0 0 1-1.06-1.061L29.192 29.25 19.11 19.167a.75.75 0 1 1 1.061-1.06l10.083 10.082 10.083-10.083Z' clip-rule='evenodd')
+    +b.popup-sale-timer
+      +e.IMG.pic(src='/img/sale-1.png' alt='')
+      +e.content
+        +e.P.caption Квартиры с хорошей выгодой!
+        +e.P.txt Ограниченный ассортимент квартир с выгодой, по сравнению со стоимостью аналогичных квартир.
+        +e.UL.list
+          li От студий до 4-комнатных
+          li Доступны ипотека, рассрочка 0%, трейд-ин,
+            br
+            | военная ипотека
+        +e.A.call.btn.js-open-modal(href="#callback") Получить список квартир
+      +b.timer
+        +e.P.holder До конца акции
+        +e.row
+          +e.col
+            +e.count 00
+            +e.sign Дней
+          +e.col
+            +e.count 12
+            +e.sign часов
+          +e.col
+            +e.count 19
+            +e.sign минут

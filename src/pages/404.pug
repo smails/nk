@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('404')
+body
+  main.with-top
+    +header()
+    +b.error-page_type-2
+      +e.P.number 404
+      +e.P.title Страница, которую вы запрашиваете, не может быть найдена
+      +e.P.txt Возможно, она была удалена, перемещена или временно недоступна
+      +e.A.btn.btn(href="#") Вернуться на главную
+    include ../modules/footer/footer
+  include ../static/pug/scripts

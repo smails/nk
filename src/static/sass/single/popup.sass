@@ -41,13 +41,23 @@
       overflow: auto
     &_white
       background: var(--white)
+      +screen('max', 1500)
+        max-width: 980px
+    &_mini
+      min-height: auto
   &__close
     position: absolute
     top: 2.5rem
     right: 2.5rem
     cursor: pointer
+    z-index: 3
     +screen('max', 1023)
-      top: -5rem
+      top: -10ch
+      right: 0rem
+      background: rgba(#000, .3)
+      padding: 2rem
+      box-sizing: border-box
+      border-radius: 100%
     path
       +screen('max', 1023)
         fill: var(--white)
@@ -56,6 +66,24 @@
         fill: var(--primary)
         +screen('max', 1023)
           fill: var(--white)
+  &__close-btn
+    position: absolute
+    top: 0.7rem
+    right: 0.7rem
+    z-index: 3
+    cursor: pointer
+    svg
+      +screen('max', 700)
+        width: 42px
+        height: 42px
+  &__close-in-box
+    position: absolute
+    top: 2.5rem
+    right: 2.5rem
+    cursor: pointer
+    +screen('max', 700)
+      top: 1.5rem
+      right: 1.5rem
   &__frame
     position: absolute
     top: 50%
@@ -102,15 +130,70 @@
       box-shadow: none
       width: 100%
       height: 100%
-  &__close-btn
+  &__review
+    box-shadow: 0 16px 43px 0 rgba(0, 0, 0, 0.25)
+    background: #fff
+    padding: 5rem
+    box-sizing: border-box
     position: absolute
-    top: 0.7rem
-    right: 0.7rem
-    z-index: 3
-    svg
-      +screen('max', 700)
-        width: 42px
-        height: 42px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    max-width: 900px
+    width: calc( 100% - 4rem )
+    +screen('max', 1023)
+      max-width: 600px
+    +screen('max', 700)
+      padding: 2rem
+      border-radius: 15px
+  &__review-call
+    padding-block: 9.5rem
+    border-radius: 40px
+    background-color: var(--secondary)
+    background-image: url(../img/bg-callback-5.png)
+    background-repeat: no-repeat
+    background-size: contain
+    width: calc(100% - 12rem)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding-block: 6rem
+    +screen('max', 1023)
+      border-radius: 20px
+      width: calc(100% - 6rem)
+    +screen('max', 700)
+      background-image: none
+      padding-block: 4rem
+      padding-inline: 1.5rem
+  &__review-success
+    padding-block: 9.5rem
+    border-radius: 40px
+    background-color: var(--secondary)
+    background-image: url(../img/bg-callback-6.png)
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 1045px
+    width: 100%
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding-block: 6rem
+      max-width: 684px
+    +screen('max', 1023)
+      border-radius: 20px
+      width: calc(100% - 4rem)
+      max-width: 728px
+    +screen('max', 700)
+      width: calc(100% - 3rem)
+      padding-block: 4rem
+      padding-inline: 1.5rem
 
 .popup-login
   padding: 6.5rem 5rem 5rem
@@ -526,3 +609,408 @@
       transform: translateY(50%)
       justify-content: center
       gap: 2rem
+
+.popup-review
+  &__time
+    color: var(--color-gray)
+    margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(14px)
+  &__more
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(14px)
+  &__name
+    +fs(24px)
+    font-weight: 600
+    margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(20px)
+  &__stars
+    margin-bottom: 2.2rem
+  &__txt
+    line-height: 1.3
+    color: var(--color-gray)
+    margin-bottom: 2.5rem
+    +fs(20px)
+    +screen('max', 1500)
+      +fs(14px)
+    p
+      margin-bottom: 1rem
+
+.popup-review-call
+  color: var(--white)
+  max-width: 750px
+  margin: 0 auto
+  +screen('max', 1500)
+    max-width: 560px
+  &__title
+    +fs(60px)
+    font-family: var(--second-family)
+    margin-bottom: 3rem
+    text-align: center
+    +screen('max', 1500)
+      +fs(30px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(20px)
+      margin-bottom: 1rem
+  &__name
+    margin-bottom: 1.5rem
+    text-align: left
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 1rem
+      opacity: 0.8
+  &__txt
+    +screen('max', 700)
+      +fs(12px)
+      opacity: 0.8
+  &__group
+    +screen('max', 700)
+      margin-bottom: 1.5rem
+  &__field
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    width: 100%
+    padding: 2.3rem 2rem
+    box-sizing: border-box
+    +fs(18px)
+    font-weight: 600
+    border-radius: 64px
+    background: none
+    color: var(--white)
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 1.6rem
+    &::placeholder
+      color: var(--white)
+      opacity: 0.4
+    &:focus
+      border-color: var(--white)
+  &__submit
+    margin-top: 3rem
+    width: 100%
+    +screen('max', 700)
+      margin-top: 1rem
+  &__req
+    +fs(18px)
+    font-weight: 600
+    margin-top: 5rem
+    color: rgba(255, 255, 255, 0.5)
+    text-align: center
+    +screen('max', 1500)
+      +fs(12px)
+      margin-top: 3rem
+    +screen('max', 1023)
+      max-width: 460px
+      display: inline-block
+    +screen('max', 700)
+      margin-top: 1.5rem
+    a
+      color: var(--white)
+  &__fields
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 4rem
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      display: block
+      margin-bottom: 0
+  &__rating
+    display: flex
+    align-items: center
+    gap: 3rem
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 1.5rem
+      gap: 1.5rem
+  &__box
+    text-align: center
+  &__pic
+    margin-bottom: 8rem
+    +screen('max', 1500)
+      margin-bottom: 5.5rem
+      width: 110px
+    +screen('max', 700)
+      width: 80px
+      margin-bottom: 5rem
+  &__btn
+    margin-top: 5rem
+    +screen('max', 1500)
+      margin-top: 3rem
+    +screen('max', 700)
+      width: 100%
+
+.popup-sale-month
+  display: flex
+  padding: 0.5rem
+  gap: 2rem
+  +screen('max', 700)
+    flex-flow: column-reverse
+  &__pic
+    vertical-align: middle
+    border-radius: 26px
+    object-fit: cover
+    +screen('max', 1500)
+      height: 424px
+    +screen('max', 1023)
+      height: 348px
+    +screen('max', 700)
+      width: 100%
+      height: 45vh
+      border-radius: 12px
+  &__content
+    padding: 9.5rem 7rem
+    box-sizing: border-box
+    position: relative
+    +screen('max', 1500)
+      padding: 4.5rem 2.5rem
+    +screen('max', 1023)
+      padding: 3.5rem 1.5rem
+    +screen('max', 700)
+      padding: 2.5rem 1.5rem 0
+  &__title
+    +fs(48px)
+    font-family: var(--second-family)
+    margin-bottom: 2.5rem
+    +screen('max', 1500)
+      +fs(30px)
+    +screen('max', 1023)
+      +fs(26px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(20px)
+  &__txt
+    line-height: 1.5
+    +fs(20px)
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      +fs(14px)
+  &__list
+    margin-top: 3rem
+    li
+      list-style: inside
+      +fs(20px)
+      color: var(--color-gray)
+      line-height: 1.5
+      margin-bottom: 1rem
+      font-weight: 600
+      +screen('max', 1500)
+        +fs(16px)
+      +screen('max', 1023)
+        +fs(14px)
+  &__btn
+    position: absolute
+    bottom: 7rem
+    +screen('max', 1500)
+      bottom: 4.5rem
+    +screen('max', 1023)
+      bottom: 2rem
+      width: calc(100% - 3rem)
+    +screen('max', 700)
+      position: relative
+      bottom: 0
+      width: 100%
+
+.popup-sale-timer
+  +screen('max', 700)
+    display: flex
+    flex-flow: column-reverse
+  &__pic
+    vertical-align: middle
+    border-radius: 30px
+    width: 100%
+    height: 627px
+    object-fit: cover
+    +screen('max', 1500)
+      height: 467px
+    +screen('max', 1023)
+      height: 358px
+    +screen('max', 700)
+      height: 243px
+      margin-top: -3rem
+      border-radius: 15px
+  &__content
+    position: absolute
+    top: 2rem
+    left: 2rem
+    padding: 3.5rem
+    box-sizing: border-box
+    background: var(--white)
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    max-width: 657px
+    border-radius: 25px
+    text-wrap: balance
+    +screen('max', 1500)
+      max-width: 458px
+    +screen('max', 1023)
+      width: 55%
+      padding: 2.5rem
+      top: 1rem
+      left: 1rem
+    +screen('max', 700)
+      position: relative
+      left: 0
+      top: 0
+      width: 100%
+      padding: 2.5rem 1.5rem
+  &__caption
+    +fs(48px)
+    line-height: 1.2
+    color: var(--secondary)
+    font-family: var(--second-family)
+    margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(30px)
+    +screen('max', 1023)
+      +fs(26px)
+    +screen('max', 700)
+      +fs(20px)
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      +fs(14px)
+  &__list
+    +fs(18px)
+    line-height: 1.3
+    font-weight: 600
+    margin-bottom: 3rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      +fs(14px)
+    li
+      position: relative
+      padding-left: 2rem
+      &:before
+        content: ''
+        width: 5px
+        height: 5px
+        border-radius: 100%
+        background: var(--primary)
+        position: absolute
+        left: 0
+        top: 8px
+  &__call
+    +screen('max', 700)
+      width: 100%
+  .timer
+    position: absolute
+    bottom: 2rem
+    right: 2rem
+    +screen('max', 1023)
+      display: none
+
+.popup-secret
+  text-align: center
+  max-width: 1070px
+  margin: 0 auto
+  padding-block: 12rem 7rem
+  +screen('max', 1500)
+    max-width: 850px
+    padding-block: 5.5rem 2rem
+  +screen('max', 1023)
+    max-width: 570px
+  +screen('max', 700)
+    padding: 4rem 2rem
+  &__title
+    +fs(48px)
+    font-family: var(--second-family)
+    margin-bottom: 2.5rem
+    +screen('max', 1500)
+      +fs(30px)
+    +screen('max', 1023)
+      +fs(26px)
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(20px)
+  &__txt
+    line-height: 1.5
+    +fs(20px)
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      display: none
+  &__action
+    margin-top: 7rem
+    +screen('max', 1500)
+      margin-top: 3.5rem
+    +screen('max', 1023)
+      margin-top: 3rem
+  &__fields
+    display: inline-grid
+    grid-template-columns: repeat(3, 1fr)
+    align-items: flex-end
+    gap: 3rem 4rem
+    max-width: 1070px
+    width: 100%
+    +screen('max', 1500)
+      gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1.2rem
+  &__name
+    margin-bottom: 1.5rem
+    text-align: left
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 1rem
+  &__field
+    border: 1px solid rgba(#4d545a, .3)
+    width: 100%
+    padding: 2.3rem 2rem
+    box-sizing: border-box
+    +fs(18px)
+    font-weight: 600
+    border-radius: 64px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(14px)
+      padding: 1.6rem
+      border-radius: 25px
+    &::placeholder
+      color: var(--primary)
+      opacity: 0.4
+    &:focus
+      border-color: var(--secondary)
+  &__group
+    &:last-of-type
+      +screen('max', 1023)
+        grid-column: 1/3
+      +screen('max', 700)
+        grid-column: auto
+  &__req
+    +fs(16px)
+    font-weight: 600
+    margin: 4rem 0
+    color: #838c95
+    +screen('max', 1500)
+      +fs(12px)
+      margin-top: 3rem
+    +screen('max', 1023)
+      max-width: 460px
+      display: inline-block
+    +screen('max', 700)
+      margin: 1.5rem 0 0
+    a
+      color: var(--color-gray)
+  &__submit
+    width: 100%
+    margin-top: 4rem
+    +screen('max', 700)
+      margin-top: 1.2rem

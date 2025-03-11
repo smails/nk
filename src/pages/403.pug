@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('403')
+body
+  main.with-top
+    +header()
+    +b.error-page_type-1
+      +e.P.number 403
+      +e.P.title У вас нет доступа к запрашиваемой странице
+      +e.P.txt  Возможно, она требует авторизации или у вас нет необходимых прав для ее просмотра. Если у вас есть учетная запись на нашем сайте, пожалуйста, авторизуйтесь, чтобы получить доступ к странице
+      +e.A.btn.btn(href="#") Авторизоваться
+    include ../modules/footer/footer
+  include ../static/pug/scripts

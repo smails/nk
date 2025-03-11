@@ -22,6 +22,8 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 3rem
+    +screen('max', 700)
+      margin-bottom: 0
     .slider-arrow
       width: 67px
       height: 67px
@@ -43,6 +45,8 @@
       margin-right: 0
     +screen('max', 700)
       width: 100%
+      border-color: var(--secondary)
+      color: var(--primary)
   &__control
     +screen('max', 700)
       width: 100%

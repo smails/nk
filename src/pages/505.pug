@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('505')
+body
+  main.with-top
+    +header()
+    +b.error-page_type-2
+      +e.P.number 505
+      +e.P.title Страница, временно недоступна из-за технических работ
+      +e.P.txt Пожалуйста, попробуйте зайти на нее позже
+      +e.A.btn.btn(href="#") Вернуться на главную
+    include ../modules/footer/footer
+  include ../static/pug/scripts
