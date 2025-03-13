@@ -3,7 +3,7 @@ mixin eco(clas, position)
     +e.inner.inner
       +e.H2.title Экология и парки
       +e.list(class=clas)
-        +e.item
+        +e.A.item.js-open-modal(href='#garden')
           +e.box
             +e.IMG.pic(src='/img/park-1.png' alt='')
             +e.content(class=clas)
@@ -17,7 +17,7 @@ mixin eco(clas, position)
             +e.info
               +e.H3.holder Ботанический сад
               +e.P.txt Уникальные коллекционные насаждения Ботанического сада ННГУ представляют большую научную, культурную и историческую ценность. На его территории произрастают растения более 3,5 тысяч таксонов.
-        +e.item
+        +e.A.item.js-open-modal(href='#garden')
           +e.box
             +e.IMG.pic(src='/img/park-2.png' alt='')
             +e.content(class=clas)
@@ -31,7 +31,7 @@ mixin eco(clas, position)
             +e.info
               +e.H3.holder Анкудиновский лесопарк
               +e.P.txt Есть в Нижнем Новгороде недалеко от Щёлоковского хутора лесопарк Анкудиновский. На некоторых картах он принадлежит области, однако на кадастровой карте России он все таки находится в Нижнем Новгороде.
-        +e.item
+        +e.A.item.js-open-modal(href='#garden')
           +e.box
             +e.IMG.pic(src='/img/park-3.png' alt='')
             +e.content(class=clas)

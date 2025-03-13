@@ -27,13 +27,18 @@
     box-sizing: border-box
     border-radius: 20px
     height: 100%
+    transition: .5s ease
+    display: block
     +screen('max', 1500)
       padding: 2rem
     +screen('max', 700)
       padding: 1.5rem
+    &:hover
+      background-color: var(--hover-green)
     &_picture
       padding: 0
       background: none
+      overflow: hidden
       &:before
         content: ''
         width: 100%
@@ -45,6 +50,9 @@
         left: 0
         border-radius: 20px
         z-index: 1
+      &:hover
+        .more__pic
+          transform: scale(1.1)
   &__caption
     +fs(22px)
     font-weight: 600
@@ -65,6 +73,7 @@
     vertical-align: middle
     object-fit: cover
     height: 100%
+    transition: .5s ease
   &__icon
     +screen('max', 1500)
       width: 60px

@@ -138,10 +138,10 @@ $('.js-open-modal').click((e) => {
   $('.popup').hide();
   const modal = e.target.getAttribute('href') != null ? e.target.getAttribute('href') : e.target.parentElement.getAttribute('href');
   $('body').addClass("hidden");
-  if(e.target.dataset.type === '#garden'){
+  if(modal === '#garden'){
     initGardenSlider();
   }
-  if(e.target.dataset.type === '#gallery'){
+  if(modal === '#gallery'){
     initPopupGallery();
   }
   $(`[data-type="${modal}"]`).fadeIn();
@@ -152,3 +152,17 @@ $('.js-close-modal').click((e) => {
   $('.popup').fadeOut();
   $('body').removeClass('hidden');
 });
+
+
+$(document).ready(() => {
+  if(window.location.pathname == '/'){
+    setTimeout(() => {
+      $(`[data-type="#sale-month"]`).fadeIn();
+    }, 10000);
+  }
+  if(window.location.pathname == '/sales.html'){
+    setTimeout(() => {
+      $(`[data-type="#sale-timer"]`).fadeIn();
+    }, 10000);
+  }
+})

@@ -405,7 +405,8 @@
 
 .calc-benefit
   box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
-  display: flex
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
   background: var(--white)
   border-radius: 25px
   &__box
@@ -485,6 +486,7 @@
   &__line
     padding-block: 1.9rem
     border-bottom: 1px solid #e1e4e8
+    position: relative
     +screen('max', 1500)
       padding-block: 1.5rem
     +screen('max', 700)
@@ -517,6 +519,8 @@
   &__sign
     line-height: 1.1
     color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(12px)
     +screen('max', 700)
       +fs(9px)
   &__all
@@ -574,3 +578,19 @@
     display: none
     &:first-of-type
       display: block
+  &__info
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    text-align: right
+    p
+      &:first-of-type
+        +fs(12px)
+        opacity: 0.8
+      &:last-of-type
+        display: flex
+        align-items: center
+        gap: 1rem
+        +fs(14px)
+        font-weight: 600

@@ -31,3 +31,12 @@ $(".year .slider").slider({
       $(".year .start").val( ui.value ).change(); 
   }
 });
+
+
+$('.calc-benefit__list li').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $(this).parent().prev().find('span').text($(this).text());
+  $(this).parents('.calc-benefit__select').removeAttr('open');
+  $(this).parents('.calc-benefit__select').next().find('.calc-benefit__item').hide();
+  $(this).parents('.calc-benefit__select').next().find('.calc-benefit__item').eq($(this).index()).show();
+})

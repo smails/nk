@@ -7,7 +7,7 @@
     display: grid
     gap: 1.5rem
     grid-template-columns: repeat(auto-fill, minmax(135px, 1fr))
-    grid-template-rows: repeat(2, minmax(300px, 1fr))  repeat(2, minmax(233px, .75fr))
+    grid-template-rows: repeat(2, minmax(300px, 1fr)) repeat(2, minmax(233px, .75fr))
     +screen('max', 1700)
       grid-template-columns: repeat(auto-fill, minmax(99px, 1fr))
       grid-template-rows: repeat(2, minmax(208px, 1fr)) minmax(167px, 0.75fr) minmax(208px, 0.75fr)
@@ -29,10 +29,13 @@
     box-sizing: border-box
     border-radius: 20px
     grid-column-end: span 3
+    transition: .5s ease
     +screen('max', 1500)
       padding: 2rem
     +screen('max', 700)
       padding: 1.5rem
+    &:hover
+      background-color: var(--hover-green)
     &:first-of-type
       grid-column-end: span 4
       +screen('max', 700)
@@ -67,6 +70,7 @@
     &_picture
       padding: 0
       background: none
+      overflow: hidden
       &:before
         content: ''
         width: 100%
@@ -78,6 +82,9 @@
         left: 0
         border-radius: 20px
         z-index: 1
+      &:hover
+        .vantage__pic
+          transform: scale(1.1)
     &_text
       background-color: var(--secondary)
       background-image: url(../img/bg-infrastructure-1.png)
@@ -87,6 +94,11 @@
       flex-flow: column
       justify-content: space-between
       gap: 2rem
+      &:hover
+        background-color: var(--hover-green)
+        background-image: url(../img/bg-infrastructure-1.png)
+        background-repeat: no-repeat
+        background-position: right bottom
   &__caption
     +fs(22px)
     font-weight: 600
@@ -125,6 +137,7 @@
     border-radius: 20px
     vertical-align: middle
     object-fit: cover
+    transition: .5s ease
     +screen('max', 1700)
       height: 100%
   &__icon
