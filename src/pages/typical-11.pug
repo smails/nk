@@ -1,0 +1,98 @@
+include ../static/pug/head
++head('клуб лояльности')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-9.png', 'клуб лояльности', 'Зарегистрироваться', '', '', '', '')
+    +b.loyalty
+      +e.inner.inner
+        +e.H2.title Зачем мне нужен клуб лояльности?
+        +e.list
+          +e.item
+            +e.IMG.icon(src='/icon/need-3.svg' alt='')
+            +e.content
+              +e.H3.caption Эксклюзивные ипотечные программы от 0,1% 
+              +e.P.txt Не нужно ничего оформлять или ждать промокод от менеджера
+          +e.item
+            +e.IMG.icon(src='/icon/need-4.svg' alt='')
+            +e.content
+              +e.H3.caption Доступ к закрытому списку 52 квартир со скидками 
+              +e.P.txt Не нужно ничего оформлять или ждать промокод от 
+                br
+                | менеджера
+          +e.item
+            +e.IMG.icon(src='/icon/need-2.svg' alt='')
+            +e.content
+              +e.H3.caption Не нужно ничего оформлять или ждать промокод 
+          +e.box
+            +e.info
+              +e.P.holder.display-2 Доступ к закрытому списку квартир с выгодой до 570 000р
+              +e.A.btn.btn_white(href='#') Получить доступ
+            +e.IMG.pic(src='/img/loyalty-1.png' alt='')
+          +e.item
+            +e.IMG.icon(src='/icon/need-4.svg' alt='')
+            +e.content
+              +e.H3.caption Не нужно ничего оформлять или ждать промокод
+    +b.loyalty-offer
+      +e.inner.inner
+        +e.H2.title Какие нужны документы
+        +e.list
+          +e.item
+            +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
+            +e.H3.caption Эксклюзивные ипотечные программы от 0,1% 
+          +e.item
+            +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
+            +e.H3.caption Доступ к закрытому списку 52 квартир со скидками 
+          +e.item
+            +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
+            +e.H3.caption Не нужно ничего оформлять или ждать промокод 
+    +b.login-container
+      +e.inner.inner
+        +b.login
+          +e.tabs
+            +e.BUTTON.tab.active Регистрация
+            +e.BUTTON.tab Авторизация
+          +e.wrappper
+            +e.FORM.action
+              +e.P.title.display-2 Зарегистрируйтесь в личном кабинете
+              +e.fields
+                +e.group
+                  +e.name Фамилия
+                  +e.INPUT.field(placeholder="Константинопольский")
+                +e.group
+                  +e.name Имя
+                  +e.INPUT.field(placeholder="Константин")
+                +e.group
+                  +e.name Отчество
+                  +e.INPUT.field(placeholder="Константинович")
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.group
+                  +e.name Электронная почта
+                  +e.INPUT.field(placeholder="example@mail.ru")
+                +e.BUTTON.submit.btn Зарегистрироваться
+              +e.req Отправляя свои данные вы соглашаетесь с 
+                a(href="#") пользовательским соглашением и политикой конфиденциальности
+              +e.info Раздел «Личный кабинет» — персональный инструмент участника закрытого «Клуба Столицы Нижний», который облегчит вам покупку квартиры и последующее сопровождение сделки. В нем можно ознакомиться с акциями от дезелопера и подать заявку на ипотеку через веб-сервис «Ипотечный брокер». Совсем скоро в «Личном кабинете» появятся новые функции, так что регистрируйтесь чтобы узнать о них первыми
+            +e.FORM.action
+              +e.P.title.display-2 Войдите в личный кабинет
+              +e.wrap
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.group
+                  +e.name Код из SMS
+                  +e.INPUT.field(placeholder="Код из SMS")
+                +e.BUTTON.send.btn Войти
+                +e.link(data-type="reset") Восстановить доступ
+            +e.FORM.action
+              +e.P.title.display-2 Восстановление доступа
+              +e.wrap
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.BUTTON.send.btn Восстановить
+                +e.link(data-type="back") < Вернуться к авторизации
+    include ../modules/footer/footer
+  include ../static/pug/scripts

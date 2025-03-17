@@ -101,3 +101,22 @@ mixin callback(type)
             +e.control
               +e.A.btn.js-open-modal(href="#callback") Отправить анкету в 20 банков
               +e.A.more.btn_transparent(href='#')  Получить консультацию
+  if type == 12
+    +b.callback-practicum
+      +e.container
+        +e.P.title Новое полезное видео каждый день
+        +e.txt с 17 по 22 октября
+        +e.FORM.action
+          +e.fields
+            +e.group
+              +e.name Имя
+              +e.INPUT.field(placeholder="Константинопольский")
+            +e.group
+              +e.name Телефон
+              +e.INPUT.field(placeholder="+7")
+            +e.group
+              +e.name Электронная почта
+              +e.INPUT.field(placeholder="example@mail.ru")
+            +e.BUTTON.submit.btn_white Отправить заявку
+        +e.req Отправляя свои данные вы соглашаетесь с 
+          a(href="#") пользовательским соглашением и политикой конфиденциальности

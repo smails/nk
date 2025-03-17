@@ -1,0 +1,308 @@
+include ../static/pug/head
++head('Стандарты строительства ')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-9.png', 'Стандарты строительства ', '', '', '', '', 'Ипотечный брокер подберет наиболее подходящие для вашей ситуации программы и банки, после чего вы получите индивидуальное предложение с выгодными ставками и высоким процентом одобрения.')
+    +b.practicum-about
+      +e.inner.inner
+        +e.row
+          +e.left
+            +e.H2.title Стандарты строительства
+          +e.right
+            +e.txt
+              p Шесть домов находятся уже на финальной стадии готовности и вводятся в эксплуатацию в 1-м квартале 2023 года. Вся инфраструктура готова, а квартиры сдаются с готовой отделкой.
+              p Успейте купить квартиру сейчас и заезжайте жить уже через полгода!
+    +b.credit-need
+      +e.inner.inner
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/need-1.svg' alt='')
+            +e.P.caption Качество
+            +e.txt Использование 
+              b качественных и экологически чистых материалов 
+              | при строительстве жилого комплекса
+          +e.item
+            +e.IMG.pic(src='/icon/need-2.svg' alt='')
+            +e.P.caption Безопасность
+            +e.txt Соблюдение строгих
+              b норм и правил безопасности 
+              | на всех этапах строительства
+          +e.item
+            +e.IMG.pic(src='/icon/need-3.svg' alt='')
+            +e.P.caption Профессионализм
+            +e.txt Профессиональная работа специалистов и сотрудников,  имеющих большой опыт в строительстве
+          +e.item
+            +e.IMG.pic(src='/icon/need-4.svg' alt='')
+            +e.P.caption Соблюдение сроков
+            +e.txt Строгое соблюдение графиков и сроков выполнения строительных работ, чтобы обеспечить своевременную сдачу объекта в эксплуатацию
+    include ../modules/vantage/vantage
+    +b.social-responsibility
+      +e.inner.inner
+        +e.H2.title Социальная ответственность
+        +e.control
+          +e.BUTTON.btn.btn_transparent._tr-black.active Экологическая ответственность
+          +e.BUTTON.btn.btn_transparent._tr-black Социальная поддержка
+          +e.BUTTON.btn.btn_transparent._tr-black Культурная жизнь
+          +e.BUTTON.btn.btn_transparent._tr-black Безопасность
+        +e.wrapper
+          +e.box
+            +e.text Информация о том, как жилой комплекс заботится о сохранении природы и экологии. Например, использование энергосберегающих технологий, сортировка мусора, организация общественных мероприятий по очистке территории и т.д
+            +e.list
+              +e.item
+                +e.number
+                  span 12415
+                  | мест
+                +e.P.txt в школах и детских садах
+              +e.item
+                +e.number
+                  span 200+
+                  | тыс. м²
+                +e.P.txt объектов социальной инфраструктуры построено
+              +e.item
+                +e.number
+                  span 125
+                  | тыс. м²
+                +e.P.txt Получите решения от банков
+          +e.box
+            +e.text Информация о том, как жилой комплекс заботится о сохранении природы и экологии. Например, использование энергосберегающих технологий, сортировка мусора, организация общественных мероприятий по очистке территории и т.д
+            +e.list
+              +e.item
+                +e.number
+                  span 12415 
+                  | мест
+                +e.P.txt в школах и детских садах
+              +e.item
+                +e.number
+                  span 200+ 
+                  | тыс. м²
+                +e.P.txt объектов социальной инфраструктуры построено
+              +e.item
+                +e.number
+                  span 125 
+                  | тыс. м²
+                +e.P.txt Получите решения от банков
+    +b.project-build
+      +e.inner.inner
+        +e.H2.title Проекты в недвижимости
+        +e.control
+          +e.BUTTON.btn.btn_transparent._tr-black.active Все
+          +e.BUTTON.btn.btn_transparent._tr-black В продаже
+          +e.BUTTON.btn.btn_transparent._tr-black Реализованные
+          +e.BUTTON.btn.btn_transparent._tr-black Планируемые
+        +e.wrapper
+          +e.box
+            +e.list
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag_green Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag.active Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag.active Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+          +e.box
+            +e.list
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag.active Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag.active Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-1.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                    +e.tag.active Новый проект
+                  +e.IMG.pic(src='/img/project-build-2.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+              +e.item
+                +e.picture
+                  +e.tags
+                    +e.tag От 7,9 млн ₽ 
+                  +e.IMG.pic(src='/img/project-build-3.png' alt='')
+                +e.H3.caption ЖК «Дельвиг»
+                +e.count Доступно 186 квартир
+                +e.info
+                  +e.state Бизнес-класс
+                  +e.state от 100 100 ₽ за м² 
+    include ../modules/review/review
+    include ../modules/life/life
+    include ../modules/select-room/offer
+    include ../modules/footer/footer
+  include ../static/pug/scripts

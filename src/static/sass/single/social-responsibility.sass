@@ -1,0 +1,47 @@
+.social-responsibility
+  margin: 12rem 0
+  &__title
+    margin-bottom: 5rem
+  &__control
+    display: flex
+    gap: 1.2rem
+    scrollbar-width: 0
+  &__btn
+    +screen('max', 700)
+      flex-shrink: 0
+  &__wrapper
+    margin-top: 4rem
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__text
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    max-width: 1235px
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+  &__list
+    display: flex
+    gap: 2rem
+  &__item
+    padding: 3rem
+    box-sizing: border-box
+    border-radius: 25px
+    background: var(--fon)
+    width: 376px
+  &__number
+    +fs(18px)
+    font-family: var(--second-family)
+    color: var(--secondary)
+    text-transform: uppercase
+    margin-bottom: 5rem
+    span
+      +fs(70px)
+  &__txt
+    +fs(20px)
+    line-height: 1.5

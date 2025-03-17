@@ -1,0 +1,77 @@
+.project-build
+  margin: 12rem 0
+  &__title
+    margin-bottom: 5rem
+  &__control
+    display: flex
+    gap: 1.2rem
+    scrollbar-width: 0
+  &__btn
+    +screen('max', 700)
+      flex-shrink: 0
+  &__wrapper
+    margin-top: 4rem
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 6rem 4rem
+  &__picture
+    position: relative
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+  &__tags
+    position: absolute
+    top: 1rem
+    left: 0.3rem
+    display: flex
+    gap: 1rem
+  &__tag
+    border-radius: 82px
+    padding: .6rem 1.1rem .8rem 1.4rem
+    box-sizing: border-box
+    +fs(16px)
+    font-weight: 600
+    backdrop-filter: blur(17px)
+    box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.02)
+    background: var(--white)
+    &_green
+      background: var(--secondary)
+      color: var(--white)
+  &__caption
+    margin: 2rem 0 1.5rem
+  &__count
+    position: relative
+    padding-left: 1.5rem
+    font-weight: 600
+    color: var(--color-gray)
+    &:before
+      content: ''
+      width: 8px
+      height: 8px
+      border-radius: 100%
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background: var(--hover-green)
+      +screen('max', 1500)
+        width: 6px
+        height: 6px
+  &__info
+    display: flex
+    gap: 1rem
+    margin-top: 2.5rem
+  &__state
+    background: var(--fon)
+    display: inline-block
+    border-radius: 82px
+    padding: .6rem 1.1rem .8rem 1.4rem
+    box-sizing: border-box
+    +fs(16px)
+    font-weight: 600

@@ -1,0 +1,197 @@
+include ../static/pug/head
++head('Практикум «ЖК новая Кузнечиха»')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-9.png', 'Практикум «ЖК новая Кузнечиха»', 'Получить видео', 'Задать свой вопрос для следующих', '', '', '')
+    +b.practicum-about
+      +e.inner.inner
+        +e.row
+          +e.left
+            +e.H2.title Что такое Практикум «ЖК новая Кузнечиха»
+          +e.right
+            +e.txt
+              p Марафон лайфхаков от экспертов крупнейшей в Нижегородской области девелоперской компании: вы научитесь грамотно выбирать квартиру в новостройке, разбираться в ситуации на рынке недвижимости, лучше понимать юридические аспекты сделки, а также экономить при покупке жилья.
+              p Третий цикл практикума — с 17 по 22 октября 2022 года.
+              p Зарегистрируйтесь здесь, и мы каждый день будем присылать вам на имейл ссылку на новое видео цикла — всего шесть небольших обучающих роликов, которые вы сможете посмотреть в любое удобное вам время.
+        +e.middle
+          +e.row
+            +e.left
+              +e.H2.title Что будет в ближайшей серии видеороликов
+              +e.box
+
+            +e.right
+              +e.UL.steps
+                li
+                  b Детские площадки в ЖК
+                  span Как правильно их использовать для развития ребенка? Какие игровые элементы подходят для конкретного возраста? Разбираемся и слушаем мнение детского психолога.
+                li
+                  b Свободная планировка
+                  span Как спланировать пространство квартиры? Как создается дизайн-проект нового интерьера?
+                li
+                  b Удаленная сделка
+                  span Как купить квартиру в другом городе, не выходя из дома? Рассказываем о дистанционных продажах по опыту конкретных сделок.
+                li
+                  b Коммунальные услуги без секретов
+                  span От чего зависит размер платы за ЖКУ в многоквартирном жилом доме? Кто предоставляет жильцам коммунальные услуги и за что конкретно мы платим?
+                li
+                  b Аренда квартиры
+                  span На что имеют право жильцы и хозяева? (Неприкосновенность частной жизни, посещение без ведома жильца, размещение личных вещей, подселение, запрет на проживание детей и/или животных, производство ремонта, досрочное расторжение договора аренды и т. п.).
+              +e.info
+                b Бонусное видео на актуальную тему
+                span Анализ финансово-экономической ситуации и прогноз по рынку недвижимости в Нижнем Новгороде
+    +b.practicum-bonus
+      +e.inner.inner
+        +e.H2.title Бонусы для подписчиков практикума
+        +e.list
+          +e.item
+            +e.numb 01
+            +e.P.caption Список квартир с выгодой
+            +e.A.more.btn_tr-green(href="#") Хочу  список сейчас
+          +e.item
+            +e.numb 02
+            +e.P.caption Полный гайд по ипотекам на новостройки
+            +e.A.more.btn_tr-green(href="#") Хочу  список сейчас
+          +e.item
+            +e.numb 03
+            +e.P.caption Участие в розыгрыше Iphone 13
+            +e.A.more.btn_tr-green(href="#") Подробнее
+    +b.practicum-speakers
+      +e.inner.inner
+        +e.head
+          +e.H2.title Спикеры
+          .slider-arrows
+            +b.slider-arrow_prev._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+        +e.wrapper
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-1.png' alt='')
+                  +e.H3.name Константинопольский 
+                    br
+                    | Иван
+                  +e.P.pos Философ профессор
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-2.png' alt='')
+                  +e.H3.name Дмитриев 
+                    br
+                    | Антон
+                  +e.P.pos Профессор
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-3.png' alt='')
+                  +e.H3.name Максимов 
+                    br
+                    |  Ольга
+                  +e.P.pos Философ профессор
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-4.png' alt='')
+                  +e.H3.name Петров 
+                    br
+                    |  Антон
+                  +e.P.pos Профессор
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-5.png' alt='')
+                  +e.H3.name Васильева 
+                    br
+                    |  Наталья
+                  +e.P.pos Философ профессор
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-speakers-1.png' alt='')
+                  +e.H3.name Константинопольский 
+                    br
+                    |  Иван
+                  +e.P.pos Философ профессор
+    +b.practicum-videos
+      +e.inner.inner
+        +e.head
+          +e.H2.title Видео вебинаров и практикума
+          .slider-arrows
+            +b.slider-arrow_prev._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next._gray
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+        +e.wrapper
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-1.png' alt='')
+                  +e.holder Первый вебинар
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-1.png' alt='')
+                  +e.holder Первый вебинар
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-1.png' alt='')
+                  +e.holder Первый вебинар
+              .swiper-slide
+                +e.item
+                  +e.IMG.pic(src='/img/practicum-1.png' alt='')
+                  +e.holder Первый вебинар
+    +callback(12)
+    +b.login-container
+      +e.inner.inner
+        +b.login
+          +e.tabs
+            +e.BUTTON.tab.active Регистрация
+            +e.BUTTON.tab Авторизация
+          +e.wrappper
+            +e.FORM.action
+              +e.P.title.display-2 Зарегистрируйтесь в личном кабинете
+              +e.fields
+                +e.group
+                  +e.name Фамилия
+                  +e.INPUT.field(placeholder="Константинопольский")
+                +e.group
+                  +e.name Имя
+                  +e.INPUT.field(placeholder="Константин")
+                +e.group
+                  +e.name Отчество
+                  +e.INPUT.field(placeholder="Константинович")
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.group
+                  +e.name Электронная почта
+                  +e.INPUT.field(placeholder="example@mail.ru")
+                +e.BUTTON.submit.btn Зарегистрироваться
+              +e.req Отправляя свои данные вы соглашаетесь с 
+                a(href="#") пользовательским соглашением и политикой конфиденциальности
+              +e.info Раздел «Личный кабинет» — персональный инструмент участника закрытого «Клуба Столицы Нижний», который облегчит вам покупку квартиры и последующее сопровождение сделки. В нем можно ознакомиться с акциями от дезелопера и подать заявку на ипотеку через веб-сервис «Ипотечный брокер». Совсем скоро в «Личном кабинете» появятся новые функции, так что регистрируйтесь чтобы узнать о них первыми
+            +e.FORM.action
+              +e.P.title.display-2 Войдите в личный кабинет
+              +e.wrap
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.group
+                  +e.name Код из SMS
+                  +e.INPUT.field(placeholder="Код из SMS")
+                +e.BUTTON.send.btn Войти
+                +e.link(data-type="reset") Восстановить доступ
+            +e.FORM.action
+              +e.P.title.display-2 Восстановление доступа
+              +e.wrap
+                +e.group
+                  +e.name Номер телефона
+                  +e.INPUT.field(placeholder="+7")
+                +e.BUTTON.send.btn Восстановить
+                +e.link(data-type="back") < Вернуться к авторизации
+    include ../modules/select-room/offer
+    include ../modules/sales/sales
+    include ../modules/footer/footer
+  include ../static/pug/scripts

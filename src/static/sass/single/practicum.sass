@@ -64,3 +64,257 @@
     z-index: 2
     +screen('max', 1500)
       +fs(14px)
+
+.practicum-about
+  margin: 9rem 0
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 6rem
+    +screen('max', 1023)
+      display: block
+  &__left
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__title
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__right
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+    p
+      margin-bottom: 1rem
+  &__middle
+    padding-top: 6rem
+    margin-top: 6rem
+    border-top: 1px solid #d7dbe0
+  &__steps
+    counter-reset: list
+    li
+      margin-bottom: 4rem
+      position: relative
+      padding-left: 9.5rem
+      &:before
+        counter-increment: list
+        content: counter(list)
+        width: 60px
+        height: 60px
+        position: absolute
+        top: 0
+        left: 0
+        border-radius: 100%
+        border: 1px solid var(--secondary)
+        +fs(24px)
+        font-weight: 600
+        display: flex
+        justify-content: center
+        align-items: center
+    b
+      display: block
+      +fs(24px)
+      font-weight: 600
+      margin-bottom: 1.5rem
+    span
+      +fs(18px)
+      line-height: 1.5
+      color: var(--color-gray)
+  &__info
+    padding: 3rem 2.5rem 3rem 9.5rem
+    box-sizing: border-box
+    border-radius: 20px
+    background-color: var(--fon)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%2351A747'/%3E%3Cpath fill='%23fff' d='M23.348 24.773h-2.075l-.562-11.906h3.2l-.563 11.906Zm-2.778 3.774c0-.64.164-1.09.492-1.348.336-.265.747-.398 1.231-.398.477 0 .883.133 1.219.398.336.258.504.707.504 1.348 0 .625-.168 1.078-.504 1.36-.336.273-.742.41-1.219.41-.484 0-.895-.137-1.23-.41-.329-.282-.493-.735-.493-1.36Z'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: 2.5rem center
+    b
+      display: block
+      +fs(24px)
+      font-weight: 600
+      margin-bottom: 1rem
+    span
+      +fs(18px)
+      line-height: 1.5
+      color: var(--color-gray)
+
+.practicum-bonus
+  padding-block: 7.5rem
+  background: var(--secondary)
+  border-radius: 40px
+  margin: 9rem .5rem
+  +screen('max', 1500)
+  +screen('max', 1023)
+    padding-block: 5rem 13rem
+    position: relative
+    border-radius: 20px
+  &__title
+    color: var(--white)
+    margin-bottom: 6rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    padding: 1.5rem 3rem 12rem
+    box-sizing: border-box
+    border-radius: 25px
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    background: var(--white)
+    position: relative
+    height: 100%
+    +screen('max', 700)
+      padding: 1.5rem 1.5rem 10rem
+  &__numb
+    +fs(110px)
+    font-weight: 600
+    color: #e9edf0
+    opacity: 0.7
+    margin-bottom: 3.5rem
+    line-height: 1
+    +screen('max', 1500)
+      +fs(100px)
+    +screen('max', 700)
+      +fs(80px)
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    margin-bottom: 2rem
+    +screen('max', 1023)
+      +fs(16px)
+      margin-bottom: 1.2rem
+  &__more
+    position: absolute
+    bottom: 3rem
+    left: 3rem
+    +screen('max', 700)
+      bottom: 2rem
+      left: 1.5rem
+      width: calc( 100% - 3rem )
+
+.practicum-speakers
+  margin: 8rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 6rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 calc((-100vw + 1800px) / 2 )
+      padding-inline: calc((100vw - 1800px) / 2 )
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+    .swiper-slide
+      max-width: 325px
+  &__item
+    text-align: center
+  &__name
+    margin-top: 2.5rem
+  &__pos
+    +fs(18px)
+    margin-top: 0.8rem
+    color: var(--color-gray)
+
+.practicum-videos
+  margin: 8rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 6rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 calc((-100vw + 1800px) / 2 )
+      padding-inline: calc((100vw - 1800px) / 2 )
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+  &__item
+    position: relative
+    display: block
+    +screen('max', 1023)
+      width: 350px
+      flex-shrink: 0
+    +screen('max', 700)
+      width: 80vw
+    &:last-of-type
+      +screen('max', 1500)
+        display: none
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      border-radius: 25px
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      position: absolute
+    &:after
+      content: ''
+      width: 70px
+      height: 70px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23F37528'/%3E%3Cpath fill='%23fff' d='M38.4071 28.9287c1.2268.787 1.2268 2.5798 0 3.3668l-10.8266 6.9452c-1.3311.8539-3.0799-.1019-3.0799-1.6834V23.6668c0-1.5814 1.7488-2.5373 3.0799-1.6834l10.8266 6.9453Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+  &__pic
+    border-radius: 25px
+    vertical-align: middle
+    max-width: 100%
+  &__holder
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 2rem
+    box-sizing: border-box
+    +fs(22px)
+    font-weight: 600
+    color: var(--white)
+    z-index: 2
+    +screen('max', 1500)
+      +fs(14px)
