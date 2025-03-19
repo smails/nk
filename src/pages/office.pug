@@ -1,0 +1,13 @@
+include ../static/pug/head
++head('Офис продаж ')
+body
+  main.gray
+    +header()
+    +breadcrumb(['Главная','Офис продаж '], 'Офис продаж ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.info
+          +e.H1.title Офис продаж 
+    include ../modules/office/page
+    include ../modules/footer/footer
+  include ../static/pug/scripts

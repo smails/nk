@@ -152,3 +152,28 @@
     color: var(--primary)
     width: 100%
     margin-top: 1.6rem
+
+.live-heading
+  margin-bottom: 7.5rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    +fs(90px)
+    font-family: var(--second-family)
+    +screen('max', 700)
+      +fs(60px)
+    &:before
+      content: ''
+      width: 25px
+      height: 25px
+      border-radius: 100%
+      background: #c41e1e
+      display: inline-block
+      margin-right: 2rem
+      vertical-align: middle
+      margin-bottom: 1rem
+  &__social
+    display: flex
+    gap: 1.5rem

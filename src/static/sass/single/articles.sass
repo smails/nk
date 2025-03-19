@@ -23,6 +23,8 @@
     +screen('max', 1500)
       +fs(14px)
       margin-bottom: 1.2rem
+  &__title
+    margin-bottom: 5.5rem
   &__caption
     +fs(30px)
     line-height: 1.2
@@ -49,3 +51,13 @@
       gap: 5rem 2rem
     +screen('max', 1023)
       grid-template-columns: 1fr
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      margin-bottom: 1rem

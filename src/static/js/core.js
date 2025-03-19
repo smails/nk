@@ -137,6 +137,38 @@ const practicumVideo = new Swiper($('.practicum-videos').find('.swiper')[0], {
   }
 });
 
+const showroom = new Swiper($('.showroom-slider').find('.swiper')[0], {
+  spaceBetween: '10px',
+  slidesPerView: 1.15,
+  loop: true,
+  navigation: {
+    nextEl: $('.showroom-slider').find('.slider-arrow_next')[0],
+    prevEl: $('.showroom-slider').find('.slider-arrow_prev')[0],
+  },
+  modules: [Navigation],
+  breakpoints: {
+    767: {
+      slidesPerView: 2.15,
+    },
+    1500: {
+      spaceBetween: '20px',
+      slidesPerView: 3.05,
+    },
+  }
+});
+
+$('.demo-slider').each((index, item) => {
+  const swiper = new Swiper($(item).find('.swiper')[0], {
+    slidesPerView: 1,
+    spaceBetween: '20px',
+    navigation: {
+      nextEl: $(item).find('.slider-arrow_next')[0],
+      prevEl: $(item).find('.slider-arrow_prev')[0],
+    },
+    modules: [Navigation],
+  });
+})
+
 $('.popup-gallery__button').click(function () {
   $(this).toggleClass('hidden');
   $('.popup-gallery__thumbs').slideToggle();

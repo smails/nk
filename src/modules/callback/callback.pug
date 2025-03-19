@@ -120,3 +120,11 @@ mixin callback(type)
             +e.BUTTON.submit.btn_white Отправить заявку
         +e.req Отправляя свои данные вы соглашаетесь с 
           a(href="#") пользовательским соглашением и политикой конфиденциальности
+  if type == 13
+    +b.callback
+      +e.inner.inner
+        +e.box
+          +e.P.title Обновленная демоквартира уже в марте 2023! Следите за новостями
+          +e.FORM.action
+            +e.INPUT.field(placeholder="E-mail")
+            +e.BUTTON.submit.btn_white(href='#') Подробнее 

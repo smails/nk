@@ -1,0 +1,137 @@
+.gallery-collection
+  margin: 8rem 0 10rem
+  +screen('max', 1023)
+    margin: 6rem 0 8rem
+    padding-bottom: 8rem
+    position: relative
+  +screen('max', 700)
+    padding-bottom: 13rem
+    margin: 4rem 0 5rem
+  &__inner
+    position: relative
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+    padding-right: 15rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
+    +screen('max', 700)
+      display: block
+      margin-bottom: 2rem
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+      margin-top: 2.5rem
+  &__caption
+    +screen('max', 1023)
+      +fs(22px)
+      max-width: 40%
+    +screen('max', 700)
+      max-width: 100%
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 1.6rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 1023)
+      padding: 1.2rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      position: absolute
+      top: 0
+      right: 0
+      +screen('max', 1023)
+        display: none
+  &__count
+    position: absolute
+    top: 1.5rem
+    left: 1.5rem
+    background: var(--tertiary)
+    padding: 0.5rem 1.2rem
+    border-radius: 36px
+    display: inline-flex
+    align-items: center
+    gap: .4rem
+    +fs(18px)
+    font-weight: 600
+    color: var(--white)
+    +screen('max', 1500)
+      +fs(14px)
+      transform: scale(.8)
+      top: 0.5rem
+      left: 0.5rem
+    svg
+      vertical-align: middle
+  &__item
+    position: relative
+    padding-bottom: 2rem
+    &:before
+      content: ''
+      width: 100%
+      height: calc(100% - 2rem)
+      left: 0
+      top: 0
+      border-radius: 25px
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      position: absolute
+    &:after
+      content: ''
+      position: absolute
+      z-index: -1
+      background: #d7dbe0
+      border-radius: 2.5rem
+      left: 2.4rem
+      bottom: 0
+      height: 50%
+      width: calc(100% - 4.8rem)
+      +screen('max', 1023)
+        width: calc(100% - 3rem)
+        left: 1.5rem
+        +screen('max', 700)
+          bottom: -1rem
+  &__holder
+    display: block
+    position: absolute
+    bottom: 2rem
+    left: 0
+    padding: 2rem
+    box-sizing: border-box
+    +fs(22px)
+    font-weight: 600
+    color: var(--white)
+    z-index: 2
+    +screen('max', 1500)
+      +fs(14px)
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__more
+    margin-top: 4rem
+    width: 100%

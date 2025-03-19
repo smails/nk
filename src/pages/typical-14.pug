@@ -1,0 +1,106 @@
+include ../static/pug/head
++head('Посмотри на свою будущую квартирув шоу-руме ЖК «Новая Кузнечиха»')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-11.png', 'Посмотри на свою будущую квартирув шоу-руме ЖК «Новая Кузнечиха»', 'Записаться в «Жар-Птицу»', 'Смотреть видео о ЖК', '', '', '')
+    +b.showroom
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Шоу-рум в ТРЦ
+              br
+              | «Жар Птица»
+          +e.right
+            +e.txt Шоу-рум в ТРЦ «Жар-Птица» позволит вам максимально погрузиться в атмосферу жилого комплекса. На территории шоу-рума воспроизведена зона двора с детской площадкой, места общего пользования и выставочная 2-х комнатная квартира с отделкой «под ключ» комфорт класса.
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/showroom-1.png' alt='')
+            +e.P.caption.display-4 Территория
+          +e.item
+            +e.IMG.pic(src='/img/showroom-2.png' alt='')
+            +e.P.caption.display-4 Зона двора
+          +e.item
+            +e.IMG.pic(src='/img/showroom-3.png' alt='')
+            +e.P.caption.display-4 Зона двора
+    +b.showroom-slider
+      +e.inner.inner
+        +e.head
+          +e.H2.title Выставочные квартиры
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+        +e.wrapper
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-4.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-4.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-6.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-4.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-4.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/showroom-6.png' alt='')
+    +b.showroom-info
+      +e.inner.inner
+        +e.container
+          +e.IMG.pic(src='/img/showroom-7.png' alt='')
+          +e.content
+            +e.H2.title Шоу-рум 
+              br
+              | в ТРЦ «Жар птица»
+            +e.P.addr Пл. Советская, 5, 1 этаж
+              a(href="#") Как добраться
+            +e.P.time Пн-Пт с 9:00 до 19:00
+            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+            +e.A.btn.btn_white.js-open-modal(href='#') Записаться в шоурум ТРЦ «Жар-Птицу»
+    +b.partners
+      +e.inner.inner
+        +e.H2.title Партнеры
+        +e.middle
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 1; i < 5; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 5; i < 9; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+    +b.articles
+      +e.inner.inner
+        +e.H2.title Как еще посмотреть ЖК вживую?
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/life-4.png' alt='')
+            +e.H3.caption Демонстрационная квартира
+            +e.txt
+              p В демонстрационной квартире, которая находится в жилом комплексе "Новая Кузнечиха", вы сможете вживую оценить отделку "под ключ" комфорт класса. Натяжные потолки, обои под покраску, ламинат, плитка, сантехника, двери, окна – вы можете оценить все используемые при отделке элементы.
+              p Показы проводят квалифицированные менеджеры, которые помогут вам составить полное впечатление о жилом комплексе
+            +e.A.more.btn_tr-green(href='#') Подробнее о демоквартире
+          +e.item
+            +e.IMG.pic(src='/img/life-5.png' alt='')
+            +e.H3.caption Экскурсионный тур
+            +e.txt
+              p На экскурсии, которую проведут опытные менеджеры, вы сможете сами оценить масштаб застройки, увидеть, как организованы кварталы, дворы, подъезды, объекты инфраструктуры, благоустройство общественных территорий.
+              p Кроме этого, вы посетите выставочную квартиру, где представлена отделка комфорт-класса, применяемая во всех новых домах жилого комплекса.
+            +e.A.more.btn_tr-green(href='#') Подробнее об экскурсии
+    +callback(13)
+    include ../modules/offer/sale
+    include ../modules/footer/footer
+  include ../static/pug/scripts

@@ -1,0 +1,99 @@
+include ../static/pug/head
++head('Приглашаем посетить демонстрационную квартиру в ЖК «Новая Кузнечиха»')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-12.png', 'Приглашаем посетить демонстрационную квартиру в ЖК «Новая Кузнечиха»', 'Записаться на показ', 'Смотреть видео о ЖК', '', '', 'За одно посещение вы сможете составить полное впечатление о жилом комплексе. Вы увидите масштабы застройки, благоустройство, объекты инфраструктуры, а также реальную отделку квартир')
+    +b.showroom
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Шоу-рум в ТРЦ
+              br
+              | «Жар Птица»
+          +e.right
+            +e.txt Шоу-рум в ТРЦ «Жар-Птица» позволит вам максимально погрузиться в атмосферу жилого комплекса. На территории шоу-рума воспроизведена зона двора с детской площадкой, места общего пользования и выставочная 2-х комнатная квартира с отделкой «под ключ» комфорт класса.
+    +b.demo-slider
+      +e.inner.inner
+        +e.wrapper
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+    +b.showroom-info
+      +e.inner.inner
+        +e.container
+          +e.IMG.pic(src='/img/showroom-8.png' alt='')
+          +e.content
+            +e.H2.title Демоквартира 
+              br
+              | в ЖК «Новая Кузнечиха»
+            +e.P.addr Ул. Романтиков, 8
+              a(href="#") Как добраться
+            +e.P.time По предварительной записи 
+            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+            +e.A.btn.btn_white.js-open-modal(href='#') Записаться на показ
+    +b.decorating
+      +e.inner.inner
+        +e.row_mod
+          +e.left
+            +e.H2.title Современная и качественная отделка по дизайн-проекту
+            +e.IMG.pic(src='/img/decorating-1.png' alt='')
+          +e.right
+            +e.P.txt Мы уделили особое внимание отделочным материалам. В жилых комнатах в качестве напольного покрытия выбран ламинат, в прихожей и кухонной зоне — керамогранит. Потолки во всех помещениях квартир — натяжные. Стены оклеены антивандальными виниловыми обоями на флизелиновой основе под покраску
+            +e.UL.list
+              +e.LI.item Все квартиры сдаются с отделкой «под ключ» комфорт-класса с использованием современных, безопасных, экологичных и долговечных материалов
+              +e.LI.item Интерьер жилых комнат выполнен в нейтральных тонах, что делает его универсальным. Все инженерные коммуникации, стояки водоснабжения и канализации зашиты в короба
+              +e.LI.item Вместо затрат на ремонт можно задуматься о покупке мебели и бытовой техники. Примеры отделки можно увидеть в наших шоу-румах или посетить демонстрационную квартиру
+            +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Записаться на просмотр
+    +b.demo-slider
+      +e.inner.inner
+        +e.wrapper
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-2.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-2.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-2.png' alt='')
+    +b.articles
+      +e.inner.inner
+        +e.H2.title Как еще посмотреть ЖК вживую?
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/life-6.png' alt='')
+            +e.H3.caption Шоурум ЖК «Новая Кузнечиха»
+            +e.txt
+              p В демонстрационной квартире, которая находится в жилом комплексе "Новая Кузнечиха", вы сможете вживую оценить отделку "под ключ" комфорт класса. Натяжные потолки, обои под покраску, ламинат, плитка, сантехника, двери, окна – вы можете оценить все используемые при отделке элементы.
+              p Показы проводят квалифицированные менеджеры, которые помогут вам составить полное впечатление о жилом комплексе
+            +e.A.more.btn_tr-green(href='#') Подробнее о демоквартире
+          +e.item
+            +e.IMG.pic(src='/img/life-5.png' alt='')
+            +e.H3.caption Экскурсионный тур
+            +e.txt
+              p На экскурсии, которую проведут опытные менеджеры, вы сможете сами оценить масштаб застройки, увидеть, как организованы кварталы, дворы, подъезды, объекты инфраструктуры, благоустройство общественных территорий.
+              p Кроме этого, вы посетите выставочную квартиру, где представлена отделка комфорт-класса, применяемая во всех новых домах жилого комплекса.
+            +e.A.more.btn_tr-green(href='#') Подробнее об экскурсии
+    +callback(13)
+    include ../modules/offer/sale
+    include ../modules/footer/footer
+  include ../static/pug/scripts

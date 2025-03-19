@@ -1,0 +1,172 @@
+.showroom
+  margin: 8rem 0 10rem
+  +screen('max', 1023)
+    margin: 6rem 0 8rem
+  +screen('max', 700)
+    margin: 4rem 0 5rem
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+    margin-bottom: 8rem
+    +screen('max', 1023)
+      display: block
+  &__left
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__right
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
+    p
+      margin-bottom: 1rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 20px
+  &__caption
+    margin-top: 2.5rem
+
+.showroom-slider
+  padding-block: 8rem
+  background: var(--fon)
+  border-radius: 40px
+  margin: 8rem .5rem
+  +screen('max', 1500)
+    padding-block: 5rem
+  +screen('max', 1023)
+    padding-block: 5rem
+    position: relative
+    border-radius: 20px
+    margin: 4rem .5rem
+  +screen('max', 700)
+    padding-block: 3.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4.5rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 calc((-100vw + 1800px) / 2 )
+      padding-inline: calc((100vw - 1800px) / 2 )
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+  &__pic
+    border-radius: 25px
+    vertical-align: middle
+    max-width: 100%
+
+.showroom-info
+  margin: 10rem 0
+  &__container
+    display: flex
+    align-items: center
+    background: var(--secondary)
+    padding: 0.8rem
+    box-sizing: border-box
+    border-radius: 30px
+  &__pic
+    width: 50%
+    max-width: 941px
+    border-radius: 26px
+    vertical-align: middle
+  &__content
+    padding-inline: 10rem
+    color: var(--white)
+    width: 50%
+  &__title
+    margin-bottom: 3.5rem
+  &__addr
+    +fs(20px)
+    margin-bottom: 3rem
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    flex-wrap: wrap
+    padding-bottom: 2.5rem
+    border-bottom: 1px solid var(--white)
+    +screen('max', 1500)
+      +fs(16px)
+      gap: 1rem
+    a
+      font-size: 16px
+      font-weight: 600
+      display: inline-block
+  &__time
+    +fs(20px)
+    margin-bottom: 1rem
+    +screen('max', 1500)
+      +fs(16px)
+  &__phone
+    +fs(30px)
+    font-weight: 600
+    display: block
+    +screen('max', 1500)
+      +fs(16px)
+  &__btn
+    margin-top: 4.5rem
+
+.partners
+  margin: 12rem 0
+  &__title
+    margin-bottom: 7rem
+  &__row
+    display: flex
+    animation: scan 50s infinite linear
+    will-change: transform
+    gap: 2rem
+    margin-bottom: 3rem
+    width: 100%
+    &:nth-of-type(2)
+      animation-direction: reverse
+    +screen('max', 767)
+      animation: scan 15s infinite linear
+  &__contain
+    display: flex
+    gap: 2rem
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 306px
+    height: 306px
+    background: var(--fon)
+    border-radius: 100%
+    padding: 2rem
+    box-sizing: border-box
+  &__pic
+    max-width: 100%
+    max-height: 100%
+    vertical-align: middle
+

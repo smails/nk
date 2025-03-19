@@ -4,6 +4,8 @@
     margin: 10rem 0 6rem
   +screen('max', 700)
     margin: 6.5rem 0 4rem
+  &_page
+    margin: 8rem 0
   &__holder
     font-size: 6.122vw
     font-family: var(--second-family)
@@ -83,6 +85,9 @@
         gap: 0
         flex-flow: column-reverse
         background: none
+    &_padding
+      padding: 0
+      position: relative
     &_mod
       position: relative
       color: var(--white)
@@ -166,6 +171,9 @@
       top: 0
       padding: 2rem
       border-radius: 15px
+    &_mini
+      padding: 4rem
+      width: 60%
   &__caption
     +fs(38px)
     line-height: 1.2
@@ -195,3 +203,26 @@
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(10px)
+    &_mod
+      position: absolute
+      top: 1.8rem
+      left: 1.8rem
+  &__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem 2rem
+  &__box
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    border-radius: 25px
+    padding: 0.8rem
+    box-sizing: border-box
+    background: var(--white)
+  &__picture
+    position: relative
+  &__info
+    padding: 3.5rem 1.7rem
+    box-sizing: border-box
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-end

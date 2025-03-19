@@ -40,7 +40,7 @@
     gap: 3rem
     margin-bottom: 3rem
     width: 100%
-    &:nth-of-type(3)
+    &:nth-of-type(2)
       animation-direction: reverse
     +screen('max', 767)
       animation: scan 15s infinite linear
@@ -61,8 +61,4 @@
     max-width: 100%
     max-height: 100%
     vertical-align: middle
-@keyframes scan
-  0%
-    transform: translate3d(0,0,0)
-  to
-    transform: translate3d(-66.666%,0,0)
+
