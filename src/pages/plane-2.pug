@@ -1,0 +1,14 @@
+include ../static/pug/head
++head('Генплан')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Генплан'], 'Генплан')
+    include ../modules/placement/placement-2
+    include ../modules/plane/interest
+    include ../modules/more/more
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

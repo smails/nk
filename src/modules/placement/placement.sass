@@ -106,3 +106,226 @@
     border-radius: 30px
     +screen('max', 700)
       height: 350px
+  &__back
+    position: absolute
+    top: 2rem
+    left: 2rem
+  &__tabs
+    border: 1px solid var(--tertiary)
+    border-radius: 84px
+    background: var(--white)
+    box-sizing: border-box
+    padding: 0.3rem
+    position: absolute
+    bottom: 2rem
+    left: 2rem
+    +screen('max', 700)
+      justify-content: space-between
+      display: flex
+  &__tab
+    +fs(18px)
+    font-weight: 600
+    padding: 1.6rem 3.5rem
+    border-radius: 48px
+    transition: .5s ease
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.2rem 1.5rem
+    +screen('max', 1023)
+      padding: 1.2rem
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1.2rem 2.5vw
+    &.active
+      background: var(--tertiary)
+      color: var(--white)
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+
+.placement-info
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  +screen('max', 700)
+    position: fixed
+    bottom: 0
+    transform: none
+    left: 0
+    z-index: 9999
+    width: 100%
+    height: 100vh
+    top: auto
+  &:before
+    +screen('max', 700)
+      width: calc(100vw + 5px)
+      height: 100vh
+      position: absolute
+      bottom: 10px
+      content: ''
+      background: #000
+      opacity: .3
+      z-index: -1
+  &__container
+    padding: 3rem
+    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    background: var(--white)
+    border-radius: 25px
+    width: 360px
+    box-sizing: border-box
+    +screen('max', 1500)
+      padding: 2rem
+      width: 285px
+    +screen('max', 700)
+      max-height: 100%
+      width: 100%
+      border-radius: 20px 20px 0 0
+      position: absolute
+      z-index: 2
+      bottom: 0
+      left: 0
+  &__title
+    margin-bottom: 0.8rem
+  &__count
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(12px)
+  &__list
+    margin-top: 1.8rem
+    padding-top: 1.8rem
+    border-top: 1px solid #bdc0ca
+    +screen('max', 1500)
+      margin-top: 1.5rem
+      padding-top: 1.5rem
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-right: 1rem
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='13' fill='none'%3E%3Cpath stroke='%23BDC0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1 1 5 5.5L1 12'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: right center
+    margin-bottom: 1rem
+  &__name
+    position: relative
+    +fs(18px)
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+    &[data-count]
+      &:after
+        content: attr(data-count)
+        display: inline-block
+        border-radius: 60px
+        background: var(--secondary)
+        +fs(14px)
+        color: var(--white)
+        padding: .35rem .6rem .2rem
+        font-weight: 700
+        box-sizing: border-box
+        line-height: 1
+        +screen('max', 1500)
+          +fs(12px)
+          padding: .35rem .6rem .3rem
+  &__price
+    +fs(18px)
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(16px)
+  &__btn
+    width: 100%
+    margin-top: 2rem
+    +screen('max', 1500)
+      margin-top: 1.5rem
+
+.placement-chess
+  border: 1px solid #d7dbe0
+  height: 860px
+  padding: 3rem 6rem
+  box-sizing: border-box
+  border-radius: 30px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 4rem
+    gap: 2rem
+  &__legend
+    display: flex
+    gap: 5rem
+  &__item
+    display: flex
+    align-items: center
+    gap: 1.2rem
+  &__sign
+    font-weight: 600
+  &__frame
+    width: 40px
+    height: 40px
+    background-color: var(--fon)
+    border-radius: 6px
+    border: 1px solid transparent
+    color: var(--secondary)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 600
+    line-height: 1
+    cursor: pointer
+    &_available
+      border-color: 1px solid var(--secondary)
+      background-color: var(--white)
+    &_blocked
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' fill='none'%3E%3Cpath fill='%23838C95' d='M12.25 6.75h-.583V4.5C11.667 2.018 9.574 0 7 0S2.333 2.018 2.333 4.5v2.25H1.75C.786 6.75 0 7.507 0 8.438v7.874C0 17.244.786 18 1.75 18h10.5c.964 0 1.75-.757 1.75-1.688V8.438c0-.93-.786-1.687-1.75-1.687ZM3.889 4.5c0-1.655 1.395-3 3.111-3 1.716 0 3.111 1.345 3.111 3v2.25H3.89V4.5Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-color: var(--fon)
+      background-position: center
+      background-size: 14px
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: flex
+    gap: min(11rem, 7vw)
+    align-items: flex-end
+    height: 100%
+    padding-bottom: 16rem
+    box-sizing: border-box
+  &__table
+    display: flex
+    flex-flow: column-reverse
+    gap: .5rem
+    counter-reset: list
+  &__col
+    max-width: 255px
+  &__line
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: .5rem
+    &:before
+      counter-increment: list
+      content: counter(list)
+      +fs(18px)
+      color: #838c95
+      opacity: 0.8
+      text-align: right
+      margin-right: 1rem
+      width: 20px
+  &__house
+    +fs(18px)
+    font-weight: 600
+    background: var(--fon)
+    padding: .75rem 1.5rem
+    box-sizing: border-box
+    display: inline-block
+    border-radius: 56px
+    +screen('max', 1500)
+      +fs(12px)
+    +screen('max', 700)
+      +fs(10px)
+      width: 100%
+      text-align: center
+      padding: 0.7rem
+      margin-top: 0.8rem
