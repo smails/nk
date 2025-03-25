@@ -246,6 +246,7 @@
   padding: 3rem 6rem
   box-sizing: border-box
   border-radius: 30px
+  position: relative
   &__head
     display: flex
     justify-content: space-between
@@ -275,7 +276,7 @@
     line-height: 1
     cursor: pointer
     &_available
-      border-color: 1px solid var(--secondary)
+      border-color: var(--secondary)
       background-color: var(--white)
     &_blocked
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' fill='none'%3E%3Cpath fill='%23838C95' d='M12.25 6.75h-.583V4.5C11.667 2.018 9.574 0 7 0S2.333 2.018 2.333 4.5v2.25H1.75C.786 6.75 0 7.507 0 8.438v7.874C0 17.244.786 18 1.75 18h10.5c.964 0 1.75-.757 1.75-1.688V8.438c0-.93-.786-1.687-1.75-1.687ZM3.889 4.5c0-1.655 1.395-3 3.111-3 1.716 0 3.111 1.345 3.111 3v2.25H3.89V4.5Z'/%3E%3C/svg%3E")
@@ -299,6 +300,126 @@
     counter-reset: list
   &__col
     max-width: 255px
+  &__line
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: .5rem
+    &:before
+      counter-increment: list
+      content: counter(list)
+      +fs(18px)
+      color: #838c95
+      opacity: 0.8
+      text-align: right
+      margin-right: 1rem
+      width: 20px
+  &__house
+    +fs(18px)
+    font-weight: 600
+    background: var(--fon)
+    padding: .75rem 1.5rem
+    box-sizing: border-box
+    display: inline-block
+    border-radius: 56px
+    +screen('max', 1500)
+      +fs(12px)
+    +screen('max', 700)
+      +fs(10px)
+      width: 100%
+      text-align: center
+      padding: 0.7rem
+      margin-top: 0.8rem
+  &__product-info
+    position: absolute
+    max-width: 435px
+    z-index: 3
+    top: 0
+    left: 0
+    transform: translate(0%, -20%)
+    display: none
+    &.open
+      display: block
+
+.placement-list
+  border: 1px solid #d7dbe0
+  height: 860px
+  padding: 3rem 6rem
+  box-sizing: border-box
+  border-radius: 30px
+  position: relative
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 4rem
+    gap: 2rem
+  &__legend
+    display: flex
+    gap: 5rem
+  &__item
+    display: flex
+    align-items: center
+    gap: 1.2rem
+  &__sign
+    font-weight: 600
+  &__frame
+    background: var(--fon)
+    border-radius: 6px
+    width: 138px
+    border: 1px solid transparent
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: flex-start
+    height: 53px
+    padding: 1rem
+    box-sizing: border-box
+    color: var(--color-gray)
+    gap: 0.1rem
+    &_available
+      border-color: var(--secondary)
+      background-color: var(--white)
+    &_blocked
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='20' fill='none'%3E%3Cpath fill='%23B7BCC1' d='M13.125 7.5H12.5V5c0-2.758-2.242-5-5-5s-5 2.242-5 5v2.5h-.625C.842 7.5 0 8.34 0 9.375v8.75C0 19.159.842 20 1.875 20h11.25C14.158 20 15 19.16 15 18.125v-8.75A1.877 1.877 0 0 0 13.125 7.5ZM4.167 5A3.337 3.337 0 0 1 7.5 1.667 3.337 3.337 0 0 1 10.833 5v2.5H4.167V5Z'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-color: #e7e8e9
+      background-position: center 28px
+      background-size: 14px
+      padding-bottom: 3rem
+    &_sale
+      border-color: var(--color-red)
+  &__frame-list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 0.5rem
+    font-weight: 600
+    opacity: 0.3
+    width: 100%
+  &__frame-text
+    +fs(18px)
+    font-weight: 600
+    &_sale
+      color: var(--color-red)
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: flex
+    gap: min(7rem, 7vw)
+    align-items: flex-end
+    height: 100%
+    padding-bottom: 16rem
+    box-sizing: border-box
+    overflow: auto
+    width: 100%
+  &__table
+    display: flex
+    flex-flow: column-reverse
+    gap: .5rem
+    counter-reset: list
+  &__col
+    max-width: 735px
   &__line
     display: flex
     align-items: center

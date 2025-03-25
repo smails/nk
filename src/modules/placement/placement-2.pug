@@ -99,6 +99,174 @@
                             +e.frame
                       - }
                   - }
+            +e.product-info
+              +b.sp-prod-card
+                +e.top
+                  +e.left
+                    +e.position
+                      span дом 15, секц. 2
+                      span Ввод  4 кв. 2023
+                    +e.type
+                      span Студия
+                      span 21 м²
+                      span 15 этаж
+                  +e.right
+                    +e.A.block(href="#")
+                      svg(xmlns='http://www.w3.org/2000/svg' width='22' height='29' fill='none')
+                        path(fill='#D3D6DD' fill-rule='evenodd' d='M18.1172 10.9992h.9c1.488 0 2.7 1.2107 2.7 2.7v12.6c0 1.4893-1.212 2.7-2.7 2.7H2.81719c-1.48798 0-2.7-1.2107-2.7-2.7v-12.6c0-1.4893 1.21202-2.7 2.7-2.7h.9V7.39922c0-3.97091 3.22909-7.2 7.20001-7.2 3.5639 0 6.5302 2.60106 7.1009 6.00503.1096.65364-.4382 1.19497-1.1009 1.19497-.6628 0-1.1847-.54566-1.3487-1.18781-.5298-2.07438-2.4139-3.61212-4.6513-3.61212-2.64725 0-4.79994 2.15263-4.79994 4.79993v3.59998H18.1172Z' clip-rule='evenodd')
+                    +e.A.favor(href="#")
+                      svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+                        path(fill='#D3D6DD' d='M15.8791 28.1592c-.4809.1676-1.2729.1676-1.7537 0C10.0239 26.7767.85937 21.0093.85937 11.234c0-4.31509 3.52158-7.80627 7.86343-7.80627 2.574 0 4.851 1.2289 6.2794 3.12809 1.4285-1.89919 3.7196-3.12809 6.2795-3.12809 4.3418 0 7.8634 3.49118 7.8634 7.80627 0 9.7753-9.1646 15.5427-13.266 16.9252Z')
+                +e.A.middle(href="#")
+                  +e.slider
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                    .slider-dots
+                +e.bottom
+                  +e.P.price 3 649 685 ₽
+                  +e.info
+                    p Ипотека - 
+                      a(href="#") от 10 456 ₽/мес.
+                    p Первоначальный взнос - 
+                      a(href="#") от 570 456 ₽
+                  +e.tags
+                    +e.tag Лоджия
+        +e.box
+          +b.placement-list
+            +e.head
+              +e.legend
+                +e.item
+                  +e.frame_available
+                    +e.frame-list
+                      span 2-к
+                      span 63,5 м²
+                      span №1
+                    +e.frame-text 7 717 640 ₽ 
+                  +e.P.sign Доступно
+                +e.item
+                  +e.frame_blocked
+                    +e.frame-list
+                      span 2-к
+                      span 63,5 м²
+                      span №1
+                  +e.P.sign Забронировано
+                +e.item
+                  +e.frame_sale
+                    +e.frame-list
+                      span 2-к
+                      span 63,5 м²
+                      span №1
+                    +e.frame-text_sale Акция!
+                  +e.P.sign Забронировано
+                  +e.P.sign Продано
+              +e.house Дом 10. Срок сдачи 1 кв. 2024
+            +e.list
+              +e.col
+                +e.P.title.display-4 Секция 1
+                +e.table
+                  -for(var i = 0; i< 10; i++){
+                    +e.line
+                      -for(var k = 0; k< 5; k++){
+                          if i == 3 && k == 1
+                            +e.frame_available
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text 7 717 640 ₽ 
+                          else if i == 3 && k == 3
+                            +e.frame_blocked
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                          else if i == 6 && k == 2
+                            +e.frame_sale
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text_sale Акция!
+                          else
+                            +e.frame
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                      - }
+                  - }
+              +e.col
+                +e.P.title.display-4 Секция 4
+                +e.table
+                  -for(var i = 0; i< 10; i++){
+                    +e.line
+                      -for(var k = 0; k< 5; k++){
+                          if i == 3 && k == 1
+                            +e.frame_available
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text 7 717 640 ₽ 
+                          else if i == 3 && k == 3
+                            +e.frame_blocked
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                          else if i == 6 && k == 2
+                            +e.frame_sale
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text_sale Акция!
+                          else
+                            +e.frame
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                      - }
+                  - }
+              +e.col
+                +e.P.title.display-4 Секция 5
+                +e.table
+                  -for(var i = 0; i< 10; i++){
+                    +e.line
+                      -for(var k = 0; k< 5; k++){
+                          if i == 3 && k == 1
+                            +e.frame_available
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text 7 717 640 ₽ 
+                          else if i == 3 && k == 3
+                            +e.frame_blocked
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                          else if i == 6 && k == 2
+                            +e.frame_sale
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                              +e.frame-text_sale Акция!
+                          else
+                            +e.frame
+                              +e.frame-list
+                                span 2-к
+                                span 63,5 м²
+                                span №1
+                      - }
+                  - }
       +e.tabs
         +e.BUTTON.tab.active Фасад
         +e.BUTTON.tab Шахматка
