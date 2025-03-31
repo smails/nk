@@ -370,6 +370,31 @@
     &.active
       path
         fill: var(--color-red)
+  &__handbook
+    display: flex
+    justify-content: space-between
+    gap: 2rem
+    margin-top: 2rem
+  &__price-mini
+    +fs(20px)
+    font-weight: 600
+    margin-bottom: 2rem
+  &__control
+    display: flex
+    align-items: center
+    gap: 1rem
+  &__count
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 60px
+    height: 60px
+    border-radius: 100%
+    line-height: 1
+    margin: 0 auto
+    background: var(--fon)
+    +fs(18px)
+    font-weight: 600
 
 .sp-prod-close
   position: absolute
@@ -492,6 +517,8 @@
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
+    span
+      color: rgba(131, 140, 149, 0.7)
   &__txt
     +fs(20px)
     +screen('max', 1500)
