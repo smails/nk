@@ -1,0 +1,72 @@
+.awards
+  margin: 10rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 7rem
+    +screen('max', 700)
+      margin-bottom: 0
+  &__control
+    display: flex
+    gap: 4rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__slide
+    display: flex
+    gap: 4.5rem
+    align-items: flex-start
+  &__picture
+    position: relative
+    flex-shrink: 0
+  &__info
+    position: relative
+    padding-bottom: 6rem
+    min-height: 191px
+    box-sizing: border-box
+  &__sign
+    position: absolute
+    top: 50%
+    left: 50%
+    max-width: 110px
+    text-align: center
+    font-weight: 600
+    +fs(18px)
+    line-height: 1.2
+    transform: translate(-50%, -50%)
+  &__subtitle
+    +fs(18px)
+    color: #838c95
+    margin-bottom: 1.5rem
+  &__more
+    display: flex
+    align-items: center
+    gap: 2rem
+    +fs(18px)
+    font-weight: 600
+    position: absolute
+    left: 0
+    bottom: 0

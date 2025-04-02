@@ -1,0 +1,87 @@
+.history
+  background: var(--fon)
+  border-radius: 40px
+  padding-block: 9rem
+  margin: 10rem 0.5rem
+  +screen('max', 1500)
+    padding-block: 6rem
+  +screen('max', 1023)
+    padding-block: 5rem
+    border-radius: 20px
+  +screen('max', 700)
+    padding-block: 3.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 8rem
+    +screen('max', 700)
+      margin-bottom: 0
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+    .swiper-wrapper
+      counter-reset: slider
+  &__box
+    position: relative
+    padding-left: 8rem
+    &:before
+      counter-increment: slider
+      content: counter(slider)
+      width: 60px
+      height: 60px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 1px solid var(--secondary)
+      border-radius: 100%
+      position: absolute
+      left: 0
+      top: 0
+      +fs(24px)
+      font-weight: 600
+  &__date
+    +fs(60px)
+    color: var(--secondary)
+    font-family: var(--second-family)
+    margin-bottom: 2rem
+    position: relative
+    display: flex
+    align-items: center
+    gap: 1.6rem
+    span
+      flex-shrink: 0
+  &__caption
+    margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+  &__arrow
+    height: 11px
+    flex-grow: 1
+    position: relative
+    max-width: 201px
+    overflow: hidden
+    svg
+      position: absolute
+      right: 0
+      top: 0

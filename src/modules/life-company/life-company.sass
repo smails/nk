@@ -1,0 +1,44 @@
+.life-company
+  background: var(--fon)
+  border-radius: 40px
+  padding-block: 9rem
+  margin: 10rem 0.5rem
+  +screen('max', 1500)
+    padding-block: 6rem
+  +screen('max', 1023)
+    padding-block: 5rem
+    border-radius: 20px
+  +screen('max', 700)
+    padding-block: 3.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 6rem
+    +screen('max', 700)
+      margin-bottom: 0
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 25px
+  &__wrapper
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem

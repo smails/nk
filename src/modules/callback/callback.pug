@@ -128,3 +128,22 @@ mixin callback(type)
           +e.FORM.action
             +e.INPUT.field(placeholder="E-mail")
             +e.BUTTON.submit.btn_white(href='#') Подробнее 
+  if type == 14
+    +b.callback-parking
+      +e.container
+        +e.P.title Запишись в лист ожидания
+        +e.txt Оставьте свои контактные данные и мы внесем вас в лист ожидания, чтобы вы одним из первых узнали о наличии доступных мест
+        +e.FORM.action
+          +e.fields
+            +e.group
+              +e.name Имя
+              +e.INPUT.field(placeholder="Константинопольский")
+            +e.group
+              +e.name Телефон
+              +e.INPUT.field(placeholder="+7")
+            +e.group
+              +e.name Электронная почта
+              +e.INPUT.field(placeholder="example@mail.ru")
+            +e.BUTTON.submit.btn_white Отправить заявку
+        +e.req Отправляя свои данные вы соглашаетесь с 
+          a(href="#") пользовательским соглашением и политикой конфиденциальности
