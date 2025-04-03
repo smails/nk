@@ -6,6 +6,11 @@ $('.placement__tab').click(function () {
   $('.placement__box').eq($(this).index()).fadeIn();
 })
 
+$('.placement__btn').click(function () {
+  $(this).toggleClass('active');
+  $('.mini-filter').fadeToggle();
+})
+
 
 $('.placement-chess__frame_available').click((e) =>{
   $('.placement-chess__product-info').removeClass('open').css({
