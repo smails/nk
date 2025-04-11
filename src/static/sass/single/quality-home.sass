@@ -1,0 +1,106 @@
+.quality-home
+  margin: 11rem 0
+  overflow: hidden
+  +screen('max', 1500)
+    margin: 7rem 0
+  +screen('max', 1023)
+    margin: 5.5rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+  &__head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 6rem
+    +screen('max', 1023)
+      display: block
+  &__left
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__title
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__right
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+    p
+      margin-bottom: 1rem
+  &__vnt
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 3rem
+    grid-auto-rows: calc((100vw / 4) - 5rem)
+    +screen('max', 700)
+      grid-template-columns: repeat(3, 154px)
+      overflow: auto
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: .8rem
+  &__item
+    border-radius: 100%
+    border: 1px solid var(--secondary)
+    padding-block: 8rem
+    text-align: center
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    +screen('max', 1500)
+      padding-block: 4.5rem
+    +screen('max', 700)
+      padding-block: 3rem
+  &__numb
+    +fs(85px)
+    color: var(--secondary)
+    margin-bottom: 3rem
+    padding-bottom: 2rem
+    position: relative
+    +screen('max', 1500)
+      +fs(30px)
+      margin-bottom: 2rem
+      padding-bottom: 2rem
+    +screen('max', 700)
+      padding-bottom: 1rem
+      margin-bottom: .5rem
+    &:after
+      content: ''
+      position: absolute
+      width: 76px
+      height: 1px
+      background: var(--secondary)
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+    span
+      +fs(6.931px)
+  &__info
+    +fs(24px)
+    line-height: 1.2
+    max-width: 220px
+    display: inline-block
+    +screen('max', 1500)
+      +fs(14px)
+      max-width: 160px
+    +screen('max', 700)
+      +fs(12px)
+      max-width: 130px
+      line-height: 1
+    b
+
+      display: block

@@ -143,3 +143,23 @@
   &__icon
     +screen('max', 1500)
       width: 60px
+
+.vantage-halls
+  margin: 7rem 0
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    padding: 4rem 3.5rem
+    box-sizing: border-box
+    border-radius: 20px
+    background: var(--fon)
+  &__icon
+    flex-shrink: 0
+  &__title
+    +fs(18px)
+    font-weight: 600

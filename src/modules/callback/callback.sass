@@ -67,7 +67,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-      margin-top: 1.5rem
+    margin-top: 1.5rem
     +screen('max', 700)
       display: block
   &__txt
@@ -181,6 +181,12 @@
     +screen('max', 700)
       padding: .5rem
       background-image: none
+    &_green
+      background-color: var(--secondary)
+      background-image: url(../img/bg-callback-2.png)
+      background-repeat: no-repeat
+      background-position: right bottom
+      background-size: contain
   &__content
     position: relative
     +screen('max', 1023)
@@ -203,21 +209,24 @@
     font-family: var(--second-family)
     line-height: 1
     max-width: 800px
-    margin-bottom: 4.5rem
     +screen('max', 1500)
       +fs(50px)
-    +screen('max', 1023)
-      margin-bottom: 0
     +screen('max', 700)
       +fs(34px)
     br
       +screen('max', 1023)
         display: none
+  &__subtitle
+    +fs(30px)
+    margin-top: 3rem
+    max-width: 735px
   &__more
+    margin-top: 4.5rem
     +screen('max', 1023)
       position: absolute
       right: 1rem
       bottom: 3rem
+      margin-top: 0
     +screen('max', 700)
       position: relative
       right: 0
@@ -573,3 +582,28 @@
       margin-top: 1.5rem
     a
       color: var(--white)
+
+.callback-mini
+  margin: 8rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+  &__container
+    width: 100%
+    background-color: var(--secondary)
+    background-image: url(../img/bg-select-parking.png)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: right
+    padding: 2.5rem
+    border-radius: 20px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 2rem
+  &__title
+    +fs(30px)
+    color: var(--white)
+    font-weight: 600

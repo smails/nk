@@ -101,3 +101,39 @@
   &__item
     +screen('max', 700)
       display: flex
+
+.about-info
+  &__inner
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 6rem
+    +screen('max', 1023)
+      display: block
+  &__info
+    max-width: 500px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__title
+    margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 2rem
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 5rem
+    max-width: 1195px
+    width: 70%
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 1023)
+      width: 100%
+    +screen('max', 700)
+      margin-bottom: 2.5rem
+    p
+      margin-bottom: 1rem
+  &__more
+    margin-top: 4rem

@@ -147,3 +147,35 @@ mixin callback(type)
             +e.BUTTON.submit.btn_white Отправить заявку
         +e.req Отправляя свои данные вы соглашаетесь с 
           a(href="#") пользовательским соглашением и политикой конфиденциальности
+  if type == 15
+    +b.callback-banner
+      +e.inner.inner
+        +e.container
+          +e.content
+            +e.P.title Дома 
+              br
+              | повышенной комфортности
+            +e.P.subtitle в 11-м квартале ЖК «Новая Кузнечиха»
+            +e.A.more.btn_transparent(href='#') Узнать подробнее 
+          +e.IMG.pic(src='/img/callback-1.png' alt='')
+  if type == 16
+    +b.callback-mini
+      +e.inner.inner
+        +e.container
+          +e.P.title Региональным клиентам предоставляются особые условия
+          +e.A.btn.btn_transparent Узнать подробнее
+  if type == 17
+    +b.callback-banner
+      +e.inner.inner
+        +e.container_green
+          +e.content
+            +e.P.title Дистанционная покупка
+            +e.P.subtitle Вам не придется приезжать, вы сможете оформить покупку не поднимаясь с дивана
+            +e.A.more.btn_transparent(href='#') Узнать подробнее 
+          +e.IMG.pic(src='/img/callback-1.png' alt='')
+  if type == 18
+    +b.callback-mini
+      +e.inner.inner
+        +e.container
+          +e.P.title Скачать презентацию о «ЖК Новая Кузнечиха»
+          +e.A.btn.btn_transparent Скачать презентацию

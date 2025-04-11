@@ -1,0 +1,85 @@
+include ../static/pug/head
++head('Холлы и подъезды ')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Холлы и подъезды '], 'Холлы и подъезды ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.info
+          +e.H1.title Холлы и 
+            br
+            | подъезды 
+        +e.txt
+          p Холлы и подъезды в жилом комплексе «Новая Кузнечиха» спроектированы для вашего максимального удобства и по-современному дизайн проекту, который учитывает все для создания комфортной и безопасной среды. В каждом доме есть входы в подъезд и лифтовые холлы, которые находятся на одном уровне с тротуаром, чтобы вам было легко завезти коляску или чемодан.
+    include ../modules/vantage/halls
+    +b.video
+      +e.inner.inner
+        +e.IMG.block(src='/img/video-halls.png' alt='')
+    include ../modules/public-place/index
+    +b.manufacure-tabs_border
+      +e.inner.inner
+        +e.head
+          +e.H2.title Входы с уровня земли
+          +e.text
+            p Холлы и подъезды в жилом комплексе «Новая Кузнечиха» спроектированы для вашего максимального удобства и по-современному дизайн проекту, который учитывает все для создания комфортной и безопасной среды. В каждом доме есть входы в подъезд и лифтовые холлы, которые находятся на одном уровне с тротуаром, чтобы вам было легко завезти коляску или чемодан
+        +e.slider
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-1.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-2.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-3.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-3.png' alt='')
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+    +b.manufacure-tabs_border
+      +e.inner.inner
+        +e.head
+          +e.H2.title Лифты
+          +e.text
+            p Все подъезды оборудованы удобной поэтажной навигацией и современными бесшумными лифтами. Во всех домах установлены грузовые лифты, а в некоторых (18-ти этажных домах) есть и грузовой, и пассажирский.
+            ul
+              li Сквозные подъезды
+              li Видеонаблюдение и домофоны
+              li Витражное остекление
+              li Тихие и быстрые лифты
+              li Входы с уровня земли
+              li Комплексная система пожаротушения
+        +e.slider
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-4.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-5.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-6.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/halls-6.png' alt='')
+            .slider-arrows
+              +b.slider-arrow_prev
+                svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                  path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+              +b.slider-arrow_next
+                svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                  path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+    +b.manufacure-tabs_border
+      +e.inner.inner
+        +e.head
+          +e.H2.title Входы с уровня земли
+          +e.text
+            p Холлы и подъезды в жилом комплексе «Новая Кузнечиха» спроектированы для вашего максимального удобства и по-современному дизайн проекту, который учитывает все для создания комфортной и безопасной среды. В каждом доме есть входы в подъезд и лифтовые холлы, которые находятся на одном уровне с тротуаром, чтобы вам было легко завезти коляску или чемодан
+            +e.IMG.big-pic(src='/img/halls-7.png' alt='')
+    +callback(15)
+    include ../modules/more/more
+    include ../modules/footer/footer
+  include ../static/pug/scripts

@@ -18,6 +18,19 @@ $('.manufacure-tabs__wrapper').each((index, item) => {
   });
 })
 
+$('.manufacure-tabs_border').each((index, item) => {
+  const swiper = new Swiper($(item).find('.swiper')[0], {
+    slidesPerView: 3,
+    spaceBetween: '20px',
+    loop: true,
+    navigation: {
+      nextEl: $(item).find('.slider-arrow_next')[0],
+      prevEl: $(item).find('.slider-arrow_prev')[0],
+    },
+    modules: [Navigation],
+  });
+})
+
 
 $('.share__btn').click((e) => {
   const text = $(e.target).prev().val();
