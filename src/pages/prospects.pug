@@ -1,0 +1,198 @@
+
+include ../static/pug/head
++head('Перспективы застройки ')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Перспективы застройки '], 'Перспективы застройки ')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Перспективы застройки 
+        +e.txt
+          p Площадь территории реализуемого сейчас проекта составляет 53 га, а общая площадь, подлежащая комплексному освоению, составляет около 453 га. К 2030 году здесь будет построен полноценный городской кластер, состоящий из 4 микрорайонов и с численностью жителей порядка 70 тысяч человек.
+    +b.quality-home
+      +e.inner.inner
+        +e.vnt
+          +e.item
+            +e.P.numb 453 
+              span ГА
+            +e.info Общая территория
+          +e.item
+            +e.P.numb 53 
+              span га
+            +e.info Уже используемая площадь
+          +e.item
+            +e.P.numb 4 
+              span микрорайона
+            +e.info Уже используемая площадь
+          +e.item
+            +e.P.numb 70 000 
+            +e.info Уже используемая площадь
+    +b.video
+      +e.inner.inner
+        +e.IMG.block(src='/img/video-halls.png' alt='')
+    +b.prospects-info
+      +e.inner.inner
+        +e.row
+          +e.left
+            +e.IMG.icon(src='/icon/prospects-1.svg' alt='')
+            +e.P.sign Первая и вторая очереди строительства, реализуемые на сегодняшний день, являются частью застройки Мкр. «Северный», в котором предусмотрено всего три очереди строительства.
+          +e.right
+            +e.IMG.scheme(src='/img/scheme.png' alt='')
+    +b.prospects-info
+      +e.inner_border-top.inner
+        +e.row
+          +e.left
+            +e.H3.title 1-ая очередь застройки
+            +e.A.btn.btn(href='#') Посмотреть доступные варианты
+            +e.UL.list
+              +e.LI.item
+                +e.P.numb 3,2
+                  span м
+                +e.P.txt высота потолков и витринное остекление 
+              +e.LI.item
+                +e.P.numb 13 
+                  span %
+                +e.P.txt годовая гарантированная доходность
+              +e.LI.item
+                +e.P.numb 13 
+                  span %
+                +e.P.txt годовая гарантированная доходность
+          +e.right
+            +e.P.text Включает в себя 12 кварталов. Это 37 домов разной этажности, строительство последнего из которых будет завершено в 1 квартале 2024 г. По состоянию на июнь 2022 г. уже введено в эксплуатацию 25 домов, 8 кварталов заселено
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._gray
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._gray
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+            +e.thumbs
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+              +e.more + 40
+    +b.prospects-info_gray
+      +e.inner.inner
+        +e.row
+          +e.left
+            +e.H3.title 2-ая очередь застройки
+            +e.A.btn.btn(href='#') Записаться в лист ожидания
+            +e.UL.list
+              +e.LI.item
+                +e.P.numb 3,2
+                  span м
+                +e.P.txt высота потолков и витринное остекление 
+              +e.LI.item
+                +e.P.numb 13 
+                  span %
+                +e.P.txt годовая гарантированная доходность
+              +e.LI.item
+                +e.P.numb 13 
+                  span %
+                +e.P.txt годовая гарантированная доходность
+          +e.right
+            +e.P.text Территория застройки «Север-Запад» — это еще 16 домов по 10 и 25 этажей. Ввод первых домов планируется в 1 квартале 2023 года. Помимо жилых домов, здесь появится и развитая социальная, коммерческая, транспортная инфраструктура и благоустройство.
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._gray
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._gray
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+            +e.thumbs
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/excursion-1.png' alt='')
+              +e.more + 40
+    +b.prospects-info
+      +e.inner.inner
+        +e.row
+          +e.left
+            +e.H3.title 3-ая очередь застройки
+            +e.A.btn.btn(href='#') Записаться в лист ожидания
+          +e.right
+            +e.P.text Территория застройки «Север-Запад» — это еще 16 домов по 10 и 25 этажей. Ввод первых домов планируется в 1 квартале 2023 года. Помимо жилых домов, здесь появится и развитая социальная, коммерческая, транспортная инфраструктура и благоустройство.
+    +b.prospects-info_mini
+      +e.inner_border-bottom.inner
+        +e.row
+          +e.left
+            +e.H3.title 4-ая очередь застройки
+            +e.A.btn.btn(href='#') Записаться в лист ожидания
+          +e.right
+            +e.P.text Территория застройки «Север-Запад» — это еще 16 домов по 10 и 25 этажей. Ввод первых домов планируется в 1 квартале 2023 года. Помимо жилых домов, здесь появится и развитая социальная, коммерческая, транспортная инфраструктура и благоустройство.
+    include ../moduLes/more/more
+    include ../moduLes/footer/footer
+  include ../static/pug/scripts

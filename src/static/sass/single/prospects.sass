@@ -1,0 +1,145 @@
+.prospects-info
+  margin-bottom: 10rem
+  padding-top: 10rem
+  &_gray
+    background: var(--fon)
+    border-radius: 40px
+    margin: 0 5px
+    padding-bottom: 10rem
+    .prospects-info__more
+      background: var(--white)
+  &_mini
+    padding-top: 0
+  &__inner
+    &_border-top
+      border-top: 1px solid #d7dbe0
+    &_border-bottom
+      border-bottom: 1px solid #d7dbe0
+      padding-bottom: 10rem
+      margin-bottom: 0
+  &__left
+    max-width: 570px
+    width: 40%
+    +screen('max', 1023)
+      width: 100%
+      max-width: 100%
+  &__right
+    max-width: 975px
+    width: 70%
+    +screen('max', 1023)
+      width: 100%
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 4rem
+  &__sign
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    padding-top: 2.5rem
+    border-top: 1px solid var(--tertiary)
+    margin-top: 2rem
+  &__scheme
+    width: 100%
+    vertical-align: middle
+    border-radius: 30px
+  &__title
+    margin-bottom: 4.4rem
+  &__list
+    margin-top: 10rem
+  &__item
+    padding-block: 1.7rem 3rem
+    border-bottom: 1px solid var(--secondary)
+    &:first-of-type
+      border-top: 1px solid var(--secondary)
+  &__numb
+    +fs(84px)
+    color: var(--secondary)
+    margin-bottom: 1rem
+    line-height: 1
+    span
+      +fs(10px)
+  &__txt
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    opacity: 0.7
+    +screen('max', 1500)
+      +fs(16px)
+  &__text
+    +fs(20px)
+    line-height: 1.5
+    color: var(--color-gray)
+    margin-bottom: 7rem
+    +screen('max', 1500)
+      +fs(16px)
+  &__wrapper
+    position: relative
+    .slider-arrows
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: calc(100% - 4rem)
+      left: 2rem
+      z-index: 2
+      +screen('max', 700)
+        display: none
+  &__thumbs
+    margin-top: 1.5rem
+    display: flex
+    gap: 1.5rem
+    +screen('max', 1023)
+      margin-top: 1.5rem
+      gap: 1rem
+    .swiper-slide
+      width: 153px
+      opacity: 0.4
+      transition: .5s ease
+      +screen('max', 1023)
+        width: 113px
+      +screen('max', 700)
+        width: 78px
+    .swiper-slide-active
+      opacity: 1
+    .prospects-info__pic
+      border-radius: 10px
+      height: auto
+      +screen('max', 1023)
+        height: 70px
+        border-radius: 10px
+      +screen('max', 700)
+        height: 50px
+        border-radius: 6px
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 30px
+    object-fit: cover
+    height: 553px
+    +screen('max', 1023)
+      border-radius: 15px
+      height: 400px
+    +screen('max', 700)
+      height: 203px
+  &__more
+    border-radius: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--fon)
+    +fs(24px)
+    font-weight: 600
+    color: #838c95
+    flex-shrink: 0
+    width: 153px
+    +screen('max', 1023)
+      width: 113px
+      +fs(18px)
+    +screen('max', 700)
+      width: 78px
+      +fs(16px)
+      border-radius: 6px

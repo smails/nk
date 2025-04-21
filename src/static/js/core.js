@@ -170,6 +170,36 @@ const showroom = new Swiper($('.showroom-slider').find('.swiper')[0], {
   }
 });
 
+
+$('.prospects-info__wrapper').each((index, item) =>{
+  const prospectsThumb = new Swiper($(item).next().find('.swiper')[0], {
+    slidesPerView: 'auto',
+    spaceBetween: '10px',
+    slideToClickedSlide: true,
+    breakpoints: {
+      1023: {
+        spaceBetween: '15px',
+      },
+    }
+  });
+  
+  const prospectsBig = new Swiper($(item).find('.swiper')[0], {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: $(item).find('.slider-arrow_next')[0],
+      prevEl: $(item).find('.slider-arrow_prev')[0],
+    },
+    modules: [Navigation],
+    thumbs:{
+      swiper: prospectsThumb
+    }
+  });
+  
+  prospectsBig.control = prospectsThumb;
+  prospectsThumb.control = prospectsBig;
+})
+
+
 $('.demo-slider').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
     slidesPerView: 1,
