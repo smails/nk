@@ -12,6 +12,11 @@
   +screen('max', 700)
     padding-block: 3.5rem
     border-radius: 20px
+  &_page
+    margin: 0
+    background: none
+    .review__title
+      color: initial
   &__inner
     +screen('max', 700)
       position: relative
@@ -96,3 +101,12 @@
   &__call
     width: 100%
     margin-top: 1.6rem
+  &__select-box
+    width: 435px
+    .select
+      &__summary
+        background: var(--white)
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem

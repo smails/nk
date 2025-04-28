@@ -1,0 +1,12 @@
+include ../static/pug/head
++head('Отзывы и контроль качества ')
+body
+  main.gray.with-top
+    +header()
+    +heading('/img/banner-13.png', 'Отзывы и контроль качества', 'Оставить отзыв', '', '', '', 'Здесь опубликованы только реальные отзывы от реальных людей')
+    include ../modules/review/page
+    +callback(19)
+    +office('_white')
+    include ../modules/offer/sale
+    include ../modules/footer/footer
+  include ../static/pug/scripts

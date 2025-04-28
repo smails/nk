@@ -1,0 +1,285 @@
+include ../static/pug/head
++head('Автобусный экскурсионный тур по ЖК «Новая Кузнечиха»')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-5.png', 'Автобусный экскурсионный тур по ЖК «Новая Кузнечиха»', 'Записаться на экскурсию', 'Смотреть видео о ЖК', '', '', 'За одно посещение вы сможете составить полное впечатление о жилом комплексе. Вы увидите масштабы застройки, благоустройство, объекты инфраструктуры, а также реальную отделку квартир')
+    +b.showroom
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Об экскурсионном 
+              br
+              | туре
+          +e.right
+            +e.txt
+              p Выбираете квартиру? Приглашаем вас на экскурсию по жилому комплексу «Новая Кузнечиха».
+              p Вы увидите масштабы застройки, благоустройство, объекты инфраструктуры, а также выставочную квартиру, в которой представлена отделка комфорт-класса, применяемая в домах, начиная с 8 квартала.
+              p Экскурсию проводят опытные менеджеры, которые помогут вам выбрать подходящую планировку и ответят на ваши вопросы. Также присутствуют специалисты банка, которые расскажут об актуальных ипотечных программах и специальных условиях для клиентов. Все участники мероприятия также получат памятные сувениры от банка!
+    +b.credit-need
+      +e.inner.inner
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/need-1.svg' alt='')
+            +e.P.caption Качество
+            +e.txt Использование 
+              b качественных и экологически чистых материалов 
+              | при строительстве жилого комплекса
+          +e.item
+            +e.IMG.pic(src='/icon/need-2.svg' alt='')
+            +e.P.caption Безопасность
+            +e.txt Соблюдение строгих
+              b норм и правил безопасности 
+              | на всех этапах строительства
+          +e.item
+            +e.IMG.pic(src='/icon/need-3.svg' alt='')
+            +e.P.caption Профессионализм
+            +e.txt Профессиональная работа специалистов и сотрудников,  имеющих большой опыт в строительстве
+          +e.item
+            +e.IMG.pic(src='/icon/need-4.svg' alt='')
+            +e.P.caption Соблюдение сроков
+            +e.txt Строгое соблюдение графиков и сроков выполнения строительных работ, чтобы обеспечить своевременную сдачу объекта в эксплуатацию
+    +b.demo-slider
+      +e.inner.inner
+        +e.wrapper
+          .slider-arrows
+            +b.slider-arrow_prev
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+            +b.slider-arrow_next
+              svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+              .swiper-slide
+                +e.IMG.pic(src='/img/demo-1.png' alt='')
+    +b.manufacure-tabs
+      +e.inner.inner
+        +e.head
+          +e.H2.title Все нужное рядом
+          +e.text В пешеходной доступности от жилого комплекса находится уже развитая инфраструктура Советского района: школы, детские сады, поликлиники, торгово-развлекательные центры, остановки общественного транспорта с развитой сетью маршрутов.
+        +e.list_four
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 4 детских сада
+            +e.sign
+              p Ведется строительство объектов социальной инфраструктуры, находящихся в ведении муниципалитета: два детских сада. 
+              p Детский сад № 37 (по генплану) на 320 мест строится между 5-м и 8-м кварталами. Детский сад № 38 (по генплану) на 270 мест строится напротив 1-го квартала. Срок ввода детских садов — 
+                b I квартал 2023 г.
+              p Еще два детских сада находятся поблизости — в микрорайоне «Кузнечиха».
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 остановки общественного транспорта
+            +e.sign
+              p — остановка Т-34, следующего по маршруту «ул. Литвинова 
+              p — ЖК Новая Кузнечиха». Остановка расположена в границах территории первой очереди застройки ЖК
+              p — ООТ «Деревня Кузнечиха», расположенная в 15 м
+              p — ООТ «Кузнечиха-2», с которой можно добраться до любой точки города. Расположена в 15 минутах ходьбы от ЖК.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 5 школ
+            +e.sign
+              p Школа на 1225 мест возводится рядом с 4-м кварталом.
+              p
+                b Срок ввода школы — IV квартал 2023 г.
+              p Еще четыре школы находятся в микрорайонах поблизости.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption Крупный торгово-развлекательный центр
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 медицинских учреждения
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 2 крупные лесо-парковые зоны: Щелоковский хутор и Ботанический сад
+    +b.excursion
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Что еще?
+          +e.right
+            +e.text
+              p
+                b Посетите демонстрационную квартиру, в которой представлена чистовая отделка комфорт-класса
+              p Натяжные потолки, обои под покраску, ламинат, плитка, сантехника, двери, окна – вы можете оценить все используемые при отделке элементы
+        +b.demo-slider
+          +e.inner.inner
+            +e.wrapper
+              .slider-arrows
+                +b.slider-arrow_prev
+                  svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                    path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                +b.slider-arrow_next
+                  svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                    path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/demo-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/demo-1.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/demo-1.png' alt='')
+        +b.excursion-tour
+          +e.container
+            +e.content
+              +e.left
+                +e.H2.title Экскурсионный тур
+                +e.P.addr ЖК «Новая Кузнечиха», ул. Романтиков, д. 8
+                +e.A.video.btn_tr-green(href="#")
+                  svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
+                    circle(cx='15' cy='15' r='15' fill='#51A747')
+                    path(fill='#fff' d='M20.2581 14.7523c.6228.3922.6228 1.3001 0 1.6923l-7.0236 4.4237c-.6659.4194-1.5329-.0591-1.5329-.8461v-8.8475c0-.787.867-1.26556 1.5329-.8461l7.0236 4.4237Z')
+                  span Видео о демоквартире
+              +e.right
+                +e.P.time Только по предварительной записи 
+                +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+            +e.A.btn.js-open-modal(href='#')
+              span Записаться на экскурсию
+              svg(xmlns='http://www.w3.org/2000/svg' width='55' height='55' fill='none')
+                circle(cx='27.5' cy='27.5' r='27' stroke='#fff')
+                path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' d='m25.861 21.77 5.73 5.729-5.73 5.729')
+    +b.excursion-nearest
+      +e.inner.inner
+        +e.H2.title Ближайшие экскурсии
+        +e.box
+          +b.timer
+            +e.row
+              +e.col
+                +e.count 00
+                +e.sign Дней
+              +e.col
+                +e.count 12
+                +e.sign часов
+              +e.col
+                +e.count 19
+                +e.sign минут
+          +e.info
+            +e.P.time 24 сентября в 11:00
+            +e.txt Автобусный тур при поддержке ПАО «Сбербанк»
+          +e.control
+            +e.A.more.btn_tr-green(href='#')  Узнать о других датах
+            +e.A.btn.btn.js-open-modal(href="#callback") Записаться на экскурсию
+    include ../modules/panorame/panorame-2
+    +b.articles
+      +e.inner.inner
+        +e.H2.title Как еще посмотреть ЖК вживую?
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/img/life-6.png' alt='')
+            +e.H3.caption Шоурум ЖК «Новая Кузнечиха»
+            +e.txt
+              p В демонстрационной квартире, которая находится в жилом комплексе "Новая Кузнечиха", вы сможете вживую оценить отделку "под ключ" комфорт класса. Натяжные потолки, обои под покраску, ламинат, плитка, сантехника, двери, окна – вы можете оценить все используемые при отделке элементы.
+              p Показы проводят квалифицированные менеджеры, которые помогут вам составить полное впечатление о жилом комплексе
+            +e.A.more.btn_tr-green(href='#') Подробнее о демоквартире
+          +e.item
+            +e.IMG.pic(src='/img/life-5.png' alt='')
+            +e.H3.caption Экскурсионный тур
+            +e.txt
+              p На экскурсии, которую проведут опытные менеджеры, вы сможете сами оценить масштаб застройки, увидеть, как организованы кварталы, дворы, подъезды, объекты инфраструктуры, благоустройство общественных территорий.
+              p Кроме этого, вы посетите выставочную квартиру, где представлена отделка комфорт-класса, применяемая во всех новых домах жилого комплекса.
+            +e.A.more.btn_tr-green(href='#') Подробнее об экскурсии
+    +callback(13)
+    include ../modules/offer/sale
+    include ../modules/footer/footer
+  include ../static/pug/scripts
