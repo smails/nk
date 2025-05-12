@@ -82,6 +82,16 @@
       grid-template-columns: repeat(3, 295px)
     &_four
       grid-template-columns: repeat(4, 1fr)
+      +screen('max', 1500)
+        grid-template-columns: repeat(3, 1fr)
+      +screen('max', 700)
+        overflow: auto
+        grid-template-columns: initial
+        margin: 0 -2rem
+        padding-inline: 2rem
+        gap: 1rem
+        grid-auto-flow: column
+        grid-auto-columns: 80vw
   &__pic
     width: 100%
     vertical-align: middle
@@ -117,6 +127,9 @@
     padding-top: 3.5rem
     margin-top: 5rem
     border-top: 1px solid #bdc0ca
+    +screen('max', 700)
+      margin-top: 4rem
+      padding-top: 2rem
   &__signature
     max-width: 1195px
     color: var(--color-gray)
@@ -124,6 +137,12 @@
     line-height: 1.5
   &__wrapper
     max-width: 434px
+    +screen('max', 1500)
+      max-width: 367px
+    +screen('max', 1200)
+      max-width: calc(32vw - 2rem)
+    +screen('max', 700)
+      max-width: 100%
     &:hover
       .slider-arrow, .slider-dots
         opacity: 1

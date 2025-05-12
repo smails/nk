@@ -70,6 +70,13 @@
     margin-top: 1.5rem
     +screen('max', 700)
       display: block
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 1.5rem
+    +screen('max', 1023)
+      display: block
   &__txt
     max-width: 1150px
     +fs(22px)
@@ -82,6 +89,19 @@
     +screen('max', 1023)
       +fs(14px)
     +screen('max', 700)
+      max-width: 100%
+      margin-bottom: 2rem
+  &__text
+    max-width: 1150px
+    +fs(22px)
+    font-weight: 600
+    line-height: 1.4
+    margin-top: 1.5rem
+    +screen('max', 1500)
+      +fs(16px)
+      max-width: 50%
+    +screen('max', 1023)
+      +fs(14px)
       max-width: 100%
       margin-bottom: 2rem
   &__btn
@@ -128,6 +148,30 @@
     .callback__btn
       +screen('max', 1500)
         width: 220px
+  &__buttons
+    display: flex
+    gap: 1.5rem
+    align-items: center
+    flex-shrink: 0
+    +screen('max', 1500)
+      margin-left: 4rem
+    +screen('max', 1023)
+      margin-left: 0
+    +screen('max', 700)
+      gap: 1rem
+      flex-wrap: wrap
+    .callback__btn
+      +screen('max', 1500)
+        width: 260px
+      +screen('max', 1023)
+        width: 50%
+      +screen('max', 700)
+        width: 100%
+    .callback__more
+      +screen('max', 1023)
+        width: 50%
+      +screen('max', 700)
+        width: 100%
   &__action
     width: 50%
     max-width: 620px
@@ -484,8 +528,11 @@
   background-image: url(../img/bg-callback-5.png)
   background-repeat: no-repeat
   background-size: contain
+  background-position: right 0
   margin: 8.5rem .5rem
   +screen('max', 1500)
+    background-size: cover
+    background-position: right 0
     margin: 5rem .5rem
     padding-block: 6rem
   +screen('max', 1023)

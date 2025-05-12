@@ -3,10 +3,15 @@
   background: var(--secondary)
   border-radius: 40px
   color: var(--white)
+  margin: 0 5px
   +screen('max', 1023)
     border-radius: 20px
     padding-block: 4rem 11rem
     position: relative
+  +screen('max', 700)
+    padding-block: 4rem 11rem
+    margin: 0 2px
+    border-radius: 15px
   &__head
     display: flex
     align-items: flex-start
@@ -15,6 +20,8 @@
     margin-bottom: 6.5rem
     +screen('max', 1023)
       display: block
+    +screen('max', 700)
+      margin-bottom: 3rem
   &__left
     max-width: 500px
     width: 40%
@@ -38,19 +45,29 @@
   &__call
     margin-top: 3.5rem
     width: 366px
+    +screen('max', 1023)
+      width: calc(100% - 6rem)
+      position: absolute
+      bottom: 5rem
+      left: 3rem
+    +screen('max', 1023)
+      width: calc(100% - 3rem)
+      position: absolute
+      bottom: 3rem
+      left: 1.5rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1500)
+      gap: 0.8rem
     +screen('max', 1023)
       grid-template-columns: repeat(3, 370px)
       overflow: auto
       margin: 0 -2rem
       padding-inline: 2rem
     +screen('max', 700)
-      grid-template-columns: 1fr
-      margin: 0
-      padding-inline: 0
+      grid-template-columns: repeat(6, 280px)
   &__item
     padding: 3rem 3rem 14rem
     box-sizing: border-box
@@ -58,15 +75,22 @@
     border-radius: 25px
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
     position: relative
+    +screen('max', 1500)
+      padding: 3rem 3rem 10rem
     +screen('max', 1023)
       border-radius: 15px
     +screen('max', 700)
-      padding: 1.5rem
+      padding: 1.5rem 1.5rem 5rem
   &__pic
     margin-bottom: 4rem
+    +screen('max', 1500)
+      width: 45px
+      margin-bottom: 1rem
     +screen('max', 700)
       width: 40px
       margin-bottom: 1.5rem
+    +screen('max', 700)
+      width: 35px
   &__caption
     +fs(30px)
     font-weight: 600
@@ -84,7 +108,13 @@
     color: var(--color-gray)
     +screen('max', 1500)
       +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
   &__btn
     position: absolute
     bottom: 3rem
     left: 3rem
+    +screen('max', 700)
+      left: 1.5rem
+      bottom: 1.5rem
+      width: calc(100% - 3rem)
