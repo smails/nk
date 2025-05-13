@@ -22,5 +22,5 @@ const publicPlaceBig = new Swiper($('.public-place__wrapper').find('.swiper')[0]
   }
 });
 
-publicPlaceBig.control = publicPlaceThumb;
-publicPlaceThumb.control = publicPlaceBig;
+publicPlaceBig.controller.control = publicPlaceThumb;
+publicPlaceThumb.controller.control = publicPlaceBig;

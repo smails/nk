@@ -1,0 +1,105 @@
+include ../static/pug/head
++head('Благоустройство')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','Благоустройство'], 'Благоустройство')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title Благоустройство
+        +e.P.txt «Новая Кузнечиха» — это масштабный проект не только по объему возводимого жилья, но и с точки зрения окружающей и создаваемой инфраструктуры.
+    include ../modules/benefit/benefit
+    +b.video
+      +e.inner.inner
+        +e.box
+          +e.IMG.pic(src='/img/video-1.png' alt='')
+    +beautification('Уютно и спокойно')
+    +b.check-list
+      +e.inner.inner
+        +e.left
+          +e.P.title На территории ЖК в пешеходной доступности
+          +e.A.btn.btn(href='#') Записаться в демоквартиру
+          +e.A.btn.btn_tr-green(href='#') Получить консультацию
+        +e.right
+          +e.item Просторный двор без машин
+          +e.item Площадки для игровых видов спорта
+          +e.item Парковочные места по периметру квартала
+          +e.item Площадка для выгула собак
+          +e.item Современные детские комплексы
+          +e.item Современные детские комплексы
+          +e.item Зоны воркаута
+          +e.item Уличные тренажеры
+          +e.item Озеленение
+          +e.item Велодорожка
+          +e.item Общественные пространства и зоны отдыха
+          +e.item Благоустроенная зона Кузнечихинского ручья
+    +b.video
+      +e.inner.inner
+        +e.box
+          +e.IMG.pic(src='/img/video-1.png' alt='')
+    +b.feature
+      +e.inner.inner
+        +e.head
+          +e.H2.title Особенности
+          +e.control
+            .slider-arrows
+              +b.slider-arrow_prev._gray
+                svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                  path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+              +b.slider-arrow_next._gray
+                svg(xmlns='http://www.w3Особенности.org/2000/svg' width='8' height='12' fill='none')
+                  path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+        +e.wrapper
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                +e.IMG.pic(src='/img/feature-1.png' alt='')
+                +e.H3.caption Безопасный тип застройки
+                +e.P.txt Такой тип застройки позволяет сделать территорию двора обособленной и безопасной для детей. Парковочные места расположены по периметру квартала, а во дворах находятся детские площадки и зона воркаута. 
+              .swiper-slide
+                +e.IMG.pic(src='/img/feature-2.png' alt='')
+                +e.H3.caption Детские площадки
+                +e.P.txt Для оборудования детских площадок мы использовали составляющие от производителя «Ksil». Приоритетом этой компании является безопасность для детей и экологичность в производстве своего оборудования.
+              .swiper-slide
+                +e.IMG.pic(src='/img/feature-3.png' alt='')
+                +e.H3.caption Озеленение территории
+                +e.P.txt Большое внимание застройщик уделил озеленению как внутри, так и по периметру квартала. Так на территории 4 кварталов высажено более 3000 деревьев и кустарников.
+              .swiper-slide
+                +e.IMG.pic(src='/img/feature-1.png' alt='')
+                +e.H3.caption Безопасный тип застройки
+                +e.P.txt Такой тип застройки позволяет сделать территорию двора обособленной и безопасной для детей. Парковочные места расположены по периметру квартала, а во дворах находятся детские площадки и зона воркаута. 
+    +beautification('Комфортно и безопасно')
+    +b.check-list
+      +e.inner.inner
+        +e.left
+          +e.P.title Места общего пользования
+          +e.A.btn.btn(href='#') Записаться в демоквартиру
+        +e.right
+          +e.item Сквозные подъезды
+          +e.item Витражное остекление
+          +e.item Входы с уровня земли
+          +e.item Тихие и быстрые лифты
+          +e.item Комплексная система пожаротушения
+          +e.item Датчики движения
+          +e.item Качественная отделка холлов
+    +b.video
+      +e.inner.inner
+        +e.wrapper
+          +e.item
+            +e.IMG.pic(src='/img/video-halls.png' alt='')
+          +e.item
+            +e.IMG.pic(src='/img/video-halls.png' alt='')
+    +b.video
+      +e.inner.inner
+        +e.box
+          +e.IMG.pic(src='/img/excursion-1.png' alt='')
+          +e.title Наша цель:
+            br
+            | Создать идеальное место для жизни!
+    +callback(15)
+    +callback(1)
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

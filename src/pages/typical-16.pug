@@ -1,0 +1,494 @@
+include ../static/pug/head
++head('Коммерческие объекты')
+body
+  main.with-top
+    +header()
+    +heading('/img/banner-10.png', 'Коммерческие объекты', 'Записаться на показ', 'Смотреть видео о ЖК', '', '', 'За одно посещение вы сможете составить полное впечатление о жилом комплексе. Вы увидите масштабы застройки, благоустройство, объекты инфраструктуры, а также реальную отделку квартир')
+    +b.credit-need
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Название заголовка
+          +e.right
+            +e.text
+              p Выбираете квартиру? Приглашаем вас на экскурсию по жилому комплексу «Новая Кузнечиха».
+              p Вы увидите масштабы застройки, благоустройство, объекты инфраструктуры, а также выставочную квартиру, в которой представлена отделка комфорт-класса, применяемая в домах, начиная с 8 квартала.
+              p Экскурсию проводят опытные менеджеры, которые помогут вам выбрать подходящую планировку и ответят на ваши вопросы. Также присутствуют специалисты банка, которые расскажут об актуальных ипотечных программах и специальных условиях для клиентов. Все участники мероприятия также получат памятные сувениры от банка!
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/need-1.svg' alt='')
+            +e.P.caption Качество
+            +e.txt Использование 
+              b качественных и экологически чистых материалов 
+              | при строительстве жилого комплекса
+          +e.item
+            +e.IMG.pic(src='/icon/need-2.svg' alt='')
+            +e.P.caption Безопасность
+            +e.txt Соблюдение строгих
+              b норм и правил безопасности 
+              | на всех этапах строительства
+          +e.item
+            +e.IMG.pic(src='/icon/need-3.svg' alt='')
+            +e.P.caption Профессионализм
+            +e.txt Профессиональная работа специалистов и сотрудников,  имеющих большой опыт в строительстве
+          +e.item
+            +e.IMG.pic(src='/icon/need-4.svg' alt='')
+            +e.P.caption Соблюдение сроков
+            +e.txt Строгое соблюдение графиков и сроков выполнения строительных работ, чтобы обеспечить своевременную сдачу объекта в эксплуатацию
+    +beautification()
+    +b.manufacure-tabs
+      +e.inner.inner
+        +e.head
+          +e.H2.title Все нужное рядом
+          +e.text В пешеходной доступности от жилого комплекса находится уже развитая инфраструктура Советского района: школы, детские сады, поликлиники, торгово-развлекательные центры, остановки общественного транспорта с развитой сетью маршрутов.
+        +e.list_four
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 4 детских сада
+            +e.sign
+              p Ведется строительство объектов социальной инфраструктуры, находящихся в ведении муниципалитета: два детских сада. 
+              p Детский сад № 37 (по генплану) на 320 мест строится между 5-м и 8-м кварталами. Детский сад № 38 (по генплану) на 270 мест строится напротив 1-го квартала. Срок ввода детских садов — 
+                b I квартал 2023 г.
+              p Еще два детских сада находятся поблизости — в микрорайоне «Кузнечиха».
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 остановки общественного транспорта
+            +e.sign
+              p — остановка Т-34, следующего по маршруту «ул. Литвинова 
+              p — ЖК Новая Кузнечиха». Остановка расположена в границах территории первой очереди застройки ЖК
+              p — ООТ «Деревня Кузнечиха», расположенная в 15 м
+              p — ООТ «Кузнечиха-2», с которой можно добраться до любой точки города. Расположена в 15 минутах ходьбы от ЖК.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 5 школ
+            +e.sign
+              p Школа на 1225 мест возводится рядом с 4-м кварталом.
+              p
+                b Срок ввода школы — IV квартал 2023 г.
+              p Еще четыре школы находятся в микрорайонах поблизости.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption Крупный торгово-развлекательный центр
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 медицинских учреждения
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 2 крупные лесо-парковые зоны: Щелоковский хутор и Ботанический сад
+        +e.info Объекты социальной инфраструктуры возводятся муниципалитетом, посредством включения в соответствующие городские программы социально - экономического развития. На фото представлена примерная визуальная концепция, реальный вид объектов может отличаться.
+    +b.ankets-bank
+      +e.inner.inner
+        +e.head
+          +e.left
+            +e.H2.title Торговый бульвар
+          +e.right
+            +e.txt Вы увидите магазины, кафе, медицинские центры и другие необходимые для комфортной жизни объекты, а также строящиеся и уже готовые объекты социальной и коммерческой инфраструктуры
+        +e.middle
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 1; i < 5; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+          +e.row
+            - for(var l = 1; l < 3; l++){
+              +e.contain
+                - for(var i = 5; i < 9; i++){
+                  +e.item
+                    +e.IMG.pic(src='/img/bank-' + i + '.png' alt='')
+                - }
+            - }
+    +beautification()
+    +b.manufacure-tabs
+      +e.inner.inner
+        +e.head
+          +e.H2.title Крытая парковка
+          +e.text Вы увидите магазины, кафе, медицинские центры и другие необходимые для комфортной жизни объекты, а также строящиеся и уже готовые объекты социальной и коммерческой инфраструктуры
+        +e.list_four
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 4 детских сада
+            +e.sign
+              p Ведется строительство объектов социальной инфраструктуры, находящихся в ведении муниципалитета: два детских сада. 
+              p Детский сад № 37 (по генплану) на 320 мест строится между 5-м и 8-м кварталами. Детский сад № 38 (по генплану) на 270 мест строится напротив 1-го квартала. Срок ввода детских садов — 
+                b I квартал 2023 г.
+              p Еще два детских сада находятся поблизости — в микрорайоне «Кузнечиха».
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 остановки общественного транспорта
+            +e.sign
+              p — остановка Т-34, следующего по маршруту «ул. Литвинова 
+              p — ЖК Новая Кузнечиха». Остановка расположена в границах территории первой очереди застройки ЖК
+              p — ООТ «Деревня Кузнечиха», расположенная в 15 м
+              p — ООТ «Кузнечиха-2», с которой можно добраться до любой точки города. Расположена в 15 минутах ходьбы от ЖК.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 5 школ
+            +e.sign
+              p Школа на 1225 мест возводится рядом с 4-м кварталом.
+              p
+                b Срок ввода школы — IV квартал 2023 г.
+              p Еще четыре школы находятся в микрорайонах поблизости.
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption Крупный торгово-развлекательный центр
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 3 медицинских учреждения
+          +e.item
+            +e.wrapper
+              .swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                  .swiper-slide
+                    +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                .slider-arrows
+                  +b.slider-arrow_prev._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                  +b.slider-arrow_next._no-bg
+                    svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                      path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                .slider-dots
+            +e.P.caption 2 крупные лесо-парковые зоны: Щелоковский хутор и Ботанический сад
+    +b.select-parking
+      +e.inner.inner
+        +e.A.btn
+          span Выбрать машиноместо
+          svg(xmlns='http://www.w3.org/2000/svg' width='60' height='60' fill='none')
+            circle(cx='30' cy='30' r='30' fill='#fff')
+            path(stroke='#23262B' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m27 22 8 8-8 8')
+    +b.manufacure-tabs
+      +e.inner.inner
+        +e.head
+          +e.H2.title Строящиеся и планируемые объекты
+        +e.control
+          +e.BUTTON.btn.btn_transparent._tr-black.active Все
+          +e.BUTTON.btn.btn_transparent._tr-black Продукты
+          +e.BUTTON.btn.btn_transparent._tr-black Услуги
+          +e.BUTTON.btn.btn_transparent._tr-black Магазины
+          +e.BUTTON.btn.btn_transparent._tr-black Сервисы
+          +e.BUTTON.btn.btn_transparent._tr-black Магазины
+          +e.BUTTON.btn.btn_transparent._tr-black Сервисы
+        +e.container
+          - for(var l = 0; l < 7; l++){
+            +e.box
+              +e.list_four
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-7.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption 4 детских сада
+                  +e.sign
+                    p Ведется строительство объектов социальной инфраструктуры, находящихся в ведении муниципалитета: два детских сада. 
+                    p Детский сад № 37 (по генплану) на 320 мест строится между 5-м и 8-м кварталами. Детский сад № 38 (по генплану) на 270 мест строится напротив 1-го квартала. Срок ввода детских садов — 
+                      b I квартал 2023 г.
+                    p Еще два детских сада находятся поблизости — в микрорайоне «Кузнечиха».
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-8.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption 3 остановки общественного транспорта
+                  +e.sign
+                    p — остановка Т-34, следующего по маршруту «ул. Литвинова 
+                    p — ЖК Новая Кузнечиха». Остановка расположена в границах территории первой очереди застройки ЖК
+                    p — ООТ «Деревня Кузнечиха», расположенная в 15 м
+                    p — ООТ «Кузнечиха-2», с которой можно добраться до любой точки города. Расположена в 15 минутах ходьбы от ЖК.
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-9.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption 5 школ
+                  +e.sign
+                    p Школа на 1225 мест возводится рядом с 4-м кварталом.
+                    p
+                      b Срок ввода школы — IV квартал 2023 г.
+                    p Еще четыре школы находятся в микрорайонах поблизости.
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-10.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption Крупный торгово-развлекательный центр
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-11.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption 3 медицинских учреждения
+                +e.item
+                  +e.wrapper
+                    .swiper
+                      .swiper-wrapper
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                        .swiper-slide
+                          +e.IMG.pic(src='/img/manufacture-12.png' alt='')
+                      .slider-arrows
+                        +b.slider-arrow_prev._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+                        +b.slider-arrow_next._no-bg
+                          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+                            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+                      .slider-dots
+                  +e.P.caption 2 крупные лесо-парковые зоны: Щелоковский хутор и Ботанический сад
+          - }
+    include ../modules/map-object/map-object
+    include ../modules/more/more
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

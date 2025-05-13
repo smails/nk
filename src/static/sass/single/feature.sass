@@ -1,0 +1,58 @@
+.feature
+  margin: 11rem 0
+  overflow: hidden
+  +screen('max', 1500)
+    margin: 7rem 0
+  +screen('max', 1023)
+    margin: 5.5rem 0
+  +screen('max', 700)
+    margin: 4rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3rem
+    .slider-arrow
+      width: 67px
+      height: 67px
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+    .slider-arrows
+      +screen('max', 1023)
+        display: none
+  &__wrapper
+    .swiper
+      margin: 0 -5rem
+      padding-inline: 5rem
+      +screen('max', 1800)
+        margin: 0 -3rem
+      +screen('max', 1500)
+        margin: 0 calc((-100vw + 1160px) / 2 )
+        padding-inline: calc((100vw - 1160px) / 2 )
+      +screen('max', 1200)
+        margin: 0 -2rem
+        padding-inline: 2rem
+  &__pic
+    vertical-align: middle
+    width: 100%
+    border-radius: 20px
+    margin-bottom: 4rem
+    max-height: 464px
+    object-fit: cover
+    +screen('max', 1023)
+      border-radius: 15px
+  &__txt
+    +fs(20px)
+    line-height: 1.4
+    color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(14px)
+  &__caption
+    +fs(24px)
+    line-height: 1.2
+    font-weight: 600
+    margin-bottom: 2rem
+    text-wrap: balance
+    +screen('max', 1500)
+      +fs(18px)

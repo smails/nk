@@ -1,10 +1,13 @@
 mixin beautification(title)
   +b.beautification
     +e.inner.inner
-      if title != false
+      if title == true
         +e.head
           +e.H2.title Благоустройство
           +e.text С каждым годом растет и развивается коммерческая инфраструктура в ЖК «Новая Кузнечиха». На первых этажах домов уже работают супермаркеты и продуктовые лавки, аптеки, частные медицинские центры, зоомагазины, кафе, салоны красоты и другие необходимые для комфортной жизни объекты.
+      else if title != undefined
+        +e.head
+          +e.H2.title=title
       +e.wrapper
         .swiper
           .swiper-wrapper

@@ -42,3 +42,16 @@
     width: 100%
   & + .callback-mini
     margin-top: -4rem
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+  &__title
+    position: absolute
+    text-align: center
+    width: 100%
+    bottom: 4rem
+    font-family: var(--second-family)
+    +fs(50px)
+    color: var(--white)
+    line-height: 1.2
