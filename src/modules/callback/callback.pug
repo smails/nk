@@ -205,3 +205,11 @@ mixin callback(type)
             +e.INPUT.field(placeholder="Введите текст...")
           +e.req Отправляя свои данные вы соглашаетесь с 
             a(href="#") пользовательским соглашением и политикой конфиденциальности
+  if type == 20
+    +b.callback
+      +e.inner.inner
+        +e.container
+          +e.P.title Посетите шоурум
+          +e.info
+            +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
+            +e.A.btn.js-open-modal(href="#callback") Записаться

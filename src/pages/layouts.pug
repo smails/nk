@@ -1,0 +1,99 @@
+include ../static/pug/head
++head('планировки')
+body
+  main
+    +header()
+    +breadcrumb(['Главная','планировки'], 'планировки')
+    +b.heading-with-text
+      +e.inner.inner
+        +e.H1.title планировки
+        +e.P.txt «Новая Кузнечиха» — это современная комплексная застройка квартального типа. Концепция микрорайона предполагает строительство закрытых дворов. Они образованы тремя или четырьмя домами. Внутри каждого двора будут располагаться детские и спортивные площадки. Двор в ЖК «Новая Кузнечиха» - это центр притяжения, место прогулок, отдыха и общения. Внутриквартальную территорию жители воспринимают как свою личную, а значит, как более комфортную.
+    +b.edge
+      +e.inner.inner
+        +e.list
+          +e.item
+            +e.IMG.pic_mod(src='/icon/need-1.svg' alt='')
+            +e.P.caption Социальные учреждения в 5 минутах от дома
+          +e.item
+            +e.IMG.pic_mod(src='/icon/need-2.svg' alt='')
+            +e.P.caption Остановки в пешеходной доступности
+          +e.item
+            +e.IMG.pic_mod(src='/icon/need-3.svg' alt='')
+            +e.P.caption Бульвар с кафе и магазинами
+          +e.item
+            +e.IMG.pic_mod(src='/icon/need-4.svg' alt='')
+            +e.P.caption Детские сады и школа на стадии строительства
+    +b.layouts
+      +e.inner.inner
+        +e.head
+          +e.H2.title Преимущества планировок
+          +e.filter
+            +e.LABEL.radio
+              +e.INPUT.hidden(type="radio" name="room" value='Студия' checked)
+              +e.SPAN.txt Студия
+            +e.LABEL.radio
+              +e.INPUT.hidden(type="radio" name="room" value='1')
+              +e.SPAN.txt 1
+            +e.LABEL.radio
+              +e.INPUT.hidden(type="radio" name="room" value='2')
+              +e.SPAN.txt 2
+            +e.LABEL.radio
+              +e.INPUT.hidden(type="radio" name="room" value='3')
+              +e.SPAN.txt 3
+            +e.LABEL.radio
+              +e.INPUT.hidden(type="radio" name="room" value='4')
+              +e.SPAN.txt 4
+        +e.body
+          +e.box
+            +e.top
+              +e.P.caption Пример европланировки
+            +e.IMG.pic(src='/img/layouts-1.png' alt='')
+            +e.A.full(href='#')
+              svg(xmlns='http://www.w3.org/2000/svg' width='70' height='70' fill='none')
+                circle(cx='35' cy='35' r='35' fill='#F5F6F7')
+                path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m37.344 32.668 7.777-7.777m0 0v6.666m0-6.666h-6.11M32.68 37.336l-7.778 7.777m0 0v-6.666m0 6.666h6.111')
+          +e.box
+            +e.top
+              +e.P.caption Другие планировки
+              +e.P.sq
+                span от
+                | 23 м²
+            +e.list
+              +e.IMG.pic(src='/img/layouts-2.png' alt='')
+              +e.IMG.pic(src='/img/layouts-3.png' alt='')
+              +e.IMG.pic(src='/img/layouts-4.png' alt='')
+            +e.A.btn.btn Смотреть все варианты
+              span 1 230 
+    +b.layouts-features
+      +e.inner.inner
+        +e.H2.title Планировки по особенностям
+        +e.list
+          +e.item
+            +e.IMG.pic(src='/icon/layouts-1.svg' alt='')
+            +e.P.caption Лоджии
+            +e.P.txt от 570 456 ₽  •  от 21 м²
+            +e.A.btn.btn Найдено вариантов
+              span 6
+          +e.item
+            +e.IMG.pic(src='/icon/layouts-2.svg' alt='')
+            +e.P.caption Гостинная
+            +e.P.txt от 570 456 ₽  •  от 21 м²
+            +e.A.btn.btn Найдено вариантов
+              span 12
+          +e.item
+            +e.IMG.pic(src='/icon/layouts-3.svg' alt='')
+            +e.P.caption Раздельный санузел
+            +e.P.txt от 570 456 ₽  •  от 21 м²
+            +e.A.btn.btn Найдено вариантов
+              span 1 234
+    +b.quize-room
+      +e.inner.inner
+        +e.H2.title Пройдите квиз на поиск подходящей квартиры
+        include ../modules/quize/quize
+    +callback(20)
+    include ../modules/more/more
+    +b.seo-text
+      +e.inner.inner
+        +e.txt SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке SEO текст Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
+    include ../modules/footer/footer
+  include ../static/pug/scripts

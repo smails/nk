@@ -1,0 +1,163 @@
+.layouts
+  padding-block: 6.7rem
+  border-radius: 40px
+  margin: 0 5px
+  background: var(--fon)
+  box-sizing: border-box
+  margin: 9rem 0
+  +screen('max', 1280)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 5rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+  &__filter
+    display: flex
+    gap: 1rem
+    position: relative
+    +screen('max', 1280)
+      gap: .8rem
+    +screen('max', 700)
+      margin-top: 2.5rem
+  &__hidden
+    display: none
+    &:checked + .layouts__txt
+      background: var(--tertiary)
+      color: var(--white)
+  &__txt
+    border-radius: 45px
+    padding: 2.4rem 3.2rem
+    background: var(--white)
+    text-align: center
+    line-height: 1.5
+    +fs(18px)
+    color: var(--primary)
+    transition: .5s ease
+    cursor: pointer
+    display: inline-block
+    box-sizing: border-box
+    flex-shrink: 0
+    font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+      padding: 1.3rem 2.1rem
+  &__body
+    margin-top: 5rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+  &__box
+    background: var(--white)
+    border-radius: 25px
+    padding: 3.2rem
+    box-sizing: border-box
+    text-align: center
+    position: relative
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 1rem
+  &__caption
+    +fs(24px)
+    font-weight: 600
+  &__sq
+    +fs(24px)
+    padding: 0.8rem 1.5rem
+    box-sizing: border-box
+    border-radius: 36px
+    font-weight: 600
+    background: #f7f7f7
+    +screen('max', 1500)
+      +fs(14px)
+    span
+      +fs(12px)
+      color: #838c95
+      opacity: 0.5
+      padding-right: 0.2rem
+  &__full
+    position: absolute
+    bottom: 2rem
+    right: 2rem
+    z-index: 1
+  &__pic
+    max-width: 100%
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1.5rem
+    margin-top: 3rem
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: .8rem
+    padding: 2.2rem 3.8rem
+    position: absolute
+    bottom: 2rem
+    left: 2rem
+    width: calc(100% - 4rem)
+    +screen('max', 1500)
+      padding: 1.4rem 2.5rem
+    +screen('max', 700)
+      width: 100%
+    span
+      display: inline-block
+      border-radius: 60px
+      background: var(--white)
+      +fs(14px)
+      color: var(--secondary)
+      padding: .5rem.6rem .3rem
+      font-weight: 700
+      box-sizing: border-box
+      line-height: 1
+
+.layouts-features
+  margin: 9rem 0
+  +screen('max', 1280)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 5rem 0
+  &__title
+    margin-bottom: 3rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    background: var(--fon)
+    padding: 3rem
+    box-sizing: border-box
+    border-radius: 25px
+  &__pic
+    margin-bottom: 5.5rem
+    vertical-align: middle
+  &__caption
+    +fs(24px)
+    font-weight: 600
+    margin-bottom: 1.4rem
+  &__txt
+    +fs(24px)
+    color: #838c95
+    margin-bottom: 3.5rem
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: .8rem
+    padding: 2.2rem 3.8rem
+    +screen('max', 1500)
+      padding: 1.4rem 2.5rem
+    +screen('max', 700)
+      width: 100%
+    span
+      display: inline-block
+      border-radius: 60px
+      background: var(--white)
+      +fs(14px)
+      color: var(--secondary)
+      padding: .5rem.6rem .3rem
+      font-weight: 700
+      box-sizing: border-box
+      line-height: 1
