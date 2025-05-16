@@ -1,0 +1,73 @@
++b.popup(data-type="#step-photo")
+  +e.overlay
+  +e.step-box
+    +e.close.js-close-modal
+      svg(xmlns='http://www.w3.org/2000/svg' width='27' height='27' fill='none')
+        path(fill='#BDC0CA' fill-rule='evenodd' d='M25.2197.21967c.2929-.2929.7677-.2929 1.0606 0 .2929.2929.2929.76777 0 1.06066L14.3107 13.25l11.9696 11.9697c.2929.2929.2929.7677 0 1.0606-.2929.2929-.7677.2929-1.0606 0L13.25 14.3107 1.28033 26.2803c-.2929.2929-.76777.2929-1.06066 0-.2929-.2929-.2929-.7677 0-1.0606L12.1893 13.25.21967 1.28033c-.2929-.2929-.2929-.76777 0-1.06066.2929-.2929.76777-.2929 1.06066 0L13.25 12.1893 25.2197.21967Z' clip-rule='evenodd')
+    +b.popup-steps
+      +e.head
+        +e.left
+          +e.P.title.display-4 Ход строительства
+          +e.A.btn.btn_tr-green(href='#')
+            svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none')
+              path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='M11.71 6H.501m0 0L5.657.844M.502 6l5.38 5.38')
+            span Предыдущий отчет
+        +e.right
+          +e.wrap
+            +e.DETAILS.select
+              +e.SUMMARY.summary Май 2023
+              +e.list
+                +e.A.item.active(href="#") Май 2023
+                +e.A.item(href="#") Апрель 2023
+                +e.A.item(href="#") Март 2023
+                +e.A.item(href="#") Февраль 2023
+                +e.A.item(href="#") Январь 2023
+                +e.A.item(href="#") Декабрь 2022
+                +e.A.item(href="#") Ноябрь 2022
+                +e.A.item(href="#") Январь 2023
+                +e.A.item(href="#") Декабрь 2022
+                +e.A.item(href="#") Ноябрь 2022
+            +e.P.sign 10 и 11 кварталы
+          +e.A.btn.btn_tr-green(href='#')
+            span Следующий отчет
+            svg(xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none')
+              path(stroke='#51A747' stroke-linecap='round' stroke-linejoin='round' d='M1.002 6h11.207m0 0L7.054.844M12.209 6l-5.38 5.38')
+      +e.wrapper
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.pic(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.pic(src='/img/city.png' alt='')
+        .slider-arrows
+          +b.slider-arrow_prev
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+          +b.slider-arrow_next
+            svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+              path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')
+      +e.thumbs
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +e.IMG.thumb(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/city.png' alt='')
+            .swiper-slide
+              +e.IMG.thumb(src='/img/city.png' alt='')
+        +b.slider-arrow_prev._black
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6.48438.79102 1.27604 5.99935l5.20834 5.20835')
+        +b.slider-arrow_next._black
+          svg(xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='none')
+            path(stroke='#838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m1.51562.79102 5.20834 5.20833-5.20834 5.20835')

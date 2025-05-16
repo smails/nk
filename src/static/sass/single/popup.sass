@@ -130,6 +130,29 @@
       box-shadow: none
       width: 100%
       height: 100%
+  &__step-box
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    box-shadow: 0 16px 43px 0 rgba(0, 0, 0, 0.25)
+    background: #fff
+    max-height: 100vh
+    max-width: 1516px
+    width: calc(100% - 4rem)
+    max-height: calc(100vh - 6rem)
+    padding: 0.5rem
+    min-height: 600px
+    +screen('max', 1300)
+      height: calc(100vh - 10rem)
+      width: calc(100% - 14rem)
+    +screen('max', 1023)
+      min-height: auto
+      background: none
+      box-shadow: none
+      width: 100%
+      height: 100%
   &__review
     box-shadow: 0 16px 43px 0 rgba(0, 0, 0, 0.25)
     background: #fff
@@ -910,3 +933,198 @@
     justify-content: center
     gap: 2.6rem
 
+.popup-steps
+  &__wrapper
+    position: relative
+    height: 700px
+    +screen('max', 1023)
+      height: 450px
+      width: calc(100% - 1rem)
+      top: -10vh
+    +screen('max', 700)
+      height: 250px
+    .swiper, .swiper-slide, .swiper-wrapper
+      height: 100%
+      +screen('max', 1023)
+        height: 450px
+      +screen('max', 700)
+        height: 250px
+    .swiper-slide
+      padding: .5rem
+      background: var(--white)
+      box-sizing: border-box
+      border-radius: 17px
+      +screen('max', 700)
+        padding: 0.2rem
+  &__thumbs
+    position: relative
+    .swiper-slide
+      width: 151px
+      position: relative
+      transition: .5s ease
+      padding: 0.4rem
+      box-sizing: border-box
+      border: 1px solid transparent
+      border-radius: 22px
+      +screen('max', 1023)
+        width: 113px
+      +screen('max', 700)
+        width: 78px
+        border-radius: 10px
+        padding: 0.2rem
+      &:before
+        content: ''
+        width: calc(100% - 4px)
+        height: calc(100% - 4px)
+        position: absolute
+        top: 2px
+        left: 2px
+        background: #000
+        opacity: 0.3
+        border-radius: 15px
+        transition: .5s ease
+        z-index: 1
+      &:hover
+        &:before
+          opacity: 0
+    .swiper-slide-active
+      border-color: var(--dark-green)
+      &:before
+        opacity: 0
+    .slider-arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 2
+      &_prev
+        left: 2rem
+      &_next
+        right: 2rem
+  &__thumb
+    border-radius: 15px
+    width: 100%
+    +screen('max', 1023)
+      height: 70px
+      border-radius: 10px
+    +screen('max', 700)
+      height: 50px
+      border-radius: 6px
+  .slider-arrows
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: calc(100% - 4rem)
+    left: 2rem
+    z-index: 4
+    +screen('max', 1023)
+      top: 100%
+      transform: translateY(50%)
+      justify-content: center
+      gap: 2rem
+  &__head
+    display: grid
+    grid-template-columns: repeat(2, 50%)
+    padding: 4rem
+    box-sizing: border-box
+  &__left
+    display: flex
+    align-items: center
+    gap: 6rem
+  &__right
+    display: flex
+    align-items: center
+    gap: 14rem
+  &__btn
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    padding: 1.5rem 2rem
+    +fs(16px)
+    font-weight: 400
+  &__select
+    position: relative
+    z-index: 2
+    +screen('max', 700)
+      width: 100%
+    &[open]
+      z-index: 99
+      .popup-steps__summary::before
+        transform: translateY(-50%) rotate(180deg)
+  &__summary
+    +fs(30px)
+    font-weight: 600
+    &:hover
+      color: var(--secondary)
+    &:before
+      content: ''
+      width: 20px
+      height: 10px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='12' fill='none'%3E%3Cpath stroke='%23838C95' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M21 1 11 11 1 1'/%3E%3C/svg%3E")
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      right: -3rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: .5s ease
+  &__list
+    position: absolute
+    top: 100%
+    left: 0
+    margin-top: 4px
+    border-radius: 15px
+    background: var(--white)
+    padding: 1.5rem
+    z-index: 2
+    list-style: none
+    box-sizing: border-box
+    max-height: 300px
+    overflow: auto
+    width: 240px
+  &__item
+    font-weight: 600
+    margin-bottom: 1rem
+    display: block
+    &.active
+      color: var(--secondary)
+  &__sign
+    +fs(18px)
+    opacity: 0.5
+    font-weight: 600
+  &__pic
+    width: 100%
+    max-height: 100%
+    vertical-align: middle
+    object-fit: cover
+    border-radius: 25px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4rem 10rem 4rem 4rem
+    box-sizing: border-box
+    .select
+      width: 330px
+  &__col
+    display: flex
+    align-items: center
+    gap: 2.5rem
+  &__live
+    +fs(40px)
+    font-family: var(--second-family)
+    text-align: center
+    position: relative
+    top: 4px
+    &:before
+      content: ''
+      width: 10px
+      height: 10px
+      border-radius: 100%
+      background: #c41e1e
+      display: inline-block
+      margin-right: 2rem
+      vertical-align: middle
