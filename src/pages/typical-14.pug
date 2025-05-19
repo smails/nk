@@ -59,9 +59,11 @@ body
               | в ТРЦ «Жар птица»
             +e.P.addr Пл. Советская, 5, 1 этаж
               a(href="#") Как добраться
-            +e.P.time Пн-Пт с 9:00 до 19:00
-            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-            +e.A.btn.btn_white.js-open-modal(href='#') Записаться в шоурум ТРЦ «Жар-Птицу»
+            +e.wrap
+              +e.box
+                +e.P.time Пн-Пт с 9:00 до 19:00
+                +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+              +e.A.btn.btn_white.js-open-modal(href='#') Записаться в шоурум ТРЦ «Жар-Птицу»
     +b.partners
       +e.inner.inner
         +e.H2.title Партнеры

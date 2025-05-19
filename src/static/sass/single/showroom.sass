@@ -1,9 +1,9 @@
 .showroom
   margin: 8rem 0 10rem
   +screen('max', 1023)
-    margin: 6rem 0 8rem
+    margin: 6rem 0
   +screen('max', 700)
-    margin: 4rem 0 5rem
+    margin: 4rem 0
   &__head
     display: flex
     align-items: flex-start
@@ -12,6 +12,7 @@
     margin-bottom: 8rem
     +screen('max', 1023)
       display: block
+      margin-bottom: 4rem
   &__left
     max-width: 500px
     width: 40%
@@ -37,12 +38,29 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      overflow: auto
+      grid-template-columns: repeat(3, 367px)
+      margin: 0 -2rem
+      padding-inline: 2rem
+      gap: 1rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 3.5rem
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 20px
   &__caption
     margin-top: 2.5rem
+    +screen('max', 700)
+      margin-top: 1.5rem
+  &__title
+    +screen('max', 1023)
+      margin-bottom: 2rem
+    br
+      +screen('max', 1023)
+        display: none
 
 .showroom-slider
   padding-block: 8rem
@@ -63,6 +81,8 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 4.5rem
+    +screen('max', 1023)
+      margin-bottom: 3.5rem
     .slider-arrow
       width: 67px
       height: 67px
@@ -89,6 +109,12 @@
 
 .showroom-info
   margin: 10rem 0
+  +screen('max', 1500)
+    margin: 8rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__container
     display: flex
     align-items: center
@@ -96,17 +122,37 @@
     padding: 0.8rem
     box-sizing: border-box
     border-radius: 30px
+    +screen('max', 1023)
+      display: block
+      border-radius: 15px
   &__pic
     width: 50%
     max-width: 941px
     border-radius: 26px
     vertical-align: middle
+    +screen('max', 1023)
+      width: 100%
   &__content
     padding-inline: 10rem
     color: var(--white)
     width: 50%
+    +screen('max', 1500)
+      padding-inline: 5rem
+    +screen('max', 1023)
+      padding: 5rem 4rem
+      width: 100%
+      box-sizing: border-box
+    +screen('max', 700)
+      padding: 2rem 1.5rem
   &__title
     margin-bottom: 3.5rem
+    +screen('max', 1500)
+      margin-bottom: 2.2rem
+    +screen('max', 700)
+      +fs(18px)
+    br
+      +screen('max', 1023)
+        display: none
   &__addr
     +fs(20px)
     margin-bottom: 3rem
@@ -119,6 +165,8 @@
     +screen('max', 1500)
       +fs(16px)
       gap: 1rem
+    +screen('max', 700)
+      +fs(14px)
     a
       font-size: 16px
       font-weight: 600
@@ -128,19 +176,49 @@
     margin-bottom: 1rem
     +screen('max', 1500)
       +fs(16px)
+    +screen('max', 700)
+      +fs(14px)
   &__phone
     +fs(30px)
     font-weight: 600
     display: block
     +screen('max', 1500)
-      +fs(16px)
+      +fs(22px)
   &__btn
     margin-top: 4.5rem
+    +screen('max', 1500)
+      margin-top: 2rem
+    +screen('max', 1023)
+      margin-top: 0
+    +screen('max', 700)
+      width: 100%
+      +fs(14px)
+      padding: 1.4rem .8rem
+  &__wrap
+    +screen('max', 1023)
+      display: flex
+      justify-content: space-between
+      align-items: center
+    +screen('max', 700)
+      flex-flow: column
+      gap: 2.5rem
+      align-items: flex-start
 
 .partners
   margin: 12rem 0
+  overflow: hidden
+  +screen('max', 1500)
+    margin: 10rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__title
     margin-bottom: 7rem
+    +screen('max', 1023)
+      margin-bottom: 5rem
+    +screen('max', 700)
+      margin-bottom: 3rem
   &__row
     display: flex
     animation: scan 50s infinite linear
@@ -152,9 +230,12 @@
       animation-direction: reverse
     +screen('max', 767)
       animation: scan 15s infinite linear
+      margin-bottom: 1rem
   &__contain
     display: flex
     gap: 2rem
+    +screen('max', 700)
+      gap: 1rem
   &__item
     display: flex
     justify-content: center
@@ -163,8 +244,15 @@
     height: 306px
     background: var(--fon)
     border-radius: 100%
-    padding: 2rem
+    padding: 4rem
     box-sizing: border-box
+    +screen('max', 1500)
+      width: 200px
+      height: 200px
+    +screen('max', 700)
+      width: 115px
+      height: 115px
+      padding: 1.5rem
   &__pic
     max-width: 100%
     max-height: 100%

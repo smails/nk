@@ -7,13 +7,14 @@
     margin-bottom: 5rem
     +screen('max', 1023)
       display: block
+      margin-bottom: 4rem
+    +screen('max', 700)
+      margin-bottom: 3rem
   &__control
     display: flex
     gap: 1rem
     scrollbar-width: 0
     +screen('max', 1023)
-      margin-top: 2.5rem
-    +screen('max', 700)
       overflow: auto
       margin: 2.5rem -1.5rem 0
       padding: 0 1.5rem
@@ -31,6 +32,7 @@
     object-fit: cover
     +screen('max', 1023)
       border-radius: 15px
+      height: 400px
   &__icon
     width: 60px
     height: 60px
@@ -40,6 +42,9 @@
     display: flex
     justify-content: center
     align-items: center
+    +screen('max', 1023)
+      width: 38px
+      height: 38px
     &_school
       top: 91%
       left: 44%

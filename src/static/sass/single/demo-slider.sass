@@ -13,10 +13,15 @@
     transform: translateY(-50%)
     width: 85px
     height: 85px
+    +screen('max', 1500)
+      width: 50px
+      height: 50px
     +screen('max', 1023)
       display: none
     svg
       transform: scale(1.75)
+      +screen('max', 1500)
+        transform: scale(1)
     &_prev
       left: 4rem
       +screen('max', 1280)
@@ -25,3 +30,12 @@
       right: 4rem
       +screen('max', 1280)
         right: 3rem
+  &__pic
+    max-width: 100%
+    object-fit: cover
+    border-radius: 20px
+    +screen('max', 1023)
+      height: 468px
+      border-radius: 15px
+    +screen('max', 700)
+      height: 190px

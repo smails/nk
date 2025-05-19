@@ -234,7 +234,7 @@ const showroom = new Swiper($('.showroom-slider').find('.swiper')[0], {
   modules: [Navigation],
   breakpoints: {
     767: {
-      slidesPerView: 2.15,
+      slidesPerView: 1.5,
     },
     1500: {
       spaceBetween: '20px',

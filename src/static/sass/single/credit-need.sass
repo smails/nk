@@ -23,11 +23,15 @@
   &__item
     +screen('max', 700)
       display: flex
+      align-items: flex-start
       gap: 2rem
   &__caption
     +fs(24px)
     font-weight: 600
     margin: 4rem 0 2rem
+    +screen('max', 700)
+      margin: 0 0 1rem
+      +fs(16px)
   &__pic
     vertical-align: middle
     margin-bottom: 2rem

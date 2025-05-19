@@ -1,6 +1,9 @@
 .panorame
   +screen('max', 700)
     display: none
+  &_view
+    +screen('max', 700)
+      display: block
   &__box
     position: relative
     &_shade
@@ -48,10 +51,23 @@
         max-width: 280px
         margin-top: 1rem
     svg
-      +screen('max', 1023)
-        transform: scale(.7) translate(-10px, 10px)
+      +screen('max', 1500)
+        width: 60px
+        height: 60px
+      +screen('max', 700)
+        width: 30px
+        height: 30px
   &__title
     +fs(48px)
     font-family: var(--second-family)
     color: var(--white)
     margin-top: 3.5rem
+    +screen('max', 1500)
+      +fs(30px)
+      margin-top: 2.5rem
+    +screen('max', 700)
+      +fs(18px)
+  &__btn
+    +screen('max', 700)
+      +fs(10px)
+      padding: 1rem 2rem

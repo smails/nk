@@ -41,9 +41,11 @@ body
               | в ЖК «Новая Кузнечиха»
             +e.P.addr Ул. Романтиков, 8
               a(href="#") Как добраться
-            +e.P.time По предварительной записи 
-            +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-            +e.A.btn.btn_white.js-open-modal(href='#') Записаться на показ
+            +e.wrap
+              +e.box
+                +e.P.time По предварительной записи 
+                +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
+              +e.A.btn.btn_white.js-open-modal(href='#') Записаться на показ
     +b.decorating
       +e.inner.inner
         +e.row_mod

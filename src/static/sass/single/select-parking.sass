@@ -1,5 +1,7 @@
 .select-parking
   margin: 10rem 0
+  +screen('max', 1500)
+    margin: 5rem 0
   &__pic
     width: 100%
     vertical-align: middle
@@ -22,3 +24,17 @@
     padding: 2.5rem
     border-radius: 20px
     box-sizing: border-box
+    +screen('max', 1500)
+      +fs(22px)
+    +screen('max', 700)
+      padding: 1.5rem
+      justify-content: flex-start
+      +fs(16px)
+      background-size: cover
+    svg
+      +screen('max', 1500)
+        width: 50px
+        height: 50px
+      +screen('max', 700)
+        width: 36px
+        height: 36px
