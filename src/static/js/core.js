@@ -358,6 +358,9 @@ $('.js-close-modal').click((e) => {
   $('.popup').fadeOut();
   $('body').removeClass('hidden');
 });
+$('.popup-excursion__close').click((e) => {
+  $('.popup-excursion').fadeOut();
+});
 
 
 $(document).ready(() => {
@@ -371,4 +374,7 @@ $(document).ready(() => {
       $(`[data-type="#sale-timer"]`).fadeIn();
     }, 10000);
   }
+  setTimeout(() => {
+      $('.popup-excursion').fadeIn();
+    }, 5000);
 })

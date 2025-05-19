@@ -1,16 +1,27 @@
 .project-build
   margin: 12rem 0
+  +screen('max', 1500)
+    margin: 8rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 3.2rem
   &__control
     display: flex
     gap: 1.2rem
     scrollbar-width: 0
+    overflow: auto
   &__btn
     +screen('max', 700)
       flex-shrink: 0
   &__wrapper
     margin-top: 4rem
+    +screen('max', 1023)
+      margin-top: 3.2rem
   &__box
     display: none
     &:first-of-type
@@ -19,6 +30,13 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 6rem 4rem
+    +screen('max', 1500)
+      gap: 5rem 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 3rem 1.5rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
   &__picture
     position: relative
   &__pic
@@ -40,16 +58,23 @@
     backdrop-filter: blur(17px)
     box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.02)
     background: var(--white)
+    +screen('max', 1500)
+      +fs(12px)
     &_green
       background: var(--secondary)
       color: var(--white)
   &__caption
     margin: 2rem 0 1.5rem
+    +screen('max', 1500)
+      +fs(18px)
+      margin: 1.5rem 0 .8rem
   &__count
     position: relative
     padding-left: 1.5rem
     font-weight: 600
-    color: var(--color-gray)
+    color: #838c95
+    +screen('max', 1500)
+      +fs(12px)
     &:before
       content: ''
       width: 8px
@@ -67,6 +92,8 @@
     display: flex
     gap: 1rem
     margin-top: 2.5rem
+    +screen('max', 1500)
+      margin-top: 1.5rem
   &__state
     background: var(--fon)
     display: inline-block
@@ -75,3 +102,5 @@
     box-sizing: border-box
     +fs(16px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(12px)

@@ -1,16 +1,28 @@
 .social-responsibility
   margin: 12rem 0
+  +screen('max', 1500)
+    margin: 8rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 3.2rem
   &__control
     display: flex
     gap: 1.2rem
     scrollbar-width: 0
+    +screen('max', 1023)
+      flex-wrap: wrap
   &__btn
     +screen('max', 700)
       flex-shrink: 0
   &__wrapper
     margin-top: 4rem
+    +screen('max', 1023)
+      margin-top: 3.2rem
   &__box
     display: none
     &:first-of-type
@@ -28,20 +40,41 @@
   &__list
     display: flex
     gap: 2rem
+    +screen('max', 1023)
+      flex-flow: column
+      gap: 1.5rem
   &__item
     padding: 3rem
     box-sizing: border-box
     border-radius: 25px
     background: var(--fon)
     width: 376px
+    +screen('max', 1023)
+      width: 100%
+      display: flex
+      align-items: center
+      border-radius: 15px
+    +screen('max', 700)
+      display: block
+      padding: 2.5rem
   &__number
     +fs(18px)
     font-family: var(--second-family)
     color: var(--secondary)
     text-transform: uppercase
     margin-bottom: 5rem
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 1023)
+      margin-bottom: 0
+      flex-shrink: 0
+      width: 300px
+    +screen('max', 700)
+      width: 100%
     span
       +fs(70px)
   &__txt
     +fs(20px)
     line-height: 1.5
+    +screen('max', 1500)
+      +fs(16px)

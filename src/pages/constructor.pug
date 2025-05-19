@@ -1,0 +1,63 @@
+include ../static/pug/head
++head('Конструктор блоков')
+body
+  main.with-top
+    .constructor
+      include ../modules/calc/calc
+    .constructor
+      include ../modules/calc/benefit
+    .constructor
+      include ../modules/calc/all
+    .constructor
+      include ../modules/finishing/finishing
+    .constructor
+      +finishing()
+    .constructor
+      +finishing('Отделка в деталях', '_border', '_tr-black', true, true, true)
+    .constructor
+      +b.decorating
+        +e.inner.inner
+          +e.row_mod
+            +e.left
+              +e.H2.title Современная и качественная отделка по дизайн-проекту
+              +e.IMG.pic(src='/img/decorating-1.png' alt='')
+            +e.right
+              +e.P.txt Мы уделили особое внимание отделочным материалам. В жилых комнатах в качестве напольного покрытия выбран ламинат, в прихожей и кухонной зоне — керамогранит. Потолки во всех помещениях квартир — натяжные. Стены оклеены антивандальными виниловыми обоями на флизелиновой основе под покраску
+              +e.UL.list
+                +e.LI.item Все квартиры сдаются с отделкой «под ключ» комфорт-класса с использованием современных, безопасных, экологичных и долговечных материалов
+                +e.LI.item Интерьер жилых комнат выполнен в нейтральных тонах, что делает его универсальным. Все инженерные коммуникации, стояки водоснабжения и канализации зашиты в короба
+                +e.LI.item Вместо затрат на ремонт можно задуматься о покупке мебели и бытовой техники. Примеры отделки можно увидеть в наших шоу-румах или посетить демонстрационную квартиру
+              +e.A.btn.btn_tr-green.js-open-modal(href="#callback") Записаться на просмотр
+    +b.constructor_popup
+      +e.container
+        +b.popup-sale-month
+          +e.IMG.pic(src='/img/sale-month.png' alt='')
+          +e.content
+            +e.P.title Акция месяца!
+            +e.P.txt Квартиры с хорошей выгодой! Ограниченный ассортимент квартир с выгодой, по сравнению со стоимостью аналогичных квартир.
+            +e.OL.list
+              li От студий до 4-комнатных
+              li Доступны ипотека, рассрочка 0%, трейд-ин, военная ипотека
+            +e.A.btn.btn(href='#') Получить список квартир
+    +b.constructor_popup
+      +e.container
+        +b.popup-secret
+          +e.P.title Секретное предложение
+          +e.P.txt Квартиры с хорошей выгодой! Ограниченный ассортимент квартир с выгодой, по сравнению со стоимостью аналогичных квартир.
+          +e.FORM.action
+            +e.fields
+              +e.group
+                +e.name Имя
+                +e.INPUT.field(placeholder="Константин")
+              +e.group
+                +e.name Номер телефона
+                +e.INPUT.field(placeholder="+7")
+              +e.group
+                +e.name Электронная почта (оционально)
+                +e.INPUT.field(placeholder="example@mail.ru")
+            +e.BUTTON.submit.btn Получить предложение
+            +e.req Отправляя свои данные вы соглашаетесь с 
+              a(href="#") пользовательским соглашением и политикой конфиденциальности
+    .constructor
+      +callback(21)
+  include ../static/pug/scripts

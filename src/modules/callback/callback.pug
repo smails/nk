@@ -213,3 +213,13 @@ mixin callback(type)
           +e.info
             +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
             +e.A.btn.js-open-modal(href="#callback") Записаться
+  if type == 21
+    +b.callback
+      +e.inner.inner
+        +e.container
+          +e.P.title Персональная подборка
+            br
+            | квартир из 500+ вариантов
+          +e.info
+            +e.P.txt Ответьте на несколько вопросов, мы подберем подходящие квартиры и пришлем вам
+            +e.A.btn.js-open-modal(href="#callback") Начать подбор онлайн
