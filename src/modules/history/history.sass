@@ -8,15 +8,19 @@
   +screen('max', 1023)
     padding-block: 5rem
     border-radius: 20px
+    margin: 6rem 0.5rem
   +screen('max', 700)
     padding-block: 3.5rem
+    margin: 4.5rem 0.5rem
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 8rem
+    +screen('max', 1500)
+      margin-bottom: 6rem
     +screen('max', 700)
-      margin-bottom: 0
+      margin-bottom: 4rem
     .slider-arrow
       width: 67px
       height: 67px
@@ -43,6 +47,8 @@
   &__box
     position: relative
     padding-left: 8rem
+    +screen('max', 1500)
+      padding-left: 6.5rem
     &:before
       counter-increment: slider
       content: counter(slider)
@@ -58,6 +64,10 @@
       top: 0
       +fs(24px)
       font-weight: 600
+      +screen('max', 1500)
+        width: 45px
+        height: 45px
+        +fs(18px)
   &__date
     +fs(60px)
     color: var(--secondary)
@@ -67,14 +77,24 @@
     display: flex
     align-items: center
     gap: 1.6rem
+    +screen('max', 1500)
+      +fs(48px)
+    +screen('max', 700)
+      +fs(38px)
     span
       flex-shrink: 0
   &__caption
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(18px)
+    +screen('max', 700)
+      +fs(16px)
   &__txt
     +fs(20px)
     line-height: 1.5
     color: var(--color-gray)
+    +screen('max', 1500)
+      +fs(14px)
   &__arrow
     height: 11px
     flex-grow: 1

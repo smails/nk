@@ -7,12 +7,27 @@
     margin: 5.5rem 0
   +screen('max', 700)
     margin: 4rem 0
+    position: relative
+    padding-bottom: 13rem
   &__title
     margin-bottom: 5rem
+    +screen('max', 1500)
+      margin-bottom: 4rem
   &__row
     display: grid
     grid-template-columns: repeat(2, 47%)
     gap: 3rem
+    +screen('max', 1023)
+      grid-template-columns: 1fr
+      gap: 4.5rem
+  &__list
+    +screen('max', 1023)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: .8rem 1.5rem
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      max-width: 100%
   &__item
     padding: 2.5rem 1.8rem
     background: var(--fon)
@@ -20,13 +35,36 @@
     margin-bottom: 1rem
     +fs(24px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
+      padding: 1.2rem 1.8rem
+      font-weight: 400
+      border-radius: 10px
+    +screen('max', 1023)
+      margin-bottom: 0
   &__control
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 2rem
     margin-top: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 50%)
+      max-width: calc(100vw - 6rem)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      max-width: 100%
+      gap: 1rem
+      position: absolute
+      bottom: 0
+      left: 1.5rem
+      width: calc( 100% - 3rem)
+  &__right
+    +screen('max', 1023)
+      max-width: calc(100vw - 4rem)
   &__wrapper
     position: relative
+    +screen('max', 1023)
+      max-width: calc(100vw - 4rem)
     .slider-arrows
       position: absolute
       top: 50%
@@ -50,6 +88,9 @@
       width: 153px
       opacity: 0.4
       transition: .5s ease
+      +screen('max', 1500)
+        width: 88px
+        border-radius: 10px
       +screen('max', 1023)
         width: 113px
       +screen('max', 700)
@@ -59,6 +100,8 @@
     .public-place__pic
       border-radius: 10px
       height: auto
+      +screen('max', 1500)
+        height: 48px
       +screen('max', 1023)
         height: 70px
         border-radius: 10px
@@ -71,6 +114,8 @@
     border-radius: 30px
     object-fit: cover
     height: 553px
+    +screen('max', 1500)
+      height: 307px
     +screen('max', 1023)
       border-radius: 15px
       height: 400px
@@ -87,6 +132,9 @@
     color: #838c95
     flex-shrink: 0
     width: 153px
+    +screen('max', 1500)
+      width: 88px
+      +fs(16px)
     +screen('max', 1023)
       width: 113px
       +fs(18px)
@@ -94,3 +142,6 @@
       width: 78px
       +fs(16px)
       border-radius: 6px
+  &__btn
+    +screen('max', 1500)
+      padding: 1.3rem

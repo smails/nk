@@ -1,15 +1,28 @@
 .awards
   margin: 10rem 0
+  +screen('max', 1500)
+    margin: 8rem 0
+  +screen('max', 1023)
+    margin: 6rem 0
+  +screen('max', 700)
+    margin: 4rem 0
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 7rem
+    +screen('max', 1500)
+      margin-bottom: 5rem
     +screen('max', 700)
-      margin-bottom: 0
+      margin-bottom: 3rem
+      flex-flow: column
+      align-items: flex-start
+      gap: 3rem
   &__control
     display: flex
     gap: 4rem
+    +screen('max', 1500)
+      gap: 3rem
     .slider-arrow
       width: 67px
       height: 67px
@@ -19,6 +32,10 @@
     .slider-arrows
       +screen('max', 1023)
         display: none
+  &__tab
+    +screen('max', 1500)
+      +fs(12px)
+      padding: 1.4rem
   &__wrapper
     .swiper
       margin: 0 -5rem
@@ -39,14 +56,28 @@
     display: flex
     gap: 4.5rem
     align-items: flex-start
+    +screen('max', 1500)
+      gap: 2.5rem
+    +screen('max', 700)
+      gap: 1.5rem
   &__picture
     position: relative
     flex-shrink: 0
+  &__pic
+    +screen('max', 1500)
+      width: 160px
+    +screen('max', 700)
+      width: 70px
   &__info
     position: relative
     padding-bottom: 6rem
     min-height: 191px
     box-sizing: border-box
+    +screen('max', 1500)
+      padding-bottom: 4rem
+    +screen('max', 700)
+      padding-bottom: 3rem
+      min-height: 145px
   &__sign
     position: absolute
     top: 50%
@@ -57,10 +88,21 @@
     +fs(18px)
     line-height: 1.2
     transform: translate(-50%, -50%)
+    +screen('max', 1500)
+      +fs(16px)
+    +screen('max', 700)
+      +fs(6px)
+  &__caption
+    +screen('max', 700)
+      +fs(14px)
   &__subtitle
     +fs(18px)
     color: #838c95
     margin-bottom: 1.5rem
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(14px)
   &__more
     display: flex
     align-items: center
@@ -70,3 +112,14 @@
     position: absolute
     left: 0
     bottom: 0
+    +screen('max', 1500)
+      +fs(14px)
+    +screen('max', 700)
+      +fs(12px)
+    svg
+      +screen('max', 1500)
+        width: 25px
+        height: 25px
+      +screen('max', 700)
+        width: 18px
+        height: 18px

@@ -47,14 +47,20 @@ $('.manufacure-tabs__btn').click(function () {
 
 $('.manufacure-tabs_border').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
-    slidesPerView: 3,
-    spaceBetween: '20px',
+    slidesPerView: 1.3,
+    spaceBetween: '10px',
     loop: true,
     navigation: {
       nextEl: $(item).find('.slider-arrow_next')[0],
       prevEl: $(item).find('.slider-arrow_prev')[0],
     },
     modules: [Navigation],
+    breakpoints: {
+      700: {
+        spaceBetween: '20px',
+        slidesPerView: 3,
+      },
+    },
   });
 })
 

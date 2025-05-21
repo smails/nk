@@ -18,6 +18,8 @@
   &_border
     padding-top: 9rem
     border-top: 1px solid #d7dbe0
+    +screen('max', 1500)
+      padding-top: 5rem
   &__head
     display: flex
     justify-content: space-between
@@ -76,6 +78,9 @@
       grid-template-columns: repeat(2, auto)
       gap: 0 7rem
       margin-top: 4rem
+      +screen('max', 700)
+        grid-template-columns: 1fr
+        gap: 0rem
     li
       padding-left: 3.5rem
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='15' fill='none'%3E%3Cpath stroke='%2351A747' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 7.5 7 14 19 1'/%3E%3C/svg%3E")
@@ -89,6 +94,8 @@
         +fs(16px)
       +screen('max', 700)
         +fs(14px)
+        background-size: 15px
+        padding-left: 2rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -206,6 +213,8 @@
       transform: translateY(-50%)
       transition: .5s ease
       justify-content: space-between
+      +screen('max', 700)
+        display: none
   &__big-pic
     margin-top: 4rem
     width: 100%

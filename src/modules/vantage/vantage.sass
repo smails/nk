@@ -146,10 +146,17 @@
 
 .vantage-halls
   margin: 7rem 0
+  +screen('max', 1023)
+    margin: 4rem 0
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 700)
+      grid-template-columns: 1fr
+      gap: 1rem
   &__item
     display: flex
     align-items: center
@@ -158,8 +165,21 @@
     box-sizing: border-box
     border-radius: 20px
     background: var(--fon)
+    +screen('max', 1023)
+      padding: 2.2rem
+      border-radius: 15px
+    &:last-of-type
+      +screen('max', 1023)
+        grid-column: 1/3
+      +screen('max', 700)
+        grid-column: auto
   &__icon
     flex-shrink: 0
+    +screen('max', 1023)
+      width: 35px
+      height: 35px
   &__title
     +fs(18px)
     font-weight: 600
+    +screen('max', 1023)
+      +fs(14px)
