@@ -4,7 +4,7 @@
   &__pic
     vertical-align: middle
     width: 100%
-    border-radius: 40px
+    border-radius: 2px
     object-fit: cover
     +screen('max', 1280)
       height: 700px
@@ -39,19 +39,19 @@
   &__tag
     padding: 1.2rem 1.5rem
     box-sizing: border-box
-    font-weight: 600
-    border-radius: 82px
+    font-weight: 400
+    border-radius: 2px
     backdrop-filter: blur(17px)
-    background: var(--white)
+    background: var(--white-100)
     display: flex
     align-items: center
     gap: 1rem
     +screen('max', 1500)
       +fs(12px)
       padding: 0.6rem 1.1rem
-    &_orange
-      background: var(--tertiary)
-      color: var(--white)
+    &_second
+      background: var(--brand-secondary)
+      color: var(--white-100)
       box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.04)
     & > span
       width: 6px
@@ -66,18 +66,23 @@
     color: #9c9c9c
   &__title
     +fs(90px)
-    color: var(--white)
+    color: var(--white-100)
     margin: 5rem 0 3.5rem
-    font-family: var(--second-family)
+    text-transform: uppercase
+    font-family: var(--font-family)
     line-height: 1
+    font-weight: 400
+    letter-spacing: -0.02em
     +screen('max', 1500)
       +fs(50px)
       margin: 3rem 0 2rem
     +screen('max', 700)
       +fs(48px)
   &__txt
-    +fs(26px)
-    color: var(--white)
+    +fs(30px)
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    color: var(--white-80)
     line-height: 1.2
     +screen('max', 1500)
       +fs(22px)

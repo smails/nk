@@ -22,9 +22,9 @@
       justify-content: space-between
       flex-flow: row-reverse
   &__tabs
-    border: 1px solid var(--tertiary)
+    border: 1px solid var(--brand-tertiary-light)
     border-radius: 84px
-    background: var(--white)
+    background: var(--white-100)
     box-sizing: border-box
     padding: 0.3rem
     +screen('max', 700)
@@ -43,8 +43,8 @@
       +fs(10px)
       padding: 1.2rem 2.5vw
     &.active
-      background: var(--tertiary)
-      color: var(--white)
+      background: var(--brand-tertiary-light)
+      color: var(--white-100)
   &__btn
     border-radius: 48px
     padding: 1.5rem
@@ -56,8 +56,8 @@
     justify-content: center
     gap: 2rem
     +fs(18px)
-    color: var(--white)
-    background: var(--secondary)
+    color: var(--white-100)
+    background: var(--brand-primary-light)
     font-weight: 600
     white-space: nowrap
     transition: .5s ease
@@ -120,7 +120,7 @@
         width: 70vw
         max-width: 217px
       &__summary
-        background: var(--white)
+        background: var(--white-100)
         box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
         +screen('max', 1500)
           padding: 1.35rem 1.5rem
@@ -129,9 +129,9 @@
     align-items: center
     gap: 2rem
   &__tabs
-    border: 1px solid var(--tertiary)
+    border: 1px solid var(--brand-tertiary-light)
     border-radius: 84px
-    background: var(--white)
+    background: var(--white-100)
     box-sizing: border-box
     padding: 0.3rem
     +screen('max', 700)
@@ -146,15 +146,15 @@
       +fs(12px)
       padding: 1.2rem 1.5rem
     &.active
-      background: var(--tertiary)
-      color: var(--white)
+      background: var(--brand-tertiary-light)
+      color: var(--white-100)
   &__filter-block
     width: 66px
     height: 66px
     display: flex
     justify-content: center
     align-items: center
-    background: var(--white)
+    background: var(--white-100)
     box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
     transition: .5s ease
     border-radius: 100%
@@ -164,9 +164,9 @@
     +screen('max', 700)
       display: none
     &:hover
-      background: var(--tertiary)
+      background: var(--brand-tertiary-light)
       path
-        fill: var(--white)
+        fill: var(--white-100)
         opacity: 1
     svg
       vertical-align: middle
@@ -201,7 +201,7 @@
     display: flex
     justify-content: center
     align-items: center
-    background: var(--white)
+    background: var(--white-100)
     box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
     transition: .5s ease
     border-radius: 100%
@@ -214,7 +214,7 @@
         width: 16px
         height: 16px
     &.active
-      background: var(--tertiary)
+      background: var(--brand-tertiary-light)
       g
         opacity: 1
         fill: #fff
@@ -263,7 +263,7 @@
 .sp-prod-card
   box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
   border-radius: 25px
-  background: var(--white)
+  background: var(--white-100)
   padding: 2.5rem
   box-sizing: border-box
   position: relative
@@ -277,7 +277,7 @@
       position: absolute
       z-index: -2
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.1)
-      background: var(--white)
+      background: var(--white-100)
       top: 2rem
       border-radius: 20px
       left: 0
@@ -295,7 +295,7 @@
     gap: 2rem
     +fs(14px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     opacity: 0.8
     margin-bottom: 1rem
     +screen('max', 1500)
@@ -338,7 +338,7 @@
       justify-content: center
       margin-top: 2rem
       .swiper-pagination-bullet.swiper-pagination-bullet-active
-        background: var(--secondary)
+        background: var(--brand-primary-light)
       .swiper-pagination-bullet
         background: #838c95
   &__pic
@@ -359,7 +359,7 @@
         color: var(--color-red)
   &__old
     +fs(11px)
-    color: #838c95
+    color: var(--black-40)
     position: relative
     &:before
       content: ''
@@ -379,7 +379,7 @@
     p
       margin-bottom: 1rem
     a
-      color: var(--secondary)
+      color: var(--brand-primary-light)
   &__tags
     display: flex
     flex-wrap: wrap
@@ -396,7 +396,7 @@
     +screen('max', 1500)
       +fs(12px)
     &_sale
-      color: var(--white)
+      color: var(--white-100)
       background: var(--color-red)
   &__favor
     &.active
@@ -458,7 +458,7 @@
     span
       +fs(24px)
       font-weight: 600
-      color: var(--white)
+      color: var(--white-100)
       +screen('max', 1500)
         +fs(16px)
     svg
@@ -479,7 +479,7 @@
       padding: 1.8rem
     &:hover
       path
-        stroke: var(--white)
+        stroke: var(--white-100)
 
 .sr-product-line
   &__top
@@ -502,7 +502,7 @@
     box-sizing: border-box
     margin-bottom: 1.5rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 20px
     position: relative
     +screen('max', 1500)
@@ -523,7 +523,7 @@
   &__caption
     +fs(16px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(12px)
@@ -562,7 +562,7 @@
     +screen('max', 700)
       display: none
     span
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       +screen('max', 1023)
         white-space: nowrap
         width: 40px
@@ -589,7 +589,7 @@
         color: var(--color-red)
   &__old
     +fs(8px)
-    color: #838c95
+    color: var(--black-40)
     position: relative
     &:before
       content: ''
@@ -611,7 +611,7 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--secondary)
+      color: var(--brand-primary-light)
   &__tags
     display: flex
     flex-flow: column
@@ -634,7 +634,7 @@
       +fs(10px)
       padding: 0.3rem 1rem .6rem
     &_sale
-      color: var(--white)
+      color: var(--white-100)
       background: var(--color-red)
       cursor: pointer
       &:hover
@@ -670,20 +670,20 @@
       display: none
     span:first-of-type
       display: inline-block
-      border: 1px solid var(--secondary)
+      border: 1px solid var(--brand-primary-light)
       border-radius: 82px
       padding: .8rem 1.2rem 1rem
       box-sizing: border-box
       font-weight: 600
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       transition: .5s ease
       cursor: pointer
       +screen('max', 1500)
         +fs(12px)
     &:hover
       span:first-of-type
-        background: var(--hover-green)
-        color: var(--white)
+        background: var(--brand-primary-hover)
+        color: var(--white-100)
       .sr-product-line__more-hidden
         opacity: 1
         z-index: 2
@@ -694,7 +694,7 @@
     transform: translateX(-50%)
     bottom: calc(100% + 1rem)
     box-shadow: 0 4px 45px 0 rgba(29, 31, 34, 0.1), 0 4px 12px 0 rgba(0, 0, 0, 0.05)
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 10px
     padding: 1.5rem
     box-sizing: border-box
@@ -716,7 +716,7 @@
     left: 50%
     transform: translateX(-50%)
     bottom: calc(100% + .5rem)
-    background: var(--secondary)
+    background: var(--brand-primary-light)
     border-radius: 10px
     padding: 1.4rem 1.2rem
     box-sizing: border-box
@@ -738,9 +738,9 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--white)
+      background: var(--white-100)
       +fs(16px)
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       padding: .5rem.6rem
       font-weight: 700
       box-sizing: border-box
@@ -789,7 +789,7 @@
     gap: 1.5rem
     +fs(10px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     opacity: 0.8
     margin-bottom: 1rem
     +screen('min', 700)
@@ -862,7 +862,7 @@
     box-sizing: border-box
     margin-bottom: 1.5rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 20px
     position: relative
     +screen('max', 1500)
@@ -881,7 +881,7 @@
   &__caption
     +fs(16px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(12px)
@@ -920,7 +920,7 @@
     +screen('max', 700)
       display: none
     span
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       +screen('max', 1023)
         white-space: nowrap
         width: 40px
@@ -947,7 +947,7 @@
         color: var(--color-red)
   &__old
     +fs(8px)
-    color: #838c95
+    color: var(--black-40)
     position: relative
     &:before
       content: ''
@@ -969,7 +969,7 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--secondary)
+      color: var(--brand-primary-light)
   &__tags
     display: flex
     flex-flow: column
@@ -992,7 +992,7 @@
       +fs(10px)
       padding: 0.3rem 1rem .6rem
     &_sale
-      color: var(--white)
+      color: var(--white-100)
       background: var(--color-red)
       cursor: pointer
       &:hover
@@ -1028,20 +1028,20 @@
       display: none
     span:first-of-type
       display: inline-block
-      border: 1px solid var(--secondary)
+      border: 1px solid var(--brand-primary-light)
       border-radius: 82px
       padding: .8rem 1.2rem 1rem
       box-sizing: border-box
       font-weight: 600
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       transition: .5s ease
       cursor: pointer
       +screen('max', 1500)
         +fs(12px)
     &:hover
       span:first-of-type
-        background: var(--hover-green)
-        color: var(--white)
+        background: var(--brand-primary-hover)
+        color: var(--white-100)
       .sr-product-line__more-hidden
         opacity: 1
         z-index: 2
@@ -1052,7 +1052,7 @@
     transform: translateX(-50%)
     bottom: calc(100% + 1rem)
     box-shadow: 0 4px 45px 0 rgba(29, 31, 34, 0.1), 0 4px 12px 0 rgba(0, 0, 0, 0.05)
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 10px
     padding: 1.5rem
     box-sizing: border-box
@@ -1074,7 +1074,7 @@
     left: 50%
     transform: translateX(-50%)
     bottom: calc(100% + .5rem)
-    background: var(--secondary)
+    background: var(--brand-primary-light)
     border-radius: 10px
     padding: 1.4rem 1.2rem
     box-sizing: border-box
@@ -1096,9 +1096,9 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--white)
+      background: var(--white-100)
       +fs(16px)
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       padding: .5rem.6rem
       font-weight: 700
       box-sizing: border-box
@@ -1147,7 +1147,7 @@
     gap: 1.5rem
     +fs(10px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     opacity: 0.8
     margin-bottom: 1rem
     +screen('min', 700)

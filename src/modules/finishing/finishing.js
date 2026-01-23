@@ -19,7 +19,7 @@ $('.finishing__wrapper').each((index, item) => {
     breakpoints: {
       1500: {
         spaceBetween: '15px',
-        slidesPerView: 1.3,
+        slidesPerView: 1.1,
       },
     }
   });

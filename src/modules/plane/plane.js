@@ -19,7 +19,8 @@ $('.plane').each((index, item) => {
         spaceBetween: '15px',
       },
       1500: {
-        spaceBetween: '15px',
+        spaceBetween: 50,
+        grabCursor: true,
         slidesPerView: 4,
       },
     }

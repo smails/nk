@@ -6,12 +6,13 @@
     display: grid
     grid-template-columns: repeat(6, 1fr)
     gap: 2rem
+    +screen('max', 1500)
+      gap: 1rem
     +screen('max', 1023)
       overflow: auto
       grid-template-columns: repeat(6, 186px)
       margin: 0 -2rem
       padding-inline: 2rem
-      gap: 1rem
     +screen('max', 700)
       grid-template-columns: repeat(2, 1fr)
   &__item

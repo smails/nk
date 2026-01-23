@@ -86,9 +86,9 @@
         height: 40px
     &:hover
       circle
-        fill: var(--hover-green)
+        fill: var(--brand-primary-hover)
       path
-        stroke: var(--white)
+        stroke: var(--white-100)
   &__body
     max-width: 1495px
     margin: 0 auto
@@ -115,7 +115,7 @@
     a
       text-decoration: underline
       text-decoration-skip-ink: none
-      color: var(--secondary)
+      color: var(--brand-primary-light)
     & > article
       margin: 8rem 0
       +screen('max', 1023)
@@ -152,11 +152,11 @@
       +screen('max', 1023)
         margin: 4rem 0
       h4
-        border-bottom: 2px solid var(--tertiary)
+        border-bottom: 2px solid var(--brand-tertiary-light)
         padding-bottom: 1rem
       p
         +fs(46px)
-        color: var(--tertiary)
+        color: var(--brand-tertiary-light)
         line-height: 1.2
         font-family: var(--second-family)
         position: relative
@@ -236,7 +236,7 @@
     background: var(--fon)
     +fs(24px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     flex-shrink: 0
     width: 212px
     +screen('max', 1023)

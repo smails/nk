@@ -23,12 +23,12 @@
   &__hidden
     display: none
     &:checked + .layouts__txt
-      background: var(--tertiary)
-      color: var(--white)
+      background: var(--brand-tertiary-light)
+      color: var(--white-100)
   &__txt
     border-radius: 45px
     padding: 2.4rem 3.2rem
-    background: var(--white)
+    background: var(--white-100)
     text-align: center
     line-height: 1.5
     +fs(18px)
@@ -48,12 +48,14 @@
     grid-template-columns: repeat(2, 1fr)
     gap: 2rem
   &__box
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 25px
     padding: 3.2rem
     box-sizing: border-box
     text-align: center
     position: relative
+    +screen('max', 1500)
+      padding: 2.6rem 2rem
   &__top
     display: flex
     justify-content: space-between
@@ -62,18 +64,20 @@
   &__caption
     +fs(24px)
     font-weight: 600
+    +screen('max', 1500)
+      +fs(16px)
   &__sq
     +fs(24px)
     padding: 0.8rem 1.5rem
     box-sizing: border-box
     border-radius: 36px
     font-weight: 600
-    background: #f7f7f7
+    background: var(--black-grey-light)
     +screen('max', 1500)
       +fs(14px)
     span
       +fs(12px)
-      color: #838c95
+      color: var(--black-40)
       opacity: 0.5
       padding-right: 0.2rem
   &__full
@@ -81,6 +85,10 @@
     bottom: 2rem
     right: 2rem
     z-index: 1
+    svg
+      +screen('max', 1500)
+        width: 45px
+        height: 45px
   &__pic
     max-width: 100%
   &__list
@@ -105,9 +113,9 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--white)
+      background: var(--white-100)
       +fs(14px)
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       padding: .5rem.6rem .3rem
       font-weight: 700
       box-sizing: border-box
@@ -133,14 +141,21 @@
   &__pic
     margin-bottom: 5.5rem
     vertical-align: middle
+    +screen('max', 1500)
+      width: 60px
   &__caption
     +fs(24px)
     font-weight: 600
     margin-bottom: 1.4rem
+    +screen('max', 1500)
+      +fs(20px)
   &__txt
     +fs(24px)
-    color: #838c95
+    color: var(--black-40)
     margin-bottom: 3.5rem
+    +screen('max', 1500)
+      +fs(16px)
+      margin-bottom: 2.5rem
   &__btn
     display: inline-flex
     align-items: center
@@ -154,9 +169,9 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--white)
+      background: var(--white-100)
       +fs(14px)
-      color: var(--secondary)
+      color: var(--brand-primary-light)
       padding: .5rem.6rem .3rem
       font-weight: 700
       box-sizing: border-box

@@ -44,7 +44,7 @@
     a
       text-decoration: underline
       text-decoration-skip-ink: none
-      color: #838c95
+      color: var(--black-40)
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -62,7 +62,7 @@
     background-size: 40px
     background-repeat: no-repeat
     background-position: 20px center
-    border: 1px solid var(--secondary)
+    border: 1px solid var(--brand-primary-light)
     border-radius: 15px
     +screen('max', 1500)
       padding: 2.3rem 2.6rem 2.3rem 6rem
@@ -85,7 +85,7 @@
 
 .demand
   padding-block: 6rem 7rem
-  background: var(--secondary)
+  background: var(--brand-primary-light)
   border-radius: 40px
   +screen('max', 1023)
     border-radius: 20px
@@ -99,7 +99,7 @@
     +screen('max', 1500)
       margin-bottom: 2.5rem
   &__title
-    color: var(--white)
+    color: var(--white-100)
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -114,7 +114,7 @@
     background-size: 40px
     background-repeat: no-repeat
     background-position: 20px center
-    background-color: var(--white)
+    background-color: var(--white-100)
     border-radius: 15px
     display: flex
     justify-content: center
@@ -140,7 +140,7 @@
     font-weight: 600
     opacity: 0.8
     margin-top: 4rem
-    color: var(--white)
+    color: var(--white-100)
     +screen('max', 1500)
       +fs(12px)
       margin-top: 3rem

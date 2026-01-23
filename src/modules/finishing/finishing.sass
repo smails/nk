@@ -76,13 +76,12 @@
   &__pic
     width: 100%
     vertical-align: middle
-    border-radius: 25px
+    border-radius: 2px
     object-fit: cover
     +screen('max', 1023)
       height: 397px
     +screen('max', 700)
       height: 260px
-      border-radius: 15px
   &__info
     display: flex
     justify-content: center
@@ -105,7 +104,7 @@
     +screen('max', 700)
       width: 100%
     &:last-of-type
-      border-color: var(--secondary)
+      border-color: var(--brand-primary-light)
 
 .finishing-tabs
   margin-top: 12rem
@@ -153,7 +152,7 @@
       padding: 1rem
       border-radius: 15px
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
-      background: var(--white)
+      background: var(--white-100)
     +screen('max', 700)
       padding: 0.5rem
     &_border
@@ -173,7 +172,7 @@
       height: 186px
   &__content
     border-radius: 25px
-    background: var(--white)
+    background: var(--white-100)
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
     padding: 5rem 5rem 14rem
     box-sizing: border-box
@@ -253,7 +252,7 @@
           transform: scale(1.1)
       path
         +screen('max', 700)
-          stroke: var(--white)
+          stroke: var(--white-100)
     .slider-dots
       position: absolute
       left: 0
@@ -264,7 +263,7 @@
       +screen('max', 700)
         bottom: 1.5rem
       .swiper-pagination-bullet.swiper-pagination-bullet-active
-        background: var(--secondary)
+        background: var(--brand-primary-light)
   &__video
     display: inline-flex
     align-items: center

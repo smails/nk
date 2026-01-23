@@ -57,12 +57,12 @@
     font-weight: 600
     backdrop-filter: blur(17px)
     box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.02)
-    background: var(--white)
+    background: var(--white-100)
     +screen('max', 1500)
       +fs(12px)
     &_green
-      background: var(--secondary)
-      color: var(--white)
+      background: var(--brand-primary-light)
+      color: var(--white-100)
   &__caption
     margin: 2rem 0 1.5rem
     +screen('max', 1500)
@@ -72,7 +72,7 @@
     position: relative
     padding-left: 1.5rem
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     +screen('max', 1500)
       +fs(12px)
     &:before
@@ -84,7 +84,7 @@
       left: 0
       top: 50%
       transform: translateY(-50%)
-      background: var(--hover-green)
+      background: var(--brand-primary-hover)
       +screen('max', 1500)
         width: 6px
         height: 6px

@@ -11,19 +11,38 @@
     &::-webkit-scrollbar
       height: 0
   &__item
+    position: relative
     +screen('max', 1023)
       flex-shrink: 0
-      width: 289px
+      width: 270px
     +screen('max', 700)
-      width: 187px
+      width: 225px
     &:last-of-type
       +screen('max', 1500)
         display: none
       +screen('max', 1023)
         display: block
+    &:nth-of-type(2n)
+      .sales__txt
+        background: var(--brand-primary-dark)
   &__pic
     vertical-align: middle
     width: 100%
+  &__txt
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: var(--brand-primary-light)
+    color: var(--white-100)
+    padding: 2.4rem 2rem
+    box-sizing: border-box
+    font-weight: 400
+    +fs(30px)
+    line-height: 120%
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    transition: .3s linear
   &__title
     +fs(30px)
     padding-block: 5rem 4rem

@@ -370,11 +370,11 @@ $('.popup-excursion__close').click((e) => {
 
 
 $(document).ready(() => {
-  if(window.location.pathname == '/'){
-    setTimeout(() => {
-      $(`[data-type="#sale-month"]`).fadeIn();
-    }, 10000);
-  }
+  // if(window.location.pathname == '/'){
+  //   setTimeout(() => {
+  //     $(`[data-type="#sale-month"]`).fadeIn();
+  //   }, 10000);
+  // }
   if(window.location.pathname == '/sales.html'){
     setTimeout(() => {
       $(`[data-type="#sale-timer"]`).fadeIn();

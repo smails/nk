@@ -6,11 +6,14 @@
     position: relative
     padding-block: 9.5rem 6rem
     +screen('max', 1023)
-      padding-block: 6rem 12.5rem
+      padding-block: 6rem 10rem
       display: block
       position: relative
     +screen('max', 700)
       padding-block: 4.5rem 8rem
+    &_large
+      +screen('max', 700)
+        padding-block: 4.5rem 14rem
   &__left
     max-width: 455px
     +screen('max', 1023)
@@ -30,10 +33,25 @@
     margin-bottom: 2rem
     +screen('max', 1023)
       position: absolute
-      bottom: 4.5rem
+      bottom: 2rem
+      margin-bottom: 0
+      width: 45%
     +screen('max', 700)
       width: calc(100% - 4rem)
       bottom: 0
+      padding: 1.5rem
+  &__call
+    padding: 2rem 2.8rem
+    +screen('max', 1023)
+      position: absolute
+      bottom: 2rem
+      left: 50%
+      width: 45%
+    +screen('max', 700)
+      left: initial
+      width: calc(100% - 4rem)
+      bottom: 6.5rem
+      padding: 1.5rem
   &__right
     display: grid
     grid-template-columns: repeat(2, 1fr)

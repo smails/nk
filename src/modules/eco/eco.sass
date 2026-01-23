@@ -7,17 +7,15 @@
     margin: 4rem 0
   &:before
     content: ''
-    width: min(339px, 17vw)
-    height: min(778px, 40vw)
+    width: min(306px, 17vw)
+    height: min(284px, 15vw)
     position: absolute
     right: 0
-    top: -20rem
-    background-image: url(../img/bg-park-1.png)
+    top: -12rem
+    background-image: url(../icon/bg-park-1.svg)
     background-repeat: no-repeat
     background-size: contain
     z-index: 3
-    +screen('max', 1500)
-      top: -15rem
     +screen('max', 1023)
       top: -10rem
     +screen('max', 700)
@@ -26,12 +24,12 @@
       height: 250px
   &__title
     font-size: clamp(38px, 7.25vw, 144px)
-    font-family: var(--second-family)
-    color: var(--secondary)
+    color: var(--brand-tertiary-light)
     letter-spacing: -0.02em
     line-height: 1
-    border-top: 3px solid var(--secondary)
+    border-top: 3px solid var(--brand-tertiary-light)
     margin-bottom: 3rem
+    font-weight: 600
     display: inline-block
     +screen('max', 1023)
       padding-top: 2rem
@@ -75,7 +73,7 @@
           max-height: 240px
   &__pic
     width: 100%
-    border-radius: 25px
+    border-radius: 2px
     vertical-align: middle
     object-fit: cover
     +screen('max', 1023)
@@ -102,7 +100,7 @@
       position: absolute
       top: 0
       left: 0
-      border-radius: 25px
+      border-radius: 2px
       z-index: 1
   &__content
     position: absolute
@@ -128,11 +126,11 @@
     display: inline-flex
     align-items: center
     gap: 0.7rem
-    border-radius: 82px
-    background: var(--white)
+    border-radius: 2px
+    background: var(--white-100)
     +fs(14px)
-    color: rgba(#4d545a, .8)
-    font-weight: 600
+    color: var(--black-80)
+    font-weight: 300
     margin-bottom: 1.3rem
     +screen('max', 1500)
       +fs(10px)
@@ -142,13 +140,16 @@
       +screen('max', 1500)
         height: 11px
   &__caption
-    +fs(26px)
-    color: var(--white)
+    +fs(24px)
+    color: var(--white-100)
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     line-height: 1.2
     +screen('max', 1500)
       +fs(16px)
   &__more
-    border-color: var(--secondary)
+    border-color: var(--brand-primary-light)
     color: var(--primary)
     width: 100%
     max-width: 1800px

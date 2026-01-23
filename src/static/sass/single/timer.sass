@@ -5,7 +5,7 @@
   background: rgba(35, 38, 43, 0.5)
   border-radius: 25px
   +screen('max', 1023)
-    background: var(--secondary)
+    background: var(--brand-primary-light)
     display: flex
     align-items: center
     justify-content: space-between
@@ -25,7 +25,7 @@
     +screen('max', 700)
       gap: .5rem
   &__holder
-    color: var(--white)
+    color: var(--white-100)
     font-family: var(--second-family)
     +fs(30px)
     text-align: center
@@ -38,11 +38,11 @@
       +fs(20px)
   &__count
     border-radius: 10px
-    background: var(--secondary)
+    background: var(--brand-primary-light)
     padding: 1.5rem
     +fs(48px)
     font-family: var(--second-family)
-    color: var(--white)
+    color: var(--white-100)
     line-height: .8
     min-width: 88px
     text-align: center
@@ -51,8 +51,8 @@
       +fs(40px)
       min-width: 68px
     +screen('max', 1023)
-      background: var(--white)
-      color: var(--secondary)
+      background: var(--white-100)
+      color: var(--brand-primary-light)
     +screen('max', 700)
       +fs(12px)
       min-width: 32px
@@ -62,7 +62,7 @@
     +fs(22px)
     margin-top: 1rem
     text-align: center
-    color: var(--white)
+    color: var(--white-100)
     +screen('max', 1500)
       +fs(18px)
     +screen('max', 700)

@@ -32,10 +32,10 @@
   &__title
     font-size: clamp(38px, 4vw, 80px)
     font-family: var(--second-family)
-    color: var(--secondary)
+    color: var(--brand-primary-light)
     letter-spacing: -0.02em
     line-height: 1
-    border-top: 3px solid var(--secondary)
+    border-top: 3px solid var(--brand-primary-light)
     margin-bottom: 3.5rem
     padding-top: 4rem
     display: inline-block
@@ -55,7 +55,7 @@
       grid-template-columns: repeat(2, 1fr)
   &__item
     padding: 3.5rem 3rem 4.5rem
-    background: var(--secondary)
+    background: var(--brand-primary-light)
     border-radius: 25px
     box-sizing: border-box
     display: flex
@@ -71,7 +71,7 @@
     +screen('max', 1023)
       padding: 2rem 2rem 2.5rem
     &:hover
-      background: var(--hover-green)
+      background: var(--brand-primary-hover)
     svg
       +screen('max', 1500)
         width: 60px
@@ -79,7 +79,7 @@
     span
       display: inline-block
       border-radius: 37px
-      background: var(--white)
+      background: var(--white-100)
       +fs(24px)
       font-weight: 600
       padding: 1.2rem 2rem

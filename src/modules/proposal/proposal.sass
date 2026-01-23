@@ -9,8 +9,8 @@
   &__inner
     padding: 4.5rem 4rem
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
-    background: var(--white)
-    border-radius: 25px
+    background: var(--white-100)
+    border-radius: 2px
     +screen('max', 1500)
       padding: 3rem 4rem
     +screen('max', 1023)
@@ -49,8 +49,9 @@
         width: 100%
   &__caption
     margin-bottom: 2rem
-    color: var(--color-gray)
+    color: var(--black-60)
     opacity: 0.7
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
       margin-bottom: 1rem
@@ -63,10 +64,10 @@
   &__hidden
     display: none
     &:checked + .proposal__txt
-      background: var(--dark-green)
-      color: var(--white)
+      background: var(--brand-secondary)
+      color: var(--white-100)
   &__txt
-    border-radius: 45px
+    border-radius: 2px
     padding: 2.4rem 3.2rem
     background: var(--fon)
     text-align: center
@@ -78,7 +79,7 @@
     display: inline-block
     box-sizing: border-box
     flex-shrink: 0
-    font-weight: 600
+    font-weight: 400
     +screen('max', 1500)
       +fs(16px)
       padding: 1.3rem 2.1rem
@@ -86,7 +87,7 @@
     display: flex
     padding: 1rem 2rem
     width: 100%
-    border-radius: 100px
+    border-radius: 2px
     background: var(--fon)
     box-sizing: border-box
     position: relative
@@ -113,7 +114,7 @@
     margin-left: auto
     margin-right: 0
     color: var(--primary)
-    font-weight: 600
+    font-weight: 400
     +screen('max', 1500)
       +fs(16px)
   &__group
@@ -129,7 +130,8 @@
       right: 2rem
     span
       +fs(14px)
-      color: var(--color-gray)
+      font-weight: 300
+      color: var(--black-60)
   &__submit
     display: flex
     align-items: center
@@ -138,11 +140,11 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--white)
-      +fs(14px)
-      color: var(--secondary)
+      background: var(--white-100)
+      +fs(16px)
+      color: var(--black-100)
       padding: .5rem.6rem .3rem
-      font-weight: 700
+      font-weight: 300
       box-sizing: border-box
       line-height: 1
       +screen('max', 1500)

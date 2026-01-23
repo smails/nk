@@ -22,7 +22,7 @@
     box-sizing: border-box
     margin-bottom: 3.2rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
-    background: var(--white)
+    background: var(--white-100)
     border-radius: 20px
     position: relative
     +screen('max', 1500)
@@ -47,7 +47,7 @@
       position: absolute
       z-index: -2
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.1)
-      background: var(--white)
+      background: var(--white-100)
       top: 1.7rem
       border-radius: 20px
       left: 0
@@ -57,7 +57,7 @@
   &__caption
     +fs(16px)
     font-weight: 600
-    color: #838c95
+    color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(12px)
@@ -116,7 +116,7 @@
         color: var(--color-red)
   &__old
     +fs(8px)
-    color: #838c95
+    color: var(--black-40)
     position: relative
     &:before
       content: ''
@@ -138,7 +138,7 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--secondary)
+      color: var(--brand-primary-light)
   &__count
     display: flex
     justify-content: center

@@ -24,7 +24,7 @@
       +screen('max', 1023)
         display: none
   &__btn
-    border-color: var(--secondary)
+    border-color: var(--brand-primary-light)
     color: var(--primary)
     padding: 2.2rem 3.8rem
     margin-right: 2rem
@@ -43,10 +43,10 @@
     flex-flow: column
     padding: 2.5rem
     box-sizing: border-box
-    border-bottom: 1.50px solid var(--secondary)
+    border-bottom: 1.50px solid var(--brand-primary-light)
     border-radius: 22px
     box-shadow: 0 -15px 17px 0 rgba(0, 0, 0, 0.02)
-    background: var(--white)
+    background: var(--white-100)
     transition: .5s ease
     height: 230px
     gap: 2rem
@@ -59,17 +59,17 @@
       border-radius: 8px
       margin-bottom: 0.8rem
     &:hover
-      background: var(--hover-green)
+      background: var(--brand-primary-hover)
       box-shadow: none
       border-bottom-color: transparent
-      color: var(--white)
+      color: var(--white-100)
       .services__to
         box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09)
         &:before
           opacity: 1
       .services__icon
         g
-          fill: var(--white)
+          fill: var(--white-100)
   &__top
     display: flex
     justify-content: space-between
@@ -113,7 +113,7 @@
       transform: translateY(-50%)
       +fs(18px)
       font-weight: 600
-      color: var(--white)
+      color: var(--white-100)
       opacity: 0
       transition: .5s ease
   &__wrapper
@@ -146,17 +146,17 @@
     .services__item
       background: var(--fon)
       &:hover
-        background: var(--hover-green)
+        background: var(--brand-primary-hover)
         box-shadow: none
         border-bottom-color: transparent
-        color: var(--white)
+        color: var(--white-100)
         .services__to
           box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09)
           &:before
             opacity: 1
         .services__icon
           g
-            fill: var(--white)
+            fill: var(--white-100)
     .services__to
       circle
-        fill: var(--white)
+        fill: var(--white-100)

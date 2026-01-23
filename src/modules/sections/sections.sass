@@ -23,13 +23,13 @@
     position: absolute
     top: 4rem
     left: 5.5rem
-    background: var(--white)
-    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
+    box-shadow: 0 11px 33px 0 rgba(2, 21, 59, 0.05)
+    background: var(--white-100)
     padding: 2.5rem
     box-sizing: border-box
     max-width: 300px
     width: 30%
-    border-radius: 25px
+    border-radius: 2px
     +screen('max', 1500)
       max-width: 250px
       left: 12rem
@@ -63,11 +63,11 @@
     &.active
       font-weight: 600
       .sections__icon
-        background: var(--secondary)
+        background: var(--brand-primary-light)
         .fill
-          fill: var(--white)
+          fill: var(--white-100)
         .stroke
-          stroke: var(--white)
+          stroke: var(--white-100)
       .sections__count
         color: var(--primary)
   &__icon
@@ -88,7 +88,7 @@
   &__caption
     flex-grow: 1
   &__count
-    color: #838c95
+    color: var(--black-40)
   &__head
     display: flex
     align-items: flex-start

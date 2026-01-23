@@ -24,10 +24,10 @@
       gap: 1rem
   &__item
     position: relative
-    background-color: var(--secondary)
+    background: var(--brand-primary-dark)
     padding: 3rem
     box-sizing: border-box
-    border-radius: 20px
+    border-radius: 2px
     grid-column-end: span 3
     transition: .5s ease
     +screen('max', 1500)
@@ -35,7 +35,7 @@
     +screen('max', 700)
       padding: 1.5rem
     &:hover
-      background-color: var(--hover-green)
+      background-color: var(--brand-primary-hover)
     &:first-of-type
       grid-column-end: span 4
       +screen('max', 700)
@@ -80,13 +80,13 @@
         position: absolute
         top: 0
         left: 0
-        border-radius: 20px
+        border-radius: 2px
         z-index: 1
       &:hover
         .vantage__pic
           transform: scale(1.1)
     &_text
-      background-color: var(--secondary)
+      background-color: var(--brand-primary-dark)
       background-image: url(../img/bg-infrastructure-1.png)
       background-repeat: no-repeat
       background-position: right bottom
@@ -95,14 +95,17 @@
       justify-content: space-between
       gap: 2rem
       &:hover
-        background-color: var(--hover-green)
+        background-color: var(--brand-primary-hover)
         background-image: url(../img/bg-infrastructure-1.png)
         background-repeat: no-repeat
         background-position: right bottom
   &__caption
-    +fs(22px)
+    +fs(24px)
     font-weight: 600
-    color: var(--white)
+    text-transform: uppercase
+    font-family: var(--second-family)
+    color: var(--white-100)
+    letter-spacing: -0.02em
     position: absolute
     bottom: 2rem
     left: 2rem
@@ -114,9 +117,11 @@
       left: 1.5rem
       bottom: 1.5rem
   &__holder
-    +fs(38px)
+    +fs(30px)
     line-height: 1.2
-    color: var(--white)
+    text-transform: uppercase
+    letter-spacing: -0.02em
+    color: var(--white-100)
     max-width: 400px
     +screen('max', 1700)
       +fs(32px)
@@ -126,15 +131,15 @@
     +screen('max', 700)
       +fs(20px)
   &__txt
-    line-height: 1.3
-    color: var(--white)
-    opacity: 0.8
+    line-height: 110%
+    color: var(--white-60)
+    +fs(18px)
     max-width: 415px
     +screen('max', 1500)
       +fs(14px)
   &__pic
     width: 100%
-    border-radius: 20px
+    border-radius: 2px
     vertical-align: middle
     object-fit: cover
     transition: .5s ease

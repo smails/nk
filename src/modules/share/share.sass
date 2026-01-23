@@ -5,7 +5,7 @@
   &:hover
     .share__icon
       circle
-        fill: var(--hover-green)
+        fill: var(--brand-primary-hover)
     .share__hidden
       opacity: 1
       visibility: visible
@@ -32,12 +32,12 @@
   &__hidden
     position: absolute
     top: calc(100% - 5px)
-    border: 1px solid var(--secondary)
+    border: 1px solid var(--brand-primary-light)
     border-radius: 20px
     padding: 1.5rem 1.5rem 2rem
     box-sizing: border-box
     width: 234px
-    background: var(--white)
+    background: var(--white-100)
     z-index: 2
     right: 0
     transition: .5s ease
@@ -65,10 +65,10 @@
     margin: 1.5rem 0 1rem
     width: 100%
     &.click
-      border-color: var(--secondary)
+      border-color: var(--brand-primary-light)
   &__btn
     +fs(12px)
-    color: var(--secondary)
+    color: var(--brand-primary-light)
     font-weight: 600
     transition: .5s ease
     &.click

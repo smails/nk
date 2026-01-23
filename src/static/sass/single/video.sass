@@ -1,9 +1,9 @@
 .video
   margin: 7rem 0
   +screen('max', 1023)
-    margin: 3rem 0
+    margin: 4rem 0
   +screen('max', 700)
-    margin: 2rem 0
+    margin: 3rem 0
   &__box
     position: relative
     &:after
@@ -53,5 +53,7 @@
     bottom: 4rem
     font-family: var(--second-family)
     +fs(50px)
-    color: var(--white)
+    color: var(--white-100)
     line-height: 1.2
+    +screen('max', 1500)
+      +fs(30px)
