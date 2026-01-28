@@ -14,31 +14,41 @@
   +screen('max', 1500)
     +fs(14px)
     padding: 1.6rem 2.5rem
+  &:hover
+    background: var(--brand-secondary-hover)
   &_transparent
     background: none
     border-color: var(--white-100)
   &_white
     background: var(--white-100)
-    color: var(--primary)
+    color: var(--black-100)
+  &_blue
+    background: var(--brand-secondary)
+    color: var(--white-100)
   &_tr-black
     background: none
     border-color: #bdc0ca
-    color: var(--primary)
+    color: var(--black-100)
     padding: 1.8rem 2.5rem
     +screen('max', 1023)
       padding: 1.6rem 2.5rem
   &_tr-blue
     border-color: var(--brand-primary-light)
-    color: var(--primary)
+    color: var(--black-100)
     background: none
     &:hover
       color: var(--white-100)
+  &_tr-green
+    border-color: var(--brand-tertiary-light)
+    color: var(--black-100)
+    background: none
+    &:hover
+      color: var(--white-100)
+      background: var(--brand-tertiary-hover)
   &.active
     background: var(--brand-secondary)
     color: var(--white-100)
     border-color: var(--brand-secondary)
-  &:hover
-    background: var(--brand-secondary-hover)
 
 .slider-arrows
   display: inline-flex
@@ -63,7 +73,7 @@
   &_gray
     background: #eff1f4
   &_black
-    background: var(--primary)
+    background: var(--black-100)
   path
     transition: .5s ese
   svg
@@ -100,12 +110,12 @@
 .ui-slider-horizontal .ui-slider-range
   top: 0
   height: 100%
-  background-color: var(--brand-primary-light)
+  background-color: var(--brand-tertiary-light)
   position: absolute
 
 .ui-slider-horizontal .ui-slider-handle
   top: -4px
-  background-color: var(--brand-primary-light)
+  background-color: var(--brand-tertiary-light)
   height: 10px
   width: 10px
   border-radius: 50%

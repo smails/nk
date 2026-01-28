@@ -1,5 +1,6 @@
 .sale
   margin: 10rem 0 8rem
+  position: relative
   +screen('max', 1023)
     margin: 6rem 0 4rem
   &_page
@@ -10,9 +11,6 @@
     +screen('max', 700)
       padding-bottom: 5.5rem
       position: relative
-  &__inner
-    +screen('max', 700)
-      padding: 0
   &__title
     margin-bottom: 4rem
     +fs(30px)
@@ -23,71 +21,45 @@
       margin-bottom: 2.5rem
   &__containter
     position: relative
-    +screen('max', 700)
-      display: flex
-      flex-flow: column-reverse
-      position: inherit
-  &__pic
-    vertical-align: middle
-    border-radius: 30px
-    width: 100%
-    height: 627px
-    object-fit: cover
-    +screen('max', 1500)
-      height: 467px
-    +screen('max', 1023)
-      height: 358px
-    +screen('max', 700)
-      height: 243px
-      margin-top: -3rem
-      border-radius: 15px
-  &__content
-    position: absolute
-    top: 2rem
-    left: 2rem
-    padding: 3.5rem
-    box-sizing: border-box
-    background: var(--white-100)
-    box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
-    max-width: 657px
-    border-radius: 25px
-    text-wrap: balance
-    +screen('max', 1500)
-      max-width: 458px
-    +screen('max', 1023)
-      width: 55%
-      padding: 2.5rem
-      top: 1rem
-      left: 1rem
-    +screen('max', 700)
-      position: relative
-      left: 0
-      top: 0
-      width: 100%
+    background-image: url(../img/sale-1.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
   &__caption
-    +fs(48px)
-    line-height: 1.2
-    color: var(--brand-primary-light)
-    font-family: var(--second-family)
-    margin-bottom: 1rem
-    +screen('max', 1500)
-      +fs(30px)
-    +screen('max', 1023)
-      +fs(26px)
+    margin-bottom: min(10rem, 5vw)
+    color: var(--white-100)
+  &__pic
+    width: 100%
+  &__content
+    top: 0
+    left: 0
+    width: 100%
+    max-width: 1015px
+    background-image: url(../icon/sale-bg-1.svg)
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: cover
+    padding: 6rem 5.4rem
+    box-sizing: border-box
+    color: var(--white-100)
   &__txt
-    +fs(20px)
+    +fs(24px)
     line-height: 1.5
-    color: var(--color-gray)
-    margin-bottom: 2rem
+    margin-bottom: 3rem
+    font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    font-family: var(--second-family)
+    max-width: 578px
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
       +fs(14px)
   &__list
-    +fs(18px)
+    +fs(22px)
     line-height: 1.3
-    font-weight: 600
-    margin-bottom: 3rem
+    font-weight: 300
+    margin-bottom: 4.5rem
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
@@ -100,7 +72,7 @@
         width: 5px
         height: 5px
         border-radius: 100%
-        background: var(--primary)
+        background: var(--white-100)
         position: absolute
         left: 0
         top: 8px
@@ -268,15 +240,15 @@
       +fs(16px)
     p
       margin-bottom: 2rem
-      color: var(--color-gray)
+      color: var(--black-40)
     b
-      color: var(--primary)
+      color: var(--black-100)
       font-weight: 600
   &__item
     border-radius: 40px
     padding: 1.5rem
     box-sizing: border-box
-    background: var(--fon)
+    background: var(--black-grey-light)
     display: flex
     align-items: center
     justify-content: space-between

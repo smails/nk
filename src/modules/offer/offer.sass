@@ -46,22 +46,10 @@
     +screen('max', 700)
       width: 100%
       border-color: var(--brand-primary-light)
-      color: var(--primary)
+      color: var(--black-100)
   &__control
     +screen('max', 700)
       width: 100%
-  &__wrapper
-    .swiper
-      margin: 0 -5rem
-      padding-inline: 5rem
-      +screen('max', 1800)
-        margin: 0 -3rem
-      +screen('max', 1500)
-        margin: 0 calc((-100vw + 1160px) / 2 )
-        padding-inline: calc((100vw - 1160px) / 2 )
-      +screen('max', 1200)
-        margin: 0 -2rem
-        padding-inline: 2rem
   &__slider
     .swiper
       margin: 0 -5rem
@@ -77,27 +65,27 @@
   &__box
     padding: 3.5rem
     box-sizing: border-box
-    border-radius: 25px
+    border-radius: 2px
     color: var(--white-100)
     display: block
     +screen('max', 1500)
       padding: 2.5rem
     &_color-1
-      background: #aa825e
-    &_color-2
-      background: #c3a454
-    &_color-3
       background: var(--brand-primary-light)
+    &_color-2
+      background: var(--brand-tertiary-light)
+    &_color-3
+      background: var(--brand-primary-dark)
     &_color-4
-      background: var(--color-brown)
+      background: var(--brand-secondary)
   &__time
     display: inline-block
     padding: 0.7rem 1rem
     box-sizing: border-box
-    background: rgba(255, 255, 255, 0.1)
-    border-radius: 32px
+    background: var(--white-10)
+    border-radius: 2px
     +fs(18px)
-    font-weight: 700
+    font-weight: 300
     line-height: 1
     margin-bottom: 2.7rem
     +screen('max', 1500)
@@ -107,29 +95,31 @@
     span
       position: relative
       +fs(14.5px)
-      font-weight: 600
+      font-weight: 300
       padding-left: 1rem
       &:before
         content: '•'
         padding-right: 1rem
   &__caption
-    +fs(28px)
-    font-weight: 700
+    +fs(24px)
+    font-weight: 300
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     margin-bottom: 2rem
     +screen('max', 1500)
       +fs(24px)
   &__txt
-    +fs(16px)
-    font-weight: 600
-    line-height: 1.3
-    opacity: 0.9
+    +fs(18px)
+    line-height: 110%
+    color: var(--white-80)
     text-wrap: balance
     +screen('max', 1500)
       +fs(14px)
 
 .offer-special
   padding-block: 8rem
-  background: var(--fon)
+  background: var(--black-grey-light)
   border-radius: 40px
   +screen('max', 1500)
     padding-block: 5rem

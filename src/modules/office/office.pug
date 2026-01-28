@@ -13,24 +13,28 @@ mixin office(cls)
           +e.A.cons.btn.js-open-modal(href='#') Записаться на консультацию
         +e.item(class=cls)
           +e.info
-            +e.P.title Демоквартира в ЖК «Новая Кузнечиха»
+            +e.P.title Демоквартира
+              br
+              | в ЖК «Новая Кузнечиха»
             +e.P.state Идивидуальные туры в реальную квартиру
             +e.P.addr Ул. Романтиков, 8
               a(href="#") Как добраться
             +e.P.time_red по предварительной записи
             +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-          +e.A.call.btn_transparent.js-open-modal(href='#') Записаться на просмотр
+          +e.A.call.btn_tr-green.js-open-modal(href='#') Записаться на просмотр
         +e.item(class=cls)
           +e.info
-            +e.P.title Шоу-рум в ТРЦ «Жар птица»
+            +e.P.title Шоу-рум
+              br
+              | в ТРЦ «Жар птица»
             +e.P.state Идивидуальные туры в реальную квартиру
             +e.P.addr Ул. М. Горького, 117, 3 этаж, офис 317
               a(href="#") Как добраться
             +e.P.time Пн-Пт с 9:00 до 19:00
             +e.A.phone(href="tel: +7 (831) 231-07-53") +7 (831) 231-07-53
-          +e.A.call.btn_transparent.js-open-modal(href='#') Записаться в шоурум
+          +e.A.call.btn_tr-green.js-open-modal(href='#') Записаться в шоурум
         +e.item_large(class=cls)
-          +e.IMG.pic(src='/img/office-1.png' alt='')
+          +e.IMG.pic(src='/img/office-1.jpg' alt='')
           +e.floating
             +e.P.caption Экскурсии в жилой комплекс
             +e.P.txt Запишитесь на офлайн-экскурсию по ЖК: вы сможете посетить понравившийся вам жилой комплекс и получить консультацию по ипотеке
@@ -39,7 +43,7 @@ mixin office(cls)
           +e.info
             +e.P.title Есть вопросы или предложения?
             +e.txt Напишите нам и мы ответим вам в ближайшее время
-          +e.A.call.btn_transparent.js-open-modal(href='#') Написать
+          +e.A.call.btn_tr-green.js-open-modal(href='#') Написать
         +e.item_mod(class=cls)
           +e.info
             +e.P.title Обращение 

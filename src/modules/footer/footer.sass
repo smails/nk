@@ -1,7 +1,7 @@
 .footer
   margin: 6rem .5rem 1rem
-  border-radius: 40px
-  background: var(--primary)
+  border-radius: 2px
+  background: var(--brand-primary-dark)
   padding-block: 5rem
   color: var(--white-100)
   +screen('max', 1023)
@@ -37,9 +37,12 @@
     +screen('max', 1023)
       width: 120px
   &__title
-    +fs(22px)
+    +fs(24px)
     font-weight: 600
     margin-bottom: 2rem
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(16px)
     &.open-nav
@@ -70,12 +73,18 @@
         display: none
   &__link
     +fs(18px)
-    opacity: 0.6
+    color: var(--white-60)
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
+    &_mod
+      +fs(14px)
+      color: var(--white-40)
   &__phone
     +fs(32px)
     font-weight: 600
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
     +screen('max', 1500)
       +fs(20px)
     +screen('max', 1023)
@@ -104,8 +113,8 @@
       flex-flow: row
       justify-content: space-between
       padding-block: 2.5rem
-      border-top: 1px solid rgba(255, 255, 255, .2)
-      border-bottom: 1px solid rgba(255, 255, 255, .2)
+      border-top: 1px solid var(--white-20)
+      border-bottom: 1px solid var(--white-20)
   &__contacts
     max-width: 282px
     +screen('max', 1023)
@@ -113,8 +122,8 @@
   &__soc-icon
     width: 40px
     height: 40px
-    border-radius: 100%
-    background: rgba(255, 255, 255, .25)
+    border-radius: 2px
+    background: var(--white-10)
     display: flex
     justify-content: center
     align-items: center
@@ -126,14 +135,16 @@
     align-items: center
     gap: 1.2rem
   &__soc-txt
-    font-weight: 600
+    font-weight: 400
+    text-transform: uppercase
     +screen('max', 700)
       display: none
   &__bottom
     margin-top: 5rem
-    border-top: 1px solid rgba(255, 255, 255, .2)
-    display: flex
-    gap: 2rem
+    border-top: 1px solid var(--white-20)
+    display: grid
+    grid-template-columns: 280px 335px 1fr
+    gap: 7rem
     padding-top: 3.5rem
     position: relative
     +screen('max', 1023)
@@ -163,9 +174,6 @@
     i
       font-style: normal
       opacity: 0.6
-    span
-      font-weight: 700
-      text-transform: uppercase
   &__holder
     display: flex
     flex-flow: column
@@ -176,14 +184,15 @@
       margin-top: 3rem
       margin-bottom: 2rem
   &__txt
-    line-height: 1.8
-    opacity: .5
     +fs(14px)
+    font-weight: 300
+    line-height: 120%
+    letter-spacing: -0.02em
+    color: var(--white-40)
     &_copy
       +screen('max', 1023)
         position: absolute
         bottom: 0
         left: 0
-  &__icon
-    max-width: 164px
-  
+  &__builder
+    max-width: 120px

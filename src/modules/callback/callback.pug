@@ -3,25 +3,21 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title.display-2 Запишитесь на экскурсию
+          +e.P.title.display-2.display-2 Запишитесь на экскурсию
           +e.info
             +e.P.txt Наш экскурсовод познакомит вас со дворами, детскими и спортивными площадками, а также покажет отделку квартиры
             +e.A.btn.js-open-modal(href="#callback") Записаться
   if type == 2
     +b.callback
       +e.inner.inner
-        +e.container
-          +e.P.title Ипотечный брокер
-          +e.info
-            +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными шансами на одобрение
-            +e.control
-              +e.A.btn.js-open-modal(href="#callback") Поучить консультацию
-              +e.A.more.btn_transparent(href='#') Подробнее 
+        +e.container_two
+          +e.P.title.display-2 Ипотечный брокер
+          +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными 
   if type == 3
     +b.callback
       +e.inner.inner
-        +e.container
-          +e.P.title_mod Узнайте первыми о спецпредложениях!
+        +e.container_tree
+          +e.P.title.display-2_mod Узнайте первыми о спецпредложениях!
           +e.info
             +e.P.txt Подпишитесь на новости и получайте информацию о спецпредложениях первыми. Не упустите выгодные возможности!
             +e.A.btn.js-open-modal(href="#callback") Подробнее 
@@ -29,13 +25,13 @@ mixin callback(type)
     +b.callback
       +e.inner
         +e.box
-          +e.P.title_two Кэшбек 15% от стоимости квартиры до 28 июня
+          +e.P.title.display-2_two Кэшбек 15% от стоимости квартиры до 28 июня
           +e.A.btn.js-open-modal(href="#callback") Узнать больше 
   if type == 5
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title Записаться в демоквартиру
+          +e.P.title.display-2 Записаться в демоквартиру
           +e.info
             +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
             +e.A.btn.js-open-modal(href="#callback") Записаться
@@ -43,7 +39,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title Для региональных клиентов
+          +e.P.title.display-2 Для региональных клиентов
           +e.info
             +e.P.txt Узнайте о льготах и преимуществах  переезда для клиентов из других регионов
             +e.A.btn.js-open-modal(href="#callback") Подробнее 
@@ -51,7 +47,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title_two Запишитесь на экскурсию по ЖК «Новая Кузнечиха» 
+          +e.P.title.display-2_two Запишитесь на экскурсию по ЖК «Новая Кузнечиха» 
           +e.info
             +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными шансами на одобрение
             +e.A.btn.js-open-modal(href="#callback") Записаться
@@ -61,7 +57,7 @@ mixin callback(type)
         +e.container
           +e.content
             +e.P.sign ЖК «Новая Кузнечиха»
-            +e.P.title Ипотека 
+            +e.P.title.display-2 Ипотека 
               br
               | для коммерческих помещений
             +e.A.more.btn_transparent(href='#') Узнать подробнее 
@@ -70,7 +66,7 @@ mixin callback(type)
     +b.subscribe
       +e.inner.inner
         +e.container
-          +e.P.title Подписывайтесь на закрытый телеграм-канал и первыми узнавайте о новых акциях, скидках и стартах продаж!
+          +e.P.title.display-2 Подписывайтесь на закрытый телеграм-канал и первыми узнавайте о новых акциях, скидках и стартах продаж!
           +e.A.btn.btn_white(href='#')
             svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none')
               path(fill='#37A9E0' d='m9.27028 15.4994-.39082 6.1424c.55915 0 .80131-.2684 1.09173-.5906l2.62141-2.7996 5.4319 4.4451c.9962.6204 1.6981.2937 1.9668-1.0241l3.5655-18.66906.001-.0011c.316-1.6456-.5325-2.2891-1.5032-1.88539L1.0968 10.0831c-1.43034.6204-1.40868 1.5114-.24315 1.9151l5.35808 1.8622L18.6575 5.15842c.5857-.43339 1.1182-.1936.6802.2398L9.27028 15.4994Z')
@@ -79,7 +75,7 @@ mixin callback(type)
     +b.callback-form
       +e.inner.inner
         +e.container
-          +e.P.title Остались вопросы?
+          +e.P.title.display-2 Остались вопросы?
           +e.txt Оставьте свои контактные данные в форме ниже, и наш специалист свяжется с вами для ответа на все ваши вопросы
           +e.FORM.action
             +e.group
@@ -95,7 +91,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title Стоимость: 2 490 рублей
+          +e.P.title.display-2 Стоимость: 2 490 рублей
           +e.content
             +e.P.txt Что в ~5 раз дешевле услуг любого агентства. Без звонков из банков, решения вы получаете онлайн
             +e.buttons
@@ -104,7 +100,7 @@ mixin callback(type)
   if type == 12
     +b.callback-practicum
       +e.container
-        +e.P.title Новое полезное видео каждый день
+        +e.P.title.display-2 Новое полезное видео каждый день
         +e.txt с 17 по 22 октября
         +e.FORM.action
           +e.fields
@@ -124,14 +120,14 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.box
-          +e.P.title Обновленная демоквартира уже в марте 2023! Следите за новостями
+          +e.P.title.display-2 Обновленная демоквартира уже в марте 2023! Следите за новостями
           +e.FORM.action
             +e.INPUT.field(placeholder="E-mail")
             +e.BUTTON.submit.btn_white(href='#') Подробнее 
   if type == 14
     +b.callback-parking
       +e.container
-        +e.P.title Запишись в лист ожидания
+        +e.P.title.display-2 Запишись в лист ожидания
         +e.txt Оставьте свои контактные данные и мы внесем вас в лист ожидания, чтобы вы одним из первых узнали о наличии доступных мест
         +e.FORM.action
           +e.fields
@@ -152,7 +148,7 @@ mixin callback(type)
       +e.inner.inner
         +e.container
           +e.content
-            +e.P.title Дома 
+            +e.P.title.display-2 Дома 
               br
               | повышенной комфортности
             +e.P.subtitle в 11-м квартале ЖК «Новая Кузнечиха»
@@ -162,14 +158,14 @@ mixin callback(type)
     +b.callback-mini
       +e.inner.inner
         +e.container
-          +e.P.title Региональным клиентам предоставляются особые условия
+          +e.P.title.display-2 Региональным клиентам предоставляются особые условия
           +e.A.btn.btn_transparent Узнать подробнее
   if type == 17
     +b.callback-banner
       +e.inner.inner
         +e.container_green
           +e.content
-            +e.P.title Дистанционная покупка
+            +e.P.title.display-2 Дистанционная покупка
             +e.P.subtitle Вам не придется приезжать, вы сможете оформить покупку не поднимаясь с дивана
             +e.A.more.btn_transparent(href='#') Узнать подробнее 
           +e.IMG.pic(src='/img/callback-1.png' alt='')
@@ -177,12 +173,12 @@ mixin callback(type)
     +b.callback-mini
       +e.inner.inner
         +e.container
-          +e.P.title Скачать презентацию о «ЖК Новая Кузнечиха»
+          +e.P.title.display-2 Скачать презентацию о «ЖК Новая Кузнечиха»
           +e.A.btn.btn_transparent Скачать презентацию
   if type == 19
     +b.callback-review
       +e.container
-        +e.P.title Оставить отзыв
+        +e.P.title.display-2 Оставить отзыв
         +e.FORM.action
           +e.fields
             +e.group
@@ -209,7 +205,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title Посетите шоурум
+          +e.P.title.display-2 Посетите шоурум
           +e.info
             +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
             +e.A.btn.js-open-modal(href="#callback") Записаться
@@ -217,7 +213,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title Персональная подборка
+          +e.P.title.display-2 Персональная подборка
             br
             | квартир из 500+ вариантов
           +e.info
