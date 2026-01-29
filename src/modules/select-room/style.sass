@@ -23,7 +23,7 @@
       flex-flow: row-reverse
   &__tabs
     border: 1px solid var(--brand-tertiary-light)
-    border-radius: 84px
+    border-radius: 2px
     background: var(--white-100)
     box-sizing: border-box
     padding: 0.3rem
@@ -34,7 +34,7 @@
     +fs(18px)
     font-weight: 600
     padding: 2rem 3.5rem
-    border-radius: 48px
+    border-radius: 2px
     transition: .5s ease
     +screen('max', 1500)
       +fs(12px)
@@ -46,7 +46,7 @@
       background: var(--brand-tertiary-light)
       color: var(--white-100)
   &__btn
-    border-radius: 48px
+    border-radius: 2px
     padding: 1.5rem
     box-sizing: border-box
     width: 66px
@@ -130,7 +130,7 @@
     gap: 2rem
   &__tabs
     border: 1px solid var(--brand-tertiary-light)
-    border-radius: 84px
+    border-radius: 2px
     background: var(--white-100)
     box-sizing: border-box
     padding: 0.3rem
@@ -140,7 +140,7 @@
     +fs(18px)
     font-weight: 600
     padding: 2rem 3.5rem
-    border-radius: 48px
+    border-radius: 2px
     transition: .5s ease
     +screen('max', 1500)
       +fs(12px)
@@ -216,8 +216,8 @@
     &.active
       background: var(--brand-tertiary-light)
       g
-        opacity: 1
-        fill: #fff
+      opacity: 1
+      fill: #fff
   &__body
     margin-top: 5rem
     +screen('max', 1500)
@@ -261,9 +261,9 @@
     margin-top: 4rem
 
 .sp-prod-card
-  box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
-  border-radius: 25px
+  box-shadow: 0 4px 45px 0 rgba(102, 105, 112, 0.1), 0 4px 12px 0 rgba(0, 0, 0, 0.02)
   background: var(--white-100)
+  border-radius: 2px
   padding: 2.5rem
   box-sizing: border-box
   position: relative
@@ -294,16 +294,14 @@
     display: flex
     gap: 2rem
     +fs(14px)
-    font-weight: 600
-    color: var(--black-40)
-    opacity: 0.8
+    font-weight: 300
+    color: var(--black-60)
     margin-bottom: 1rem
     +screen('max', 1500)
       +fs(12px)
   &__type
     display: flex
     +fs(14px)
-    font-weight: 600
     gap: .4rem
     +screen('max', 1500)
       +fs(12px)
@@ -345,7 +343,7 @@
     max-width: 100%
   &__price
     +fs(28px)
-    font-weight: 600
+    font-weight: 300
     margin-bottom: 2rem
     line-height: 1
     display: flex
@@ -372,14 +370,14 @@
       transform: rotate(-8deg)
       transform-origin: right
   &__info
-    color: rgba(131, 140, 149, 0.8)
-    font-weight: 600
+    color: var(--black-60)
+    font-weight: 400
     +screen('max', 1500)
       +fs(12px)
     p
       margin-bottom: 1rem
     a
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
   &__tags
     display: flex
     flex-wrap: wrap
@@ -389,7 +387,7 @@
       margin-top: 1.2rem
   &__tag
     padding: 0.8rem 1.2rem
-    font-weight: 600
+    font-weight: 400
     background: #f0f1f3
     box-sizing: border-box
     border-radius: 82px
@@ -409,7 +407,7 @@
     margin-top: 2rem
   &__price-mini
     +fs(20px)
-    font-weight: 600
+    font-weight: 300
     margin-bottom: 2rem
   &__control
     display: flex
@@ -424,7 +422,7 @@
     border-radius: 100%
     line-height: 1
     margin: 0 auto
-    background: var(--black-grey-light)
+    background: var(--black-20)
     +fs(18px)
     font-weight: 600
 
@@ -434,7 +432,7 @@
   left: 0
   width: 100%
   height: 100%
-  border-radius: 25px
+  border-radius: 2px
   backdrop-filter: blur(3px)
   background: rgba(35, 38, 43, 0.4)
   display: flex

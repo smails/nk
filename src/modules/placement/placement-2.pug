@@ -92,7 +92,7 @@
                       input(type="hidden" name="PRICE_END" class="price_end" value="25")
                       +e.field.range-end 0
                     .slider
-            +e.box
+            +e.box_mod
               +e.wrap
                 +e.LABEL.checkbox
                   +e.INPUT.hidden(type="checkbox" checked)
@@ -100,21 +100,21 @@
                 +e.LABEL.checkbox
                   +e.INPUT.hidden(type="checkbox" )
                   +e.check-text Спецпредложения
-          +e.box
+          +e.box_mod
             +e.A.submit.btn.js-open-modal(href="#success") Показать варианты
               span 1 230 
             +e.BUTTON.reset
               span Очистить фильтр
-              svg(xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox="0 0 20 20")
-                path(fill='#838C95' fill-rule='evenodd' d='M1.2807.22004C.98802-.07306.51314-.07339.22004.2193-.07306.51199-.07339.98686.2193 1.27996l8.61629 8.6284L.22033 18.5357c-.29269.2931-.29235.768.00074 1.0607.2931.2927.76798.2923 1.06067-.0008l8.61377-8.6258 8.61379 8.6258c.2927.2931.7675.2935 1.0606.0008.2931-.2927.2935-.7676.0008-1.0607l-8.6153-8.62734 8.6163-8.6284c.2927-.2931.2924-.76797-.0007-1.06066-.2931-.29269-.768-.29236-1.0607.00074L9.89551 8.84695 1.2807.22005Z' clip-rule='evenodd')
+              svg(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewbox='0 0 12 12')
+                path(fill='#13151a' fill-opacity='.4' fill-rule='evenodd' d='M1.281.22A.75.75 0 1 0 .219 1.28l4.292 4.302L.223 9.88a.75.75 0 0 0 1.062 1.06L5.57 6.644l4.286 4.296a.75.75 0 0 0 1.062-1.06L6.63 5.582l4.292-4.302A.75.75 0 0 0 9.86.22l-4.29 4.3z' clip-rule='evenodd')
     +e.body
       +e.back
-        svg(xmlns='http://www.w3.org/2000/svg' width='45' height='45' fill='none')
-          rect(width='44' height='44' x='.5' y='.5' fill='#FFA443' stroke='#FFA443' rx='22')
-          path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m25.102 18-5.105 5.104 5.105 5.104')
+        svg(xmlns='http://www.w3.org/2000/svg' width='65' height='65' fill='none' viewbox='0 0 65 65')
+          path(fill='#00a6e6' d='M65 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v61a2 2 0 0 0 2 2h61a2 2 0 0 0 2-2z')
+          path(stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m36 42-9-9 9-9')
       +e.wrapper
         +e.box
-          +e.IMG.pic(src='/img/placement-2.png' alt='')
+          +e.IMG.pic(src='/img/placement-2.jpg' alt='')
           +b.placement-info
             +e.container
               +e.P.title.display-3 Этаж 10
@@ -252,6 +252,13 @@
                       span №1
                   +e.P.sign Забронировано
                 +e.item
+                  +e.frame
+                    +e.frame-list
+                      span 2-к
+                      span 63,5 м²
+                      span №1
+                  +e.P.sign Продано
+                +e.item
                   +e.frame_sale
                     +e.frame-list
                       span 2-к
@@ -259,7 +266,6 @@
                       span №1
                     +e.frame-text_sale Акция!
                   +e.P.sign Забронировано
-                  +e.P.sign Продано
               +e.house Дом 10. Срок сдачи 1 кв. 2024
             +e.list
               +e.col
