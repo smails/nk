@@ -8,15 +8,18 @@
     gap: 1.5rem
     grid-template-columns: repeat(auto-fill, minmax(135px, 1fr))
     grid-template-rows: repeat(2, minmax(300px, 1fr)) repeat(2, minmax(233px, .75fr))
+    +screen('max', 1850)
+      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr))
+      grid-template-rows: repeat(2, minmax(300px, 1fr)) repeat(2, minmax(233px, .75fr))
     +screen('max', 1700)
-      grid-template-columns: repeat(auto-fill, minmax(99px, 1fr))
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr))
       grid-template-rows: repeat(2, minmax(208px, 1fr)) minmax(167px, 0.75fr) minmax(208px, 0.75fr)
     +screen('max', 1500)
       grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
     +screen('max', 1280)
-      grid-template-columns: repeat(auto-fill, minmax(95px, 1fr))
-    +screen('max', 1023)
-      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr))
+      grid-template-columns: repeat(auto-fill, minmax(9vw, 1fr))
+    +screen('max', 900)
+      grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr))
       grid-template-rows: repeat(2, minmax(169px, 1fr)) minmax(140px, 0.75fr) minmax(140px, 0.75fr)
     +screen('max', 700)
       grid-template-columns: repeat(5, 1fr)
@@ -33,7 +36,7 @@
     +screen('max', 1500)
       padding: 2rem
     +screen('max', 700)
-      padding: 1.5rem
+      padding: 1rem
     &:hover
       background-color: var(--brand-primary-hover)
     &:first-of-type
@@ -87,16 +90,18 @@
           transform: scale(1.1)
     &_text
       background-color: var(--brand-primary-dark)
-      background-image: url(../img/bg-infrastructure-1.png)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='233' fill='none' viewBox='0 0 280 233'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M213-32 0 116.801V228L213 79.227z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M319 5 106 153.8V265l213-148.773z' clip-rule='evenodd'/%3E%3C/svg%3E")
       background-repeat: no-repeat
       background-position: right bottom
       display: flex
       flex-flow: column
       justify-content: space-between
       gap: 2rem
+      +screen('max', 700)
+        background: var(--brand-primary-dark)
       &:hover
         background-color: var(--brand-primary-hover)
-        background-image: url(../img/bg-infrastructure-1.png)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='233' fill='none' viewBox='0 0 280 233'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M213-32 0 116.801V228L213 79.227z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M319 5 106 153.8V265l213-148.773z' clip-rule='evenodd'/%3E%3C/svg%3E")
         background-repeat: no-repeat
         background-position: right bottom
   &__caption
@@ -114,8 +119,8 @@
       +fs(16px)
     +screen('max', 700)
       +fs(14px)
-      left: 1.5rem
-      bottom: 1.5rem
+      left: 1rem
+      bottom: 1rem
   &__holder
     +fs(30px)
     line-height: 1.2

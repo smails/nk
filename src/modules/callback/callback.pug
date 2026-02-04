@@ -6,21 +6,25 @@ mixin callback(type)
           +e.P.title.display-2.display-2 Запишитесь на экскурсию
           +e.info
             +e.P.txt Наш экскурсовод познакомит вас со дворами, детскими и спортивными площадками, а также покажет отделку квартиры
-            +e.A.btn.js-open-modal(href="#callback") Записаться
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Записаться
   if type == 2
     +b.callback
       +e.inner.inner
         +e.container_two
           +e.P.title.display-2 Ипотечный брокер
-          +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными 
+          +e.info
+            +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными 
+            +e.control
+              +e.A.btn.js-open-modal(href="#callback") Поучить консультацию
+              +e.A.more.btn_transparent(href='#') Подробнее
   if type == 3
     +b.callback
       +e.inner.inner
-        +e.container_tree
+        +e.container_three
           +e.P.title.display-2_mod Узнайте первыми о спецпредложениях!
           +e.info
             +e.P.txt Подпишитесь на новости и получайте информацию о спецпредложениях первыми. Не упустите выгодные возможности!
-            +e.A.btn.js-open-modal(href="#callback") Подробнее 
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Подписаться 
   if type == 4
     +b.callback
       +e.inner

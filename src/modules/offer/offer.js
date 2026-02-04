@@ -16,7 +16,7 @@ $('.offer, .offer-special').each((index, item) => {
       767: {
         slidesPerView: 2.15,
       },
-      1500: {
+      1200: {
         spaceBetween: '15px',
         slidesPerView: 4,
       },

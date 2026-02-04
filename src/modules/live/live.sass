@@ -1,19 +1,22 @@
 .live
   margin: 10rem 0 8rem
+  +screen('max', 1500)
+    margin: 7rem 0
   +screen('max', 1023)
     margin: 5.5rem 0
   +screen('max', 700)
     margin: 4rem 0
   &__title
     +fs(80px)
-    font-family: var(--second-family)
     text-align: center
     margin-bottom: 6rem
     letter-spacing: -0.02em
     text-transform: uppercase
-    +screen('max', 700)
+    +screen('max', 1500)
       +fs(60px)
       margin-bottom: 2.5rem
+    +screen('max', 700)
+      +fs(40px)
     &:before
       content: ''
       width: 17px
@@ -28,9 +31,9 @@
     margin: 0 -5rem
     padding: 6rem 5rem
     box-sizing: border-box
-    border-radius: 40px
+    border-radius: 2px
     background: var(--black-grey-light)
-    +screen('max', 1800)
+    +screen('max', 1850)
       margin: 0 -3rem
     +screen('max', 1500)
       margin: 0 calc((-100vw + 1160px) / 2 )
@@ -56,6 +59,7 @@
     border-radius: 2px
     box-sizing: border-box
     padding: 0.3rem
+    border: 1px solid var(--brand-secondary)
     +screen('max', 700)
       justify-content: space-between
       display: flex

@@ -5,32 +5,41 @@
   +screen('max', 700)
     margin: 5.5rem 0
   &__container
-    background-image: url(../icon/bg-callback-1.svg)
+    background-color: var(--brand-primary-light)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='445' height='232' fill='none' viewBox='0 0 445 232'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M299.457 353.913 0 144.729 145.297 43.236l299.508 209.185z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='M145.297-113.125 444.805 96.059v156.363L145.297 43.238z' clip-rule='evenodd'/%3E%3C/svg%3E")
     background-repeat: no-repeat
-    background-position: right top
-    padding: 5rem 7rem
+    background-position: right
+    padding: 4rem 7rem
     box-sizing: border-box
     background-size: contain
     color: var(--white-100)
+    clip-path: polygon(100% 0%, 98% 100%, 0% 100%, 2% 0%)
     +screen('max', 1500)
       padding: 4rem
-      background-position: 60% top
     +screen('max', 1023)
       padding: 3rem
     +screen('max', 700)
       padding: 3rem 2rem
-      background-position: 50% top
-      background-size: 150%
+      background: var(--brand-primary-light)
+      clip-path: polygon(100% 0%, 95% 100%, 0% 100%, 5% 0%)
     &_two
-      background-image: url(../icon/bg-callback-2.svg)
+      background-color: var(--brand-tertiary-light)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='656' height='212' fill='none' viewBox='0 0 656 212'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M373.141-69.425 51.029 47.43l220.544 262.205 322.148-116.791z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='m271.596 310.644 452.459-164.052L777.377-52.41 324.919 111.642z' clip-rule='evenodd'/%3E%3C/svg%3E")
       background-repeat: no-repeat
       background-position: right top
       background-size: contain
-    &_two
-      background-image: url(../icon/bg-callback-3.svg)
+      +screen('max', 1500)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='369' height='175' fill='none' viewBox='0 0 369 175'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M222.982-17.939 30.494 51.891l131.792 156.688 192.51-69.792z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='m162.302 209.183 270.38-98.034 31.865-118.92-270.38 98.034z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      +screen('max', 700)
+        background: var(--brand-tertiary-light)
+    &_three
+      background-color: var(--brand-secondary)
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='585' height='232' fill='none' viewBox='0 0 585 232'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='m394.608 267.399 280.893-196.24-280.893-196.19-280.944 196.19z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='M394.581-125.031 0 150.536v206.022L394.581 80.991z' clip-rule='evenodd'/%3E%3C/svg%3E")
       background-repeat: no-repeat
       background-position: right top
       background-size: contain
+      +screen('max', 700)
+        background: var(--brand-secondary)
   &__box
     display: flex
     justify-content: space-between
@@ -89,40 +98,40 @@
     margin-top: 1.5rem
     +screen('max', 1500)
       +fs(16px)
-      max-width: 50%
     +screen('max', 1023)
       +fs(14px)
     +screen('max', 700)
       max-width: 100%
       margin-bottom: 2rem
   &__btn
-    border-radius: 2px
-    padding: 2.5rem
-    background: var(--brand-tertiary-light)
-    display: inline-block
-    width: 250px
-    +fs(18px)
-    font-weight: 400
-    color: var(--white-100)
-    transition: .5s ease
-    border: 1px solid var(--brand-tertiary-light)
-    text-align: center
-    box-sizing: border-box
-    +screen('max', 1500)
-      +fs(14px)
-      width: 177px
-      padding: 1.6rem
-    +screen('max', 700)
-      width: 100%
-      +fs(12px)
-      margin-top: 0
-    &:hover
-      background: var(--brand-tertiary-hover)
+    width: 255px
+    &:not(.btn)
+      border-radius: 2px
+      padding: 2.5rem
+      display: inline-block
+      transition: .5s ease
+      background: var(--white-100)
+      color: var(--black-100)
+      +fs(18px)
+      font-weight: 300
+      border: 1px solid transparent
+      text-align: center
+      box-sizing: border-box
+      +screen('max', 1500)
+        +fs(14px)
+        padding: 1.6rem
+      +screen('max', 700)
+        width: 100%
+        +fs(12px)
+        margin-top: 0
+      &:hover
+        background: var(--brand-tertiary-hover)
   &__more
-    backdrop-filter: blur(8px)
-    background: rgba(255, 255, 255, 0.15)
+    backdrop-filter: blur(6px)
+    background: var(--white-5)
     +screen('max', 700)
       padding: 1.6rem
+      +fs(12px)
   &__control
     display: flex
     gap: 1.5rem
@@ -130,14 +139,11 @@
     +screen('max', 1500)
       flex-flow: column-reverse
       align-items: stretch
-      margin-top: -7rem
+      margin-top: -6rem
     +screen('max', 700)
       margin-top: 0
       flex-flow: row-reverse
       gap: .7rem
-    .callback__btn
-      +screen('max', 1500)
-        width: 220px
   &__buttons
     display: flex
     gap: 1.5rem

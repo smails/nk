@@ -17,7 +17,7 @@ $('.review').each((index, item) => {
         slidesPerView: 2.1,
       },
       800: {
-        slidesPerView: 3,
+        slidesPerView: 2.5,
       },
       1500: {
         slidesPerView: 4.1,

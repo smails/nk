@@ -25,23 +25,38 @@
     background-repeat: no-repeat
     background-position: center
     background-size: cover
+    +screen('max', 900)
+      background-position: 10%
   &__caption
-    margin-bottom: min(10rem, 5vw)
+    margin-bottom: min(10rem, 7vw)
     color: var(--white-100)
+    +screen('max', 700)
+      margin-bottom: 40px
   &__pic
     width: 100%
   &__content
-    top: 0
-    left: 0
     width: 100%
     max-width: 1015px
-    background-image: url(../icon/sale-bg-1.svg)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1013' height='597' fill='none' viewBox='0 0 1013 597'%3E%3Cpath fill='%230082ca' d='M-1 0h1014L656 466H-1z'/%3E%3Cpath fill='%2370b865' d='M-1 597h1014L656 196H-1z'/%3E%3C/svg%3E")
     background-repeat: no-repeat
     background-position: top right
     background-size: cover
     padding: 6rem 5.4rem
     box-sizing: border-box
     color: var(--white-100)
+    +screen('max', 1500)
+      padding: 4rem 7rem
+      background-position: 0 -50px
+    +screen('max', 900)
+      padding: 3.5rem 2.5rem
+      max-width: 515px
+      background-position: right
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='515' height='439' fill='none' viewBox='0 0 515 439'%3E%3Cpath fill='%230082ca' d='M0 0h515L333.683 311H0z'/%3E%3Cpath fill='%2370b865' d='M0 439h515L333.683 135H0z'/%3E%3C/svg%3E")
+    +screen('max', 700)
+      padding: 2.5rem 1.5rem
+      max-width: 100%
+      background-position: right
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='372' fill='none' viewBox='0 0 360 372'%3E%3Cpath fill='%230082ca' d='M-8 0h515L325.683 311H-8z'/%3E%3Cpath fill='%2370b865' d='M-58 372h515L275.683 101H-58z'/%3E%3C/svg%3E")
   &__txt
     +fs(24px)
     line-height: 1.5
@@ -55,6 +70,12 @@
       +fs(16px)
     +screen('max', 1023)
       +fs(14px)
+    +screen('max', 900)
+      +fs(18px)
+      max-width: 300px
+      margin-bottom: 1.5rem
+    +screen('max', 700)
+      +fs(16px)
   &__list
     +fs(22px)
     line-height: 1.3
@@ -64,6 +85,12 @@
       +fs(16px)
     +screen('max', 1023)
       +fs(14px)
+    +screen('max', 900)
+      max-width: 385px
+      margin-bottom: 1.5rem
+      +fs(18px)
+    +screen('max', 700)
+      +fs(16px)
     li
       position: relative
       padding-left: 2rem
@@ -76,6 +103,9 @@
         position: absolute
         left: 0
         top: 8px
+  &__call
+    +screen('max', 700)
+      width: 100%
   .timer
     position: absolute
     bottom: 2rem

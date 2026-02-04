@@ -1,5 +1,6 @@
 .plane
   margin: 12rem 0 3rem
+  overflow: hidden
   +screen('max', 1500)
     margin: 10rem 0 3rem
   +screen('max', 1023)
@@ -21,6 +22,9 @@
     margin-bottom: 4rem
     +screen('max', 1023)
       display: block
+  &__wrapper
+    +screen('max', 1850)
+      width: calc(100vw - 2rem)
   &__text
     max-width: 1195px
     +fs(18px)
@@ -39,11 +43,11 @@
     margin: 0 -5rem
     background: var(--black-grey-light)
     box-sizing: border-box
-    +screen('max', 1800)
+    +screen('max', 1850)
       margin: 0 -3rem
     +screen('max', 1500)
       margin: 0 calc((-100vw + 1160px) / 2 )
-      padding: 4rem calc((100vw - 1160px) / 2 )
+      padding: 4rem 0
       border-radius: 2px
     +screen('max', 1280)
       margin: 0 -2rem
@@ -60,6 +64,7 @@
     padding-inline: 5.6rem
     +screen('max', 1500)
       margin-bottom: 3rem
+      padding-inline: 0
     +screen('max', 700)
       display: block
     &_no-pi
@@ -155,7 +160,7 @@
     max-width: 100%
     vertical-align: middle
     object-fit: contain
-    +screen('max', 700)
+    +screen('max', 1280)
       max-height: 245px
   &__info
     display: flex
@@ -192,6 +197,8 @@
   .swiper
     padding: 0 7rem 3rem
     margin: 0 -.75rem -3rem
+    +screen('max', 1500)
+      padding: 0 2rem 3rem
   .slider-arrow
     box-shadow: 0 6px 12px 0 rgba(112, 119, 126, 0.07)
     width: 70px
@@ -206,6 +213,7 @@
     box-sizing: border-box
     padding: 2rem 1rem 2.5rem 4.5rem
     z-index: 2
+    text-align: center
     &:before
       content: ''
       width: calc(100% + 30px)
@@ -217,5 +225,9 @@
       left: 15px
       z-index: -1
       transform: skew(-10deg)
-    +screen('max', 1500)
-      padding: 1.5rem
+      +screen('max', 1500)
+        width: calc(100% + 20px)
+      +screen('max', 1280)
+        width: calc(100% + 10px)
+      +screen('max', 700)
+        transform: skew(-7deg)

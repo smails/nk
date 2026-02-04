@@ -8,8 +8,8 @@
       margin-bottom: 2rem
   &__wrapper
     margin-left: 6rem
-    +screen('max', 1500)
-      margin-left: 7rem
+    +screen('max', 1850)
+      margin-left: 3rem
     +screen('max', 1280)
       margin-left: 1.5rem
     +screen('min', 1921)
@@ -69,10 +69,14 @@
     margin: 1.6rem auto 0
     display: block
     line-height: 1
-    +screen('max', 1500)
-      max-width: 1140px
+    +screen('max', 1850)
+      margin: 1.6rem 3rem 0
+      width: calc(100% - 6rem)
     +screen('max', 1023)
       width: calc(100% - 4rem)
+    +screen('max', 700)
+      margin: 1.6rem 1.5rem 0
+      width: calc(100% - 3rem)
   .slider-arrows
     +screen('max', 1023)
       display: none

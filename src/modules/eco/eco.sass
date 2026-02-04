@@ -7,23 +7,26 @@
     margin: 4rem 0
   &:before
     content: ''
-    width: min(306px, 17vw)
-    height: min(284px, 15vw)
+    width: min(306px, 15vw)
+    height: min(284px, 13vw)
     position: absolute
     right: 0
     top: -12rem
-    background-image: url(../icon/bg-park-1.svg)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='306' height='285' fill='none' viewBox='0 0 306 285'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='M204.039 0 0 142.541v106.522l204.039-142.515z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M306.081 35.28 102.016 177.82v106.522l204.065-142.514z' clip-rule='evenodd'/%3E%3C/svg%3E")
     background-repeat: no-repeat
     background-size: contain
     z-index: 3
-    +screen('max', 1023)
-      top: -10rem
+    +screen('max', 1500)
+      top: -6rem
+    +screen('max', 900)
+      width: min(201px, 28vw)
+      height: min(186px, 25vw)
     +screen('max', 700)
-      top: -3rem
-      width: 100px
+      top: 0
+      width: 140px
       height: 250px
   &__title
-    font-size: clamp(38px, 7.25vw, 144px)
+    font-size: clamp(38px, 7vw, 144px)
     color: var(--brand-tertiary-light)
     letter-spacing: -0.02em
     line-height: 1
@@ -35,14 +38,13 @@
       padding-top: 2rem
     +screen('max', 700)
       width: 60vw
+      margin-bottom: 1rem
   &__list
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 1.5rem
     scrollbar-width: 0
-    +screen('max', 1500)
-      margin: 0 -6.5rem
-    +screen('max', 1280)
+    +screen('max', 1850)
       margin: 0
     +screen('max', 1023)
       grid-template-columns: repeat(2, 1fr)
@@ -78,7 +80,6 @@
     object-fit: cover
     +screen('max', 1023)
       height: 100%
-      border-radius: 15px
   &__item
     position: relative
     display: block

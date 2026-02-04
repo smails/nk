@@ -2,26 +2,31 @@
   margin: 5rem 0 8.5rem
   +screen('max', 700)
     margin: 3.5rem 0
+  &__inner
+    +screen('max', 1280)
+      padding: 0
   &__list
     display: flex
     gap: 1.5rem
     scrollbar-width: 0
-    +screen('max', 1023)
+    +screen('max', 1280)
       overflow: auto
+      gap: 1rem
     &::-webkit-scrollbar
       height: 0
   &__item
     position: relative
-    +screen('max', 1023)
+    +screen('max', 1280)
       flex-shrink: 0
       width: 270px
     +screen('max', 700)
       width: 225px
+    &:first-of-type
+      +screen('max', 1280)
+        margin-left: 2rem
     &:last-of-type
-      +screen('max', 1500)
-        display: none
-      +screen('max', 1023)
-        display: block
+      +screen('max', 1280)
+        margin-right: 2rem
     &:nth-of-type(2n)
       .sales__txt
         background: var(--brand-primary-dark)
@@ -43,6 +48,11 @@
     letter-spacing: -0.02em
     text-transform: uppercase
     transition: .3s linear
+    +screen('max', 1280)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+      padding: 1.5rem
   &__title
     +fs(30px)
     padding-block: 5rem 4rem
