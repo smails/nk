@@ -129,7 +129,7 @@
     align-items: center
     gap: 2rem
   &__tabs
-    border: 1px solid var(--brand-tertiary-light)
+    border: 1px solid var(--brand-secondary)
     border-radius: 2px
     background: var(--white-100)
     box-sizing: border-box
@@ -138,7 +138,7 @@
       display: none
   &__tab
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     padding: 2rem 3.5rem
     border-radius: 2px
     transition: .5s ease
@@ -146,7 +146,7 @@
       +fs(12px)
       padding: 1.2rem 1.5rem
     &.active
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary)
       color: var(--white-100)
   &__filter-block
     width: 66px
@@ -164,7 +164,7 @@
     +screen('max', 700)
       display: none
     &:hover
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary-hover)
       path
         fill: var(--white-100)
         opacity: 1
@@ -180,7 +180,7 @@
     gap: 3rem
   &__count
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 1023)
@@ -214,9 +214,11 @@
         width: 16px
         height: 16px
     &.active
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary)
       opacity: 1
-      fill: #fff
+      g
+        fill: #fff
+        opacity: 1
   &__body
     margin-top: 5rem
     +screen('max', 1500)
@@ -302,6 +304,7 @@
     display: flex
     +fs(14px)
     gap: .4rem
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
     span
@@ -424,6 +427,35 @@
     background: var(--black-20)
     +fs(18px)
     font-weight: 600
+  &__favor
+    svg
+      +screen('max', 1500)
+        width: 20px
+        height: 20px
+      +screen('max', 1023)
+        width: 32px
+        height: 32px
+      +screen('max', 700)
+        width: 18px
+        height: 18px
+    &.active
+      path
+        fill: var(--color-red)
+    &:hover
+      path
+        fill: var(--color-red)
+        opacity: 0.5
+  &__block
+    svg
+      +screen('max', 1500)
+        width: 20px
+        height: 20px
+      +screen('max', 1023)
+        width: 32px
+        height: 32px
+      +screen('max', 700)
+        width: 18px
+        height: 18px
 
 .sp-prod-close
   position: absolute
@@ -456,6 +488,8 @@
       +fs(24px)
       font-weight: 600
       color: var(--white-100)
+      font-family: var(--second-family)
+      text-transform: uppercase
       +screen('max', 1500)
         +fs(16px)
     svg

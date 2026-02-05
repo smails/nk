@@ -28,17 +28,18 @@ mixin callback(type)
   if type == 4
     +b.callback
       +e.inner
-        +e.box
-          +e.P.title.display-2_two Кэшбек 15% от стоимости квартиры до 28 июня
-          +e.A.btn.js-open-modal(href="#callback") Узнать больше 
+        +e.container
+          +e.info
+            +e.P.title.display-2_two Кэшбек 15% от стоимости квартиры до 28 июня
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Узнать больше 
   if type == 5
     +b.callback
       +e.inner.inner
-        +e.container
+        +e.container_three
           +e.P.title.display-2 Записаться в демоквартиру
           +e.info
             +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой, планировками 
-            +e.A.btn.js-open-modal(href="#callback") Записаться
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Записаться
   if type == 6
     +b.callback
       +e.inner.inner

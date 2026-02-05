@@ -10,6 +10,9 @@ $('.placement__btn').click(function () {
   $(this).toggleClass('active');
   $('.mini-filter').fadeToggle();
 })
+$('.placement-stub__btn').click(function () {
+  $('.placement-stub').fadeOut();
+})
 
 
 $('.placement-chess__frame_available').click((e) =>{

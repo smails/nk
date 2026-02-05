@@ -113,11 +113,14 @@
     grid-template-columns: repeat(4, 1fr)
     gap: 5rem
     max-width: 95%
-    +screen('max', 700)
+    +screen('max', 1500)
+      gap: 3rem
+    +screen('max', 1200)
       grid-template-columns: repeat(4, 270px)
       overflow: auto
       padding-inline: 2rem
       margin: 0 -2rem
+      max-width: 100%
   &__submit
     display: inline-flex
     align-items: center
@@ -154,8 +157,12 @@
       left: 15px
       z-index: -1
       transform: skew(-10deg)
-    +screen('max', 1500)
-      padding: 1.5rem
+      +screen('max', 1500)
+        width: calc(100% + 20px)
+      +screen('max', 1280)
+        width: calc(100% + 10px)
+      +screen('max', 700)
+        transform: skew(-7deg)
   &__pic
     max-width: 100%
     vertical-align: middle
