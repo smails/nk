@@ -14,6 +14,8 @@
     +screen('max', 1023)
       display: none
   &__row
+    position: relative
+  &__action
     display: grid
     grid-template-columns: 126px 285px 100px 92px 92px 145px 60px 250px 60px
     gap: 7rem
@@ -23,7 +25,7 @@
     margin-bottom: 3.2rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
     background: var(--white-100)
-    border-radius: 20px
+    border-radius: 2px
     position: relative
     +screen('max', 1500)
       grid-template-columns: 100px 100px 55px 100px 120px 80px 220px 100px 50px
@@ -49,14 +51,14 @@
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.1)
       background: var(--white-100)
       top: 1.7rem
-      border-radius: 20px
+      border-radius: 2px
       left: 0
       right: 0
       margin: 0 auto
       display: block
   &__caption
     +fs(16px)
-    font-weight: 600
+    font-weight: 300
     color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
@@ -73,25 +75,26 @@
       margin-left: 2rem
       margin-bottom: 4rem
   &__title
-    +fs(24px)
-    font-weight: 600
+    +fs(22px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
     span
       color: rgba(131, 140, 149, 0.7)
   &__txt
-    +fs(20px)
+    +fs(18px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
@@ -99,8 +102,8 @@
     +screen('max', 1023)
       grid-column: 2/5
   &__price
-    +fs(30px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     margin-bottom: 2rem
     line-height: 1
     display: flex
@@ -129,7 +132,8 @@
       transform: rotate(-8deg)
       transform-origin: right
   &__info
-    color: rgba(131, 140, 149, 0.8)
+    color: var(--black-60)
+    font-family: var(--second-family)
     font-weight: 600
     +screen('max', 1500)
       +fs(12px)
@@ -138,16 +142,16 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
   &__count
     display: flex
     justify-content: center
     align-items: center
-    width: 40px
-    height: 40px
-    border-radius: 100%
+    width: 60px
+    height: 60px
+    border-radius: 2px
     line-height: 1
     margin: 0 auto
     background: var(--black-grey-light)
-    +fs(12px)
-    font-weight: 600
+    +fs(18px)
+    font-weight: 300

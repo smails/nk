@@ -12,7 +12,7 @@
       content: ''
       width: 100%
       height: 100%
-      border-radius: 40px
+      border-radius: 2px
       position: absolute
       top: 0
       left: 0
@@ -20,15 +20,15 @@
       opacity: 0.6
       z-index: 1
       +screen('max', 1023)
-        border-radius: 20px
+        border-radius: 2px
   &__pic
     width: 100%
-    border-radius: 40px
+    border-radius: 2px
     vertical-align: middle
     object-fit: cover
     +screen('max', 1280)
       height: 700px
-      border-radius: 20px
+      border-radius: 2px
     +screen('max', 1023)
       height: clamp(715px, 80vh, 915px)
   &__content

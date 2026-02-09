@@ -90,17 +90,16 @@
           display: block
 
 .sr-product-list
-  margin-top: 7rem
+  margin: 7rem 5px 0
   padding-block: 5rem
   box-sizing: border-box
-  border-radius: 40px
+  border-radius: 2px
   background: var(--black-grey-light)
   +screen('max', 1500)
     padding-block: 4rem
-    margin-top: 4.5rem
-    border-radius: 20px
+    margin: 4.5rem 5px 0
   +screen('max', 700)
-    margin-top: 2rem
+    margin: 2rem 5px 0
     padding-block: 2.4rem
   &__head
     display: flex
@@ -205,7 +204,7 @@
     box-shadow: 0 4px 16px 0 rgba(158, 163, 172, 0.07)
     transition: .5s ease
     border-radius: 100%
-    +screen('max', 1023)
+    +screen('max', 1500)
       width: 45px
       height: 45px
     svg
@@ -280,7 +279,7 @@
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.1)
       background: var(--white-100)
       top: 2rem
-      border-radius: 20px
+      border-radius: 2px
       left: 0
       right: 0
       margin: 0 auto
@@ -506,6 +505,8 @@
     display: flex
     justify-content: center
     align-items: center
+    &:nth-of-type(2)
+      border-radius: 100%
     +screen('max', 1500)
       padding: 1.8rem
     &:hover
@@ -525,6 +526,25 @@
     +screen('max', 1023)
       display: none
   &__row
+    position: relative
+    .sp-prod-close
+      flex-flow: row
+      align-items: center
+      +screen('max', 700)
+        flex-flow: column
+      +screen('max', 700)
+        justify-content: space-between
+      &__top
+        flex-flow: row
+        flex-grow: 1
+        +screen('max', 900)
+          justify-content: flex-start
+        +screen('max', 700)
+          flex-grow: 0
+      &__bottom
+        width: auto
+        flex-shrink: 0
+  &__action
     display: grid
     grid-template-columns: 150px 160px 100px 100px 190px 120px 300px 160px 50px
     gap: 5rem
@@ -534,7 +554,7 @@
     margin-bottom: 1.5rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
     background: var(--white-100)
-    border-radius: 20px
+    border-radius: 2px
     position: relative
     +screen('max', 1500)
       grid-template-columns: 100px 100px 55px 100px 120px 80px 220px 100px 50px
@@ -553,7 +573,7 @@
       padding: 1.5rem 0 1.5rem 1.5rem
   &__caption
     +fs(16px)
-    font-weight: 600
+    font-weight: 300
     color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
@@ -570,25 +590,26 @@
       margin-left: 2rem
       margin-bottom: 4rem
   &__title
-    +fs(24px)
-    font-weight: 600
+    +fs(22px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
     span
-      color: rgba(131, 140, 149, 0.7)
+      color: var(--black-60)
   &__txt
-    +fs(20px)
+    +fs(18px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
@@ -603,8 +624,8 @@
     +screen('max', 1023)
       grid-column: 2/5
   &__price
-    +fs(30px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     margin-bottom: 2rem
     line-height: 1
     display: flex
@@ -633,8 +654,8 @@
       transform: rotate(-8deg)
       transform-origin: right
   &__info
-    color: rgba(131, 140, 149, 0.8)
-    font-weight: 600
+    color: var(--black-60)
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
     +screen('max', 700)
@@ -642,7 +663,7 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
   &__tags
     display: flex
     flex-flow: column
@@ -653,8 +674,8 @@
       margin-top: 2rem
   &__tag
     padding: 0.8rem 1.2rem
-    font-weight: 600
-    background: #f0f1f3
+    font-weight: 300
+    background: var(--black-grey-light)
     box-sizing: border-box
     border-radius: 82px
     display: inline-block
@@ -663,7 +684,7 @@
       +fs(12px)
     +screen('max', 700)
       +fs(10px)
-      padding: 0.3rem 1rem .6rem
+      padding: .6rem 1rem
     &_sale
       color: var(--white-100)
       background: var(--color-red)
@@ -695,6 +716,7 @@
       flex-flow: row
       align-items: center
       height: auto
+      gap: .8rem
   &__more
     position: relative
     +screen('max', 700)
@@ -705,7 +727,7 @@
       border-radius: 82px
       padding: .8rem 1.2rem 1rem
       box-sizing: border-box
-      font-weight: 600
+      font-weight: 300
       color: var(--brand-primary-light)
       transition: .5s ease
       cursor: pointer
@@ -752,7 +774,7 @@
     padding: 1.4rem 1.2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     flex-wrap: wrap
     opacity: 0
     visibility: hidden
@@ -761,6 +783,7 @@
     min-width: 350px
     +screen('max', 1500)
       +fs(14px)
+      padding: 1rem
       min-width: 220px
   &__link
     display: flex
@@ -770,14 +793,16 @@
       display: inline-block
       border-radius: 60px
       background: var(--white-100)
+      font-family: var(--second-family)
       +fs(16px)
-      color: var(--brand-primary-light)
       padding: .5rem.6rem
       font-weight: 700
+      color: var(--brand-primary-light)
       box-sizing: border-box
       line-height: .8
       +screen('max', 1500)
         +fs(12px)
+        line-height: .5
   &__favor
     +screen('max', 700)
       padding: 1rem
@@ -801,6 +826,7 @@
         fill: var(--color-red)
         opacity: 0.5
   &__block
+    text-align: center
     +screen('max', 700)
       padding: 1rem
       border-radius: 100%
@@ -819,19 +845,20 @@
     display: flex
     gap: 1.5rem
     +fs(10px)
-    font-weight: 600
-    color: var(--black-40)
-    opacity: 0.8
+    font-weight: 400
+    color: var(--black-60)
+    letter-spacing: -0.02em
     margin-bottom: 1rem
     +screen('min', 700)
       display: none
   &__type
     display: flex
     +fs(10px)
-    font-weight: 600
+    font-weight: 400
     gap: .4rem
     padding-bottom: 1rem
-    border-bottom: 1px solid #e9edf0
+    letter-spacing: -0.02em
+    border-bottom: 1px solid var(--black-10)
     margin-bottom: 1rem
     +screen('min', 700)
       display: none
@@ -846,12 +873,12 @@
 .sr-product-offer
   padding-block: 9rem
   background: var(--black-grey-light)
-  border-radius: 40px
+  border-radius: 2px
   +screen('max', 1500)
     padding-block: 6rem
   +screen('max', 1023)
     padding-block: 4rem
-    border-radius: 20px
+    border-radius: 2px
   &__title
     margin-bottom: 5rem
     +screen('max', 1500)
@@ -894,7 +921,7 @@
     margin-bottom: 1.5rem
     box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.08)
     background: var(--white-100)
-    border-radius: 20px
+    border-radius: 2px
     position: relative
     +screen('max', 1500)
       gap: 2rem
@@ -934,7 +961,7 @@
       +fs(16px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
@@ -946,7 +973,7 @@
       +fs(14px)
     +screen('max', 1023)
       padding-bottom: 2rem
-      border-bottom: 1px solid #e9edf0
+      border-bottom: 1px solid var(--black-10)
       margin-bottom: 1rem
     +screen('max', 700)
       display: none
@@ -1189,7 +1216,7 @@
     font-weight: 600
     gap: .4rem
     padding-bottom: 1rem
-    border-bottom: 1px solid #e9edf0
+    border-bottom: 1px solid var(--black-10)
     margin-bottom: 1rem
     +screen('min', 700)
       display: none

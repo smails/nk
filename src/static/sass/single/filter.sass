@@ -9,7 +9,7 @@
     .filter__inner
       padding: 5.5rem
       background: var(--white-100)
-      border-radius: 40px
+      border-radius: 2px
       box-shadow: 0 5px 20px 0 rgba(158, 163, 172, 0.06)
       margin: 0.7rem
       max-width: calc(100% - 1.4rem)
@@ -25,7 +25,7 @@
         padding: 4rem 2rem
       +screen('max', 700)
         padding: 4rem 1.5rem
-        border-radius: 20px 20px 0 0
+        border-radius: 2px 20px 0 0
     .filter__mini-control
       display: none
     .filter__action
@@ -166,8 +166,8 @@
         display: block
   &__hidden
     display: none
-    &:checked + .proposal__txt
-      background: var(--dark-green)
+    &:checked + .filter__txt
+      background: var(--brand-secondary)
       color: var(--white-100)
   &__txt
     border-radius: 2px
@@ -349,7 +349,7 @@
       gap:.8rem
   &__tag
     padding: 1.5rem 2rem
-    font-weight: 600
+    font-weight: 400
     background: #f0f1f3
     box-sizing: border-box
     border-radius: 82px
