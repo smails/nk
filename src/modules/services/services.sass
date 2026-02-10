@@ -44,7 +44,7 @@
     padding: 2.5rem
     box-sizing: border-box
     border-bottom: 1.50px solid var(--brand-primary-light)
-    border-radius: 22px
+    border-radius: 2px
     box-shadow: 0 -15px 17px 0 rgba(0, 0, 0, 0.02)
     background: var(--white-100)
     transition: .5s ease
@@ -88,8 +88,9 @@
     g
       transition: .5s ease
   &__caption
-    +fs(24px)
-    font-weight: 600
+    +fs(20px)
+    font-weight: 400
+    text-transform: uppercase
     line-height: 1.2
     +screen('max', 1500)
       +fs(18px)
@@ -112,7 +113,7 @@
       right: calc( 100% + 10px )
       transform: translateY(-50%)
       +fs(18px)
-      font-weight: 600
+      font-weight: 300
       color: var(--white-100)
       opacity: 0
       transition: .5s ease

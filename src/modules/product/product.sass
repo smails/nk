@@ -10,10 +10,11 @@
     display: inline-flex
     align-items: center
     gap: 1.2rem
-    font-weight: 600
+    font-weight: 200
     +screen('max', 1500)
       +fs(12px)
     svg
+      box-shadow: 0 5px 20px 0 rgba(0, 10, 31, 0.04)
       +screen('max', 1500)
         width: 20px
         height: 20px
@@ -24,6 +25,7 @@
   &__state
     position: relative
     padding-left: 1.5rem
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
       padding-left: 1rem
@@ -55,7 +57,8 @@
     justify-content: center
     align-items: center
     border-radius: 100%
-    background: #ccced4
+    background:  var(--white-100)
+    box-shadow: 0 5px 20px 0 rgba(0, 10, 31, 0.04)
     +screen('max', 1500)
       width: 45px
       height: 45px
@@ -115,7 +118,7 @@
     +screen('max', 700)
       width: 280px
   &__tabs
-    border: 1px solid var(--brand-tertiary-light)
+    border: 1px solid var(--brand-secondary)
     border-radius: 2px
     background: var(--white-100)
     box-sizing: border-box
@@ -125,7 +128,7 @@
       display: flex
   &__tab
     +fs(18px)
-    font-weight: 600
+    font-weight: 30000
     padding: 2rem 3.5rem
     border-radius: 2px
     transition: .5s ease
@@ -136,7 +139,7 @@
       +fs(10px)
       padding: .8rem 2.5vw
     &.active
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary)
       color: var(--white-100)
   &__sort
     width: 70px
@@ -197,9 +200,8 @@
     &:last-of-type
       margin-bottom: 0
   &__title
-    +fs(38px)
-    font-family: var(--font-family)
-    font-weight: 600
+    +fs(30px)
+    font-weight: 400
     +screen('max', 1500)
       +fs(28px)
     +screen('max', 700)
@@ -207,9 +209,10 @@
   &__price-metr
     margin-top: 2.5rem
     border-radius: 82px
-    background: #f0f1f3
+    background: var(--black-grey-light)
     +fs(18px)
     font-weight: 600
+    font-family: var(--second-family)
     color: var(--black-40)
     padding: 0.8rem 1rem .6rem
     display: inline-block
@@ -224,7 +227,8 @@
     display: flex
     justify-content: space-between
     margin-bottom: 0.6rem
-    +fs(20px)
+    +fs(22px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     &.hide
@@ -233,7 +237,7 @@
       display: flex
     span
       &:first-of-type
-        color: var(--black-40)
+        color: var(--black-60)
     &:last-of-type
       margin-bottom: 0
   &__more
@@ -241,21 +245,23 @@
     display: inline-flex
     align-items: center
     gap: 1rem
-    font-weight: 600
+    font-weight: 300
     cursor: pointer
+    +fs(18px)
     +screen('max', 1500)
       +fs(14px)
   &__caption
     +fs(20px)
-    color: var(--black-40)
+    color: var(--black-100)
     margin-bottom: 2rem
+    font-weight: 400
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(16px)
   &__hidden
     display: none
     &:checked + .product__txt
       color: var(--black-100)
-      font-weight: 600
       &:before
         border-color: var(--brand-primary-light)
         border-width: 6px
@@ -274,8 +280,9 @@
   &__txt
     position: relative
     padding-left: 35px
-    +fs(20px)
-    color: var(--black-40)
+    +fs(22px)
+    color: var(--black-60)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     &:before
@@ -283,7 +290,7 @@
       width: 22px
       height: 22px
       border-radius: 100%
-      border: 1px solid #bdc0ca
+      border: 1px solid var(--black-20)
       box-sizing: border-box
       position: absolute
       top: 0
@@ -294,7 +301,7 @@
         content: attr(data-sale-red)
         border-radius: 82px
         background: var(--color-red)
-        font-weight: 600
+        font-weight: 300
         color: var(--white-100)
         padding: 0.8rem 1rem .6rem
         +fs(13px)
@@ -306,7 +313,7 @@
         content: attr(data-sale)
         border-radius: 82px
         background: rgba(131, 140, 149, 0.1)
-        font-weight: 600
+        font-weight: 300
         color: var(--black-40)
         padding: 0.8rem 1rem .6rem
         +fs(13px)
@@ -317,16 +324,16 @@
     position: absolute
     right: 0
     bottom: 3px
-    color: var(--brand-primary-light)
-    font-weight: 600
+    color: var(--brand-tertiary-light)
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
   &__price
     margin-top: 2.5rem
     padding-top: 3rem
     border-top: 1px solid var(--black-10)
-    +fs(30px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     line-height: 1
     display: flex
     align-items: center

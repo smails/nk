@@ -22,7 +22,7 @@
       justify-content: space-between
       flex-flow: row-reverse
   &__tabs
-    border: 1px solid var(--brand-tertiary-light)
+    border: 1px solid var(--brand-secondary)
     border-radius: 2px
     background: var(--white-100)
     box-sizing: border-box
@@ -43,10 +43,10 @@
       +fs(10px)
       padding: 1.2rem 2.5vw
     &.active
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary)
       color: var(--white-100)
   &__btn
-    border-radius: 2px
+    border-radius: 48px
     padding: 1.5rem
     box-sizing: border-box
     width: 66px
@@ -57,7 +57,7 @@
     gap: 2rem
     +fs(18px)
     color: var(--white-100)
-    background: var(--brand-primary-light)
+    background: var(--brand-tertiary-light)
     font-weight: 600
     white-space: nowrap
     transition: .5s ease
@@ -85,7 +85,7 @@
     @media (hover: hover)
       &:hover
         width: 308px
-        background: var(--dark-green)
+        background: var(--brand-tertiary-hover)
         span
           display: block
 
@@ -299,6 +299,8 @@
     margin-bottom: 1rem
     +screen('max', 1500)
       +fs(12px)
+  &__title
+    text-transform: none
   &__type
     display: flex
     +fs(14px)
@@ -420,12 +422,12 @@
     align-items: center
     width: 60px
     height: 60px
-    border-radius: 100%
+    border-radius: 2px
     line-height: 1
     margin: 0 auto
-    background: var(--black-20)
+    background: var(--black-grey-light)
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
   &__favor
     svg
       +screen('max', 1500)
@@ -938,7 +940,7 @@
       padding: 1.5rem 0 1.5rem 1.5rem
   &__caption
     +fs(16px)
-    font-weight: 600
+    font-weight: 300
     color: var(--black-40)
     margin-bottom: 2rem
     +screen('max', 1500)
@@ -969,6 +971,7 @@
       color: rgba(131, 140, 149, 0.7)
   &__txt
     +fs(20px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 1023)
@@ -978,7 +981,7 @@
     +screen('max', 700)
       display: none
     span
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
       +screen('max', 1023)
         white-space: nowrap
         width: 40px
@@ -988,8 +991,8 @@
     +screen('max', 1023)
       grid-column: 2/5
   &__price
-    +fs(30px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     margin-bottom: 2rem
     line-height: 1
     display: flex
@@ -1018,8 +1021,9 @@
       transform: rotate(-8deg)
       transform-origin: right
   &__info
-    color: rgba(131, 140, 149, 0.8)
+    color: var(--black-60)
     font-weight: 600
+    font-family: var(--second-family)
     +screen('max', 1500)
       +fs(12px)
     +screen('max', 700)
@@ -1027,7 +1031,7 @@
     p
       margin-bottom: 1rem
     span
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
   &__tags
     display: flex
     flex-flow: column
@@ -1038,8 +1042,8 @@
       margin-top: 2rem
   &__tag
     padding: 0.8rem 1.2rem
-    font-weight: 600
-    background: #f0f1f3
+    font-weight: 300
+    background: var(--black-grey-light)
     box-sizing: border-box
     border-radius: 82px
     display: inline-block
@@ -1186,6 +1190,7 @@
         fill: var(--color-red)
         opacity: 0.5
   &__block
+    text-align: center
     +screen('max', 700)
       padding: 1rem
       border-radius: 100%
