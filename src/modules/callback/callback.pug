@@ -3,7 +3,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container
-          +e.P.title.display-2.display-2 Запишитесь на экскурсию
+          +e.P.title.display-2 Запишитесь на экскурсию
           +e.info
             +e.P.txt Наш экскурсовод познакомит вас со дворами, детскими и спортивными площадками, а также покажет отделку квартиры
             +e.A.btn.btn_green.js-open-modal(href="#callback") Записаться
@@ -21,7 +21,7 @@ mixin callback(type)
     +b.callback
       +e.inner.inner
         +e.container_three
-          +e.P.title.display-2_mod Узнайте первыми о спецпредложениях!
+          +e.P.title_mod.display-2 Узнайте первыми о спецпредложениях!
           +e.info
             +e.P.txt Подпишитесь на новости и получайте информацию о спецпредложениях первыми. Не упустите выгодные возможности!
             +e.A.btn.btn_green.js-open-modal(href="#callback") Подписаться 
@@ -43,11 +43,11 @@ mixin callback(type)
   if type == 6
     +b.callback
       +e.inner.inner
-        +e.container
+        +e.container_three
           +e.P.title.display-2 Для региональных клиентов
           +e.info
             +e.P.txt Узнайте о льготах и преимуществах  переезда для клиентов из других регионов
-            +e.A.btn.js-open-modal(href="#callback") Подробнее 
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Подробнее 
   if type == 7
     +b.callback
       +e.inner.inner
@@ -158,7 +158,8 @@ mixin callback(type)
               | повышенной комфортности
             +e.P.subtitle в 11-м квартале ЖК «Новая Кузнечиха»
             +e.A.more.btn_transparent(href='#') Узнать подробнее 
-          +e.IMG.pic(src='/img/callback-1.png' alt='')
+          +e.picture
+            +e.IMG.pic(src='/img/callback-1.png' alt='')
   if type == 16
     +b.callback-mini
       +e.inner.inner

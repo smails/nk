@@ -40,19 +40,24 @@
     margin-bottom: 4rem
     max-height: 464px
     object-fit: cover
-    +screen('max', 1023)
-      border-radius: 15px
-  &__txt
-    +fs(20px)
-    line-height: 1.4
-    color: var(--black-40)
-    +screen('max', 1500)
-      +fs(14px)
   &__caption
     +fs(24px)
-    line-height: 1.2
+    font-family: var(--second-family)
     font-weight: 600
+    line-height: 120%
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    color: var(--black-100)
     margin-bottom: 2rem
+    +screen('max', 1500)
+      +fs(14px)
+  &__txt
+    +fs(18px)
+    font-weight: 300
+    line-height: 110%
+    color: var(--black-80)
     text-wrap: balance
     +screen('max', 1500)
-      +fs(18px)
+      +fs(16px)
+    +screen('max', 1280)
+      +fs(14px)
