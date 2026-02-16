@@ -407,9 +407,9 @@
       padding: 1rem 1rem 1.5rem
     &_green
       border-radius: 2px
-      background: var(--brand-primary-light)
+      background: var(--brand-tertiary-light)
       color: var(--white-100)
-      border: 8px solid var(--black-grey-light)
+      border-left: 8px solid var(--black-grey-light)
       +screen('max', 700)
         border-width: 4px
         border-radius: 15px
@@ -420,10 +420,10 @@
         color: var(--white-100)
       .calc-benefit__line
         border-bottom-color: #74c76b
-      .calc-benefit__val_price:after, .calc-benefit__total:after
+      .calc-benefit__val_price:after, .calc-benefit__total:after, .calc-benefit__info p:last-of-type:after
         filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(0%) hue-rotate(74deg) brightness(106%) contrast(106%)
       .calc-benefit__state
-        background: #e96a6a
+        background: var(--color-red)
         color: var(--white-100)
   &__select
     position: relative
@@ -431,10 +431,10 @@
     display: flex
     align-items: center
     justify-content: space-between
-    +fs(30px)
+    +fs(28px)
     padding-bottom: 3rem
-    font-weight: 600
-    border-bottom: 1px solid #e1e4e8
+    font-weight: 300
+    border-bottom: 1px solid var(--black-10)
     cursor: pointer
     user-select: none
     +screen('max', 1500)
@@ -455,7 +455,7 @@
     left: 0
     box-shadow: 0 4px 35px 0 rgba(46, 47, 50, 0.1)
     background: var(--white-100)
-    border-radius: 15px
+    border-radius: 2px
     padding: 1.5rem
     box-sizing: border-box
     list-style: none
@@ -463,7 +463,7 @@
     z-index: 6
     li
       position: relative
-      font-weight: 600
+      font-weight: 300
       transition: .5s ease
       cursor: pointer
       color: var(--black-100)
@@ -482,7 +482,7 @@
       padding-block: 1rem
   &__val
     +fs(30px)
-    font-weight: 600
+    font-weight: 300
     margin-bottom: 0.8rem
     +screen('max', 1500)
       +fs(22px)
@@ -506,7 +506,8 @@
           width: 8px
           height: 10px
   &__sign
-    line-height: 1.1
+    line-height: 1.2
+    font-weight: 300
     color: var(--black-40)
     +screen('max', 1500)
       +fs(12px)
@@ -523,16 +524,16 @@
       display: block
       margin-top: 1rem
   &__total
-    +fs(38px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     +screen('max', 1500)
-      +fs(25px)
+      +fs(24px)
     +screen('max', 700)
       +fs(18px)
     &:after
       content: ''
-      width: 21px
-      height: 36px
+      width: 17px
+      height: 26px
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='36' fill='none'%3E%3Cpath fill='%2323262B' d='M3.10131 33V6H9.803c3.1132 0 5.4184.66807 6.9156 2.0042C18.2395 9.34034 19 11.2815 19 13.8277c0 1.7143-.3684 3.1891-1.1051 4.4244-.7367 1.2101-1.8299 2.1429-3.2795 2.7983-1.4259.6555-3.1964.9832-5.31146.9832H6.30957V33H3.10131ZM0 27.8571v-2.4579h12.1914v2.4579H0Zm0-5.8235v-2.8739h8.16323v2.8739H0Zm8.84053-2.8739c1.44967 0 2.67357-.1639 3.67167-.4916 1.0219-.3278 1.8061-.8698 2.3527-1.6261.5466-.7563.8199-1.7899.8199-3.1008 0-1.7143-.4991-2.9874-1.4972-3.8194-.9981-.83188-2.5547-1.24785-4.66978-1.24785H6.30957V19.1597h2.53096Z'/%3E%3C/svg%3E")
       background-repeat: no-repeat
       background-position: center
@@ -548,13 +549,13 @@
         height: 13px
   &__state
     +fs(18px)
-    font-weight: 600
-    color: var(--brand-primary-light)
+    font-weight: 300
+    color: var(--brand-tertiary-light)
     padding: 1rem 1.5rem
     box-sizing: border-box
     display: inline-block
     background: rgba(38, 187, 20, 0.09)
-    border-radius: 56px
+    border-radius: 2px
     +screen('max', 1500)
       +fs(12px)
     +screen('max', 700)
@@ -575,11 +576,27 @@
     text-align: right
     p
       &:first-of-type
-        +fs(12px)
-        opacity: 0.8
+        +fs(16px)
+        font-weight: 300
       &:last-of-type
         display: flex
         align-items: center
         gap: 1rem
-        +fs(14px)
+        +fs(23px)
         font-weight: 600
+        font-family: var(--second-family)
+        position: relative
+        &:after
+          content: ''
+          width: 16px
+          height: 23px
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='36' fill='none'%3E%3Cpath fill='%2323262B' d='M3.10131 33V6H9.803c3.1132 0 5.4184.66807 6.9156 2.0042C18.2395 9.34034 19 11.2815 19 13.8277c0 1.7143-.3684 3.1891-1.1051 4.4244-.7367 1.2101-1.8299 2.1429-3.2795 2.7983-1.4259.6555-3.1964.9832-5.31146.9832H6.30957V33H3.10131ZM0 27.8571v-2.4579h12.1914v2.4579H0Zm0-5.8235v-2.8739h8.16323v2.8739H0Zm8.84053-2.8739c1.44967 0 2.67357-.1639 3.67167-.4916 1.0219-.3278 1.8061-.8698 2.3527-1.6261.5466-.7563.8199-1.7899.8199-3.1008 0-1.7143-.4991-2.9874-1.4972-3.8194-.9981-.83188-2.5547-1.24785-4.66978-1.24785H6.30957V19.1597h2.53096Z'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          display: inline-block
+          position: relative
+          top: 1px
+          +screen('max', 700)
+            width: 10px
+            height: 13px

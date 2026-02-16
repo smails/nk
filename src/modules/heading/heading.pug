@@ -15,7 +15,7 @@ mixin heading(img, title, btn1, btn2, topsign, bottomsign, txt, sale, mod)
           if btn1 != '' || btn2 != ''
             +e.control
               if btn1 != ''
-                +e.A.btn.btn(href='#')=btn1
+                +e.A.btn.btn_blue(href='#')=btn1
               if btn2 != ''
                 +e.A.btn.btn_transparent(href='#')=btn2
     if sale != undefined

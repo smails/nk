@@ -3,7 +3,7 @@ include ../static/pug/head
 body
   main.with-top
     +header()
-    +heading('/img/banner-4.png', 'Квартиры со сроком сдачи весной 2023 года!', 'Смотреть планировки', 'Получить консультацию', '', '', 'Помещения для бизнеса на цокольном и первом этажах зданий нового комплекса', true)
+    +heading('/img/banner-4.jpg', 'Квартиры со сроком сдачи весной 2023 года!', 'Смотреть планировки', 'Получить консультацию', '', '', 'Помещения для бизнеса на цокольном и первом этажах зданий нового комплекса', true)
     +b.rooms
       +e.inner.inner
         +e.head
@@ -34,17 +34,17 @@ body
                 +e.info
                   p Ипотека 0,1%
                   span от 10 456 ₽/мес.
-                +e.A.more.btn_tr-blue Смотреть квартиры
+                +e.A.more.btn_tr-green Смотреть квартиры
                   span 1 230 
           -}
         +e.footer
           +e.callback
             +e.P.holder Получите все доступные планировки и цены
-            +e.A.call.btn_transparent.js-open-modal(href='#callback') Получить планировки и цены
+            +e.A.call.btn_green.js-open-modal(href='#callback') Показать варианты
     include ../modules/calc/benefit
     +payment('_gray', false)
     include ../modules/offer/sale
     +services('_gray')
-    +callback(1)
+    +callback(22)
     include ../modules/footer/footer
   include ../static/pug/scripts

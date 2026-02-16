@@ -61,7 +61,7 @@
     &:hover
       background: var(--brand-primary-hover)
       box-shadow: none
-      border-bottom-color: transparent
+      border-bottom-color: transparentd
       color: var(--white-100)
       .services__to
         box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09)
@@ -69,6 +69,11 @@
           opacity: 1
       .services__icon
         g
+          fill: var(--white-100)
+    &_gray
+      background: var(--black-grey-light)
+      .services__to
+        svg > path
           fill: var(--white-100)
   &__top
     display: flex

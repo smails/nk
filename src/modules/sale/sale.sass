@@ -141,15 +141,28 @@
       margin: 0 -2rem 3rem
       padding-inline: 2rem
   &__item
-    border-radius: 2px
-    background: var(--color-brown)
-    padding: 3.5rem 3rem
-    +fs(24px)
-    font-weight: 600
-    color: var(--white-100)
+    padding: 2.4rem 5rem
+    +fs(20px)
+    font-weight: 400
+    line-height: 1
+    text-transform: uppercase
+    color: var(--black-100)
+    text-wrap: balance
     display: flex
     align-items: center
-    text-wrap: balance
+    box-sizing: border-box
+    position: relative
+    filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.1))
+    &:after
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: var(--white-100)
+      z-index: -1
+      clip-path: polygon(100% 0%, 97% 100%, 0% 100%, 3% 0%)
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
@@ -176,16 +189,35 @@
     margin-bottom: 5rem
     +screen('max', 1500)
       margin-bottom: 3rem
+  &__picture
+    position: relative
   &__pic
-    width: 100%
     vertical-align: middle
-    +screen('max', 1023)
-      max-width: 400px
-      margin-top: 2rem
+    width: 100%
+  &__sign
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: var(--brand-primary-light)
+    color: var(--white-100)
+    padding: 2.4rem 2rem
+    box-sizing: border-box
+    font-weight: 400
+    +fs(30px)
+    line-height: 120%
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    transition: .3s linear
+    +screen('max', 1280)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+      padding: 1.5rem
   &__right
-    max-width: 1190px
+    max-width: 1220px
     width: 66%
-    padding-top: 34rem
+    padding-top: 35rem
     +screen('max', 1500)
       padding-top: 28rem
     +screen('max', 1023)
@@ -194,16 +226,20 @@
     +screen('max', 700)
       padding-top: 3rem
   &__txt
-    +fs(20px)
-    line-height: 1.5
+    +fs(18px)
+    font-weight: 300
+    line-height: 1.1
+    max-width: 1140px
     +screen('max', 1500)
       +fs(16px)
     p
       margin-bottom: 2rem
   &__caption
     +fs(30px)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     margin-bottom: 3.5rem
-    font-weight: 600
+    font-weight: 400
     +screen('max', 1500)
       +fs(22px)
       margin-bottom: 2.5rem
@@ -216,7 +252,7 @@
     +screen('max', 1023)
       width: 100%
   .timer
-    background: var(--brand-primary-light)
+    background: var(--color-red)
     position: absolute
     top: 9rem
     left: 34%
@@ -231,7 +267,7 @@
       width: 100%
     &__count
       background: var(--white-100)
-      color: var(--brand-primary-light)
+      color: var(--color-red)
 
 .sales-room
   margin: 7rem 0
@@ -244,7 +280,7 @@
     gap: 4rem
     position: relative
     padding-top: 6.5rem
-    border-top: 1px solid #d7dbe0
+    border-top: 1px solid var(--black-20)
     +screen('max', 1023)
       display: block
     +screen('max', 1023)
@@ -264,16 +300,20 @@
     +screen('max', 1023)
       margin-bottom: 2rem
   &__txt
-    +fs(20px)
-    line-height: 1.5
+    +fs(18px)
+    line-height: 1.1
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     p
       margin-bottom: 2rem
-      color: var(--black-40)
+      color: var(--black-80)
     b
       color: var(--black-100)
-      font-weight: 600
+      font-weight: 400
+      text-transform: uppercase
+      line-height: 1.3
+      +fs(18px)
   &__item
     border-radius: 2px
     padding: 1.5rem
@@ -306,8 +346,9 @@
   &__caption
     margin-bottom: 1.5rem
   &__subcaption
-    +fs(24px)
-    font-weight: 600
+    +fs(20px)
+    text-transform: uppercase
+    font-weight: 400
     line-height: 1.2
     margin-bottom: 3rem
     +screen('max', 1500)
@@ -315,7 +356,9 @@
     +screen('max', 700)
       margin-bottom: 2.5rem
   &__list
-    +fs(20px)
+    +fs(18px)
+    font-weight: 300
+    line-height: 1.1
     list-style: inside
     +screen('max', 1500)
       +fs(16px)
@@ -371,6 +414,7 @@
         right: 2rem
   &__sign
     color: var(--black-40)
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
 
@@ -378,6 +422,10 @@
   margin: 9rem 0
   +screen('max', 1500)
     margin: 7rem 0
+  &__col
+    &:nth-of-type(2n)
+      .sale-other__sign
+        background: var(--brand-primary-dark)
   &__title
     margin-bottom: 3rem
     +screen('max', 1500)
@@ -399,28 +447,25 @@
     box-sizing: border-box
     border-radius: 2px
     color: var(--white-100)
-    background: var(--color-brown)
-    margin: 2rem 0
     display: block
     +screen('max', 1500)
       padding: 2.5rem
-    +screen('max', 1023)
-      margin: 1rem 0
-      padding: 1.5rem 1.5rem 2rem
     &_color-1
-      background: #aa825e
-    &_color-2
-      background: #c3a454
-    &_color-3
       background: var(--brand-primary-light)
+    &_color-2
+      background: var(--brand-tertiary-light)
+    &_color-3
+      background: var(--brand-primary-dark)
+    &_color-4
+      background: var(--brand-secondary)
   &__time
     display: inline-block
     padding: 0.7rem 1rem
     box-sizing: border-box
-    background: rgba(255, 255, 255, 0.1)
-    border-radius: 32px
+    background: var(--white-10)
+    border-radius: 2px
     +fs(18px)
-    font-weight: 700
+    font-weight: 300
     line-height: 1
     margin-bottom: 2.7rem
     +screen('max', 1500)
@@ -430,28 +475,53 @@
     span
       position: relative
       +fs(14.5px)
-      font-weight: 600
+      font-weight: 300
       padding-left: 1rem
       &:before
         content: '•'
         padding-right: 1rem
   &__caption
-    +fs(28px)
-    font-weight: 700
+    +fs(24px)
+    font-weight: 300
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     margin-bottom: 2rem
     +screen('max', 1500)
-      +fs(24px)
+      +fs(18px)
   &__txt
-    +fs(16px)
-    font-weight: 600
-    line-height: 1.3
-    opacity: 0.9
+    +fs(18px)
+    line-height: 110%
+    color: var(--white-80)
     text-wrap: balance
     +screen('max', 1500)
       +fs(14px)
   &__control
     text-align: center
     margin-top: 4.5rem
+  &__picture
+    position: relative
+    margin: 2rem 0
   &__pic
-    width: 100%
     vertical-align: middle
+    width: 100%
+  &__sign
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: var(--brand-primary-light)
+    color: var(--white-100)
+    padding: 2.4rem 2rem
+    box-sizing: border-box
+    font-weight: 400
+    +fs(30px)
+    line-height: 120%
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    transition: .3s linear
+    +screen('max', 1280)
+      +fs(22px)
+    +screen('max', 700)
+      +fs(18px)
+      padding: 1.5rem

@@ -33,10 +33,11 @@
     +screen('max', 1023)
       width: 100%
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(22px)
+    line-height: 1.2
+    color: var(--black-80)
     margin-bottom: 5rem
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 700)
@@ -55,7 +56,7 @@
     align-items: center
     gap: 1rem
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)
     &::before
@@ -68,7 +69,7 @@
     display: flex
     align-items: center
     gap: .5rem
-    font-weight: 600
+    font-weight: 300
     color: #9c9c9c
     +fs(18px)
     +screen('max', 1500)
@@ -87,10 +88,22 @@
       padding-inline: 2rem
       gap: .8rem
   &__item
-    border-radius: 100%
-    border: 1px solid var(--brand-primary-light)
     padding-block: 8rem
     text-align: center
+    clip-path: polygon(100% 0%, 90% 100%, 0% 100%, 10% 0%)
+    background: var(--brand-primary-light)
+    position: relative
+    &:before
+      content: ''
+      width: calc( 100% - 2px )
+      height: calc( 100% - 2px )
+      left: 1px
+      top: 1px
+      background: var(--white-100)
+      position: absolute
+      z-index: -1
+      display: block
+      clip-path: polygon(100% 0%, 90% 100%, 0% 100%, 10% 0%)
     +screen('max', 1500)
       padding-block: 4.5rem
     +screen('max', 700)
@@ -102,6 +115,8 @@
     margin-bottom: 3rem
     padding-bottom: 2rem
     position: relative
+    font-family: var(--second-family)
+    letter-spacing: -0.02em
     +screen('max', 1500)
       +fs(30px)
       margin-bottom: 2rem
@@ -122,11 +137,12 @@
     span
       +fs(6.931px)
   &__sign
-    +fs(24px)
+    +fs(22px)
     line-height: 1.2
-    color: var(--black-40)
+    color: var(--black-60)
     max-width: 220px
     display: inline-block
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
       max-width: 160px
@@ -137,3 +153,7 @@
     b
       color: var(--black-100)
       display: block
+      text-transform: uppercase
+      +fs(16px)
+      font-weight: 400
+      margin-bottom: 1rem

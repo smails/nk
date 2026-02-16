@@ -142,6 +142,9 @@
       +screen('max', 1023)
         display: none
   &__control
+    display: flex
+    align-items: center
+    gap: 2.5rem
     +screen('max', 700)
       display: none
   &__item
@@ -180,18 +183,26 @@
   &__sale
     color: var(--white-100)
     background: var(--color-red)
-    +fs(20px)
+    +fs(18px)
     padding: 0.8rem 1.5rem 1rem
     border-radius: 82px
+    font-weight: 300
     display: inline-block
     margin-bottom: 5rem
+    position: relative
+    top: -1rem
+    left: -1rem
     +screen('max', 700)
       +fs(12px)
       margin-bottom: 2rem
   &__caption
-    +fs(28px)
-    font-weight: 600
-    margin-bottom: 4rem
+    +fs(20px)
+    font-weight: 400
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    margin-bottom: 3rem
     +screen('max', 700)
       +fs(20px)
       padding-right: 120px
+  &__call
+    width: 100%

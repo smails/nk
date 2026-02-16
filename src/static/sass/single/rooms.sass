@@ -12,7 +12,7 @@
     justify-content: space-between
     gap: 4rem
     padding-bottom: 6rem
-    border-bottom: 1px solid #d7dbe0
+    border-bottom: 1px solid var(--black-20)
     +screen('max', 1500)
       padding-bottom: 5rem
     +screen('max', 1023)
@@ -31,8 +31,8 @@
     +screen('max', 1023)
       margin-bottom: 1.5rem
   &__subtitle
-    +fs(20px)
-    font-weight: 600
+    +fs(18px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 1023)
@@ -43,9 +43,10 @@
     +screen('max', 1023)
       width: 100%
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(22px)
+    font-weight: 300
+    line-height: 120%
+    color: var(--black-80)
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 700)
@@ -78,7 +79,8 @@
     margin-bottom: 2rem
   &__caption
     +fs(30px)
-    font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(22px)
     +screen('max', 700)
@@ -86,9 +88,10 @@
   &__sign
     max-width: 195px
     +fs(18px)
-    line-height: 1.5
-    color: var(--black-40)
+    line-height: 1.1
+    color: var(--black-80)
     text-align: right
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 700)
@@ -110,8 +113,8 @@
     justify-content: space-between
     align-items: center
   &__info
-    +fs(20px)
-    font-weight: 600
+    +fs(18px)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     p
@@ -119,7 +122,7 @@
       margin-bottom: 0.5rem
     span
       display: block
-      color: var(--brand-primary-light)
+      color: var(--brand-tertiary-light)
   &__more
     display: inline-flex
     align-items: center
@@ -136,36 +139,38 @@
     span
       display: inline-block
       border-radius: 60px
-      background: var(--brand-primary-light)
+      background: var(--brand-tertiary-light)
       +fs(15px)
+      font-family: var(--second-family)
       color: var(--white-100)
       padding: .5rem.6rem .3rem
       font-weight: 700
+      letter-spacing: -0.02em
       box-sizing: border-box
       line-height: 1
       +screen('max', 1500)
         +fs(11px)
   &__callback
-    border-radius: 2px
     background-color: var(--brand-primary-light)
-    background-image: url(../img/bg-callback-3.png)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1830' height='152' fill='none' viewBox='0 0 1830 152'%3E%3Cmask id='a' width='1830' height='152' x='0' y='0' maskUnits='userSpaceOnUse' style='mask-type:alpha'%3E%3Cpath fill='%230082ca' d='M30 0h1800l-30 152H0z'/%3E%3C/mask%3E%3Cg fill-rule='evenodd' clip-rule='evenodd' mask='url(%23a)'%3E%3Cpath fill='%2300a6e6' d='M1644.46 283.915 1345 74.731l145.3-101.493 299.5 209.185z'/%3E%3Cpath fill='%23006098' d='m1490.3-183.125 299.5 209.184v156.363L1490.3-26.762z'/%3E%3C/g%3E%3C/svg%3E")
+    background-position: right
     background-repeat: no-repeat
-    background-position: bottom
-    background-size: contain
-    padding: 2.4rem
+    clip-path: polygon(100% 0%, 98% 100%, 0% 100%, 2% 0%)
+    padding: 4rem 6rem
     box-sizing: border-box
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
     gap: 4rem
     +screen('max', 1023)
-      padding: 2rem
       gap: 2rem
     +screen('max', 700)
+      padding: 3rem 4rem
       flex-flow: column
   &__holder
     +fs(30px)
-    font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
     color: var(--white-100)
     +screen('max', 1500)
       +fs(22px)

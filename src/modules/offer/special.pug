@@ -3,15 +3,14 @@
     +e.head
       +e.H2.title Специальные предложения
       +e.control
-        +e.A.btn.btn(href="/sale.html") Смотреть все предложения
+        +e.A.btn.btn_blue(href="/sale.html") Смотреть все предложения
         .slider-arrows
           +b.slider-arrow_prev
             svg(xmlns='http://www.w3.org/2000/svg' width='11' height='20' fill='none' viewBox='0 0 11 20')
               path(stroke='#13151a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m10 19-9-9 9-9')
-
           +b.slider-arrow_next
             svg(xmlns='http://www.w3.org/2000/svg' width='11' height='20' fill='none' viewBox='0 0 11 20')
-               path(stroke='#13151a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 19 9-9-9-9')
+              path(stroke='#13151a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 19 9-9-9-9')
     +e.wrapper
       .swiper
         .swiper-wrapper
@@ -30,5 +29,5 @@
                     .slider-dots
                 +e.bottom
                   +e.P.caption 2-комнатная 
-                  +e.A.btn.btn_tr-blue(href="#") Получить предложение
+                  +e.A.call.btn_tr-green(href="#") Получить предложение
           - }

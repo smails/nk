@@ -51,7 +51,7 @@ mixin finishing(title='Отделка', control, btn='_white', sign, video, slid
               if video != undefined
                 +e.A.video.btn_tr-blue(href="#")
                   svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
-                    circle(cx='15' cy='15' r='15' fill='#51A747')
+                    circle(cx='15' cy='15' r='15' fill='var(--brand-primary-light)')
                     path(fill='#fff' d='M20.2581 14.7523c.6228.3922.6228 1.3001 0 1.6923l-7.0236 4.4237c-.6659.4194-1.5329-.0591-1.5329-.8461v-8.8475c0-.787.867-1.26556 1.5329-.8461l7.0236 4.4237Z')
                   span Смотреть видео об отделке
               else
@@ -98,13 +98,13 @@ mixin finishing(title='Отделка', control, btn='_white', sign, video, slid
               if video != undefined
                 +e.A.video.btn_tr-blue(href="#")
                   svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='none')
-                    circle(cx='15' cy='15' r='15' fill='#51A747')
+                    circle(cx='15' cy='15' r='15' fill='var(--brand-primary-light)')
                     path(fill='#fff' d='M20.2581 14.7523c.6228.3922.6228 1.3001 0 1.6923l-7.0236 4.4237c-.6659.4194-1.5329-.0591-1.5329-.8461v-8.8475c0-.787.867-1.26556 1.5329-.8461l7.0236 4.4237Z')
                   span Смотреть видео об отделке
               else
                 +e.A.more.btn_tr-blue(href="#") Подробнее об отделке
       if control != undefined
         +e.control
-          +e.A.call.btn.js-open-modal(href="#callback") Записаться в демоквартиру
+          +e.A.call.btn_blue.js-open-modal(href="#callback") Записаться в демоквартиру
       if sign != undefined
         +e.sign * Представленные материалы и оборудование демонстрируются в целях художественной визуализации, являются примером. Марка или производитель оборудования и материалов могут меняться без ухудшения свойств без какого-либо уведомления. Цветовые решения фасадов и иные проектные решения могут быть изменены

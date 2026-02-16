@@ -37,6 +37,9 @@
   &__caption
     +fs(24px)
     font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    font-family: var(--second-family)
     +screen('max', 1500)
       +fs(18px)
     +screen('max', 700)
@@ -54,10 +57,10 @@
         fill: var(--black-100)
   &__body
     margin-top: 2.6rem
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
-    opacity: 0.8
+    +fs(18px)
+    line-height: 1.1
+    font-weight: 300
+    color: var(--black-60)
     display: none
     +screen('max', 1500)
       +fs(14px)

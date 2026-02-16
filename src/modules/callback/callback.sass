@@ -212,7 +212,7 @@
     justify-content: space-between
     align-items: center
     border-radius: 2px
-    background: var(--brand-tertiary-light)
+    background: var(--brand-primary-dark)
     clip-path: polygon(100% 0%, 97% 100%, 0% 100%, 3% 0%)
     padding: 4rem
     box-sizing: border-box
@@ -226,11 +226,7 @@
       padding: 1rem
       clip-path: none
     &_green
-      background-color: var(--brand-primary-light)
-      background-image: url(../img/bg-callback-2.png)
-      background-repeat: no-repeat
-      background-position: right bottom
-      background-size: contain
+      background: var(--brand-tertiary-light)
   &__content
     position: relative
     padding: 5rem 10rem
@@ -528,13 +524,9 @@
     display: flex
     justify-content: space-between
     align-items: center
-    border-radius: 2px
-    background-color: var(--color-brown)
-    background-image: url(../img/bg-callback-4.png)
-    background-repeat: no-repeat
-    background-position: right bottom
-    background-size: contain
-    padding: 3.5rem 4rem
+    clip-path: polygon(100% 0%, 98% 100%, 0% 100%, 2% 0%)
+    padding: 3rem 5rem
+    background: var(--brand-tertiary-light)
     box-sizing: border-box
     gap: 10rem
     color: var(--white-100)
@@ -547,8 +539,8 @@
       border-radius: 15px
   &__title
     +fs(30px)
-    line-height: 1
-    font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(22px)
     +screen('max', 700)

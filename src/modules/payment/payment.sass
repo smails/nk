@@ -59,10 +59,8 @@
     &_gray
       border-bottom: 0
       background: var(--black-grey-light)
-      .payment__btn
-        background: var(--white-100)
       .payment__to
-        circle
+        svg > path
           fill: var(--white-100)
   &__top
     display: flex
@@ -78,11 +76,14 @@
     g
       transition: .5s ease
   &__caption
-    +fs(30px)
+    +fs(24px)
     font-weight: 400
-    text-transform: uppercase
     line-height: 1.2
     margin-bottom: 1.5rem
+    text-transform: uppercase
+    letter-spacing: -0.02em
+    font-family: var(--second-family)
+    font-weight: 600
     +screen('max', 1500)
       +fs(22px)
   &__txt

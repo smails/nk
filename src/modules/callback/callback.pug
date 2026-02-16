@@ -51,11 +51,11 @@ mixin callback(type)
   if type == 7
     +b.callback
       +e.inner.inner
-        +e.container
+        +e.container_three
           +e.P.title.display-2_two Запишитесь на экскурсию по ЖК «Новая Кузнечиха» 
           +e.info
             +e.P.txt Мы подберем индивидуальную ипотечную программу, которая учтет все ваши особенности. С минимальными ставками, нулевым первоначальным взносом и повышенными шансами на одобрение
-            +e.A.btn.js-open-modal(href="#callback") Записаться
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Записаться
   if type == 8
     +b.callback-banner
       +e.inner.inner
@@ -66,7 +66,8 @@ mixin callback(type)
               br
               | для коммерческих помещений
             +e.A.more.btn_transparent(href='#') Узнать подробнее 
-          +e.IMG.pic(src='/img/callback-1.png' alt='')
+          +e.picture
+            +e.IMG.pic(src='/img/callback-1.png' alt='')
   if type == 9
     +b.subscribe
       +e.inner.inner
@@ -151,7 +152,7 @@ mixin callback(type)
   if type == 15
     +b.callback-banner
       +e.inner.inner
-        +e.container
+        +e.container_green
           +e.content
             +e.P.title.display-2 Дома 
               br
@@ -225,3 +226,13 @@ mixin callback(type)
           +e.info
             +e.P.txt Ответьте на несколько вопросов, мы подберем подходящие квартиры и пришлем вам
             +e.A.btn.js-open-modal(href="#callback") Начать подбор онлайн
+  if type == 22
+    +b.callback
+      +e.inner.inner
+        +e.container_two
+          +e.P.title.display-2 Записаться на экскурсию
+          +e.info
+            +e.P.txt Наши специалисты проведут вам экскурсию и ознакомят с квартирой, отделкой,
+              br
+              | планировками 
+            +e.A.btn.btn_green.js-open-modal(href="#callback") Записаться
