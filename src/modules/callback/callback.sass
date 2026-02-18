@@ -559,32 +559,63 @@
       width: 100%
 
 .callback-form
-  padding-block: 9.5rem
+  padding-block: 8.5rem
   border-radius: 2px
   background-color: var(--brand-primary-light)
-  background-image: url(../img/bg-callback-5.png)
-  background-repeat: no-repeat
-  background-size: contain
-  background-position: right 0
-  margin: 8.5rem .5rem
+  margin: 8.5rem 5px .5rem
+  position: relative
+  z-index: 1
   +screen('max', 1500)
-    background-size: cover
-    background-position: right 0
     margin: 5rem .5rem
     padding-block: 6rem
   +screen('max', 1023)
     border-radius: 2px
   +screen('max', 700)
-    background-image: none
     padding-block: 3.5rem
+  &:before
+    content: ''
+    width: 338px
+    height: 297px
+    position: absolute
+    top: 0
+    left: 0
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='322' height='286' fill='none' viewBox='0 0 322 286'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m231.027 126.854 202.468 21.773-90.109 182.594-202.48-21.731z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M343.378 331.228 58.991 300.695.004 193.404l284.386 30.533z' clip-rule='evenodd'/%3E%3C/svg%3E")
+    background-size: contain
+    background-repeat: no-repeat
+    transform: rotate(180deg)
+    background-position: right
+    z-index: -1
+    +screen('max', 1023)
+      width: 138px
+      height: 159px
+    +screen('max', 700)
+      content: none
+  &:after
+    content: ''
+    width: 338px
+    height: 297px
+    position: absolute
+    bottom: 0
+    right: 0
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='322' height='286' fill='none' viewBox='0 0 322 286'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m231.027 126.854 202.468 21.773-90.109 182.594-202.48-21.731z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M343.378 331.228 58.991 300.695.004 193.404l284.386 30.533z' clip-rule='evenodd'/%3E%3C/svg%3E")
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: right
+    z-index: -1
+    +screen('max', 1023)
+      width: 138px
+      height: 159px
+    +screen('max', 700)
+      content: none
   &__container
     max-width: 1070px
     margin: 0 auto
     text-align: center
     color: var(--white-100)
   &__title
-    +fs(60px)
-    font-family: var(--second-family)
+    +fs(52px)
+    font-weight: 300
+    text-transform: uppercase
     margin-bottom: 3rem
     +screen('max', 1500)
       +fs(30px)
@@ -593,9 +624,10 @@
       +fs(20px)
       margin-bottom: 1rem
   &__txt
-    +fs(24px)
+    +fs(22px)
     line-height: 1.5
-    opacity: 0.8
+    color: var(--white-80)
+    font-weight: 300
     margin-bottom: 5rem
     +screen('max', 1500)
       +fs(16px)
@@ -623,17 +655,20 @@
   &__name
     margin-bottom: 1.5rem
     text-align: left
+    +fs(12px)
+    letter-spacing: -0.02em
+    color: var(--white-60)
     +screen('max', 1500)
       +fs(12px)
       margin-bottom: 1rem
   &__field
-    border: 1px solid rgba(255, 255, 255, 0.5)
+    border: 1px solid var(--white-40)
+    border-radius: 2px
     width: 100%
     padding: 2.3rem 2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
-    border-radius: 64px
+    font-weight: 300
     background: none
     color: var(--white-100)
     transition: .5s ease
@@ -653,9 +688,9 @@
       margin-top: 1rem
   &__req
     +fs(18px)
-    font-weight: 600
-    margin-top: 5rem
-    color: rgba(255, 255, 255, 0.5)
+    font-weight: 300
+    margin-top: 2.5rem
+    color: var(--white-60)
     +screen('max', 1500)
       +fs(12px)
       margin-top: 3rem

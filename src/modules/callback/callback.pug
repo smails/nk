@@ -82,7 +82,9 @@ mixin callback(type)
       +e.inner.inner
         +e.container
           +e.P.title.display-2 Остались вопросы?
-          +e.txt Оставьте свои контактные данные в форме ниже, и наш специалист свяжется с вами для ответа на все ваши вопросы
+          +e.txt Оставьте свои контактные данные в форме ниже, и наш специалист свяжется с вами для 
+            br
+            | ответа на все ваши вопросы
           +e.FORM.action
             +e.group
               +e.name Имя
@@ -90,13 +92,15 @@ mixin callback(type)
             +e.group
               +e.name Телефон
               +e.INPUT.field(placeholder="+7")
-            +e.BUTTON.submit.btn_white Отправить заявку
+            +e.BUTTON.submit.btn Отправить заявку
           +e.req Отправляя свои данные вы соглашаетесь с 
-            a(href="#") пользовательским соглашением и политикой конфиденциальности
+            a(href="#") пользовательским соглашением 
+            | и 
+            a(href="#")  политикой конфиденциальности
   if type == 11
     +b.callback
       +e.inner.inner
-        +e.container
+        +e.container_three
           +e.P.title.display-2 Стоимость: 2 490 рублей
           +e.content
             +e.P.txt Что в ~5 раз дешевле услуг любого агентства. Без звонков из банков, решения вы получаете онлайн

@@ -125,8 +125,6 @@
     width: 100%
     vertical-align: middle
     border-radius: 2px
-    +screen('max', 1023)
-      border-radius: 15px
   &__caption
     +fs(24px)
     letter-spacing: -0.02em
@@ -143,9 +141,8 @@
       +fs(16px)
   &__sign
     +fs(18px)
-    opacity: 0.9
     color: var(--black-80)
-    line-height: 1.4
+    line-height: 1.1
     font-weight: 300
     +screen('max', 1500)
       +fs(14px)
@@ -159,15 +156,14 @@
   &__bottom
     padding-top: 3.5rem
     margin-top: 5rem
-    border-top: 1px solid #bdc0ca
+    border-top: 1px solid var(--black-20)
     +screen('max', 700)
       margin-top: 4rem
       padding-top: 2rem
   &__signature
     max-width: 1195px
-    color: var(--black-40)
-    opacity: 0.9
-    line-height: 1.5
+    color: var(--black-80)
+    line-height: 1.2
   &__wrapper
     max-width: 434px
     +screen('max', 1500)
