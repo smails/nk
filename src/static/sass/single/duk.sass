@@ -5,7 +5,7 @@
     justify-content: space-between
     gap: 6rem
     padding-top: 9rem
-    border-top: 1px solid #d7dbe0
+    border-top: 1px solid var(--black-20)
     +screen('max', 1500)
       padding-top: 6rem
     +screen('max', 1023)
@@ -40,6 +40,7 @@
       gap: 2rem
   &__addr
     +fs(18px)
+    font-weight: 300
     +screen('max', 700)
       +fs(14px)
   &__pic
@@ -54,7 +55,7 @@
       +fs(22px)
   &__site
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     letter-spacing: -0.02em
     text-decoration: underline
     text-decoration-skip-ink: none

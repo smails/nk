@@ -3,7 +3,7 @@ include ../static/pug/head
 body
   main.with-top
     +header()
-    +heading('/img/banner-9.png', 'клуб лояльности', 'Зарегистрироваться', '', '', '', '')
+    +heading('/img/banner-10.jpg', 'клуб лояльности', 'Зарегистрироваться', '', '', '', '')
     +b.loyalty
       +e.inner.inner
         +e.H2.title Зачем мне нужен клуб лояльности?
@@ -11,12 +11,16 @@ body
           +e.item
             +e.IMG.icon(src='/icon/need-3.svg' alt='')
             +e.content
-              +e.H3.caption Эксклюзивные ипотечные программы от 0,1% 
+              +e.H3.caption Эксклюзивные ипотечные 
+                br
+                | программы от 0,1% 
               +e.P.txt Не нужно ничего оформлять или ждать промокод от менеджера
           +e.item
             +e.IMG.icon(src='/icon/need-4.svg' alt='')
             +e.content
-              +e.H3.caption Доступ к закрытому списку 52 квартир со скидками 
+              +e.H3.caption Доступ к закрытому списку 52 квартир 
+                br
+                | со скидками 
               +e.P.txt Не нужно ничего оформлять или ждать промокод от 
                 br
                 | менеджера
@@ -27,8 +31,8 @@ body
           +e.box
             +e.info
               +e.P.holder.display-2 Доступ к закрытому списку квартир с выгодой до 570 000р
-              +e.A.btn.btn_white(href='#') Получить доступ
-            +e.IMG.pic(src='/img/loyalty-1.png' alt='')
+              +e.A.btn.btn(href='#') Получить доступ
+            +e.IMG.pic(src='/img/loyalty-1.jpg' alt='')
           +e.item
             +e.IMG.icon(src='/icon/need-4.svg' alt='')
             +e.content
@@ -39,20 +43,20 @@ body
         +e.list
           +e.item
             +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
-            +e.H3.caption Эксклюзивные ипотечные программы от 0,1% 
+            +e.P.caption Эксклюзивные ипотечные программы от 0,1% 
           +e.item
             +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
-            +e.H3.caption Доступ к закрытому списку 52 квартир со скидками 
+            +e.P.caption Доступ к закрытому списку 52 квартир со скидками 
           +e.item
             +e.IMG.icon(src='/icon/loyalty-1.svg' alt='')
-            +e.H3.caption Не нужно ничего оформлять или ждать промокод 
+            +e.P.caption Не нужно ничего оформлять или ждать промокод 
     +b.login-container
       +e.inner.inner
         +b.login
           +e.tabs
             +e.BUTTON.tab.active Регистрация
             +e.BUTTON.tab Авторизация
-          +e.wrappper
+          +e.wrapper
             +e.FORM.action
               +e.P.title.display-2 Зарегистрируйтесь в личном кабинете
               +e.fields
@@ -71,7 +75,7 @@ body
                 +e.group
                   +e.name Электронная почта
                   +e.INPUT.field(placeholder="example@mail.ru")
-                +e.BUTTON.submit.btn Зарегистрироваться
+                +e.BUTTON.submit.btn_blue Зарегистрироваться
               +e.req Отправляя свои данные вы соглашаетесь с 
                 a(href="#") пользовательским соглашением и политикой конфиденциальности
               +e.info Раздел «Личный кабинет» — персональный инструмент участника закрытого «Клуба Столицы Нижний», который облегчит вам покупку квартиры и последующее сопровождение сделки. В нем можно ознакомиться с акциями от дезелопера и подать заявку на ипотеку через веб-сервис «Ипотечный брокер». Совсем скоро в «Личном кабинете» появятся новые функции, так что регистрируйтесь чтобы узнать о них первыми
@@ -84,7 +88,7 @@ body
                 +e.group
                   +e.name Код из SMS
                   +e.INPUT.field(placeholder="Код из SMS")
-                +e.BUTTON.send.btn Войти
+                +e.BUTTON.send.btn_blue Войти
                 +e.link(data-type="reset") Восстановить доступ
             +e.FORM.action
               +e.P.title.display-2 Восстановление доступа
@@ -92,7 +96,7 @@ body
                 +e.group
                   +e.name Номер телефона
                   +e.INPUT.field(placeholder="+7")
-                +e.BUTTON.send.btn Восстановить
+                +e.BUTTON.send.btn_blue Восстановить
                 +e.link(data-type="back") < Вернуться к авторизации
     include ../modules/footer/footer
   include ../static/pug/scripts

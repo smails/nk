@@ -100,13 +100,15 @@ mixin callback(type)
   if type == 11
     +b.callback
       +e.inner.inner
-        +e.container_three
-          +e.P.title.display-2 Стоимость: 2 490 рублей
+        +e.container_two
+          +e.P.caption Стоимость: 2 490 рублей
           +e.content
-            +e.P.txt Что в ~5 раз дешевле услуг любого агентства. Без звонков из банков, решения вы получаете онлайн
+            +e.P.txt Что в ~5 раз дешевле услуг любого агентства.
+              br
+              | Без звонков из банков, решения вы получаете онлайн
             +e.buttons
-              +e.A.btn.js-open-modal(href="#callback") Отправить анкету в 20 банков
-              +e.A.more.btn_transparent(href='#')  Получить консультацию
+              +e.A.btn_mini.js-open-modal(href="#callback") Отправить анкету в 20 банков
+              +e.A.more_mini.btn_transparent(href='#')  Получить консультацию
   if type == 12
     +b.callback-practicum
       +e.container

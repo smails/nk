@@ -34,8 +34,9 @@
     +screen('max', 1023)
       width: 100%
   &__text
-    +fs(20px)
-    line-height: 1.5
+    +fs(22px)
+    line-height: 1.1
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 700)
@@ -44,7 +45,7 @@
       margin-bottom: 1rem
   &__call
     margin-top: 3.5rem
-    width: 366px
+    width: 346px
     +screen('max', 1023)
       width: calc(100% - 6rem)
       position: absolute
@@ -93,9 +94,11 @@
       width: 35px
   &__caption
     +fs(30px)
-    font-weight: 600
+    font-weight: 400
     line-height: 1.2
     margin-bottom: 2rem
+    text-transform: uppercase
+    letter-spacing: -0.02em
     color: var(--black-100)
     +screen('max', 1500)
       +fs(20px)
@@ -103,9 +106,10 @@
     +screen('max', 700)
       +fs(18px)
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(22px)
+    line-height: 120%
+    color: var(--black-60)
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 700)

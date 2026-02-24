@@ -32,17 +32,15 @@
     border-radius: 2px
     box-shadow: 0 11px 33px 0 rgba(158, 163, 172, 0.12)
     position: relative
-    +screen('max', 1023)
-      border-radius: 15px
     +screen('max', 700)
       padding: 1.5rem 1.5rem 2.5rem
     &:before
       counter-increment: list
       content: "0" counter(list)
-      font-weight: 600
+      font-weight: 200
       +fs(60px)
-      color: var(--black-10)
-      opacity: 0.7
+      letter-spacing: -0.02em
+      color: var(--black-20)
       position: absolute
       top: 1rem
       right: 2rem
@@ -57,12 +55,14 @@
       margin-bottom: 1rem
   &__caption
     margin-bottom: 2rem
+    font-weight: 300
     +screen('max', 700)
       margin-bottom: 1rem
   &__text
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(18px)
+    font-weight: 300
+    line-height: 1.1
+    color: var(--black-60)
     +screen('max', 1500)
       +fs(14px)
   &__more
@@ -88,7 +88,6 @@
       grid-column: auto
       width: 100%
       padding: 2rem 1.5rem
-      border-radius: 15px
       position: relative
     &:before
       content: ''
@@ -108,9 +107,10 @@
         top: 1.5rem
         left: 2rem
   &__holder
-    +fs(50px)
-    font-family: var(--second-family)
+    +fs(42px)
+    font-weight: 300
     margin-bottom: 1.5rem
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(30px)
       margin-bottom: 0.8rem
@@ -121,8 +121,9 @@
       margin-bottom: 2rem
       padding-left: 5rem
   &__txt
-    +fs(20px)
-    line-height: 1.5
+    +fs(22px)
+    line-height: 1.1
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 700)

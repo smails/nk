@@ -128,12 +128,16 @@
         margin-top: 0
       &:hover
         background: var(--brand-tertiary-hover)
+    &_mini
+      font-size: .875em !important
   &__more
     backdrop-filter: blur(6px)
     background: var(--white-5)
     +screen('max', 700)
       padding: 1.6rem
       +fs(12px)
+    &_mini
+      font-size: .875em !important
   &__control
     display: flex
     gap: 1.5rem
@@ -200,6 +204,11 @@
       border-radius: 2px
     &::placeholder
       color: var(--white-100)
+  &__caption
+    +fs(52px)
+    font-weight: 300
+    text-transform: uppercase
+    color: var(--white-100)
 
 .callback-banner
   margin: 9rem 0
