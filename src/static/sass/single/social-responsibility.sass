@@ -28,9 +28,10 @@
     &:first-of-type
       display: block
   &__text
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(16px)
+    line-height: 1.2
+    font-weight: 300
+    color: var(--black-80)
     margin-bottom: 5rem
     max-width: 1235px
     +screen('max', 1500)
@@ -53,16 +54,15 @@
       width: 100%
       display: flex
       align-items: center
-      border-radius: 15px
+      border-radius: 2px
     +screen('max', 700)
       display: block
       padding: 2.5rem
   &__number
-    +fs(18px)
-    font-family: var(--second-family)
     color: var(--brand-primary-light)
     text-transform: uppercase
-    margin-bottom: 5rem
+    margin-bottom: 4rem
+    font-weight: 300
     +screen('max', 1500)
       +fs(14px)
     +screen('max', 1023)
@@ -74,7 +74,8 @@
     span
       +fs(70px)
   &__txt
-    +fs(20px)
-    line-height: 1.5
+    +fs(22px)
+    line-height: 1.1
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)

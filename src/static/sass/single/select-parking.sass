@@ -9,19 +9,17 @@
     margin-bottom: 2rem
   &__btn
     width: 100%
-    background-color: var(--brand-primary-light)
-    background-image: url(../img/bg-select-parking.png)
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: right
     display: flex
     justify-content: center
     align-items: center
     gap: 2rem
     +fs(30px)
+    background-color: var(--brand-primary-light)
     color: var(--white-100)
-    font-weight: 600
+    font-weight: 400
+    text-transform: uppercase
     padding: 2.5rem
+    clip-path: polygon(100% 0%, 98% 100%, 0% 100%, 2% 0%)
     border-radius: 2px
     box-sizing: border-box
     +screen('max', 1500)
@@ -30,7 +28,7 @@
       padding: 1.5rem
       justify-content: flex-start
       +fs(16px)
-      background-size: cover
+      clip-path: polygon(100% 0%, 97% 100%, 0% 100%, 3% 0%)
     svg
       +screen('max', 1500)
         width: 50px

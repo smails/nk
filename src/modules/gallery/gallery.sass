@@ -21,11 +21,12 @@
       display: block
       margin-bottom: 2rem
   &__tabs
-    border: 1px solid var(--brand-tertiary-light)
-    border-radius: 2px
+    box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.04)
     background: var(--white-100)
+    border-radius: 2px
     box-sizing: border-box
     padding: 0.3rem
+    border: 1px solid var(--brand-secondary)
     +screen('max', 700)
       justify-content: space-between
       display: flex
@@ -38,8 +39,8 @@
       max-width: 100%
   &__tab
     +fs(18px)
-    font-weight: 600
-    padding: 1.6rem 3.5rem
+    font-weight: 300
+    padding: 1.8rem 3.5rem
     border-radius: 2px
     transition: .5s ease
     +screen('max', 1500)
@@ -51,7 +52,7 @@
       +fs(10px)
       padding: 1.2rem 2.5vw
     &.active
-      background: var(--brand-tertiary-light)
+      background: var(--brand-secondary)
       color: var(--white-100)
   &__box
     display: none
@@ -73,14 +74,14 @@
     position: absolute
     top: 1.5rem
     left: 1.5rem
-    background: var(--brand-tertiary-light)
+    background: var(--brand-secondary)
     padding: 0.5rem 1.2rem
     border-radius: 36px
     display: inline-flex
     align-items: center
     gap: .4rem
     +fs(18px)
-    font-weight: 600
+    font-weight: 300
     color: var(--white-100)
     +screen('max', 1500)
       +fs(14px)
@@ -99,14 +100,15 @@
       left: 0
       top: 0
       border-radius: 2px
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 6.96%, rgba(0, 0, 0, 0) 70.15%)
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 8.96%, rgba(0, 0, 0, 0) 66.15%)
+      opacity: 0.8
       position: absolute
     &:after
       content: ''
       position: absolute
       z-index: -1
       background: var(--black-20)
-      border-radius: 2.5rem
+      border-radius: 2px
       left: 2.4rem
       bottom: 0
       height: 50%
@@ -123,8 +125,11 @@
     left: 0
     padding: 2rem
     box-sizing: border-box
-    +fs(22px)
+    +fs(24px)
     font-weight: 600
+    letter-spacing: -0.02em
+    text-transform: uppercase
+    font-family: var(--second-family)
     color: var(--white-100)
     z-index: 2
     +screen('max', 1500)

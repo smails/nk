@@ -54,13 +54,13 @@
     padding: .6rem 1.1rem .8rem 1.4rem
     box-sizing: border-box
     +fs(16px)
-    font-weight: 600
+    font-weight: 300
     backdrop-filter: blur(17px)
     box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.02)
     background: var(--white-100)
     +screen('max', 1500)
       +fs(12px)
-    &_green
+    &_blue
       background: var(--brand-primary-light)
       color: var(--white-100)
   &__caption
@@ -71,8 +71,8 @@
   &__count
     position: relative
     padding-left: 1.5rem
-    font-weight: 600
-    color: var(--black-40)
+    font-weight: 300
+    color: var(--brand-tertiary-light)
     +screen('max', 1500)
       +fs(12px)
     &:before
@@ -84,7 +84,7 @@
       left: 0
       top: 50%
       transform: translateY(-50%)
-      background: var(--brand-primary-hover)
+      background: var(--brand-tertiary-light)
       +screen('max', 1500)
         width: 6px
         height: 6px
@@ -101,6 +101,6 @@
     padding: .6rem 1.1rem .8rem 1.4rem
     box-sizing: border-box
     +fs(16px)
-    font-weight: 600
+    font-weight: 300
     +screen('max', 1500)
       +fs(12px)

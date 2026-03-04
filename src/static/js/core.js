@@ -302,7 +302,7 @@ $('.feature').each((index, item) => {
 
 $('.demo-slider').each((index, item) => {
   const swiper = new Swiper($(item).find('.swiper')[0], {
-    slidesPerView: 1,
+    slidesPerView: 1.05,
     spaceBetween: '20px',
     navigation: {
       nextEl: $(item).find('.slider-arrow_next')[0],

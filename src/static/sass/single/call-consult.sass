@@ -1,0 +1,72 @@
+.call-consult
+    margin: 7rem 0
+    +screen('max', 1500)
+        margin: 4rem 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 243px
+        gap: 2rem
+        +screen('max', 1100)
+            grid-template-columns: 1fr
+            gap: 1rem
+    &__box
+        padding: 2rem
+        box-sizing: border-box
+        border: 1px solid var(--brand-primary-light)
+        border-radius: 2px
+        display: flex
+        align-items: center
+        gap: 4rem
+        +screen('max', 1500)
+            padding: 4rem
+        +screen('max', 1100)
+            padding: 2rem
+        +screen('max', 700)
+            padding: 1.5rem 1rem
+            align-items: flex-start
+            gap: 1.5rem
+    &__txt
+        +fs(22px)
+        font-weight: 300
+        line-height: 1.2
+        color: var(--black-80)
+        margin-top: 2rem
+        +screen('max', 1500)
+            +fs(14px)
+        +screen('max', 700)
+            +fs(12px)
+            margin-top: 1rem
+    &__button
+        background: var(--brand-primary-light)
+        mix-blend-mode: darken
+        border-radius: 2px
+        display: flex
+        flex-flow: column
+        justify-content: center
+        align-items: center
+        gap: 2.5rem
+        box-sizing: border-box
+        +screen('max', 1100)
+            flex-flow: row
+            padding: 2rem
+    &__sign
+        font-weight: 400
+        +fs(30px)
+        line-height: 120%
+        letter-spacing: -0.02em
+        text-transform: uppercase
+        text-align: center
+        color: var(--white-100)
+        +screen('max', 1500)
+            +fs(22px)
+        +screen('max', 700)
+            +fs(18px)
+    &__pic
+        +screen('max', 1500)
+            height: 184px
+        +screen('max', 700)
+            height: 90px
+    &__icon
+        +screen('max', 700)
+            height: 40px
+            width: 40px

@@ -16,9 +16,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 8rem
-    +screen('max', 1500)
-      margin-bottom: 6rem
+    margin-bottom: 5rem
     +screen('max', 700)
       margin-bottom: 4rem
     .slider-arrow
@@ -32,10 +30,8 @@
         display: none
   &__wrapper
     .swiper
-      margin: 0 -5rem
-      padding-inline: 5rem
-      +screen('max', 1850)
-        margin: 0 -3rem
+      margin: 0 -3rem
+      padding-inline: 3rem
       +screen('max', 1500)
         margin: 0 calc((-100vw + 1160px) / 2 )
         padding-inline: calc((100vw - 1160px) / 2 )
@@ -63,13 +59,14 @@
       left: 0
       top: 0
       +fs(24px)
+      font-family: var(--second-family)
       font-weight: 600
       +screen('max', 1500)
         width: 45px
         height: 45px
         +fs(18px)
   &__date
-    +fs(60px)
+    +fs(46px)
     color: var(--brand-primary-light)
     font-family: var(--second-family)
     margin-bottom: 2rem
@@ -77,8 +74,8 @@
     display: flex
     align-items: center
     gap: 1.6rem
-    +screen('max', 1500)
-      +fs(48px)
+    font-weight: 300
+    letter-spacing: -0.02em
     +screen('max', 700)
       +fs(38px)
     span
@@ -90,9 +87,10 @@
     +screen('max', 700)
       +fs(16px)
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(18px)
+    line-height: 1.1
+    font-weight: 300
+    color: var(--black-60)
     +screen('max', 1500)
       +fs(14px)
   &__arrow

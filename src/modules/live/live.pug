@@ -3,7 +3,7 @@ mixin live(title="Ход строительства", head)
     +e.inner.inner
       if head == undefined
         +e.P.title Live
-      +e.container
+      +e.container(class=title!='Ход строительства'?'_gray':"" )
         +e.head
           +e.H2.caption=title
           +e.tabs

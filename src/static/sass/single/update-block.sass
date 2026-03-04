@@ -10,17 +10,15 @@
   &:before
     content: ''
     width: min(339px, 17vw)
-    height: min(778px, 40vw)
+    height: min(322px, 16vw)
     position: absolute
     right: 0
-    top: -15rem
-    background-image: url(../img/bg-update-block-1.png)
+    top: -8rem
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='343' height='322' fill='none' viewBox='0 0 343 322'%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M241.327 321.63 0 153.031 176.651 29.617l241.327 168.599z' clip-rule='evenodd'/%3E%3Cpath fill='%2300a1e4' fill-rule='evenodd' d='M362.784 0 186.133 123.414l55.217 38.542 176.651-123.37z' clip-rule='evenodd'/%3E%3Cpath fill='%23178ece' fill-rule='evenodd' d='M417.983 38.586 241.332 161.955v159.668L417.983 198.21z' clip-rule='evenodd'/%3E%3Cpath fill='%23006499' fill-rule='evenodd' d='m186.133 123.418 55.217 38.542v159.668l-55.217-38.586z' clip-rule='evenodd'/%3E%3C/svg%3E")
     background-repeat: no-repeat
     background-size: contain
     z-index: 3
     pointer-events: none
-    +screen('max', 1500)
-      top: -12rem
     +screen('max', 1023)
       top: -10rem
       width: min(339px, 26vw)
@@ -30,11 +28,12 @@
       width: 100px
       height: 250px
   &__title
-    font-size: clamp(38px, 4vw, 80px)
-    font-family: var(--second-family)
-    color: var(--brand-primary-light)
+    font-size: clamp(38px, 4vw, 52px)
+    text-transform: uppercase
+    color: var(--brand-primary-dark)
     letter-spacing: -0.02em
     line-height: 1
+    font-weight: 300
     border-top: 3px solid var(--brand-primary-light)
     margin-bottom: 3.5rem
     padding-top: 4rem
@@ -67,7 +66,6 @@
     +screen('max', 1500)
       gap: 1.5rem
       padding: 2.5rem 2.5rem 3rem
-      border-radius: 15px
     +screen('max', 1023)
       padding: 2rem 2rem 2.5rem
     &:hover
@@ -78,10 +76,10 @@
         height: 60px
     span
       display: inline-block
-      border-radius: 37px
+      border-radius: 2px
       background: var(--white-100)
-      +fs(24px)
-      font-weight: 600
+      +fs(22px)
+      font-weight: 300
       padding: 1.2rem 2rem
       +screen('max', 1500)
         +fs(18px)

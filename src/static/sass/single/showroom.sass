@@ -25,9 +25,9 @@
     +screen('max', 1023)
       width: 100%
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(22px)
+    line-height: 1.2
+    color: var(--black-80)
     +screen('max', 1500)
       +fs(16px)
     +screen('max', 700)
@@ -53,6 +53,14 @@
     border-radius: 2px
   &__caption
     margin-top: 2.5rem
+    text-transform: uppercase
+    font-family: var(--second-family)
+    font-weight: 600
+    letter-spacing: -0.02em
+    +fs(24px)
+    +screen('max', 1300)
+      +fs(18px)
+      font-weight: 400
     +screen('max', 700)
       margin-top: 1.5rem
   &__title
@@ -94,8 +102,8 @@
         display: none
   &__wrapper
     .swiper
-      margin: 0 calc((-100vw + 1800px) / 2 )
-      padding-inline: calc((100vw - 1800px) / 2 )
+      margin: 0 calc((-100vw + 1860px) / 2 )
+      padding-inline: calc((100vw - 1860px) / 2 )
       +screen('max', 1500)
         margin: 0 calc((-100vw + 1160px) / 2 )
         padding-inline: calc((100vw - 1160px) / 2 )
@@ -124,11 +132,10 @@
     border-radius: 2px
     +screen('max', 1023)
       display: block
-      border-radius: 15px
   &__pic
     width: 50%
     max-width: 941px
-    border-radius: 26px
+    border-radius: 2px
     vertical-align: middle
     +screen('max', 1023)
       width: 100%
@@ -154,7 +161,7 @@
       +screen('max', 1023)
         display: none
   &__addr
-    +fs(20px)
+    +fs(22px)
     margin-bottom: 3rem
     display: flex
     justify-content: space-between
@@ -162,6 +169,7 @@
     flex-wrap: wrap
     padding-bottom: 2.5rem
     border-bottom: 1px solid var(--white-100)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
       gap: 1rem
@@ -169,10 +177,11 @@
       +fs(14px)
     a
       font-size: 16px
-      font-weight: 600
+      color: var(--white-60)
       display: inline-block
   &__time
-    +fs(20px)
+    +fs(16px)
+    font-weight: 300
     margin-bottom: 1rem
     +screen('max', 1500)
       +fs(16px)
@@ -180,7 +189,7 @@
       +fs(14px)
   &__phone
     +fs(30px)
-    font-weight: 600
+    font-weight: 400
     display: block
     +screen('max', 1500)
       +fs(22px)

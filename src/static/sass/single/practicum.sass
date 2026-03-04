@@ -130,6 +130,7 @@
         left: 0
         border-radius: 100%
         border: 1px solid var(--brand-primary-light)
+        font-family: var(--second-family)
         +fs(24px)
         font-weight: 600
         display: flex
@@ -139,10 +140,27 @@
           width: 45px
           height: 45px
           +fs(18px)
+      &:after
+        content: ''
+        width: 8px
+        height: 60%
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='54' fill='none' viewBox='0 0 8 54'%3E%3Cpath fill='%230082ca' d='M4.184.5a.5.5 0 1 0-1 0h1M3.33 53.354a.5.5 0 0 0 .707 0l3.182-3.182a.5.5 0 1 0-.707-.707l-2.828 2.828-2.829-2.828a.5.5 0 1 0-.707.707zM3.684.5h-.5V53h1V.5z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: bottom
+        position: absolute
+        top: 65px
+        left: 28px
+      &:last-of-type
+        &:after
+            content: none
     b
       display: block
       +fs(24px)
       font-weight: 600
+      font-family: var(--second-family)
+      text-transform: uppercase
+      letter-spacing: -0.02em
       margin-bottom: 1.5rem
       +screen('max', 1500)
         +fs(18px)
@@ -151,8 +169,9 @@
         +fs(16px)
     span
       +fs(18px)
-      line-height: 1.5
-      color: var(--black-40)
+      line-height: 1.1
+      font-weight: 300
+      color: var(--black-80)
       +screen('max', 1500)
         +fs(14px)
       +screen('max', 700)
@@ -162,7 +181,7 @@
     box-sizing: border-box
     border-radius: 2px
     background-color: var(--black-grey-light)
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%2351A747'/%3E%3Cpath fill='%23fff' d='M23.348 24.773h-2.075l-.562-11.906h3.2l-.563 11.906Zm-2.778 3.774c0-.64.164-1.09.492-1.348.336-.265.747-.398 1.231-.398.477 0 .883.133 1.219.398.336.258.504.707.504 1.348 0 .625-.168 1.078-.504 1.36-.336.273-.742.41-1.219.41-.484 0-.895-.137-1.23-.41-.329-.282-.493-.735-.493-1.36Z'/%3E%3C/svg%3E")
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' fill='none' viewBox='0 0 45 45'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%230082ca'/%3E%3Cpath fill='%23fff' d='M23.348 24.773h-2.075l-.562-11.906h3.2zm-2.778 3.774q0-.96.492-1.348.505-.398 1.231-.398.715 0 1.219.398.504.387.504 1.348 0 .937-.504 1.36-.504.41-1.219.41-.727 0-1.23-.41-.493-.423-.493-1.36'/%3E%3C/svg%3E")
     background-repeat: no-repeat
     background-position: 2.5rem center
     +screen('max', 700)
@@ -171,8 +190,8 @@
       background-position: 1.5rem 1.5rem
     b
       display: block
-      +fs(24px)
-      font-weight: 600
+      +fs(28px)
+      font-weight: 300
       margin-bottom: 1rem
       +screen('max', 1500)
         +fs(18px)
@@ -180,8 +199,9 @@
         +fs(16px)
     span
       +fs(18px)
-      line-height: 1.5
-      color: var(--black-40)
+      line-height: 1.1
+      font-weight: 300
+      color: var(--black-60)
       +screen('max', 1500)
         +fs(14px)
       +screen('max', 700)
@@ -189,16 +209,14 @@
 
 .practicum-bonus
   padding-block: 7.5rem
-  background: var(--brand-primary-light)
+  background: var(--brand-primary-dark)
   border-radius: 2px
   margin: 9rem .5rem
   +screen('max', 1023)
     padding-block: 5rem
     position: relative
-    border-radius: 2px
   +screen('max', 700)
     padding-block: 4rem
-    border-radius: 15px
   &__title
     color: var(--white-100)
     margin-bottom: 6rem
@@ -229,17 +247,16 @@
       gap: 5rem
       align-items: center
       padding: 2.5rem
-      border-radius: 15px
+      border-radius: 2px
     +screen('max', 700)
       padding: 1.5rem
       flex-flow: column
       align-items: flex-start
       gap: 1rem
   &__numb
-    +fs(110px)
-    font-weight: 600
+    +fs(100px)
+    font-weight: 200
     color: var(--black-10)
-    opacity: 0.7
     margin-bottom: 3.5rem
     line-height: 1
     +screen('max', 1500)
@@ -250,8 +267,8 @@
     +screen('max', 700)
       +fs(30px)
   &__caption
-    +fs(24px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     margin-bottom: 2rem
     +screen('max', 1023)
       +fs(20px)
@@ -300,8 +317,8 @@
         display: none
   &__wrapper
     .swiper
-      margin: 0 calc((-100vw + 1800px) / 2 )
-      padding-inline: calc((100vw - 1800px) / 2 )
+      margin: 0 calc((-100vw + 1860px) / 2 )
+      padding-inline: calc((100vw - 1860px) / 2 )
       +screen('max', 1500)
         margin: 0 calc((-100vw + 1160px) / 2 )
         padding-inline: calc((100vw - 1160px) / 2 )
@@ -328,7 +345,8 @@
   &__pos
     +fs(18px)
     margin-top: 0.8rem
-    color: var(--black-40)
+    font-weight: 300
+    color: var(--black-80)
     +screen('max', 1500)
       +fs(14px)
 
@@ -356,8 +374,8 @@
         display: none
   &__wrapper
     .swiper
-      margin: 0 calc((-100vw + 1800px) / 2 )
-      padding-inline: calc((100vw - 1800px) / 2 )
+      margin: 0 calc((-100vw + 1860px) / 2 )
+      padding-inline: calc((100vw - 1860px) / 2 )
       +screen('max', 1500)
         margin: 0 calc((-100vw + 1160px) / 2 )
         padding-inline: calc((100vw - 1160px) / 2 )
@@ -403,8 +421,10 @@
     left: 0
     padding: 2rem
     box-sizing: border-box
-    +fs(22px)
-    font-weight: 600
+    +fs(18px)
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: -0.02em
     color: var(--white-100)
     z-index: 2
     +screen('max', 1500)

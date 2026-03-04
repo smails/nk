@@ -1,11 +1,11 @@
 .live
-  margin: 10rem 0 8rem
+  margin: 10rem 5px 8rem
   +screen('max', 1500)
-    margin: 7rem 0
+    margin: 7rem 5px
   +screen('max', 1023)
-    margin: 5.5rem 0
+    margin: 5.5rem 5px
   +screen('max', 700)
-    margin: 4rem 0
+    margin: 4rem 5px
   &__title
     +fs(80px)
     text-align: center
@@ -28,21 +28,27 @@
       vertical-align: middle
       margin-bottom: 1rem
   &__container
-    margin: 0 -5rem
-    padding: 6rem 5rem
+    margin: 0 -3rem
+    padding-inline: 3rem
     box-sizing: border-box
     border-radius: 2px
-    background: var(--black-grey-light)
     +screen('max', 1850)
       margin: 0 -3rem
     +screen('max', 1500)
       margin: 0 calc((-100vw + 1160px) / 2 )
-      padding: 6rem calc((100vw - 1160px) / 2 )
+      padding-inline: calc((100vw - 1160px) / 2 )
     +screen('max', 1280)
       margin: 0 -2rem
-      padding: 4rem 2rem
+      padding-inline: 2rem
     +screen('max', 1023)
-      padding: 3.5rem 2rem
+      padding-inline: 2rem
+    &_gray
+      background: var(--black-grey-light)
+      padding-block: 6rem
+      +screen('max', 1280)
+        padding-block: 4rem
+      +screen('max', 1023)
+        padding-block: 3.5rem
   &__head
     display: flex
     justify-content: space-between
@@ -166,7 +172,8 @@
     align-items: center
   &__title
     +fs(90px)
-    font-family: var(--second-family)
+    letter-spacing: -0.02em
+    text-transform: uppercase
     +screen('max', 700)
       +fs(60px)
     &:before

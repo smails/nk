@@ -20,7 +20,7 @@
     border-radius: 2px
     width: 100%
     +screen('max', 1023)
-      border-radius: 15px
+      border-radius: 2px
   &__picture
     margin-bottom: 2.5rem
     display: block
@@ -32,7 +32,8 @@
   &__date
     +fs(18px)
     margin-bottom: 1rem
-    color: var(--black-40)
+    color: var(--black-60)
+    font-weight: 300
     display: block
     +screen('max', 1500)
       +fs(14px)
@@ -61,26 +62,31 @@
   background: var(--white-100)
   display: grid
   grid-template-columns: repeat(2, 1fr)
-  align-items: center
   padding: 0.5rem
   box-sizing: border-box
   +screen('max', 1023)
     grid-template-columns: 1fr
-    border-radius: 15px
+    border-radius: 2px
   &__content
-    padding-inline: 6rem
+    padding: 6rem
     box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    flex-flow: column
     +screen('max', 1500)
-      padding-inline: 5rem
+      padding: 5rem
     +screen('max', 1023)
       order: 1
       padding: 3rem
     +screen('max', 700)
       padding: 1.5rem
+  &__title
+    flex-grow: 1
   &__date
-    +fs(20px)
+    +fs(18px)
     margin-bottom: 3rem
-    color: var(--black-40)
+    color: var(--black-60)
+    font-weight: 300
     +screen('max', 1500)
       +fs(16px)
       margin-bottom: 2rem
@@ -88,9 +94,10 @@
       +fs(14px)
       margin-bottom: 1rem
   &__txt
-    +fs(20px)
-    line-height: 1.5
-    color: var(--black-40)
+    +fs(22px)
+    line-height: 120%
+    color: var(--black-60)
+    font-weight: 300
     margin-top: 3rem
     +screen('max', 1500)
       +fs(16px)
@@ -105,6 +112,6 @@
     object-fit: cover
     +screen('max', 1023)
       height: 380px
-      border-radius: 15px
+      border-radius: 2px
     +screen('max', 700)
       height: 250px

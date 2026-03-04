@@ -169,20 +169,51 @@
       max-width: 600px
     +screen('max', 700)
       padding: 2rem
-      border-radius: 15px
+      border-radius: 2px
   &__review-call
     padding-block: 9.5rem
     border-radius: 2px
-    background-color: var(--brand-primary-light)
-    background-image: url(../img/bg-callback-5.png)
-    background-repeat: no-repeat
-    background-size: contain
+    background: var(--brand-primary-dark)
     width: calc(100% - 12rem)
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     box-sizing: border-box
+    &:before
+      content: ''
+      width: 393px
+      height: 303px
+      position: absolute
+      top: 0
+      left: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='393' height='303' fill='none' viewBox='0 0 393 303'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='M181.286 132.521 311.991-76.207 71.053-127.096-59.699 81.612z' clip-rule='evenodd'/%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m71.04-127.091-183.634 293.142 57.872 136.296L128.91 9.205z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
+    &:after
+      content: ''
+      width: 381px
+      height: 398px
+      position: absolute
+      bottom: 0
+      right: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='381' height='398' fill='none' viewBox='0 0 381 398'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='m232.731 195.218 238.298-62.169-23.63 245.116-238.293 62.221z' clip-rule='evenodd'/%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M447.392 378.179 112.7 465.557.001 369.512l334.692-87.379z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
     +screen('max', 1500)
       padding-block: 6rem
     +screen('max', 1023)
@@ -195,10 +226,7 @@
   &__review-success
     padding-block: 9.5rem
     border-radius: 2px
-    background-color: var(--brand-primary-light)
-    background-image: url(../img/bg-callback-6.png)
-    background-repeat: no-repeat
-    background-size: cover
+    background: var(--brand-tertiary-light)
     position: absolute
     top: 50%
     left: 50%
@@ -408,7 +436,7 @@
         left: 2px
         background: #000
         opacity: 0.3
-        border-radius: 15px
+        border-radius: 2px
         transition: .5s ease
         z-index: 1
       &:hover
@@ -428,7 +456,7 @@
       &_next
         right: 2rem
   &__thumb
-    border-radius: 15px
+    border-radius: 2px
     width: 100%
     +screen('max', 1023)
       height: 70px
@@ -479,7 +507,8 @@
 
 .popup-review
   &__time
-    color: var(--black-40)
+    color: var(--black-80)
+    font-weight: 300
     margin-bottom: 1rem
     +screen('max', 1500)
       +fs(14px)
@@ -492,18 +521,18 @@
     +screen('max', 1500)
       +fs(14px)
   &__name
-    +fs(24px)
-    font-weight: 600
+    +fs(28px)
+    font-weight: 300
     margin-bottom: 1.5rem
     +screen('max', 1500)
       +fs(20px)
   &__stars
     margin-bottom: 2.2rem
   &__txt
-    line-height: 1.3
-    color: var(--black-40)
+    line-height: 1.1
+    color: var(--black-80)
     margin-bottom: 2.5rem
-    +fs(20px)
+    +fs(18px)
     +screen('max', 1500)
       +fs(14px)
     p
@@ -516,8 +545,9 @@
   +screen('max', 1500)
     max-width: 560px
   &__title
-    +fs(60px)
-    font-family: var(--second-family)
+    +fs(52px)
+    font-weight: 300
+    text-transform: uppercase
     margin-bottom: 3rem
     text-align: center
     +screen('max', 1500)
@@ -526,13 +556,6 @@
     +screen('max', 700)
       +fs(20px)
       margin-bottom: 1rem
-  &__name
-    margin-bottom: 1.5rem
-    text-align: left
-    +screen('max', 1500)
-      +fs(12px)
-      margin-bottom: 1rem
-      opacity: 0.8
   &__txt
     +screen('max', 700)
       +fs(12px)
@@ -540,14 +563,23 @@
   &__group
     +screen('max', 700)
       margin-bottom: 1.5rem
+  &__name
+    margin-bottom: 1.5rem
+    text-align: left
+    +fs(16px)
+    letter-spacing: -0.02em
+    color: var(--white-60)
+    +screen('max', 1500)
+      +fs(12px)
+      margin-bottom: 1rem
   &__field
-    border: 1px solid rgba(255, 255, 255, 0.5)
+    border: 1px solid var(--white-40)
+    border-radius: 2px
     width: 100%
     padding: 2.3rem 2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
-    border-radius: 64px
+    font-weight: 300
     background: none
     color: var(--white-100)
     transition: .5s ease
@@ -566,9 +598,9 @@
       margin-top: 1rem
   &__req
     +fs(18px)
-    font-weight: 600
-    margin-top: 5rem
-    color: rgba(255, 255, 255, 0.5)
+    font-weight: 300
+    margin-top: 2.5rem
+    color: var(--white-60)
     text-align: center
     +screen('max', 1500)
       +fs(12px)
@@ -703,7 +735,7 @@
     +screen('max', 700)
       height: 243px
       margin-top: -3rem
-      border-radius: 15px
+      border-radius: 2px
   &__content
     position: absolute
     top: 2rem
@@ -981,7 +1013,7 @@
         left: 2px
         background: #000
         opacity: 0.3
-        border-radius: 15px
+        border-radius: 2px
         transition: .5s ease
         z-index: 1
       &:hover
@@ -1001,7 +1033,7 @@
       &_next
         right: 2rem
   &__thumb
-    border-radius: 15px
+    border-radius: 2px
     width: 100%
     +screen('max', 1023)
       height: 70px
@@ -1076,7 +1108,7 @@
     top: 100%
     left: 0
     margin-top: 4px
-    border-radius: 15px
+    border-radius: 2px
     background: var(--white-100)
     padding: 1.5rem
     z-index: 2
@@ -1130,21 +1162,17 @@
       vertical-align: middle
 
 .popup-excursion
-  border-radius: 15px
+  border-radius: 2px
   position: fixed
   bottom: 3rem
   right: 3rem
   z-index: 99
-  border: 1px solid var(--brand-primary-light)
   padding: 2rem
   box-sizing: border-box
   width: 370px
-  background-image: url(../img/popup-excursion-bg.png)
-  background-repeat: no-repeat
-  background-position: bottom right
-  background-size: contain
-  background-color: var(--white-100)
   display: none
+  background-color: var(--brand-primary-light)
+  color: var(--white-100)
   +screen('max', 1500)
     padding: 2rem
   +screen('max', 700)
@@ -1152,11 +1180,6 @@
     bottom: 1.5rem
     left: 1.5rem
     padding: 1.5rem
-    background-image: url(../img/popup-excursion-bg-mobile.png)
-    background-repeat: no-repeat
-    background-position: bottom right
-    background-size: contain
-    background-color: var(--brand-primary-light)
   &__close
     position: absolute
     top: 1.5rem
@@ -1167,14 +1190,18 @@
         fill: var(--white-100)
   &__title
     +fs(18px)
-    font-weight: 600
+    font-weight: 400
+    letter-spacing: -0.02em
+    text-transform: uppercase
     margin-bottom: 1.2rem
     +screen('max', 700)
       +fs(16px)
-      color: var(--white-100)
   &__txt
     +fs(14px)
-    line-height: 1.3
+    line-height: 1.2
+    letter-spacing: -0.02em
+    color: var(--white-80)
+    font-weight: 300
     margin-bottom: 2rem
     +screen('max', 700)
       +fs(12px)
@@ -1184,5 +1211,3 @@
     +fs(14px)
     +screen('max', 700)
       width: 100%
-      background: var(--white-100)
-      color: var(--black-100)

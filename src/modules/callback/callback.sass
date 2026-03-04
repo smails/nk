@@ -20,7 +20,7 @@
       padding: 3rem
     +screen('max', 700)
       padding: 3rem 2rem
-      background: var(--brand-primary-light)
+      background-image: none
       clip-path: polygon(100% 0%, 97% 100%, 0% 100%, 3% 0%)
     &_two
       background-color: var(--brand-tertiary-light)
@@ -31,7 +31,7 @@
       +screen('max', 1500)
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='369' height='175' fill='none' viewBox='0 0 369 175'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M222.982-17.939 30.494 51.891l131.792 156.688 192.51-69.792z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='m162.302 209.183 270.38-98.034 31.865-118.92-270.38 98.034z' clip-rule='evenodd'/%3E%3C/svg%3E")
       +screen('max', 700)
-        background: var(--brand-tertiary-light)
+        background-image: none
     &_three
       background-color: var(--brand-secondary)
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='585' height='232' fill='none' viewBox='0 0 585 232'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='m394.608 267.399 280.893-196.24-280.893-196.19-280.944 196.19z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='M394.581-125.031 0 150.536v206.022L394.581 80.991z' clip-rule='evenodd'/%3E%3C/svg%3E")
@@ -39,22 +39,22 @@
       background-position: right top
       background-size: contain
       +screen('max', 700)
-        background: var(--brand-secondary)
+        background-image: none
   &__box
     display: flex
     justify-content: space-between
     align-items: flex-end
-    border-radius: 2px
     background-color: var(--brand-primary-light)
-    background-image: url(../img/bg-callback-1.png)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='656' height='142' fill='none' viewBox='0 0 656 142'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M373.141-69.417 51.029 47.437l220.544 262.205 322.148-116.791z' clip-rule='evenodd'/%3E%3Cpath fill='%23006098' fill-rule='evenodd' d='M271.596 310.652 724.055 146.6l53.322-199.002L324.919 111.65z' clip-rule='evenodd'/%3E%3C/svg%3E")
     background-repeat: no-repeat
-    background-position: right top
-    padding: 5rem
+    background-position: right
+    padding: 4rem 7rem
     box-sizing: border-box
+    background-size: contain
     color: var(--white-100)
+    clip-path: polygon(100% 0%, 98% 100%, 0% 100%, 2% 0%)
     +screen('max', 1500)
       padding: 4rem
-      background-position: 60% top
     +screen('max', 1023)
       padding: 3rem
       flex-flow: column
@@ -62,8 +62,8 @@
       gap: 2rem
     +screen('max', 700)
       padding: 3rem 2rem
-      background-position: 50% top
-      background-size: 150%
+      background-image: none
+      clip-path: polygon(100% 0%, 97% 100%, 0% 100%, 3% 0%)
   &__title
     color: var(--white-100)
     &_mod
@@ -188,20 +188,19 @@
       margin-left: 0
       gap: 0.5rem
   &__field
-    backdrop-filter: blur(13px)
-    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(28px)
+    background: var(--white-5)
     padding: 2.3rem 2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
-    border-radius: 64px
+    font-weight: 300
+    border-radius: 2px
     transition: .5s ease
     width: 100%
-    border: 1px solid rgba(255, 255, 255, 0.5)
+    border: 1px solid var(--white-60)
     +screen('max', 1023)
       +fs(16px)
       padding: 1.6rem 2rem
-      border-radius: 2px
     &::placeholder
       color: var(--white-100)
   &__caption
@@ -335,25 +334,61 @@
 
 .callback-practicum
   &__container
+    padding-block: 8.5rem
     border-radius: 2px
-    background-color: var(--color-brown)
-    background-image: url(../img/bg-callback-7.png)
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
-    padding: 10rem 4rem
-    margin: 0 .5rem
-    box-sizing: border-box
+    background-color: var(--brand-primary-light)
+    margin: 8.5rem 5px .5rem
+    position: relative
+    z-index: 1
+    +screen('max', 1500)
+      margin: 5rem .5rem
+      padding-block: 6rem
+    +screen('max', 1023)
+      border-radius: 2px
+    +screen('max', 700)
+      padding-block: 3.5rem
+    &:before
+      content: ''
+      width: 338px
+      height: 297px
+      position: absolute
+      top: 0
+      left: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='322' height='286' fill='none' viewBox='0 0 322 286'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m231.027 126.854 202.468 21.773-90.109 182.594-202.48-21.731z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M343.378 331.228 58.991 300.695.004 193.404l284.386 30.533z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      transform: rotate(180deg)
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
+    &:after
+      content: ''
+      width: 338px
+      height: 297px
+      position: absolute
+      bottom: 0
+      right: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='322' height='286' fill='none' viewBox='0 0 322 286'%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m231.027 126.854 202.468 21.773-90.109 182.594-202.48-21.731z' clip-rule='evenodd'/%3E%3Cpath fill='%2370b865' fill-rule='evenodd' d='M343.378 331.228 58.991 300.695.004 193.404l284.386 30.533z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
+  &__title
+    +fs(52px)
+    font-weight: 300
+    text-transform: uppercase
+    margin-bottom: 3rem
     color: var(--white-100)
     text-align: center
-    +screen('max', 700)
-      background-image: none
-      border-radius: 15px
-      padding: 3.5rem 1.5rem
-  &__title
-    +fs(60px)
-    font-family: var(--second-family)
-    margin-bottom: 3rem
     +screen('max', 1500)
       +fs(30px)
       margin-bottom: 1.5rem
@@ -361,17 +396,20 @@
       +fs(20px)
       margin-bottom: 1rem
   &__txt
-    +fs(24px)
+    +fs(18px)
     line-height: 1.5
-    margin-bottom: 7rem
+    color: var(--white-80)
+    font-weight: 400
+    text-align: center
+    margin-bottom: 5rem
+    text-transform: uppercase
     +screen('max', 1500)
       +fs(16px)
       margin-bottom: 3rem
-      max-width: 600px
       display: inline-block
     +screen('max', 700)
       +fs(14px)
-      margin-bottom: 2rem
+      margin-bottom: 2.5rem
   &__fields
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -387,17 +425,20 @@
   &__name
     margin-bottom: 1.5rem
     text-align: left
+    +fs(12px)
+    letter-spacing: -0.02em
+    color: var(--white-60)
     +screen('max', 1500)
       +fs(12px)
       margin-bottom: 1rem
   &__field
-    border: 1px solid rgba(255, 255, 255, 0.5)
+    border: 1px solid var(--white-40)
+    border-radius: 2px
     width: 100%
     padding: 2.3rem 2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
-    border-radius: 64px
+    font-weight: 300
     background: none
     color: var(--white-100)
     transition: .5s ease
@@ -410,16 +451,14 @@
     &:focus
       border-color: var(--white-100)
   &__submit
-    +screen('max', 1500)
-      grid-column: 1/4
     +screen('max', 700)
-      grid-column: auto
       margin-top: 1rem
   &__req
     +fs(18px)
-    font-weight: 600
-    margin-top: 5rem
-    color: rgba(255, 255, 255, 0.5)
+    font-weight: 300
+    margin-top: 2.5rem
+    color: var(--white-60)
+    text-align: center
     +screen('max', 1500)
       +fs(12px)
       margin-top: 3rem
@@ -446,7 +485,7 @@
     text-align: center
     +screen('max', 700)
       background-image: none
-      border-radius: 15px
+      border-radius: 2px
   &__title
     +fs(60px)
     font-family: var(--second-family)
@@ -545,7 +584,7 @@
     +screen('max', 700)
       padding: 3rem 2rem
       background-image: none
-      border-radius: 15px
+      border-radius: 2px
   &__title
     +fs(30px)
     letter-spacing: -0.02em
@@ -738,24 +777,62 @@
 
 .callback-review
   &__container
+    padding-block: 9.5rem
     border-radius: 2px
-    background-color: var(--color-brown)
-    background-image: url(../img/bg-callback-7.png)
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
-    padding: 10rem 4rem
-    margin: 0 .5rem
+    background: var(--brand-primary-dark)
     box-sizing: border-box
+    position: relative
     color: var(--white-100)
-    text-align: center
+    z-index: 2
+    &:before
+      content: ''
+      width: 393px
+      height: 303px
+      position: absolute
+      top: 0
+      left: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='393' height='303' fill='none' viewBox='0 0 393 303'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='M181.286 132.521 311.991-76.207 71.053-127.096-59.699 81.612z' clip-rule='evenodd'/%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='m71.04-127.091-183.634 293.142 57.872 136.296L128.91 9.205z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
+    &:after
+      content: ''
+      width: 381px
+      height: 398px
+      position: absolute
+      bottom: 0
+      right: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='381' height='398' fill='none' viewBox='0 0 381 398'%3E%3Cpath fill='%230082ca' fill-rule='evenodd' d='m232.731 195.218 238.298-62.169-23.63 245.116-238.293 62.221z' clip-rule='evenodd'/%3E%3Cpath fill='%2300a6e6' fill-rule='evenodd' d='M447.392 378.179 112.7 465.557.001 369.512l334.692-87.379z' clip-rule='evenodd'/%3E%3C/svg%3E")
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: right
+      z-index: -1
+      +screen('max', 1023)
+        width: 138px
+        height: 159px
+      +screen('max', 700)
+        content: none
+    +screen('max', 1500)
+      padding-block: 6rem
+    +screen('max', 1023)
+      border-radius: 2px
+      width: calc(100% - 6rem)
     +screen('max', 700)
       background-image: none
-      border-radius: 15px
+      padding-block: 4rem
+      padding-inline: 1.5rem
   &__title
-    +fs(60px)
-    font-family: var(--second-family)
+    +fs(52px)
+    font-weight: 300
+    text-transform: uppercase
     margin-bottom: 3rem
+    text-align: center
     +screen('max', 1500)
       +fs(30px)
       margin-bottom: 1.5rem
@@ -763,38 +840,29 @@
       +fs(20px)
       margin-bottom: 1rem
   &__txt
-    +fs(24px)
-    line-height: 1.5
-    margin-bottom: 7rem
-    +screen('max', 1500)
-      +fs(16px)
-      margin-bottom: 3rem
-      max-width: 600px
-      display: inline-block
     +screen('max', 700)
-      +fs(14px)
-      margin-bottom: 2.5rem
-  &__fields
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    gap: 3rem
-    align-items: flex-end
-    max-width: 1410px
-    margin: 0 auto 3.5rem
+      +fs(12px)
+      opacity: 0.8
+  &__group
+    +screen('max', 700)
+      margin-bottom: 1.5rem
   &__name
     margin-bottom: 1.5rem
     text-align: left
+    +fs(16px)
+    letter-spacing: -0.02em
+    color: var(--white-60)
     +screen('max', 1500)
       +fs(12px)
       margin-bottom: 1rem
   &__field
-    border: 1px solid rgba(255, 255, 255, 0.5)
+    border: 1px solid var(--white-40)
+    border-radius: 2px
     width: 100%
     padding: 2.3rem 2rem
     box-sizing: border-box
     +fs(18px)
-    font-weight: 600
-    border-radius: 64px
+    font-weight: 300
     background: none
     color: var(--white-100)
     transition: .5s ease
@@ -807,16 +875,16 @@
     &:focus
       border-color: var(--white-100)
   &__submit
-    +screen('max', 1023)
-      grid-column: 1/3
+    margin-top: 3rem
+    width: 100%
     +screen('max', 700)
-      grid-column: auto
       margin-top: 1rem
   &__req
     +fs(18px)
-    font-weight: 600
-    margin-top: 5rem
-    color: rgba(255, 255, 255, 0.5)
+    font-weight: 300
+    margin-top: 2.5rem
+    color: var(--white-60)
+    text-align: center
     +screen('max', 1500)
       +fs(12px)
       margin-top: 3rem
@@ -841,11 +909,18 @@
     display: flex
     align-items: center
     gap: 3rem
-    margin-bottom: 3.5rem
+    margin-bottom: 1rem
     +screen('max', 700)
-      margin-bottom: 1.5rem
       gap: 1.5rem
   &__action
     max-width: 700px
     margin: 0 auto
     width: 100%
+  &__fields
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 4rem
+    margin-bottom: 3.5rem
+    +screen('max', 700)
+      display: block
+      margin-bottom: 0
