@@ -21,3 +21,10 @@ $(document).on('click', '.footer__title.open-nav', function() {
     $(this).next().removeClass('hidden');
   }
 })
+
+
+$(document).on('click', '.footer__up', function() {
+  $('body').animate({
+    scrollTop: 0
+  }, 1500)
+})

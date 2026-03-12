@@ -55,13 +55,13 @@
           opacity: 1
       .payment__icon
         g
-          fill: var(--white-100)
+        fill: var(--white-100)
     &_gray
       border-bottom: 0
       background: var(--black-grey-light)
       .payment__to
         svg > path
-          fill: var(--white-100)
+        fill: var(--white-100)
   &__top
     display: flex
     justify-content: space-between
@@ -154,7 +154,6 @@
     +screen('max', 1500)
       padding: 2rem 3rem
     +screen('max', 1023)
-      border-radius: 2px
       padding: 2rem
     +screen('max', 700)
       align-items: stretch
@@ -165,7 +164,7 @@
     gap: 1rem
   &__tag
     padding: 0.8rem 1.5rem
-    font-weight: 600
+    font-weight: 300
     box-sizing: border-box
     border-radius: 82px
     +fs(18px)
@@ -186,7 +185,7 @@
     flex-grow: 1
   &__title
     +fs(28px)
-    font-weight: 600
+    font-weight: 300
     margin-bottom: 1.5rem
     +screen('max', 1500)
       +fs(20px)
@@ -195,8 +194,9 @@
       +fs(18px)
   &__text
     +fs(18px)
-    line-height: 1.5
-    color: var(--black-40)
+    line-height: 110%
+    font-weight: 300
+    color: var(--black-60)
     +screen('max', 1500)
       +fs(14px)
   & + .calc

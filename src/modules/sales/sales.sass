@@ -9,16 +9,20 @@
     display: flex
     gap: 1.5rem
     scrollbar-width: 0
+    flex-wrap: wrap
     +screen('max', 1280)
       overflow: auto
       gap: 1rem
+      flex-wrap: nowrap
     &::-webkit-scrollbar
       height: 0
   &__item
     position: relative
+    +screen('max', 1500)
+      width: 32%
     +screen('max', 1280)
-      flex-shrink: 0
       width: 270px
+      flex-shrink: 0
     +screen('max', 700)
       width: 225px
     &:first-of-type
