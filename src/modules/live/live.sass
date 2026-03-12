@@ -28,12 +28,10 @@
       vertical-align: middle
       margin-bottom: 1rem
   &__container
-    margin: 0 -3rem
-    padding-inline: 3rem
     box-sizing: border-box
     border-radius: 2px
-    +screen('max', 1850)
-      margin: 0 -3rem
+    margin: 0 calc((-100vw + 1850px) / 2 )
+    padding-inline: calc((100vw - 1850px) / 2 )
     +screen('max', 1500)
       margin: 0 calc((-100vw + 1160px) / 2 )
       padding-inline: calc((100vw - 1160px) / 2 )
